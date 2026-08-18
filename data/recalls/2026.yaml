@@ -5,6 +5,36 @@
 # with the YAML extension (VS Code, Zed, Neovim + yaml-language-server).
 
 recalls:
+  - id: 2026-08-indus-foods-gangothri-pickled-meat
+    date: 2026-08-17
+    title: Pickled goat and chicken products
+    summary:
+      - pickled goat & chicken
+    recalling_firm: Indus Foods, LLC (dba Gangothri Foods)
+    agency: FSIS
+    hazard: processing-defect
+    classification: I
+    distribution: Nationwide (restaurants, retail and online)
+    products:
+      - name: Gangothri Goat Pickle, 8-oz jar
+        brand: Gangothri Foods
+      - name: Gangothri Gongura Goat Pickle, 8-oz jar
+        brand: Gangothri Foods
+      - name: Gangothri Chicken Pickle, 8-oz jar
+        brand: Gangothri Foods
+      - name: Gangothri Gongura Chicken Pickle, 8-oz jar
+        brand: Gangothri Foods
+    note: |
+      About 1,626 pounds of ready-to-eat pickled goat and chicken were produced
+      without federal inspection, discovered during FSIS surveillance. The jars
+      have a two-year shelf life and may still be in pantries or on shelves. No
+      confirmed illnesses reported.
+    citations:
+      - title: Indus Foods, LLC DBA Gangothri Foods Recalls Ready-To-Eat Pickled Goat and Chicken Products Produced Without Benefit of Inspection
+        url: https://www.fsis.usda.gov/recalls-alerts/indus-foods-llc-dba-gangothri-foods-recalls-ready-eat-pickled-goat-and-chicken
+        publisher: FSIS
+        accessed: 2026-08-18
+
   - id: 2026-08-dreyers-outshine-fruit-bars
     date: 2026-08-16
     title: Outshine Fruit Bars (five flavors)
@@ -113,6 +143,33 @@ recalls:
       - title: Walmart recalls tomato soup kits sold in Delaware. What to know
         url: https://www.usatoday.com/story/grocery/2026/08/16/walmart-tomato-soup-kit-recall-in-delaware-how-to-identify-it/91327995007/
         publisher: USA Today
+        accessed: 2026-08-18
+
+  - id: 2026-08-lidl-vitasia-wok-spice-mix
+    date: 2026-08-12
+    title: Vitasia Asian Style Wok Spice Mix (Lidl)
+    summary:
+      - spice mix
+    recalling_firm: Lidl US
+    agency: FDA
+    hazard: salmonella
+    distribution: Lidl stores in 10 states and Washington, D.C.
+    products:
+      - name: Vitasia Asian Style Wok Spice Mix, 1.58 oz (45 g)
+        brand: Vitasia (Lidl)
+        codes:
+          - UPC 4335619355491
+          - Lot 155846
+          - Best by June 2028
+    note: |
+      Routine quality testing detected Salmonella in a laboratory sample of the
+      spice mix. Recalled from Lidl US stores in Delaware, Georgia, Maryland,
+      New Jersey, New York, North Carolina, Pennsylvania, South Carolina,
+      Virginia and Washington, D.C. No illnesses reported.
+    citations:
+      - title: Lidl US Recalls Vitasia Asian Style Wok Spice Mix Due to Potential Salmonella Contamination
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/lidl-us-recalls-vitasia-asian-style-wok-spice-mix-due-potential-salmonella-contamination
+        publisher: FDA
         accessed: 2026-08-18
 
   - id: 2026-08-taylor-fresh-jalapenos-salmonella
@@ -271,6 +328,31 @@ recalls:
         publisher: FSIS
         accessed: 2026-08-18
 
+  - id: 2026-08-lexunder-food-to-live-green-powders
+    date: 2026-08-07
+    title: Food to Live green powders (kale, moringa, spirulina and more)
+    summary:
+      - green powders
+    recalling_firm: Lexunder Inc. (dba Food To Live)
+    agency: FDA
+    hazard: salmonella
+    distribution: Nationwide via online retailers
+    products:
+      - name: Food to Live green powder products (kale, moringa, spirulina, wheatgrass, algae and supergreens)
+        brand: Food to Live
+        codes:
+          - Lots SO-72558 through SO-79374 and others
+    note: |
+      FDA testing found Salmonella in a retail sample of Food to Live Organic
+      SuperGreens Mix. Nine green powder products were recalled, sold nationwide
+      via foodtolive.com and online marketplaces. No illnesses reported;
+      production suspended during the investigation.
+    citations:
+      - title: Lexunder Inc Recalls Food to Live Brand Green Powder Products Because of Possible Health Risk
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/lexunder-inc-recalls-food-live-brand-green-powder-products-because-possible-health-risk
+        publisher: FDA
+        accessed: 2026-08-18
+
   - id: 2026-08-botticelli-bettergoods-pistachio-butter
     date: 2026-08-03
     title: Bettergoods Pistachio Nut Butter (Walmart)
@@ -300,6 +382,102 @@ recalls:
       - title: Popular Walmart nut butter recalled after testing detects salmonella
         url: https://www.foxbusiness.com/lifestyle/popular-walmart-nut-butter-recalled-testing-detects-salmonella
         publisher: Fox Business
+        accessed: 2026-08-18
+
+  - id: 2026-07-ukrops-spaghetti-chicken-metal
+    date: 2026-07-31
+    title: Baked spaghetti, chicken cobbler and bread pudding
+    summary:
+      - baked spaghetti
+      - chicken cobbler
+      - bread pudding
+    recalling_firm: Ukrop's Homestyle Foods
+    agency: FSIS
+    hazard: foreign-material
+    classification: I
+    distribution: North Carolina, Virginia, West Virginia, military commissaries and online
+    products:
+      - name: Baked Spaghetti (bulk 62.4-oz pan and 14.8-oz tray)
+        brand: Ukrop's Homestyle Foods
+        codes:
+          - EST. 19979
+          - Best by 2026-07-08 through 2026-08-05
+      - name: Chicken Cobbler (bulk 48-oz pan and 11.6-oz tray)
+        brand: Ukrop's Homestyle Foods
+        codes:
+          - P-19979
+          - Best by 2026-07-08 through 2026-08-05
+      - name: Bread Pudding with Vanilla Sauce (13.8-oz and 4-lb kits)
+        brand: Ukrop's Homestyle Foods
+    note: |
+      Roughly 22,880 pounds of baked spaghetti and chicken cobbler were recalled
+      after a consumer found a metal piece; small aluminum slivers were traced
+      to the baking pans. A separate FDA notice covers bread pudding with
+      vanilla sauce. Sold at Kroger, Food Lion, Publix, Harris Teeter, Wegmans
+      and others. No injuries confirmed.
+    citations:
+      - title: Ukrop's Homestyle Foods Recalls Spaghetti and Chicken Products Due to Possible Foreign Matter Contamination
+        url: https://www.fsis.usda.gov/recalls-alerts/ukrops-homestyle-foods-recalls-spaghetti-and-chicken-products-due-possible-foreign
+        publisher: FSIS
+        accessed: 2026-08-18
+      - title: Ukrop's Homestyle Foods Announces a Voluntary Recall Due to Possible Foreign Object
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/ukrops-homestyle-foods-announces-voluntary-recall-due-possible-foreign-object
+        publisher: FDA
+        accessed: 2026-08-18
+
+  - id: 2026-07-lidl-eridanous-shortbread-cookies
+    date: 2026-07-31
+    title: Eridanous Shortbread Cookies (Lidl)
+    summary:
+      - shortbread cookies
+    recalling_firm: Lidl US
+    agency: FDA
+    hazard: undeclared-allergen
+    distribution: Lidl stores in 10 states and Washington, D.C.
+    products:
+      - name: Shortbread Cookies with Chocolate Truffle Coating & Apricot Filling, 11.6 oz
+        brand: Eridanous (Lidl)
+        codes:
+          - UPC 4056489125839
+      - name: Shortbread Cookies with Apricot Filling and Cocoa Topping with Coconut Sprinkles, 11.6 oz
+        brand: Eridanous (Lidl)
+        codes:
+          - UPC 4056489125846
+    note: |
+      Undeclared wheat, soy, milk, egg and tree nut (coconut) due to
+      foreign-language packaging missing English allergen labeling. The recall
+      was expanded July 31 to a second product and the coconut allergen. No
+      illnesses reported.
+    citations:
+      - title: Lidl US Expands Recall of Eridanous Shortbread Cookies Due to Undeclared Wheat, Soy, Milk, Egg and Tree Nut (Coconut) Allergens
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/lidl-us-expands-recall-eridanous-shortbread-cookies-due-undeclared-wheat-soy-milk-egg-and-tree-nut
+        publisher: FDA
+        accessed: 2026-08-18
+
+  - id: 2026-07-marys-harvest-curry-chicken-salad
+    date: 2026-07-30
+    title: Curry Chicken Salad (Listeria alert)
+    summary:
+      - chicken salad
+    recalling_firm: Mary's Harvest Fresh Foods, Inc.
+    agency: FSIS
+    hazard: listeria
+    distribution: Oregon and Washington
+    products:
+      - name: Curry Chicken Salad, 8-oz plastic package
+        brand: Mary's Harvest Fresh Foods
+        codes:
+          - Use by 2026-07-30
+          - EST. P-39928
+    note: |
+      FSIS issued a public health alert (not a full recall, since the product
+      was no longer for sale) after routine testing found Listeria
+      monocytogenes. The product may still be in consumers' refrigerators. No
+      confirmed illnesses reported.
+    citations:
+      - title: FSIS Issues Public Health Alert for Chicken Salad Product That May Be Contaminated with Listeria
+        url: https://www.fsis.usda.gov/recalls-alerts/fsis-issues-public-health-alert-chicken-salad-product-may-be-contaminated-listeria
+        publisher: FSIS
         accessed: 2026-08-18
 
   - id: 2026-07-publix-greenwise-frozen-blueberries
