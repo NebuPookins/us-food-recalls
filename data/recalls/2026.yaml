@@ -5,6 +5,55 @@
 # with the YAML extension (VS Code, Zed, Neovim + yaml-language-server).
 
 recalls:
+  - id: 2026-08-dreyers-outshine-fruit-bars
+    date: 2026-08-16
+    title: Outshine Fruit Bars (five flavors)
+    summary:
+      - fruit bars
+    recalling_firm: Dreyer's Grand Ice Cream, Inc.
+    hazard: foreign-material
+    distribution: Nationwide
+    products:
+      - name: Strawberry Fruit Bars, 6-count 2.5 oz paddle bars
+        brand: Outshine
+        codes:
+          - UPC 041548610047
+          - Best before 2027-09-30 through 2027-11-30
+      - name: Grape Fruit Bars, 6-count 2.5 oz paddle bars
+        brand: Outshine
+        codes:
+          - UPC 041548244044
+          - Best before 2027-09-30 through 2027-10-31
+      - name: Watermelon Fruit Bars, 6-count 2.5 oz paddle bars
+        brand: Outshine
+        codes:
+          - UPC 041548413624
+          - Best before 2027-06-30 through 2027-07-31
+      - name: Black Cherry Fruit Bars, 6-count 2.5 oz paddle bars
+        brand: Outshine
+        codes:
+          - UPC 041548000121
+          - Best before 2027-07-31
+      - name: Tangerine Fruit Bars, 6-count 2.5 oz paddle bars
+        brand: Outshine
+        codes:
+          - UPC 041548612041
+          - Best before 2027-10-31
+    note: |
+      A limited number of Outshine Fruit Bars (five flavors of 6-count,
+      2.5-ounce paddle bars) may contain glass. Dreyer's Grand Ice Cream
+      voluntarily recalled the products nationwide. No illnesses or injuries
+      reported; consumers should discard or return them for a refund.
+    citations:
+      - title: Dreyer's Grand Ice Cream, Inc. Issues Voluntary Recall on Select Outshine Fruit Bars Due to Possible Foreign Matter Contamination
+        url: https://www.prnewswire.com/news-releases/dreyers-grand-ice-cream-inc-issues-voluntary-recall-on-select-outshine-fruit-bars-due-to-possible-foreign-matter-contamination-302852376.html
+        publisher: PR Newswire
+        accessed: 2026-08-18
+      - title: Outshine Fruit Bars recalled nationwide over possible glass contamination, company says
+        url: https://www.cbsnews.com/news/outshine-fruit-bars-recall-glass-contamination-dreyers/
+        publisher: CBS News
+        accessed: 2026-08-18
+
   - id: 2026-08-kettle-cuisine-tomato-soup-kits
     date: 2026-08-12
     title: Marketside Tomato Bisque Soup Kits (Walmart)
