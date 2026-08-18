@@ -172,11 +172,40 @@ recalls:
         publisher: FDA
         accessed: 2026-08-18
 
+  - id: 2026-08-coast-citrus-jalapenos-salmonella
+    date: 2026-08-09
+    title: Fresh jalapeños (Coast Citrus Distributors)
+    summary:
+      - jalapeños
+    recalling_firm: Coast Citrus Distributors
+    agency: FDA
+    hazard: salmonella
+    distribution: Restaurants and retailers in 27 states
+    illnesses: 345
+    products:
+      - name: Fresh jalapeños (grown in Sinaloa, Mexico)
+        brand: Coast Citrus Distributors
+    note: |
+      A multistate Salmonella outbreak was traced to fresh jalapeños grown in
+      Sinaloa, Mexico and distributed by Coast Citrus Distributors. As of
+      August 5 the CDC counted 345 illnesses and 36 hospitalizations across 27
+      states. Restaurants including Chipotle and QDOBA stopped serving the
+      peppers, and several prepared-food firms recalled products made with them.
+    citations:
+      - title: Taylor Farms recalls jalapeno products over salmonella concerns
+        url: https://apnews.com/article/taylor-fresh-foods-trump-jalapenos-lettuce-salmonella-6cc2f9e17fdd4cb45953c21bee841e1e
+        publisher: AP News
+        accessed: 2026-08-18
+      - title: Taylor Farms recalls jalapeño products due to salmonella risk
+        url: https://www.cnn.com/2026/08/10/health/salmonella-jalapeno-taylor-farms
+        publisher: CNN
+        accessed: 2026-08-18
+
   - id: 2026-08-taylor-fresh-jalapenos-salmonella
+    parent_id: 2026-08-coast-citrus-jalapenos-salmonella
     date: 2026-08-09
     title: Jalapeño salsa, guacamole and prepared meals
     summary:
-      - jalapeños
       - salsa & guacamole
       - chicken wraps
       - enchiladas
@@ -186,7 +215,6 @@ recalls:
     agency: FDA
     hazard: salmonella
     distribution: Retail centers in 26 states
-    illnesses: 345
     products:
       - name: Jalapeño-based salsa, guacamole and dips
         brand: Taylor Farms (Trader Joe's, Kroger Private Selection, Freshness Guaranteed)
@@ -287,6 +315,35 @@ recalls:
       - title: 18 prepared foods under alert as jalapeño Salmonella outbreak sickens 345
         url: https://www.foxbusiness.com/lifestyle/jalapeno-salmonella-outbreak-prepared-foods-alert
         publisher: Fox Business
+        accessed: 2026-08-18
+
+  - id: 2026-08-salata-jalapeno-avocado-dressing
+    parent_id: 2026-08-coast-citrus-jalapenos-salmonella
+    date: 2026-08-11
+    title: Salata Jalapeno Avocado Dressing (H-E-B)
+    summary:
+      - avocado dressing
+    recalling_firm: Salata Dressings, LLC
+    agency: FDA
+    hazard: salmonella
+    distribution: H-E-B stores in Texas
+    products:
+      - name: Salata Jalapeno Avocado Dressing, 12-oz bottle
+        brand: Salata
+        codes:
+          - Best by 2026-11-05, 2026-11-13, 2026-11-18 or 2026-11-25
+    note: |
+      Recalled because diced jalapeños from Coast Citrus Distributors may be
+      contaminated with Salmonella. No illnesses reported specific to the
+      dressing.
+    citations:
+      - title: Recall of Jalapeno Avocado Dressing Because of Possible Health Risk
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/recall-jalapeno-avocado-dressing-because-possible-health-risk
+        publisher: FDA
+        accessed: 2026-08-18
+      - title: More than 35 H-E-B foods recalled as salmonella outbreak spreads
+        url: https://www.kxan.com/news/local/more-than-35-h-e-b-foods-recalled-as-salmonella-outbreak-spreads/
+        publisher: KXAN
         accessed: 2026-08-18
 
   - id: 2026-08-city-foods-pastrami-corned-beef
