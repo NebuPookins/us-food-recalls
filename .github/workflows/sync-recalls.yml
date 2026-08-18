@@ -1,0 +1,27 @@
+name: Sync recalls
+
+on:
+  schedule:
+    # Daily at 08:23 UTC (off-minute). Tunable if the sources ever update faster.
+    - cron: '23 8 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: node scripts/sync-recalls.ts
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          RECALL_REVIEWER: ${{ vars.RECALL_REVIEWER }}
+          GH_TOKEN: ${{ github.token }}
