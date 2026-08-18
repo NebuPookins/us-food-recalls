@@ -1,93 +1,415 @@
 # yaml-language-server: $schema=../../schema.json
 #
-# EXAMPLE DATA — every entry below is invented. Delete them and add real ones.
+# Curated timeline of significant US food recalls announced in 2026.
 # The $schema line above gives you autocomplete and inline errors in any editor
 # with the YAML extension (VS Code, Zed, Neovim + yaml-language-server).
 
 recalls:
-  - id: 2026-08-example-foods-spinach
-    date: 2026-08-14
-    title: Example Foods bagged baby spinach
-    recalling_firm: Example Foods Inc.
+  - id: 2026-08-kettle-cuisine-tomato-soup-kits
+    date: 2026-08-12
+    title: Marketside Tomato Bisque Soup Kits (Walmart)
+    recalling_firm: Kettle Cuisine LLC
     agency: FDA
     hazard: listeria
+    distribution: Walmart stores in 29 states
+    products:
+      - name: Marketside Tomato Bisque Soup Kit, 14 oz tray
+        brand: Marketside
+        codes:
+          - UPC 194346474004
+          - Best by 2026-08-22
+    note: |
+      Routine finished-product testing found a presumptive positive for Listeria
+      monocytogenes. Kettle Cuisine recalled 3,240 packs sold only at Walmart
+      stores in 29 states between June 30 and July 7, 2026. No illnesses reported.
+    citations:
+      - title: Walmart tomato soup kits recalled over Listeria contamination risk, FDA says
+        url: https://www.cbsnews.com/losangeles/news/walmart-tomato-soup-kits-listeria-recall/
+        publisher: CBS News
+        accessed: 2026-08-18
+      - title: Walmart recalls tomato soup kits sold in Delaware. What to know
+        url: https://www.usatoday.com/story/grocery/2026/08/16/walmart-tomato-soup-kit-recall-in-delaware-how-to-identify-it/91327995007/
+        publisher: USA Today
+        accessed: 2026-08-18
+
+  - id: 2026-08-taylor-fresh-jalapenos-salmonella
+    date: 2026-08-09
+    title: Fresh jalapeño salsa, guacamole and dips
+    recalling_firm: Taylor Fresh Foods (parent of Taylor Farms)
+    agency: FDA
+    hazard: salmonella
+    distribution: Retail centers in 26 states
+    illnesses: 345
+    products:
+      - name: Jalapeño-based salsa, guacamole, taco dip and sandwiches
+        brand: Taylor Farms (also Trader Joe's, Kroger Private Selection, Freshness Guaranteed)
+        codes:
+          - Best if used by up to and including 2026-08-16
+    note: |
+      A multistate Salmonella outbreak was linked to fresh jalapeños grown in
+      Sinaloa, Mexico and distributed by Coast Citrus Distributors. Taylor Fresh
+      Foods recalled finished products containing the jalapeños; restaurants
+      including Chipotle and QDOBA also stopped serving them. As of August 5 the
+      CDC counted 345 illnesses and 36 hospitalizations across 27 states.
+    citations:
+      - title: Taylor Fresh Foods Recalls Products Made With Jalapeno Peppers Because of Possible Health Risk
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/taylor-fresh-foods-recalls-products-made-jalapeno-peppers-because-possible-health-risk
+        publisher: FDA
+        accessed: 2026-08-18
+      - title: Taylor Farms recalls jalapeno products over salmonella concerns
+        url: https://apnews.com/article/taylor-fresh-foods-trump-jalapenos-lettuce-salmonella-6cc2f9e17fdd4cb45953c21bee841e1e
+        publisher: AP News
+        accessed: 2026-08-18
+
+  - id: 2026-08-city-foods-pastrami-corned-beef
+    date: 2026-08-08
+    title: Ready-to-eat pastrami and corned beef
+    recalling_firm: City Foods, Inc. (dba Bea's Best Corned Beef)
+    agency: FSIS
+    hazard: listeria
     classification: I
-    distribution: Nationwide, plus Puerto Rico
+    distribution: Illinois, Iowa and Michigan, then nationwide
+    products:
+      - name: Midamar Premium Beef Pastrami, 10-lb box
+        brand: Midamar
+        codes:
+          - EST. 1896
+          - Case code 19410
+      - name: Bea's Best Cooked Corned Beef Brisket
+        brand: Bea's Best
+        codes:
+          - EST. 1896
+          - Case code 18919
+      - name: Kirsch Delicatessen Style Cooked Corned Beef Brisket
+        brand: Kirsch
+        codes:
+          - EST. 1896
+          - Case code 19751
+    note: |
+      Roughly 3,215 pounds of ready-to-eat pastrami and corned beef produced
+      July 16, 2026 may be contaminated with Listeria monocytogenes. The bulk
+      products shipped to foodservice customers in Illinois, Iowa and Michigan,
+      then reached delis and kitchens nationwide. Discovered during routine FSIS
+      inspection; no illnesses reported.
+    citations:
+      - title: City Foods, Inc. Recalls Ready-To-Eat Pastrami and Corned Beef Products Due To Possible Listeria Contamination
+        url: https://www.fsis.usda.gov/recalls-alerts/city-foods-inc--recalls-ready-eat-pastrami-and-corned-beef-products-due-possible
+        publisher: FSIS
+        accessed: 2026-08-18
+
+  - id: 2026-07-maple-leaf-bacon-import
+    date: 2026-07-24
+    title: Smoked bacon imported without reinspection
+    recalling_firm: Maple Leaf Foods, Inc.
+    agency: FSIS
+    hazard: processing-defect
+    classification: I
+    distribution: Grocery Outlet stores in Idaho, Oregon and Washington
+    products:
+      - name: Royale Natural Applewood Smoked Uncured Bacon, 12 oz
+        brand: Royale
+        codes:
+          - Canada EST. 1
+          - Sell by 2026-09-01 and 2026-09-07
+      - name: TOP VALU Uncured Hardwood Smoked Bacon, 12 oz
+        brand: TOP VALU
+        codes:
+          - Canada EST. 1
+          - Sell by 2026-09-01 through 2026-09-07
+    note: |
+      About 12,036 pounds of not-ready-to-eat smoked bacon imported from Canada
+      entered the US without the required import reinspection. Discovered during
+      routine FSIS inspection; no illnesses reported.
+    citations:
+      - title: Maple Leaf Foods Inc. Recalls Not Ready-To-Eat (NRTE) Bacon Product Imported without the Benefit of Import Reinspection
+        url: https://www.fsis.usda.gov/recalls-alerts/maple-leaf-foods-inc--recalls-not-ready-eat-nrte-bacon-product-imported-without
+        publisher: FSIS
+        accessed: 2026-08-18
+
+  - id: 2026-07-midwest-poultry-shell-eggs
+    date: 2026-07-22
+    title: Shell eggs (Kroger, Brookshire's and other brands)
+    recalling_firm: Midwest Poultry Services, L.P.
+    agency: FDA
+    hazard: salmonella
+    classification: I
+    distribution: Texas, Oklahoma, Louisiana, Arkansas, Mississippi and New Mexico
+    illnesses: 98
+    products:
+      - name: White and brown cage-free shell eggs
+        brand: Kroger, Brookshire's, Country Morning, Simple Truth, Cal-Maine Sunups
+        codes:
+          - Plant P-1950 or 0840962
+          - Julian dates 157 through 184
+          - Best by 2026-07-20 through 2026-08-17
+    note: |
+      Midwest Poultry Services recalled roughly 1.59 million dozen shell eggs
+      after environmental samples matched the Salmonella Enteritidis strain
+      behind a 17-state outbreak (98 illnesses, 26 hospitalizations, no deaths).
+      Eggs were produced at Texas farms between June 6 and July 3, 2026. The FDA
+      upgraded the recall to Class I in August.
+    citations:
+      - title: Midwest Poultry Services. L.P. Recalls Shell Eggs Due to Possible Salmonella Enteritidis Contamination
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/midwest-poultry-services-lp-recalls-shell-eggs-due-possible-salmonella-enteritidis-contamination
+        publisher: FDA
+        accessed: 2026-08-18
+      - title: "Outbreak Investigation of Salmonella: Eggs (July 2026)"
+        url: https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-eggs-july-2026
+        publisher: FDA
+        accessed: 2026-08-18
+
+  - id: 2026-07-taylor-farms-lettuce-cyclospora
+    date: 2026-07-17
+    title: Iceberg lettuce and shredded-lettuce products
+    recalling_firm: Taylor Farms de Mexico
+    agency: FDA
+    hazard: other
+    distribution: 27 states, plus Taco Bell restaurants in five states
+    illnesses: 9481
+    deaths: 2
+    products:
+      - name: Marketside Iceberg Salad, 12 oz and 24 oz
+        brand: Marketside
+        codes:
+          - Best if used by 2026-07-18 through 2026-08-03
+      - name: Marketside Shredded Lettuce, 8 oz and 16 oz
+        brand: Marketside
+        codes:
+          - Best if used by 2026-07-18 through 2026-08-03
+    note: |
+      Iceberg lettuce sourced from central Mexico was linked to the largest
+      cyclosporiasis outbreak on record, traced to shredded lettuce served at
+      Taco Bell restaurants in five states. Taylor Farms de Mexico recalled all
+      such lettuce from the US market. The FDA's final update counted 9,481
+      illnesses, 398 hospitalizations and two deaths.
+    citations:
+      - title: "Multistate Outbreak of Cyclospora Illnesses: Iceberg Lettuce July 2026"
+        url: https://www.fda.gov/food/outbreaks-foodborne-illness/investigation-multistate-outbreak-cyclospora-illnesses-iceberg-lettuce-july-2026
+        publisher: FDA
+        accessed: 2026-08-18
+      - title: Taylor Farms lettuce sample produced false positive for cyclospora, FDA says
+        url: https://www.nbcnews.com/health/health-news/fda-says-taylor-farms-lettuce-sample-tested-cyclospora-produced-false-rcna588303
+        publisher: NBC News
+        accessed: 2026-08-18
+
+  - id: 2026-06-la-ceiba-cottage-cheese
+    date: 2026-06-26
+    title: Requesón cottage cheese (Salvadoran and Mexican)
+    recalling_firm: La Ceiba Foods Latin Market Inc.
+    agency: FDA
+    hazard: listeria
+    distribution: Maryland, Virginia and Washington, D.C.
+    products:
+      - name: Requesón Salvadoreño (Salvadoran cottage cheese)
+        brand: La Colonia / Selectos Latinos
+      - name: Requesón Mexicano (Mexican cottage cheese)
+        brand: La Colonia / Selectos Latinos
+    note: |
+      Cottage cheese products may be contaminated with Listeria monocytogenes
+      from supplier Clover Hill Dairy, which is the subject of a multistate
+      outbreak. No additional illnesses specific to this product were reported.
+    citations:
+      - title: La Ceiba Foods Latin Market Inc. Recalls Cottage Cheese Products Because of Possible Health Risk
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/la-ceiba-foods-latin-market-inc-recalls-cottage-cheese-products-because-possible-health-risk
+        publisher: FDA
+        accessed: 2026-08-18
+
+  - id: 2026-06-bef-foods-mac-and-cheese
+    date: 2026-06-10
+    title: Park St. Deli Macaroni & Cheese (Aldi)
+    recalling_firm: BEF Foods, Inc.
+    agency: FDA
+    hazard: undeclared-allergen
+    classification: II
+    distribution: Nationwide
+    products:
+      - name: Park St. Deli Macaroni & Cheese, 20 oz
+        brand: Park St. Deli (Aldi)
+        codes:
+          - Recall H-0940-2026
+          - Lots SUL4839705 through SUL4887699
+    note: |
+      More than 525,000 packages of Park St. Deli Macaroni & Cheese sold at Aldi
+      may contain undeclared soy lecithin. The 20-ounce product was distributed
+      nationwide. No illnesses reported.
+    citations:
+      - title: "Nearly 526,000 packages of macaroni and cheese recalled nationwide: FDA"
+        url: https://www.newsnationnow.com/us-news/recalls/macaroni-cheese-recall-fda/
+        publisher: NewsNation
+        accessed: 2026-08-18
+
+  - id: 2026-06-clover-hill-cheese-listeria
+    date: 2026-06-03
+    title: Requesón / ricotta and other cheeses
+    recalling_firm: Clover Hill Dairy, LLC
+    agency: FDA
+    hazard: listeria
+    distribution: Maryland, Virginia, New York, North Carolina, New Jersey and Washington, D.C.
     illnesses: 12
     deaths: 1
     products:
-      - name: Baby Spinach, 5 oz clamshell
-        brand: Example Farms
+      - name: Soft Ricotta / Requesón cheese (clamshells to 5-gal buckets)
+        brand: Clover Hill Dairy
         codes:
-          - UPC 0-00000-00000-0
-          - Best by 2026-09-02 through 2026-09-11
-      - name: Spring Mix with Baby Spinach, 11 oz clamshell
-        brand: Example Farms
+          - Plant number 24-128
+      - name: All other Clover Hill Dairy cheeses (cheddar, colby, Monterey Jack, flavored and smoked)
+        brand: Clover Hill Dairy
         codes:
-          - UPC 0-00000-00001-7
+          - Plant number 24-128
     note: |
-      Routine state sampling found Listeria monocytogenes in a finished-product
-      sample. The firm halted production at the affected facility while FDA
-      investigates the source.
-
-      Consumers should not eat the product even if some of it has already been
-      eaten without anyone getting sick.
+      A multi-year, multi-state Listeria outbreak was traced to soft requesón and
+      other cheeses from Clover Hill Dairy. The company first recalled its
+      ricotta/requesón in early June and expanded to all Clover Hill Dairy
+      cheeses on June 18 after product and environmental samples matched the
+      outbreak strain. As of late June there were 12 cases, 10 hospitalizations
+      and one death across four states.
     citations:
-      - title: Example Foods Inc. Recalls Baby Spinach Because of Possible Health Risk
-        url: https://example.com/fda/example-foods-spinach-recall
+      - title: Clover Hill Dairy Recalls Soft Ricotta/Requeson Cheese Due to Possible Health Risk
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/clover-hill-dairy-recalls-soft-ricottarequeson-cheese-due-possible-health-risk
         publisher: FDA
-        accessed: 2026-08-15
-      - title: Investigation of Listeria Outbreak Linked to Bagged Spinach
-        url: https://example.com/cdc/listeria-spinach-2026
+        accessed: 2026-08-18
+      - title: Clover Hill Dairy Expands Recall to Include All Clover Hill Dairy Brand Cheese Due to Possible Health Risk
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/clover-hill-dairy-expands-recall-include-all-clover-hill-dairy-brand-cheese-due-possible-health-risk
+        publisher: FDA
+        accessed: 2026-08-18
+      - title: "Investigation Update: Listeria Outbreak, June 2026"
+        url: https://www.cdc.gov/listeria/outbreaks/soft-cheese-06-26/investigation.html
         publisher: CDC
-        accessed: 2026-08-15
+        accessed: 2026-08-18
 
-  - id: 2026-07-sample-bakery-cookies
-    date: 2026-07-30
-    title: Sample Bakery chocolate chip cookies (undeclared peanuts)
-    recalling_firm: Sample Bakery Co.
+  - id: 2026-05-de-dios-ice-pops
+    date: 2026-05-27
+    title: De Dios Ice Pops
+    recalling_firm: De Dios' Ice Pops II LLC
     agency: FDA
     hazard: undeclared-allergen
-    classification: I
-    distribution: Nationwide via retail and online orders
-    ended: 2026-08-12
+    distribution: New Jersey, New York, Pennsylvania and Connecticut
     products:
-      - name: Chocolate Chip Cookies, 12 oz tray
-        brand: Sample Bakery
+      - name: De Dios Ice Pops, 3.7 oz (multiple flavors)
+        brand: De Dios
         codes:
-          - Lot 6210
-          - Lot 6211
-    note: >
-      A packaging changeover put chocolate chip cookies into cartons printed for
-      the peanut butter variety. People with a peanut allergy risk a serious or
-      life-threatening reaction. No illnesses were reported and the recall was
-      closed out on August 12.
-    citations:
-      - title: Sample Bakery Co. Issues Allergy Alert on Undeclared Peanuts
-        url: https://example.com/fda/sample-bakery-peanut-alert
-        publisher: FDA
-        accessed: 2026-08-01
-
-  - id: 2026-06-demo-meats-deli-turkey
-    date: 2026-06-18
-    title: Demo Meats sliced deli turkey
-    recalling_firm: Demo Meats LLC
-    agency: FSIS
-    hazard: salmonella
-    classification: I
-    distribution: Nationwide
-    illnesses: 34
-    products:
-      - name: Oven Roasted Turkey Breast, deli sliced
-        brand: Demo Deli
-        codes:
-          - EST. 00000
-          - Use by 2026-07-04
+          - Produced before 2026-04-27
     note: |
-      FSIS identified the product through traceback from a multistate Salmonella
-      cluster. Roughly 180,000 pounds were shipped to retail delis nationwide.
+      Ice pops may contain undeclared milk, Yellow #5, Red #40, pecans and
+      pistachios. Found during an FDA inspection of the firm's manufacturing
+      practices; no illnesses reported.
     citations:
-      - title: Demo Meats LLC Recalls Ready-To-Eat Turkey Products
-        url: https://example.com/fsis/demo-meats-turkey-recall
+      - title: Paterson company recalls De Dios Ice Pops. Here's why
+        url: https://www.northjersey.com/story/life/food/2026/05/28/paterson-nj-company-recalls-de-dios-ice-pops-health-concerns/90303307007/
+        publisher: NorthJersey.com
+        accessed: 2026-08-18
+
+  - id: 2026-03-bakkavor-pizza-focaccia-metal
+    date: 2026-03-23
+    title: Pizza and focaccia with possible metal fragments
+    recalling_firm: Bakkavor
+    agency: FDA
+    hazard: foreign-material
+    classification: II
+    distribution: Retail and meal-kit customers in 10 states
+    products:
+      - name: Basil Pesto & Mozzarella Pizza (HelloFresh meal kit)
+        brand: HelloFresh
+        codes:
+          - 2,337 cases recalled
+      - name: Roasted Tomato Parmesan Focaccia Bread
+        brand: Trader Joe's, Frederik's by Meijer, HT Traders, Fresh & Simple
+        codes:
+          - 23,459 cases recalled
+    note: |
+      Pizzas and focaccia made with slow-roasted tomatoes that may contain metal
+      fragments were recalled from 10 states. The recall was initiated in
+      January and classified Class II in March. No illnesses reported.
+    citations:
+      - title: Pizza Recall Issued in 10 States Over Metal Risk
+        url: https://www.usnews.com/news/health-news/articles/2026-03-25/hellofresh-pizza-recall-issued-in-10-states-over-metal-risk
+        publisher: U.S. News
+        accessed: 2026-08-18
+      - title: Pizza Recall Issued in 10 States Over Metal Risk
+        url: https://www.healthday.com/health-news/public-health/hellofresh-pizza-recall-issued-in-10-states-over-metal-risk
+        publisher: HealthDay
+        accessed: 2026-08-18
+
+  - id: 2026-03-aldi-spinach-bites
+    date: 2026-03-16
+    title: Simply Nature Spinach Bites (Aldi)
+    recalling_firm: Dr. Praeger's Sensible Foods Inc.
+    agency: FDA
+    hazard: foreign-material
+    classification: II
+    distribution: Maryland and Pennsylvania
+    products:
+      - name: Simply Nature Spinach Bites, 12 oz
+        brand: Simply Nature (Aldi)
+        codes:
+          - UPC 4099100247992
+          - Lot G25CF-02B
+    note: |
+      Roughly 7,900 twelve-ounce boxes of frozen spinach bites sold exclusively
+      at Aldi may contain rodent hair. No illnesses reported.
+    citations:
+      - title: Aldi Recalls Spinach Bites Over Possible Contamination
+        url: https://www.healthday.com/health-news/public-health/aldi-recalls-spinach-bites-over-possible-contamination
+        publisher: HealthDay
+        accessed: 2026-08-18
+      - title: Aldi recalls popular snack food over possible rodent hair contamination
+        url: https://nypost.com/2026/03/18/business/aldi-recalls-popular-snack-food-over-possible-rodent-hair-contamination/
+        publisher: New York Post
+        accessed: 2026-08-18
+
+  - id: 2026-02-cs-beef-packers-ground-beef
+    date: 2026-02-11
+    title: Raw ground beef
+    recalling_firm: CS Beef Packers, LLC
+    agency: FSIS
+    hazard: e-coli
+    classification: I
+    distribution: Foodservice distributors in California, Idaho and Oregon
+    products:
+      - name: Beef, Coarse Ground, 73L (10-lb chubs)
+        brand: Foodservice
+        codes:
+          - EST. 630
+          - Case code 18601
+          - Use/freeze by 2026-02-04
+      - name: Fire River Farms Classic Beef Fine Ground, 73L and 81L
+        brand: Fire River Farms
+        codes:
+          - EST. 630
+          - Case codes 19583 and 19563
+          - Use/freeze by 2026-02-04
+    note: |
+      About 22,912 pounds of raw ground beef produced January 14, 2026 may be
+      contaminated with E. coli O145, found during FSIS testing at a downstream
+      customer. Shipped to distributors in California, Idaho and Oregon for
+      foodservice use. No illnesses reported.
+    citations:
+      - title: CS Beef Packers, LLC Recalls Ground Beef Products That May be Contaminated With E. Coli O145
+        url: https://www.fsis.usda.gov/recalls-alerts/cs-beef-packers-llc-recalls-ground-beef-products-may-be-contaminated-e--coli-o145
         publisher: FSIS
-        accessed: 2026-06-19
+        accessed: 2026-08-18
+
+  - id: 2026-01-suzannas-kitchen-grilled-chicken
+    date: 2026-01-16
+    title: Ready-to-eat grilled chicken breast fillets
+    recalling_firm: Suzanna's Kitchen (Norcross, Georgia)
+    agency: FSIS
+    hazard: listeria
+    classification: I
+    distribution: Foodservice in Alabama, Florida, Georgia, Missouri, New Hampshire, North Carolina and Ohio
+    products:
+      - name: Grilled Chicken Breast Fillet with Rib Meat, 10-lb case (two 5-lb bags)
+        brand: Suzanna's Kitchen
+        codes:
+          - EST. P-1382
+          - Lot 60104 P1382 287 5 J14
+    note: |
+      About 13,720 pounds of ready-to-eat grilled chicken breast fillets produced
+      October 14, 2025 may be contaminated with Listeria monocytogenes, detected
+      by a third-party laboratory. Distributed to foodservice customers in seven
+      states. No illnesses reported.
+    citations:
+      - title: Suzanna's Kitchen Recalls Ready-To-Eat Grilled Chicken Breast Fillet Products due to Possible Listeria Contamination
+        url: https://www.fsis.usda.gov/recalls-alerts/suzannas-kitchen-recalls-ready-eat-grilled-chicken-breast-fillet-products-due
+        publisher: FSIS
+        accessed: 2026-08-18
