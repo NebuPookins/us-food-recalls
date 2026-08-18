@@ -54,6 +54,38 @@ recalls:
         publisher: CBS News
         accessed: 2026-08-18
 
+  - id: 2026-08-hampton-grocer-lacnola-granola
+    date: 2026-08-14
+    title: Lacnola Lactation Granola
+    summary:
+      - granola
+    recalling_firm: The Hampton Grocer, Inc.
+    agency: FDA
+    hazard: salmonella
+    distribution: Nationwide via Amazon and other online retailers
+    products:
+      - name: Lacnola Lactation Granola, 8 oz stand-up pouch
+        brand: Lacnola (The Hampton Grocer)
+        codes:
+          - UPC 850035324554
+          - Lot HGLC-102125, exp 2026-10-21
+          - Lot HGLC-021326, exp 2027-02-13
+    note: |
+      The Hampton Grocer recalled Lacnola Lactation Granola after its ingredient
+      supplier reported that a sample of an organic greens powder containing
+      moringa tested positive for Salmonella. The granola sold nationwide via
+      Amazon and the company's website between October 2025 and August 2026. No
+      illnesses reported.
+    citations:
+      - title: The Hampton Grocer, Inc. Recalls 8-Ounce Packages of Lacnola Lactation Granola Because of Possible Health Risk
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/hampton-grocers-inc-recalls-its-8-ounce-packages-lacnola-lactation-granola-because-possible-health
+        publisher: FDA
+        accessed: 2026-08-18
+      - title: Granola sold nationwide on Amazon recalled over salmonella contamination fears
+        url: https://www.foxbusiness.com/lifestyle/granola-sold-nationwide-amazon-recalled-salmonella-contamination-fears
+        publisher: Fox Business
+        accessed: 2026-08-18
+
   - id: 2026-08-kettle-cuisine-tomato-soup-kits
     date: 2026-08-12
     title: Marketside Tomato Bisque Soup Kits (Walmart)
