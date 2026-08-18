@@ -132,6 +132,19 @@ export type SiteMeta = {
   readonly buildDate: string;
 };
 
+/** Compact "foods to check" list with anchor links to each entry, newest first. */
+function renderSummary(recalls: readonly Recall[]): string {
+  const links = recalls.flatMap((r) =>
+    (r.summary ?? []).map((food) => `<a href="#${escapeHtml(r.id)}">${escapeHtml(food)}</a>`),
+  );
+  if (links.length === 0) return '';
+
+  return `<section class="summary" aria-labelledby="summary-title">
+  <h2 id="summary-title">Foods to check</h2>
+  <p class="food-list">${links.join(', ')}</p>
+</section>`;
+}
+
 export function renderIndex(recalls: readonly Recall[], meta: SiteMeta): string {
   const years = [...new Set(recalls.map((r) => r.date.slice(0, 4)))].toSorted().toReversed();
   const hazards = [...new Set(recalls.map((r) => r.hazard))].toSorted((a, b) =>
@@ -159,6 +172,8 @@ export function renderIndex(recalls: readonly Recall[], meta: SiteMeta): string 
     <span>updated ${escapeHtml(formatDate(meta.buildDate))}</span>
   </p>
 </header>
+
+${renderSummary(recalls)}
 
 <form class="filters" role="search" aria-label="Filter recalls">
   <label>Search

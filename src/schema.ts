@@ -73,6 +73,11 @@ export const RecallSchema = z.strictObject({
     .describe('Stable unique slug. Becomes the permalink anchor, so never rename one.'),
   date: IsoDate.describe('Date the recall was announced.'),
   title: z.string().min(1).describe('One-line headline, e.g. "Acme Foods bagged spinach".'),
+  summary: z
+    .array(z.string().min(1))
+    .min(1)
+    .optional()
+    .describe('One- or two-word food labels for the "at a glance" list at the top of the page.'),
   recalling_firm: z.string().min(1).optional(),
   agency: z.enum(AGENCIES).optional(),
   hazard: z.enum(HAZARDS),

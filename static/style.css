@@ -41,6 +41,19 @@ a { color: var(--accent); }
 .tagline { margin: 0 0 .75rem; color: var(--muted); }
 .site-links { margin: 0; font-size: .85rem; color: var(--muted); }
 
+/* ---- summary ---- */
+
+.summary { margin: 1.25rem 0 0; }
+.summary h2 {
+  margin: 0 0 .4rem;
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.food-list { margin: 0; line-height: 1.9; }
+
 /* ---- filters ---- */
 
 .filters {

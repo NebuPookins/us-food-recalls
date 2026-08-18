@@ -8,6 +8,8 @@ recalls:
   - id: 2026-08-kettle-cuisine-tomato-soup-kits
     date: 2026-08-12
     title: Marketside Tomato Bisque Soup Kits (Walmart)
+    summary:
+      - tomato bisque soup
     recalling_firm: Kettle Cuisine LLC
     agency: FDA
     hazard: listeria
@@ -35,6 +37,8 @@ recalls:
   - id: 2026-08-taylor-fresh-jalapenos-salmonella
     date: 2026-08-09
     title: Fresh jalapeño salsa, guacamole and dips
+    summary:
+      - jalapeños
     recalling_firm: Taylor Fresh Foods (parent of Taylor Farms)
     agency: FDA
     hazard: salmonella
@@ -64,6 +68,9 @@ recalls:
   - id: 2026-08-city-foods-pastrami-corned-beef
     date: 2026-08-08
     title: Ready-to-eat pastrami and corned beef
+    summary:
+      - pastrami
+      - corned beef
     recalling_firm: City Foods, Inc. (dba Bea's Best Corned Beef)
     agency: FSIS
     hazard: listeria
@@ -100,6 +107,9 @@ recalls:
   - id: 2026-07-publix-greenwise-frozen-blueberries
     date: 2026-07-29
     title: GreenWise Organic Frozen Blueberries and Mixed Berries (Publix)
+    summary:
+      - blueberries
+      - mixed berries
     recalling_firm: Publix Super Markets, Inc.
     agency: FDA
     hazard: e-coli
@@ -138,6 +148,8 @@ recalls:
   - id: 2026-07-maple-leaf-bacon-import
     date: 2026-07-24
     title: Smoked bacon imported without reinspection
+    summary:
+      - bacon
     recalling_firm: Maple Leaf Foods, Inc.
     agency: FSIS
     hazard: processing-defect
@@ -167,6 +179,8 @@ recalls:
   - id: 2026-07-midwest-poultry-shell-eggs
     date: 2026-07-22
     title: Shell eggs (Kroger, Brookshire's and other brands)
+    summary:
+      - eggs
     recalling_firm: Midwest Poultry Services, L.P.
     agency: FDA
     hazard: salmonella
@@ -199,6 +213,8 @@ recalls:
   - id: 2026-07-taylor-farms-lettuce-cyclospora
     date: 2026-07-17
     title: Iceberg lettuce and shredded-lettuce products
+    summary:
+      - lettuce
     recalling_firm: Taylor Farms de Mexico
     agency: FDA
     hazard: other
@@ -233,6 +249,8 @@ recalls:
   - id: 2026-06-la-ceiba-cottage-cheese
     date: 2026-06-26
     title: Requesón cottage cheese (Salvadoran and Mexican)
+    summary:
+      - cottage cheese
     recalling_firm: La Ceiba Foods Latin Market Inc.
     agency: FDA
     hazard: listeria
@@ -255,6 +273,8 @@ recalls:
   - id: 2026-06-bef-foods-mac-and-cheese
     date: 2026-06-10
     title: Park St. Deli Macaroni & Cheese (Aldi)
+    summary:
+      - mac & cheese
     recalling_firm: BEF Foods, Inc.
     agency: FDA
     hazard: undeclared-allergen
@@ -279,6 +299,8 @@ recalls:
   - id: 2026-06-clover-hill-cheese-listeria
     date: 2026-06-03
     title: Requesón / ricotta and other cheeses
+    summary:
+      - soft cheese
     recalling_firm: Clover Hill Dairy, LLC
     agency: FDA
     hazard: listeria
@@ -318,6 +340,8 @@ recalls:
   - id: 2026-05-de-dios-ice-pops
     date: 2026-05-27
     title: De Dios Ice Pops
+    summary:
+      - ice pops
     recalling_firm: De Dios' Ice Pops II LLC
     agency: FDA
     hazard: undeclared-allergen
@@ -340,6 +364,9 @@ recalls:
   - id: 2026-03-bakkavor-pizza-focaccia-metal
     date: 2026-03-23
     title: Pizza and focaccia with possible metal fragments
+    summary:
+      - pizza
+      - focaccia
     recalling_firm: Bakkavor
     agency: FDA
     hazard: foreign-material
@@ -371,6 +398,8 @@ recalls:
   - id: 2026-03-aldi-spinach-bites
     date: 2026-03-16
     title: Simply Nature Spinach Bites (Aldi)
+    summary:
+      - spinach bites
     recalling_firm: Dr. Praeger's Sensible Foods Inc.
     agency: FDA
     hazard: foreign-material
@@ -398,6 +427,8 @@ recalls:
   - id: 2026-02-cs-beef-packers-ground-beef
     date: 2026-02-11
     title: Raw ground beef
+    summary:
+      - ground beef
     recalling_firm: CS Beef Packers, LLC
     agency: FSIS
     hazard: e-coli
@@ -430,6 +461,8 @@ recalls:
   - id: 2026-01-suzannas-kitchen-grilled-chicken
     date: 2026-01-16
     title: Ready-to-eat grilled chicken breast fillets
+    summary:
+      - grilled chicken
     recalling_firm: Suzanna's Kitchen (Norcross, Georgia)
     agency: FSIS
     hazard: listeria

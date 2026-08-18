@@ -23,6 +23,15 @@
             "minLength": 1,
             "description": "One-line headline, e.g. \"Acme Foods bagged spinach\"."
           },
+          "summary": {
+            "description": "One- or two-word food labels for the \"at a glance\" list at the top of the page.",
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
           "recalling_firm": {
             "type": "string",
             "minLength": 1
