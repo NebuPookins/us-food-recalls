@@ -145,6 +145,14 @@ function renderSummary(recalls: readonly Recall[]): string {
 </section>`;
 }
 
+/** Two calls to action: report a missed recall by email, and support the site. */
+function renderActions(): string {
+  return `<section class="actions" aria-label="Get involved">
+  <a class="button" href="mailto:nebupookins@gmail.com?subject=New%20food%20recall%20to%20report">📧 Spotted a recall I missed? Let me know!</a>
+  <a class="button button-secondary" href="https://ko-fi.com/nebupookins" target="_blank" rel="noopener noreferrer">☕ Find this list useful? Support the site!</a>
+</section>`;
+}
+
 export function renderIndex(recalls: readonly Recall[], meta: SiteMeta): string {
   const years = [...new Set(recalls.map((r) => r.date.slice(0, 4)))].toSorted().toReversed();
   const hazards = [...new Set(recalls.map((r) => r.hazard))].toSorted((a, b) =>
@@ -174,6 +182,8 @@ export function renderIndex(recalls: readonly Recall[], meta: SiteMeta): string 
 </header>
 
 ${renderSummary(recalls)}
+
+${renderActions()}
 
 <form class="filters" role="search" aria-label="Filter recalls">
   <label>Search
