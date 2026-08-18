@@ -748,6 +748,89 @@ recalls:
         publisher: CDC
         accessed: 2026-08-18
 
+  - id: 2026-03-tops-peeled-garlic-botulism
+    date: 2026-03-25
+    title: Peeled garlic (Tops Friendly Markets)
+    summary:
+      - peeled garlic
+    recalling_firm: Tops Friendly Markets
+    agency: FDA
+    hazard: botulism
+    classification: I
+    distribution: New York, Pennsylvania and Vermont
+    products:
+      - name: Christopher Ranch Peeled Garlic, 6-oz bag
+        brand: Christopher Ranch
+        codes:
+          - UPC 00007457410852
+    note: |
+      Peeled garlic was stored in coolers that did not maintain safe
+      temperatures, creating a botulism risk. No illnesses reported.
+    citations:
+      - title: Garlic recalled because of botulism risk
+        url: https://www.foodsafetynews.com/2026/03/garlic-recalled-because-of-botulism-risk/
+        publisher: Food Safety News
+        accessed: 2026-08-18
+      - title: Garlic recall (March 2026)
+        url: https://www.health.com/garlic-recall-march-2026-11936024
+        publisher: Health
+        accessed: 2026-08-18
+
+  - id: 2026-03-blackwing-meats-uninspected-beef-pork
+    date: 2026-03-25
+    title: Blackwing Meats raw beef and pork (uninspected)
+    summary:
+      - ground beef
+      - pork
+    recalling_firm: Blackwing Organic Meats
+    agency: FSIS
+    hazard: processing-defect
+    distribution: Nationwide (wholesale and retail)
+    products:
+      - name: Blackwing Organic Meats Organic Ground Beef and other raw beef and pork
+        brand: Blackwing Organic Meats
+    note: |
+      FSIS public health alert: raw beef and pork produced without federal
+      inspection and bearing a false mark of inspection. No illnesses reported.
+    citations:
+      - title: FSIS Issues Public Health Alert for Beef and Pork Products Produced Without the Benefit of Inspection
+        url: https://www.fsis.usda.gov/recalls-alerts/fsis-issues-public-health-alert-beef-and-pork-products-produced-without-benefit
+        publisher: FSIS
+        accessed: 2026-08-18
+      - title: Ground beef public health alert (March 2026)
+        url: https://www.health.com/ground-beef-public-health-alert-march-2026-11933393
+        publisher: Health
+        accessed: 2026-08-18
+
+  - id: 2026-04-lundberg-jasmine-white-rice
+    date: 2026-04-04
+    title: Lundberg Organic Jasmine White Rice
+    summary:
+      - white rice
+    recalling_firm: Lundberg Family Farms
+    agency: FDA
+    hazard: foreign-material
+    classification: II
+    distribution: Nationwide (Wegmans, Walmart, Target, Whole Foods and others)
+    products:
+      - name: Regenerative Organic Certified White Jasmine Rice, 2-lb bag
+        brand: Lundberg Family Farms
+        codes:
+          - UPC 073416-040281
+          - Lots 260201 and 260202
+    note: |
+      Voluntary recall of about 4,500 cases for possible foreign material. No
+      illnesses reported.
+    citations:
+      - title: Popular white rice facing nationwide recall over foreign material
+        url: https://nypost.com/2026/04/11/us-news/popular-white-rice-facing-nationwide-recall-over-foreign-material/
+        publisher: New York Post
+        accessed: 2026-08-18
+      - title: White rice recall (April 2026)
+        url: https://www.health.com/white-rice-recall-april-2026-11946281
+        publisher: Health
+        accessed: 2026-08-18
+
   - id: 2026-05-de-dios-ice-pops
     date: 2026-05-27
     title: De Dios Ice Pops
@@ -804,6 +887,235 @@ recalls:
       - title: Pizza Recall Issued in 10 States Over Metal Risk
         url: https://www.healthday.com/health-news/public-health/hellofresh-pizza-recall-issued-in-10-states-over-metal-risk
         publisher: HealthDay
+        accessed: 2026-08-18
+
+  - id: 2026-02-stellar-bay-oysters-norovirus
+    date: 2026-02-12
+    title: Raw oysters (Stellar Bay Shellfish)
+    summary:
+      - raw oysters
+    recalling_firm: Stellar Bay Shellfish Ltd.
+    agency: FDA
+    hazard: norovirus
+    distribution: Restaurants and retailers in 10 states
+    products:
+      - name: Raw oysters (Kusshi, Chrome Point, Stellar Bay and Stellar Bay Gold)
+        brand: Stellar Bay Shellfish
+        codes:
+          - Harvest area BC 17-20 (Nanoose Bay)
+    note: |
+      Raw oysters from British Columbia were linked to norovirus-like illness
+      outbreaks reported in Washington and California. Recalled from restaurants
+      and retailers in 10 states.
+    citations:
+      - title: FDA recalls oysters that may be contaminated with the norovirus
+        url: https://newyork.news12.com/fda-recalls-oysters-that-may-be-contaminated-with-the-norovirus
+        publisher: News 12
+        accessed: 2026-08-18
+      - title: "Food safety alert: oysters recalled over norovirus concerns"
+        url: https://www.health.com/oyster-recall-february-2026-11910575
+        publisher: Health
+        accessed: 2026-08-18
+
+  - id: 2026-02-ajinomoto-trader-joes-frozen-glass
+    date: 2026-02-19
+    title: Frozen fried rice, ramen and dumplings (glass)
+    summary:
+      - frozen fried rice
+      - dumplings
+    recalling_firm: Ajinomoto Foods North America, Inc.
+    agency: FSIS
+    hazard: foreign-material
+    classification: II
+    distribution: 43 states
+    products:
+      - name: Trader Joe's Chicken Fried Rice, Vegetable Fried Rice, Japanese Style Fried Rice and Chicken Shu Mai
+        brand: Trader Joe's (and other brands)
+        codes:
+          - Best by dates from 2026-02-28 through 2027-02-10
+    note: |
+      Ajinomoto recalled nearly 37 million pounds of frozen fried rice, ramen
+      and dumpling products (Trader Joe's and other brands) after consumers
+      found glass; a carrot ingredient was the likely source. No injuries
+      reported.
+    citations:
+      - title: Trader Joe's frozen food recall expands to 10M pounds of popular items sent to 43 states
+        url: https://nypost.com/2026/03/23/lifestyle/10-million-pounds-of-popular-foods-in-trader-joes-recall/
+        publisher: New York Post
+        accessed: 2026-08-18
+      - title: Trader Joe's recall expands to more products
+        url: https://www.health.com/trader-joes-recall-expands-march-2026-11933011
+        publisher: Health
+        accessed: 2026-08-18
+
+  - id: 2026-02-rosina-frozen-meatballs-metal
+    date: 2026-02-22
+    title: Bremer frozen meatballs (Aldi)
+    summary:
+      - frozen meatballs
+    recalling_firm: Rosina Food Products, Inc.
+    agency: FSIS
+    hazard: foreign-material
+    classification: I
+    distribution: Aldi stores nationwide
+    products:
+      - name: Bremer Family Size Italian Style Meatballs, 32-oz bag
+        brand: Bremer (Aldi)
+        codes:
+          - EST. 4286B
+          - Best by 2026-10-30
+    note: |
+      About 9,462 pounds of frozen meatballs recalled after a consumer found
+      metal fragments. No injuries reported.
+    citations:
+      - title: Rosina Food Products, Inc. Recalls Ready-To-Eat Frozen Meatball Products Due To Possible Foreign Matter Contamination
+        url: https://www.fsis.usda.gov/recalls-alerts/rosina-food-products-inc--recalls-ready-eat-frozen-meatball-products-due-possible
+        publisher: FSIS
+        accessed: 2026-08-18
+      - title: Meatball recall (February 2026)
+        url: https://www.health.com/meatball-recall-february-2026-11911923
+        publisher: Health
+        accessed: 2026-08-18
+
+  - id: 2026-02-saputo-great-value-cottage-cheese
+    date: 2026-02-24
+    title: Great Value cottage cheese (pasteurization issue)
+    summary:
+      - cottage cheese
+    recalling_firm: Saputo Cheese USA Inc.
+    agency: FDA
+    hazard: processing-defect
+    distribution: Walmart in 24 states
+    products:
+      - name: Great Value cottage cheese (fat free, lowfat and small curd), 16 oz to 3 lb
+        brand: Great Value (Walmart)
+        codes:
+          - Best if used by 2026-04-01 through 2026-04-03
+    note: |
+      Recalled because liquid dairy ingredients may not have been fully
+      pasteurized. No illnesses reported.
+    citations:
+      - title: Saputo USA Recalls Great Value Cottage Cheese Because of Possible Health Risk
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/saputo-usa-recalls-great-value-cottage-cheese-because-possible-health-risk
+        publisher: FDA
+        accessed: 2026-08-18
+      - title: Cottage cheese recall (February 2026)
+        url: https://www.health.com/cottage-cheese-recall-february-2026-11914963
+        publisher: Health
+        accessed: 2026-08-18
+
+  - id: 2026-02-savannah-bee-bbq-sauce
+    date: 2026-02-27
+    title: Savannah Bee Honey BBQ Sauce-Mustard
+    summary:
+      - barbecue sauce
+    recalling_firm: Savannah Bee Company
+    agency: FDA
+    hazard: undeclared-allergen
+    classification: II
+    distribution: Nationwide
+    products:
+      - name: Honey BBQ Sauce-Mustard, 16-oz bottle
+        brand: Savannah Bee Company
+        codes:
+          - UPC 8 50033 93758 9
+          - Lot B1L1360525
+    note: |
+      Bottles of Honey BBQ Sauce-Sweet (containing wheat and soy) were
+      mislabeled as the mustard flavor. No illnesses reported.
+    citations:
+      - title: Barbecue sauce recalled because of undeclared allergens
+        url: https://www.foodsafetynews.com/2026/03/barbecue-sauce-recalled-because-of-undeclared-allergens/
+        publisher: Food Safety News
+        accessed: 2026-08-18
+      - title: Barbecue sauce recall (March 2026)
+        url: https://www.health.com/barbecue-sauce-recall-march-2026-11919401
+        publisher: Health
+        accessed: 2026-08-18
+
+  - id: 2026-03-frito-lay-miss-vickies-milk
+    date: 2026-03-03
+    title: Miss Vickie's Spicy Dill Pickle Potato Chips
+    summary:
+      - potato chips
+    recalling_firm: Frito-Lay
+    agency: FDA
+    hazard: undeclared-allergen
+    classification: I
+    distribution: Six states
+    products:
+      - name: Miss Vickie's Spicy Dill Pickle Potato Chips, 8-oz bag
+        brand: Miss Vickie's
+        codes:
+          - UPC 0 28400 761772
+          - Guaranteed fresh 2026-04-21
+    note: |
+      Some bags may contain jalapeño potato chips with undeclared milk.
+      Classified Class I. No reactions reported.
+    citations:
+      - title: Frito-Lay Issues Voluntary Allergy Alert on Undeclared Milk in Miss Vickie's Spicy Dill Pickle Potato Chips
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/frito-lay-issues-voluntary-allergy-alert-undeclared-milk-miss-vickies-spicy-dill-pickle-potato-chips
+        publisher: FDA
+        accessed: 2026-08-18
+      - title: Frito-Lay recall (March 2026)
+        url: https://www.health.com/frito-lay-recall-march-2026-11919760
+        publisher: Health
+        accessed: 2026-08-18
+
+  - id: 2026-03-costco-meatloaf-salmonella
+    date: 2026-03-14
+    title: Costco Meatloaf with Mashed Yukon Potatoes and Glaze
+    summary:
+      - meatloaf
+    recalling_firm: Costco Wholesale
+    agency: FDA
+    hazard: salmonella
+    distribution: Costco in 26 states, D.C. and Puerto Rico
+    products:
+      - name: Meatloaf with Mashed Yukon Potatoes and Glaze
+        brand: Costco
+        codes:
+          - Item #30783
+          - Sell by 2026-03-05 through 2026-03-16
+    note: |
+      An ingredient supplier (Griffith Foods) recalled an ingredient used in the
+      meatloaf over possible Salmonella. No illnesses reported.
+    citations:
+      - title: Costco recalls popular meatloaf meal kit over salmonella concerns
+        url: https://abc13.com/post/costco-recalls-popular-meatloaf-meal-kit-salmonella-risk/18723442/
+        publisher: ABC 13
+        accessed: 2026-08-18
+      - title: Costco meatloaf meal kit recall (March 2026)
+        url: https://www.health.com/costco-meatloaf-meal-kit-recall-march-2026-11927307
+        publisher: Health
+        accessed: 2026-08-18
+
+  - id: 2026-03-raw-farm-cheddar-ecoli
+    date: 2026-03-15
+    title: Raw Farm raw cheddar cheese (E. coli outbreak)
+    summary:
+      - cheddar cheese
+    recalling_firm: Raw Farm, LLC
+    agency: FDA
+    hazard: e-coli
+    distribution: Illnesses in California, Florida and Texas
+    illnesses: 9
+    products:
+      - name: Raw Farm raw cheddar cheese (block and shredded)
+        brand: Raw Farm
+    note: |
+      A multistate E. coli O157:H7 outbreak was linked to Raw Farm raw cheddar
+      cheese (9 illnesses, 3 hospitalizations, one case of kidney failure). The
+      company recalled the cheese on April 2; the outbreak was declared over
+      April 30.
+    citations:
+      - title: "Outbreak Investigation of E. coli O157:H7: Raw Cheddar Cheese (March 2026)"
+        url: https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-o157h7-raw-cheddar-cheese-march-2026
+        publisher: FDA
+        accessed: 2026-08-18
+      - title: Cheddar cheese E. coli outbreak (March 2026)
+        url: https://www.health.com/cheddar-cheese-ecoli-outbreak-march-2026-11927066
+        publisher: Health
         accessed: 2026-08-18
 
   - id: 2026-03-aldi-spinach-bites
