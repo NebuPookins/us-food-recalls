@@ -55,7 +55,7 @@ function renderCitation(citation: Citation): string {
   const accessed = citation.accessed
     ? ` <span class="accessed">accessed ${escapeHtml(formatDate(citation.accessed))}</span>`
     : '';
-  return `<li><a href="${escapeHtml(citation.url)}" rel="noopener noreferrer nofollow">${escapeHtml(citation.title)}</a>${publisher}${accessed}</li>`;
+  return `<li><a href="${escapeHtml(citation.url)}" target="_blank" rel="noopener noreferrer nofollow">${escapeHtml(citation.title)}</a>${publisher}${accessed}</li>`;
 }
 
 type Fact = { readonly label: string; readonly value: string };
