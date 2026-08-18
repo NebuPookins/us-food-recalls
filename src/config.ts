@@ -8,7 +8,7 @@ import type { SiteMeta } from './render.ts';
 export const SITE = {
   title: 'US Nationwide Food Recalls',
   description: 'A hand-curated, cited timeline of nationwide food recalls in the United States.',
-  siteUrl: process.env.SITE_URL ?? 'https://example.github.io/us-food-recalls',
+  siteUrl: process.env.SITE_URL ?? 'https://nebupookins.github.io/us-food-recalls',
 } as const;
 
 export function siteMeta(): SiteMeta {
