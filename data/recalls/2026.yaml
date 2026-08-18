@@ -153,6 +153,37 @@ recalls:
         publisher: FSIS
         accessed: 2026-08-18
 
+  - id: 2026-08-botticelli-bettergoods-pistachio-butter
+    date: 2026-08-03
+    title: Bettergoods Pistachio Nut Butter (Walmart)
+    summary:
+      - pistachio nut butter
+    recalling_firm: Botticelli Foods
+    agency: FDA
+    hazard: salmonella
+    distribution: Walmart stores in 19 states
+    products:
+      - name: Bettergoods Pistachio Nut Butter, 6.7 oz glass jar
+        brand: Bettergoods (Walmart)
+        codes:
+          - UPC 194346207961
+          - Lot LB028ACP04
+          - Expiration 2027-01-28
+    note: |
+      Salmonella was detected in three jars during a routine inspection by the
+      Florida Department of Agriculture and Consumer Services at a Walmart
+      store. Botticelli Foods recalled the Walmart-exclusive pistachio nut
+      butter, distributed in 19 states. No illnesses reported.
+    citations:
+      - title: Botticelli Foods Recalls Bettergoods Pistachio Nut Butter Because of Possible Health Risk
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/boticelli-foods-recalls-bettergoods-pistachio-nut-butter-because-possible-health-risk
+        publisher: FDA
+        accessed: 2026-08-18
+      - title: Popular Walmart nut butter recalled after testing detects salmonella
+        url: https://www.foxbusiness.com/lifestyle/popular-walmart-nut-butter-recalled-testing-detects-salmonella
+        publisher: Fox Business
+        accessed: 2026-08-18
+
   - id: 2026-07-publix-greenwise-frozen-blueberries
     date: 2026-07-29
     title: GreenWise Organic Frozen Blueberries and Mixed Berries (Publix)
