@@ -1,0 +1,93 @@
+# yaml-language-server: $schema=../../schema.json
+#
+# EXAMPLE DATA — every entry below is invented. Delete them and add real ones.
+# The $schema line above gives you autocomplete and inline errors in any editor
+# with the YAML extension (VS Code, Zed, Neovim + yaml-language-server).
+
+recalls:
+  - id: 2026-08-example-foods-spinach
+    date: 2026-08-14
+    title: Example Foods bagged baby spinach
+    recalling_firm: Example Foods Inc.
+    agency: FDA
+    hazard: listeria
+    classification: I
+    distribution: Nationwide, plus Puerto Rico
+    illnesses: 12
+    deaths: 1
+    products:
+      - name: Baby Spinach, 5 oz clamshell
+        brand: Example Farms
+        codes:
+          - UPC 0-00000-00000-0
+          - Best by 2026-09-02 through 2026-09-11
+      - name: Spring Mix with Baby Spinach, 11 oz clamshell
+        brand: Example Farms
+        codes:
+          - UPC 0-00000-00001-7
+    note: |
+      Routine state sampling found Listeria monocytogenes in a finished-product
+      sample. The firm halted production at the affected facility while FDA
+      investigates the source.
+
+      Consumers should not eat the product even if some of it has already been
+      eaten without anyone getting sick.
+    citations:
+      - title: Example Foods Inc. Recalls Baby Spinach Because of Possible Health Risk
+        url: https://example.com/fda/example-foods-spinach-recall
+        publisher: FDA
+        accessed: 2026-08-15
+      - title: Investigation of Listeria Outbreak Linked to Bagged Spinach
+        url: https://example.com/cdc/listeria-spinach-2026
+        publisher: CDC
+        accessed: 2026-08-15
+
+  - id: 2026-07-sample-bakery-cookies
+    date: 2026-07-30
+    title: Sample Bakery chocolate chip cookies (undeclared peanuts)
+    recalling_firm: Sample Bakery Co.
+    agency: FDA
+    hazard: undeclared-allergen
+    classification: I
+    distribution: Nationwide via retail and online orders
+    ended: 2026-08-12
+    products:
+      - name: Chocolate Chip Cookies, 12 oz tray
+        brand: Sample Bakery
+        codes:
+          - Lot 6210
+          - Lot 6211
+    note: >
+      A packaging changeover put chocolate chip cookies into cartons printed for
+      the peanut butter variety. People with a peanut allergy risk a serious or
+      life-threatening reaction. No illnesses were reported and the recall was
+      closed out on August 12.
+    citations:
+      - title: Sample Bakery Co. Issues Allergy Alert on Undeclared Peanuts
+        url: https://example.com/fda/sample-bakery-peanut-alert
+        publisher: FDA
+        accessed: 2026-08-01
+
+  - id: 2026-06-demo-meats-deli-turkey
+    date: 2026-06-18
+    title: Demo Meats sliced deli turkey
+    recalling_firm: Demo Meats LLC
+    agency: FSIS
+    hazard: salmonella
+    classification: I
+    distribution: Nationwide
+    illnesses: 34
+    products:
+      - name: Oven Roasted Turkey Breast, deli sliced
+        brand: Demo Deli
+        codes:
+          - EST. 00000
+          - Use by 2026-07-04
+    note: |
+      FSIS identified the product through traceback from a multistate Salmonella
+      cluster. Roughly 180,000 pounds were shipped to retail delis nationwide.
+    citations:
+      - title: Demo Meats LLC Recalls Ready-To-Eat Turkey Products
+        url: https://example.com/fsis/demo-meats-turkey-recall
+        publisher: FSIS
+        accessed: 2026-06-19

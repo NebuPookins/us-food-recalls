@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "recalls": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+            "description": "Stable unique slug. Becomes the permalink anchor, so never rename one."
+          },
+          "date": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+            "description": "Date the recall was announced."
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "description": "One-line headline, e.g. \"Acme Foods bagged spinach\"."
+          },
+          "recalling_firm": {
+            "type": "string",
+            "minLength": 1
+          },
+          "agency": {
+            "type": "string",
+            "enum": [
+              "FDA",
+              "FSIS",
+              "CDC",
+              "other"
+            ]
+          },
+          "hazard": {
+            "type": "string",
+            "enum": [
+              "listeria",
+              "salmonella",
+              "e-coli",
+              "botulism",
+              "hepatitis-a",
+              "norovirus",
+              "undeclared-allergen",
+              "foreign-material",
+              "chemical-contamination",
+              "processing-defect",
+              "mislabeling",
+              "other"
+            ]
+          },
+          "classification": {
+            "type": "string",
+            "enum": [
+              "I",
+              "II",
+              "III"
+            ]
+          },
+          "products": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "The product as a shopper would recognise it on the shelf."
+                },
+                "brand": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "codes": {
+                  "description": "Lot codes, UPCs, best-by dates, establishment numbers.",
+                  "minItems": 1,
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "required": [
+                "name"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "distribution": {
+            "description": "Free text, e.g. \"Nationwide\" or \"Nationwide via online orders\".",
+            "type": "string",
+            "minLength": 1
+          },
+          "illnesses": {
+            "description": "Reported illnesses at time of writing.",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "deaths": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "note": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Short plain-text description. HTML and markdown are escaped."
+          },
+          "ended": {
+            "description": "Date the recall was terminated or closed out.",
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          },
+          "citations": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri",
+                  "description": "Must be a full http:// or https:// URL."
+                },
+                "publisher": {
+                  "description": "e.g. \"FDA\", \"AP News\".",
+                  "type": "string",
+                  "minLength": 1
+                },
+                "accessed": {
+                  "description": "When you last confirmed this link worked.",
+                  "type": "string",
+                  "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                }
+              },
+              "required": [
+                "title",
+                "url"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "id",
+          "date",
+          "title",
+          "hazard",
+          "products",
+          "note",
+          "citations"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "recalls"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,23 @@
+{
+  "name": "us-food-recalls",
+  "version": "1.0.0",
+  "description": "Static site generator for a curated timeline of US nationwide food recalls",
+  "scripts": {
+    "build": "node src/build.ts",
+    "validate": "node src/validate.ts",
+    "schema": "node src/gen-schema.ts",
+    "typecheck": "tsc --noEmit",
+    "preview": "npm run build && node src/serve.ts",
+    "prepare": "git config core.hooksPath .githooks || true"
+  },
+  "keywords": [],
+  "type": "module",
+  "dependencies": {
+    "yaml": "^2.9.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "typescript": "^7.0.2"
+  }
+}
