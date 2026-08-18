@@ -552,6 +552,32 @@ recalls:
         publisher: FSIS
         accessed: 2026-08-18
 
+  - id: 2026-07-brooklyn-roasting-cold-brew-botulism
+    date: 2026-07-24
+    title: Pasteurized Cold Brew Concentrate (botulism risk)
+    summary:
+      - cold brew
+    recalling_firm: Brooklyn Roasting Company
+    agency: FDA
+    hazard: botulism
+    classification: II
+    distribution: New York and New Jersey (wholesale)
+    products:
+      - name: Pasteurized Cold Brew Concentrate, 2.5-gallon bag
+        brand: Brooklyn Roasting Company
+    note: |
+      More than 3,000 gallons recalled because ambient storage conditions could
+      allow botulism toxin to form. No illnesses reported.
+    citations:
+      - title: More Than 3,000 Gallons of Cold Brew Recalled Over Botulism Risk, FDA Says
+        url: https://www.health.com/cold-brew-recall-july-2026-12030925
+        publisher: Health
+        accessed: 2026-08-18
+      - title: 3,000 gallons of cold brew recalled for risk of deadly toxin
+        url: https://www.usatoday.com/story/money/food/2026/07/27/cold-brew-concentrate-recall/91068312007/
+        publisher: USA Today
+        accessed: 2026-08-18
+
   - id: 2026-07-midwest-poultry-shell-eggs
     date: 2026-07-22
     title: Shell eggs (Kroger, Brookshire's and other brands)
@@ -620,6 +646,34 @@ recalls:
       - title: Taylor Farms lettuce sample produced false positive for cyclospora, FDA says
         url: https://www.nbcnews.com/health/health-news/fda-says-taylor-farms-lettuce-sample-tested-cyclospora-produced-false-rcna588303
         publisher: NBC News
+        accessed: 2026-08-18
+
+  - id: 2026-07-pillsbury-bread-rolls-glass
+    date: 2026-07-13
+    title: Pillsbury frozen bread rolls (glass)
+    summary:
+      - bread rolls
+    recalling_firm: General Mills
+    agency: FDA
+    hazard: foreign-material
+    classification: II
+    distribution: Walmart in-store bakeries in 19 states
+    products:
+      - name: Pillsbury Bread Rolls (Hard Roll Dough and Kaiser Roll Dough)
+        brand: Pillsbury
+        codes:
+          - Best if used by 2026-10-12 and 2026-10-13
+    note: |
+      About 735,000 frozen dough rolls baked and sold at Walmart bakeries
+      recalled for possible glass. No injuries reported.
+    citations:
+      - title: General Mills recalls 730,000 Pillsbury rolls for possible glass - Walmart
+        url: https://www.usatoday.com/story/money/2026/07/18/general-mills-recall-pillsbury-rolls-walmart-glass/90967806007/
+        publisher: USA Today
+        accessed: 2026-08-18
+      - title: Bread roll recall (July 2026)
+        url: https://www.health.com/bread-roll-recall-july-2026-12021093
+        publisher: Health
         accessed: 2026-08-18
 
   - id: 2026-06-la-ceiba-cottage-cheese
@@ -707,6 +761,33 @@ recalls:
         publisher: NewsNation
         accessed: 2026-08-18
 
+  - id: 2026-05-motor-city-cheese-bread-salmonella
+    date: 2026-05-29
+    title: Motor City Pizza Co. 5 Cheese Bread
+    summary:
+      - cheese bread
+    recalling_firm: Champion Foods LLC
+    agency: FDA
+    hazard: salmonella
+    distribution: Costco, Walmart, Target, Kroger and other retailers
+    products:
+      - name: Motor City Pizza Co. 5 Cheese Bread (single and 2-pack)
+        brand: Motor City Pizza Co.
+        codes:
+          - UPC 8 70375 00511 1 and 8 70375 00509 8
+    note: |
+      Recalled because a seasoning blend contained milk powder recalled for
+      possible Salmonella. No illnesses reported.
+    citations:
+      - title: Champion Foods Recalls Some Batches of Motor City Pizza Co. 5 Cheese Bread Because of Possible Health Risk
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/champion-foods-recalls-some-batches-motor-city-pizza-co-5-cheese-bread-because-possible-health-risk
+        publisher: FDA
+        accessed: 2026-08-18
+      - title: Pizza product recall (June 2026)
+        url: https://www.health.com/pizza-product-recall-june-2026-11997957
+        publisher: Health
+        accessed: 2026-08-18
+
   - id: 2026-06-clover-hill-cheese-listeria
     date: 2026-06-03
     title: Requesón / ricotta and other cheeses
@@ -746,6 +827,62 @@ recalls:
       - title: "Investigation Update: Listeria Outbreak, June 2026"
         url: https://www.cdc.gov/listeria/outbreaks/soft-cheese-06-26/investigation.html
         publisher: CDC
+        accessed: 2026-08-18
+
+  - id: 2026-04-ghirardelli-beverage-mixes-salmonella
+    date: 2026-04-27
+    title: Ghirardelli powdered beverage mixes
+    summary:
+      - hot cocoa mixes
+    recalling_firm: Ghirardelli Chocolate Company
+    agency: FDA
+    hazard: salmonella
+    distribution: Nationwide (food service and e-commerce)
+    products:
+      - name: Hot cocoa, frappe and chocolate beverage mixes (13 products)
+        brand: Ghirardelli
+    note: |
+      Recalled because a milk powder ingredient from California Dairies may
+      contain Salmonella. No illnesses reported.
+    citations:
+      - title: Ghirardelli recalls drink mixes over salmonella risk. See list
+        url: https://www.usatoday.com/story/money/2026/04/28/ghirardelli-powdered-drink-mix-recall/89844830007/
+        publisher: USA Today
+        accessed: 2026-08-18
+      - title: Ghirardelli recall (April 2026)
+        url: https://www.health.com/ghirardelli-recall-april-2026-11960635
+        publisher: Health
+        accessed: 2026-08-18
+
+  - id: 2026-04-ayco-cantaloupe-salmonella
+    date: 2026-04-20
+    title: Ayco Farms cantaloupe (Salmonella outbreak)
+    summary:
+      - cantaloupe
+    recalling_firm: Ayco Farms Inc.
+    agency: FDA
+    hazard: salmonella
+    classification: I
+    distribution: California, Florida, New York and Pennsylvania
+    illnesses: 70
+    products:
+      - name: Whole cantaloupe (individually wrapped, 6-12 per carton)
+        brand: Ayco
+        codes:
+          - Lots GC26257 through GC26328 and others
+    note: |
+      A Salmonella Newport outbreak (70 illnesses across 25 states) was traced
+      to cantaloupe imported from Guatemala and distributed December 2025
+      through January 2026. The recall was upgraded to Class I in April; the
+      outbreak has ended.
+    citations:
+      - title: Cantaloupe recall upgraded in US over potentially deadly contamination concerns
+        url: https://www.the-independent.com/life-style/cantaloupe-recall-ayco-melons-salmonella-class-1-b2962371.html
+        publisher: The Independent
+        accessed: 2026-08-18
+      - title: Cantaloupe recall (April 2026)
+        url: https://www.health.com/cantaloupe-recall-april-2026-11953864
+        publisher: Health
         accessed: 2026-08-18
 
   - id: 2026-03-tops-peeled-garlic-botulism
@@ -799,6 +936,113 @@ recalls:
         accessed: 2026-08-18
       - title: Ground beef public health alert (March 2026)
         url: https://www.health.com/ground-beef-public-health-alert-march-2026-11933393
+        publisher: Health
+        accessed: 2026-08-18
+
+  - id: 2026-05-straus-ice-cream-metal
+    date: 2026-05-14
+    title: Straus Organic Ice Cream (metal)
+    summary:
+      - ice cream
+    recalling_firm: Straus Family Creamery
+    agency: FDA
+    hazard: foreign-material
+    distribution: 17 states
+    products:
+      - name: Organic Super Premium Ice Cream (Vanilla Bean, Strawberry, Cookie Dough, Dutch Chocolate, Mint Chip)
+        brand: Straus Family Creamery
+        codes:
+          - Best by 2026-12-23 through 2026-12-30
+    note: |
+      Recalled after a damaged piece of equipment could have left stainless
+      steel fragments in select flavors. No injuries reported.
+    citations:
+      - title: Straus Family Creamery Voluntarily Recalls Select Flavors of Organic Ice Cream Due to Potential Presence of Foreign Material
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/straus-family-creamery-voluntarily-recalls-select-flavors-organic-ice-cream-due-potential-presence
+        publisher: FDA
+        accessed: 2026-08-18
+      - title: Ice cream recall (May 2026)
+        url: https://www.health.com/ice-cream-recall-may-2026-11977343
+        publisher: Health
+        accessed: 2026-08-18
+
+  - id: 2026-05-utz-zapps-dirty-chips-salmonella
+    date: 2026-05-06
+    title: Zapp's and Dirty potato chips
+    summary:
+      - potato chips
+    recalling_firm: Utz Quality Foods, LLC
+    agency: FDA
+    hazard: salmonella
+    distribution: Nationwide
+    products:
+      - name: Zapp's and Dirty potato chips (multiple varieties)
+        brand: Zapp's / Dirty
+        codes:
+          - Best by 2026-07-27 through 2026-08-31
+    note: |
+      Seasoning containing dry milk powder recalled for possible Salmonella.
+      No illnesses reported.
+    citations:
+      - title: Utz Quality Foods, LLC Issues Voluntary Recall of Certain Limited Varieties of Zapp's and Dirty Potato Chips
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/utz-quality-foods-llc-issues-voluntary-recall-certain-limited-varieties-zapps-and-dirty-potato-chips
+        publisher: FDA
+        accessed: 2026-08-18
+      - title: Potato chip recall (May 2026)
+        url: https://www.health.com/potato-chip-recall-may-2026-11966776
+        publisher: Health
+        accessed: 2026-08-18
+
+  - id: 2026-05-sanfilippo-snack-mixes-salmonella
+    date: 2026-05-05
+    title: Fisher, Good & Gather and other snack mixes
+    summary:
+      - snack mixes
+    recalling_firm: John B. Sanfilippo & Son, Inc.
+    agency: FDA
+    hazard: salmonella
+    distribution: Nationwide (including Target)
+    products:
+      - name: Snack and trail mixes (Good & Gather, Fisher, Southern Style Nuts, Squirrel Brand)
+        brand: Good & Gather / Fisher / Squirrel Brand
+        codes:
+          - Best by 2027-01 through 2027-08
+    note: |
+      Seasoning contained dry milk powder recalled for possible Salmonella.
+      No illnesses reported.
+    citations:
+      - title: John B. Sanfilippo & Son, Inc. Voluntarily Recalls Snack Mix Products Due to Possible Health Risk
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/john-b-sanfilippo-son-inc-voluntarily-recalls-snack-mix-products-due-possible-health-risk
+        publisher: FDA
+        accessed: 2026-08-18
+      - title: Snack mixes recall (May 2026)
+        url: https://www.health.com/snack-mixes-recall-may-2026-11969670
+        publisher: Health
+        accessed: 2026-08-18
+
+  - id: 2026-05-frozen-pizza-salmonella
+    date: 2026-05-01
+    title: Frozen pizzas (Great Value, Mama Cozzi's and others)
+    summary:
+      - frozen pizza
+    agency: FSIS
+    hazard: salmonella
+    distribution: Walmart, Aldi and other retailers
+    products:
+      - name: Great Value and Mama Cozzi's frozen pizzas (multiple varieties)
+        brand: Great Value (Walmart) / Mama Cozzi's (Aldi)
+        codes:
+          - Lot codes WC103203 and others
+    note: |
+      Frozen pizzas recalled as part of the wider Salmonella recall linked to
+      California Dairies dry milk powder. No confirmed illnesses reported.
+    citations:
+      - title: Frozen pizzas sold at Walmart recalled. See the impacted flavors
+        url: https://www.tennessean.com/story/news/health/2026/05/03/walmart-frozen-pizza-recall-aldi-salmonella-concerns/89922386007/
+        publisher: The Tennessean
+        accessed: 2026-08-18
+      - title: Frozen pizza recall (May 2026)
+        url: https://www.health.com/frozen-pizza-recall-may-2026-11965313
         publisher: Health
         accessed: 2026-08-18
 
