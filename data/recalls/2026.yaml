@@ -97,6 +97,44 @@ recalls:
         publisher: FSIS
         accessed: 2026-08-18
 
+  - id: 2026-07-publix-greenwise-frozen-blueberries
+    date: 2026-07-29
+    title: GreenWise Organic Frozen Blueberries and Mixed Berries (Publix)
+    recalling_firm: Publix Super Markets, Inc.
+    agency: FDA
+    hazard: e-coli
+    distribution: Publix stores in 8 states (Alabama, Florida, Georgia, Kentucky, North Carolina, South Carolina, Tennessee, Virginia)
+    illnesses: 12
+    products:
+      - name: GreenWise Organic Whole Blueberries, 10 oz and 48 oz
+        brand: GreenWise (Publix)
+        codes:
+          - UPC 41415-06453 (10 oz)
+          - UPC 41415-12053 (48 oz)
+          - All lots
+      - name: GreenWise Organic Whole Mixed Berries, 10 oz and 48 oz
+        brand: GreenWise (Publix)
+        codes:
+          - UPC 41415-06753 (10 oz)
+          - UPC 41415-12153 (48 oz)
+          - All lots
+    note: |
+      A multistate outbreak of E. coli O145:H28 was traced to organic frozen
+      blueberries from Chilean supplier Frutas y Hortalizas del Sur S.A., sold
+      under Publix's GreenWise brand. After a single lot was recalled on July 3,
+      Publix expanded the recall on July 29 to all lots of four blueberry and
+      mixed-berry products. Twelve confirmed cases and four hospitalizations were
+      reported across eight states, with no deaths.
+    citations:
+      - title: Publix Recalls All Lots of GreenWise Organic Frozen Blueberries and Whole Mixed Berries Due to Potential E. coli O145 Contamination
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/publix-recalls-all-lots-greenwise-organic-frozen-blueberries-and-whole-mixed-berries-due-potential-e
+        publisher: FDA
+        accessed: 2026-08-18
+      - title: "Outbreak Investigation of E. coli O145:H28: Frozen Blueberries (July 2026)"
+        url: https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-o145h28-frozen-blueberries-july-2026
+        publisher: FDA
+        accessed: 2026-08-18
+
   - id: 2026-07-maple-leaf-bacon-import
     date: 2026-07-24
     title: Smoked bacon imported without reinspection
