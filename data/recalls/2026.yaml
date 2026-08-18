@@ -761,33 +761,6 @@ recalls:
         publisher: NewsNation
         accessed: 2026-08-18
 
-  - id: 2026-05-motor-city-cheese-bread-salmonella
-    date: 2026-05-29
-    title: Motor City Pizza Co. 5 Cheese Bread
-    summary:
-      - cheese bread
-    recalling_firm: Champion Foods LLC
-    agency: FDA
-    hazard: salmonella
-    distribution: Costco, Walmart, Target, Kroger and other retailers
-    products:
-      - name: Motor City Pizza Co. 5 Cheese Bread (single and 2-pack)
-        brand: Motor City Pizza Co.
-        codes:
-          - UPC 8 70375 00511 1 and 8 70375 00509 8
-    note: |
-      Recalled because a seasoning blend contained milk powder recalled for
-      possible Salmonella. No illnesses reported.
-    citations:
-      - title: Champion Foods Recalls Some Batches of Motor City Pizza Co. 5 Cheese Bread Because of Possible Health Risk
-        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/champion-foods-recalls-some-batches-motor-city-pizza-co-5-cheese-bread-because-possible-health-risk
-        publisher: FDA
-        accessed: 2026-08-18
-      - title: Pizza product recall (June 2026)
-        url: https://www.health.com/pizza-product-recall-june-2026-11997957
-        publisher: Health
-        accessed: 2026-08-18
-
   - id: 2026-06-clover-hill-cheese-listeria
     date: 2026-06-03
     title: Requesón / ricotta and other cheeses
@@ -829,7 +802,36 @@ recalls:
         publisher: CDC
         accessed: 2026-08-18
 
+  - id: 2026-04-california-dairies-milk-powder-salmonella
+    date: 2026-04-20
+    title: California Dairies powdered milk (Salmonella)
+    summary:
+      - powdered milk
+    recalling_firm: California Dairies, Inc.
+    agency: FDA
+    hazard: salmonella
+    classification: I
+    distribution: Ingredient sold to food manufacturers nationwide
+    products:
+      - name: Powdered milk and buttermilk (bulk ingredient)
+        brand: California Dairies
+    note: |
+      California Dairies recalled about 2 million pounds of powdered milk after
+      Salmonella was found in routine testing. The ingredient was used in dozens
+      of foods, triggering more than 60 downstream recalls. No illnesses
+      reported.
+    citations:
+      - title: 2026 Recalls of Food Products Associated with Powdered Milk from California Dairies, Inc.
+        url: https://www.fda.gov/safety/major-product-recalls/2026-recalls-food-products-associated-powdered-milk-california-dairies-inc-due-potential-salmonella
+        publisher: FDA
+        accessed: 2026-08-18
+      - title: Dozens of popular snacks recalled due to salmonella contamination
+        url: https://www.nbcwashington.com/news/consumer/recall-alert/popular-snacks-recalled-salmonella-full-list/4103343/
+        publisher: NBC Washington
+        accessed: 2026-08-18
+
   - id: 2026-04-ghirardelli-beverage-mixes-salmonella
+    parent_id: 2026-04-california-dairies-milk-powder-salmonella
     date: 2026-04-27
     title: Ghirardelli powdered beverage mixes
     summary:
@@ -852,6 +854,146 @@ recalls:
       - title: Ghirardelli recall (April 2026)
         url: https://www.health.com/ghirardelli-recall-april-2026-11960635
         publisher: Health
+        accessed: 2026-08-18
+
+  - id: 2026-05-frozen-pizza-salmonella
+    parent_id: 2026-04-california-dairies-milk-powder-salmonella
+    date: 2026-05-01
+    title: Frozen pizzas (Great Value, Mama Cozzi's and others)
+    summary:
+      - frozen pizza
+    agency: FSIS
+    hazard: salmonella
+    distribution: Walmart, Aldi and other retailers
+    products:
+      - name: Great Value and Mama Cozzi's frozen pizzas (multiple varieties)
+        brand: Great Value (Walmart) / Mama Cozzi's (Aldi)
+        codes:
+          - Lot codes WC103203 and others
+    note: |
+      Frozen pizzas recalled as part of the wider Salmonella recall linked to
+      California Dairies dry milk powder. No confirmed illnesses reported.
+    citations:
+      - title: Frozen pizzas sold at Walmart recalled. See the impacted flavors
+        url: https://www.tennessean.com/story/news/health/2026/05/03/walmart-frozen-pizza-recall-aldi-salmonella-concerns/89922386007/
+        publisher: The Tennessean
+        accessed: 2026-08-18
+      - title: Frozen pizza recall (May 2026)
+        url: https://www.health.com/frozen-pizza-recall-may-2026-11965313
+        publisher: Health
+        accessed: 2026-08-18
+
+  - id: 2026-05-sanfilippo-snack-mixes-salmonella
+    parent_id: 2026-04-california-dairies-milk-powder-salmonella
+    date: 2026-05-05
+    title: Fisher, Good & Gather and other snack mixes
+    summary:
+      - snack mixes
+    recalling_firm: John B. Sanfilippo & Son, Inc.
+    agency: FDA
+    hazard: salmonella
+    distribution: Nationwide (including Target)
+    products:
+      - name: Snack and trail mixes (Good & Gather, Fisher, Southern Style Nuts, Squirrel Brand)
+        brand: Good & Gather / Fisher / Squirrel Brand
+        codes:
+          - Best by 2027-01 through 2027-08
+    note: |
+      Seasoning contained dry milk powder recalled for possible Salmonella.
+      No illnesses reported.
+    citations:
+      - title: John B. Sanfilippo & Son, Inc. Voluntarily Recalls Snack Mix Products Due to Possible Health Risk
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/john-b-sanfilippo-son-inc-voluntarily-recalls-snack-mix-products-due-possible-health-risk
+        publisher: FDA
+        accessed: 2026-08-18
+      - title: Snack mixes recall (May 2026)
+        url: https://www.health.com/snack-mixes-recall-may-2026-11969670
+        publisher: Health
+        accessed: 2026-08-18
+
+  - id: 2026-05-utz-zapps-dirty-chips-salmonella
+    parent_id: 2026-04-california-dairies-milk-powder-salmonella
+    date: 2026-05-06
+    title: Zapp's and Dirty potato chips
+    summary:
+      - potato chips
+    recalling_firm: Utz Quality Foods, LLC
+    agency: FDA
+    hazard: salmonella
+    distribution: Nationwide
+    products:
+      - name: Zapp's and Dirty potato chips (multiple varieties)
+        brand: Zapp's / Dirty
+        codes:
+          - Best by 2026-07-27 through 2026-08-31
+    note: |
+      Seasoning containing dry milk powder recalled for possible Salmonella.
+      No illnesses reported.
+    citations:
+      - title: Utz Quality Foods, LLC Issues Voluntary Recall of Certain Limited Varieties of Zapp's and Dirty Potato Chips
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/utz-quality-foods-llc-issues-voluntary-recall-certain-limited-varieties-zapps-and-dirty-potato-chips
+        publisher: FDA
+        accessed: 2026-08-18
+      - title: Potato chip recall (May 2026)
+        url: https://www.health.com/potato-chip-recall-may-2026-11966776
+        publisher: Health
+        accessed: 2026-08-18
+
+  - id: 2026-05-motor-city-cheese-bread-salmonella
+    parent_id: 2026-04-california-dairies-milk-powder-salmonella
+    date: 2026-05-29
+    title: Motor City Pizza Co. 5 Cheese Bread
+    summary:
+      - cheese bread
+    recalling_firm: Champion Foods LLC
+    agency: FDA
+    hazard: salmonella
+    distribution: Costco, Walmart, Target, Kroger and other retailers
+    products:
+      - name: Motor City Pizza Co. 5 Cheese Bread (single and 2-pack)
+        brand: Motor City Pizza Co.
+        codes:
+          - UPC 8 70375 00511 1 and 8 70375 00509 8
+    note: |
+      Recalled because a seasoning blend contained milk powder recalled for
+      possible Salmonella. No illnesses reported.
+    citations:
+      - title: Champion Foods Recalls Some Batches of Motor City Pizza Co. 5 Cheese Bread Because of Possible Health Risk
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/champion-foods-recalls-some-batches-motor-city-pizza-co-5-cheese-bread-because-possible-health-risk
+        publisher: FDA
+        accessed: 2026-08-18
+      - title: Pizza product recall (June 2026)
+        url: https://www.health.com/pizza-product-recall-june-2026-11997957
+        publisher: Health
+        accessed: 2026-08-18
+
+  - id: 2026-04-dorada-foods-dino-nuggets-lead
+    date: 2026-04-01
+    title: Great Value Dino Shaped Chicken Nuggets (lead alert — retracted)
+    summary:
+      - chicken nuggets
+    recalling_firm: Dorada Foods
+    agency: FSIS
+    hazard: chemical-contamination
+    status: retracted
+    distribution: Nationwide (Walmart)
+    products:
+      - name: Great Value Fully Cooked Dino Shaped Chicken Breast Nuggets, 29-oz bag
+        brand: Great Value (Walmart)
+        codes:
+          - Best if used by 2027-02-10
+    note: |
+      FSIS issued a public health alert April 1 after state testing suggested
+      elevated lead levels, then retracted it April 6 after additional testing
+      showed the initial result was a false positive. No recall occurred.
+    citations:
+      - title: FSIS Retracts Public Health Alert for Frozen, Ready-to-Eat Chicken Nuggets Due to Updated Laboratory Result
+        url: https://www.fsis.usda.gov/recalls-alerts/fsis-issues-public-health-alert-frozen-dinosaur-shaped-ready-eat-chicken-nuggets-due
+        publisher: FSIS
+        accessed: 2026-08-18
+      - title: Health Alert Over Dinosaur Chicken Nuggets Sold at Walmart Has Been Retracted After Additional Testing
+        url: https://www.today.com/health/recall/dino-chicken-nuggets-recall-great-value-walmart-lead-rcna266384
+        publisher: Today
         accessed: 2026-08-18
 
   - id: 2026-04-ayco-cantaloupe-salmonella
@@ -963,86 +1105,6 @@ recalls:
         accessed: 2026-08-18
       - title: Ice cream recall (May 2026)
         url: https://www.health.com/ice-cream-recall-may-2026-11977343
-        publisher: Health
-        accessed: 2026-08-18
-
-  - id: 2026-05-utz-zapps-dirty-chips-salmonella
-    date: 2026-05-06
-    title: Zapp's and Dirty potato chips
-    summary:
-      - potato chips
-    recalling_firm: Utz Quality Foods, LLC
-    agency: FDA
-    hazard: salmonella
-    distribution: Nationwide
-    products:
-      - name: Zapp's and Dirty potato chips (multiple varieties)
-        brand: Zapp's / Dirty
-        codes:
-          - Best by 2026-07-27 through 2026-08-31
-    note: |
-      Seasoning containing dry milk powder recalled for possible Salmonella.
-      No illnesses reported.
-    citations:
-      - title: Utz Quality Foods, LLC Issues Voluntary Recall of Certain Limited Varieties of Zapp's and Dirty Potato Chips
-        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/utz-quality-foods-llc-issues-voluntary-recall-certain-limited-varieties-zapps-and-dirty-potato-chips
-        publisher: FDA
-        accessed: 2026-08-18
-      - title: Potato chip recall (May 2026)
-        url: https://www.health.com/potato-chip-recall-may-2026-11966776
-        publisher: Health
-        accessed: 2026-08-18
-
-  - id: 2026-05-sanfilippo-snack-mixes-salmonella
-    date: 2026-05-05
-    title: Fisher, Good & Gather and other snack mixes
-    summary:
-      - snack mixes
-    recalling_firm: John B. Sanfilippo & Son, Inc.
-    agency: FDA
-    hazard: salmonella
-    distribution: Nationwide (including Target)
-    products:
-      - name: Snack and trail mixes (Good & Gather, Fisher, Southern Style Nuts, Squirrel Brand)
-        brand: Good & Gather / Fisher / Squirrel Brand
-        codes:
-          - Best by 2027-01 through 2027-08
-    note: |
-      Seasoning contained dry milk powder recalled for possible Salmonella.
-      No illnesses reported.
-    citations:
-      - title: John B. Sanfilippo & Son, Inc. Voluntarily Recalls Snack Mix Products Due to Possible Health Risk
-        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/john-b-sanfilippo-son-inc-voluntarily-recalls-snack-mix-products-due-possible-health-risk
-        publisher: FDA
-        accessed: 2026-08-18
-      - title: Snack mixes recall (May 2026)
-        url: https://www.health.com/snack-mixes-recall-may-2026-11969670
-        publisher: Health
-        accessed: 2026-08-18
-
-  - id: 2026-05-frozen-pizza-salmonella
-    date: 2026-05-01
-    title: Frozen pizzas (Great Value, Mama Cozzi's and others)
-    summary:
-      - frozen pizza
-    agency: FSIS
-    hazard: salmonella
-    distribution: Walmart, Aldi and other retailers
-    products:
-      - name: Great Value and Mama Cozzi's frozen pizzas (multiple varieties)
-        brand: Great Value (Walmart) / Mama Cozzi's (Aldi)
-        codes:
-          - Lot codes WC103203 and others
-    note: |
-      Frozen pizzas recalled as part of the wider Salmonella recall linked to
-      California Dairies dry milk powder. No confirmed illnesses reported.
-    citations:
-      - title: Frozen pizzas sold at Walmart recalled. See the impacted flavors
-        url: https://www.tennessean.com/story/news/health/2026/05/03/walmart-frozen-pizza-recall-aldi-salmonella-concerns/89922386007/
-        publisher: The Tennessean
-        accessed: 2026-08-18
-      - title: Frozen pizza recall (May 2026)
-        url: https://www.health.com/frozen-pizza-recall-may-2026-11965313
         publisher: Health
         accessed: 2026-08-18
 

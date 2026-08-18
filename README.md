@@ -29,6 +29,8 @@ No build step or bundler: Node runs the TypeScript directly, so `npm install` an
 - id: 2026-08-acme-spinach      # unique, kebab-case, permanent — it's the permalink
   date: 2026-08-14              # announcement date
   title: Acme Foods bagged baby spinach
+  summary:                      # optional: food labels for the "foods to check" list
+    - spinach
   recalling_firm: Acme Foods Inc.
   agency: FDA                   # FDA | FSIS | CDC | other
   hazard: listeria              # see HAZARDS in src/schema.ts
@@ -53,6 +55,10 @@ No build step or bundler: Node runs the TypeScript directly, so `npm install` an
 
 Required: `id`, `date`, `title`, `hazard`, `products`, `note`, `citations`.
 Everything else is optional and simply omitted from the page when absent.
+
+`parent_id` links a sub-recall to its umbrella recall (rendered as a "Part of:"
+link). `status: retracted` marks a report that was withdrawn or was a false
+positive; those are published on `retracted.html` rather than the main timeline.
 
 The `# yaml-language-server: $schema=../../schema.json` line at the top of each
 data file gives you autocomplete and inline errors in VS Code / Zed / Neovim

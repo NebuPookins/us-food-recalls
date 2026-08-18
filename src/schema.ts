@@ -43,6 +43,9 @@ export const CLASSIFICATIONS = ['I', 'II', 'III'] as const;
 /** Which federal agency announced it. FSIS covers meat, poultry and egg products. */
 export const AGENCIES = ['FDA', 'FSIS', 'CDC', 'other'] as const;
 
+/** Lifecycle status. `retracted` marks a report that was withdrawn or a false positive. */
+export const RECALL_STATUSES = ['active', 'retracted'] as const;
+
 const Product = z.strictObject({
   name: z.string().min(1).describe('The product as a shopper would recognise it on the shelf.'),
   brand: z.string().min(1).optional(),
@@ -71,6 +74,11 @@ export const RecallSchema = z.strictObject({
       'must be a lowercase kebab-case slug, e.g. "2026-08-acme-spinach"',
     )
     .describe('Stable unique slug. Becomes the permalink anchor, so never rename one.'),
+  parent_id: z
+    .string()
+    .min(1)
+    .optional()
+    .describe('id of the umbrella recall this entry is part of.'),
   date: IsoDate.describe('Date the recall was announced.'),
   title: z.string().min(1).describe('One-line headline, e.g. "Acme Foods bagged spinach".'),
   summary: z
@@ -91,6 +99,10 @@ export const RecallSchema = z.strictObject({
   illnesses: z.int().nonnegative().optional().describe('Reported illnesses at time of writing.'),
   deaths: z.int().nonnegative().optional(),
   note: z.string().min(1).describe('Short plain-text description. HTML and markdown are escaped.'),
+  status: z
+    .enum(RECALL_STATUSES)
+    .optional()
+    .describe('active (default) or retracted (withdrawn / false positive).'),
   ended: IsoDate.optional().describe('Date the recall was terminated or closed out.'),
   citations: z.array(Citation).nonempty(),
 });

@@ -32,7 +32,7 @@ export function loadRecalls(dataDir: string): LoadResult {
   const errors = parsed.flatMap((p) => p.errors);
   const sourced = parsed.flatMap((p) => p.recalls);
 
-  const allErrors = [...errors, ...findDuplicateIds(sourced)];
+  const allErrors = [...errors, ...findDuplicateIds(sourced), ...findInvalidParentIds(sourced)];
   if (allErrors.length > 0) return { ok: false, errors: allErrors };
 
   // Newest first. IDs break ties so the output is stable regardless of file order.
@@ -75,4 +75,12 @@ function findDuplicateIds(sourced: readonly Sourced[]): readonly string[] {
   return [...byId]
     .filter(([, group]) => group.length > 1)
     .map(([id, group]) => `Duplicate recall id "${id}" in: ${group.map((g) => g.file).join(', ')}`);
+}
+
+/** Every `parent_id` must point at an existing recall in the same data set. */
+function findInvalidParentIds(sourced: readonly Sourced[]): readonly string[] {
+  const ids = new Set(sourced.map((s) => s.recall.id));
+  return sourced
+    .filter((s) => s.recall.parent_id && !ids.has(s.recall.parent_id))
+    .map((s) => `Recall "${s.recall.id}" references missing parent_id "${s.recall.parent_id}" (in ${s.file}).`);
 }
