@@ -869,6 +869,181 @@ recalls:
         publisher: FSIS
         accessed: 2026-08-18
 
+  - id: 2026-02-slade-gorton-wellsley-salmon
+    date: 2026-02-10
+    title: Wellsley Farms Atlantic Salmon (BJ's Wholesale Club)
+    summary:
+      - salmon
+    recalling_firm: Slade Gorton & Co., Inc.
+    agency: FDA
+    hazard: listeria
+    classification: II
+    distribution: BJ's Wholesale Club in 7 states
+    products:
+      - name: Wellsley Farms Farm-Raised Atlantic Salmon, 2-lb (32 oz) frozen bag
+        brand: Wellsley Farms (BJ's)
+        codes:
+          - UPC 888670025963
+          - Lot 3896
+          - Best by 2027-06-30
+    note: |
+      FDA sampling found Listeria monocytogenes in one lot of frozen Atlantic
+      salmon sold at BJ's Wholesale Club in Delaware, Maryland, New Jersey, New
+      York, North Carolina, Pennsylvania and Virginia. No illnesses reported.
+    citations:
+      - title: Slade Gorton & Co., Inc. Recalls One Lot of Wellsley Farms Farm-Raised Atlantic Salmon Sold at BJ's Wholesale Club Due to Potential Listeria Monocytogenes Contamination
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/slade-gorton-co-inc-recalls-one-lot-wellsley-farms-farm-raised-atlantic-salmon-sold-bjs-wholesale
+        publisher: FDA
+        accessed: 2026-08-18
+      - title: FDA Announces Salmon Recall in 7 States Due to Listeria Contamination
+        url: https://www.health.com/salmon-recall-february-2026-11905629
+        publisher: Health
+        accessed: 2026-08-18
+
+  - id: 2026-02-beacon-promotions-mms-allergen
+    date: 2026-02-04
+    title: Repackaged M&M's candies
+    summary:
+      - M&M's
+    recalling_firm: Beacon Promotions Inc.
+    agency: FDA
+    hazard: undeclared-allergen
+    classification: II
+    distribution: 20 states
+    products:
+      - name: Repackaged M&M's (Peanut and classic), 1.3-oz packs
+        brand: M&M's
+        codes:
+          - Item #BB458BG and #BB471BG
+    note: |
+      Promotional M&M's repackaged for corporate events lacked labels declaring
+      milk, soy and peanut allergens. More than 6,000 units distributed in 20
+      states. No illnesses reported.
+    citations:
+      - title: M&M candy recalled in 20 states including NC. Here's what we know
+        url: https://www.usatoday.com/story/news/2026/02/06/mm-recall-nc-what-mms-were-recalled-where-were-they-sold/88548391007/
+        publisher: USA Today
+        accessed: 2026-08-18
+      - title: M&M's recalled in 20 states over undeclared allergens
+        url: https://www.health.com/m-and-m-recall-february-2026-11901361
+        publisher: Health
+        accessed: 2026-08-18
+
+  - id: 2026-02-costco-mini-beignets-hazelnut
+    date: 2026-02-03
+    title: Costco Mini Beignets (caramel, mislabeled)
+    summary:
+      - mini beignets
+    recalling_firm: Costco Wholesale
+    agency: FDA
+    hazard: undeclared-allergen
+    distribution: More than 20 states
+    products:
+      - name: Mini Beignets filled with Caramel, 22-pack
+        brand: Costco Bakery
+        codes:
+          - Item #1181272
+    note: |
+      Caramel-filled mini beignets were inadvertently packaged with chocolate
+      hazelnut beignets, so the packages contain undeclared tree nuts
+      (hazelnuts). Sold in more than 20 states. No illnesses reported.
+    citations:
+      - title: Costco recalls popular bakery item due to undeclared allergen
+        url: https://abc7ny.com/post/costco-beignets-company-recalls-popular-bakery-item-due-undeclared-tree-nut-allergen-20-states/18534155/
+        publisher: ABC 7 NY
+        accessed: 2026-08-18
+      - title: Costco recalls bakery item over undeclared tree nut allergen
+        url: https://www.health.com/costco-bakery-item-recall-february-2026-11897515
+        publisher: Health
+        accessed: 2026-08-18
+
+  - id: 2026-01-navitas-organic-chia-seeds
+    date: 2026-01-23
+    title: Navitas Organics Organic Chia Seeds
+    summary:
+      - chia seeds
+    recalling_firm: Navitas Organics
+    agency: FDA
+    hazard: salmonella
+    distribution: Nationwide (Whole Foods, Target, Amazon and online)
+    products:
+      - name: Organic Chia Seeds, 8 oz stand-up pouch
+        brand: Navitas Organics
+        codes:
+          - UPC 858847000284
+          - Lots starting with W31025
+    note: |
+      Precautionary recall after the company's chia seed supplier recalled
+      product. No illnesses reported.
+    citations:
+      - title: Navitas Organics Voluntarily Recalls Select Lots of 8oz Organic Chia Seeds Because of Possible Health Risk
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/navitas-organics-voluntarily-recalls-select-lots-8oz-organic-chia-seeds-because-possible-health-risk
+        publisher: FDA
+        accessed: 2026-08-18
+      - title: FDA Announces Recall of Chia Seeds Sold Nationwide
+        url: https://www.health.com/chia-seed-recall-january-2026-11892392
+        publisher: Health
+        accessed: 2026-08-18
+
+  - id: 2026-01-gold-star-rodent-waste
+    date: 2026-01-22
+    title: Thousands of pantry items exposed to rodent and bird waste
+    summary:
+      - cereals & snacks
+    recalling_firm: Gold Star Distribution, Inc.
+    agency: FDA
+    hazard: other
+    classification: II
+    distribution: Minnesota, Indiana and North Dakota
+    products:
+      - name: Packaged foods, beverages, snacks and candy held at the facility
+        brand: Multiple (Cheerios, Pringles, Nutella, Coca-Cola and more)
+    note: |
+      FDA inspectors found rodent and bird waste at a Minneapolis distribution
+      facility, affecting nearly 2,000 products from major brands held there.
+      No illnesses reported.
+    citations:
+      - title: Cheerios, Pringles among thousands of products recalled due to possible rodent waste exposure
+        url: https://abc7chicago.com/post/cheerios-pringles-among-thousands-products-recalled-due-possible-rodent-dropping-exposure-sold-indiana-fda/18510271/
+        publisher: ABC 7 Chicago
+        accessed: 2026-08-18
+      - title: Nearly 2,000 products recalled after FDA finds rodent waste at facility
+        url: https://www.health.com/rodent-waste-recall-january-2026-11895164
+        publisher: Health
+        accessed: 2026-08-18
+
+  - id: 2026-01-tri-union-genova-tuna-botulism
+    date: 2026-01-16
+    title: Genova canned tuna (botulism risk)
+    summary:
+      - canned tuna
+    recalling_firm: Tri-Union Seafoods
+    agency: FDA
+    hazard: botulism
+    distribution: Nine states (Meijer, Giant, Safeway/Albertsons chains)
+    products:
+      - name: Genova Yellowfin Tuna in Olive Oil, 5 oz (4-pack)
+        brand: Genova
+        codes:
+          - UPC 4800073265
+      - name: Genova Yellowfin Tuna in Extra Virgin Olive Oil with Sea Salt, 5 oz
+        brand: Genova
+        codes:
+          - UPC 4800013275
+    note: |
+      An expansion of a 2025 recall: quarantined cans with a possible botulism
+      defect in the easy-open lids were inadvertently shipped by a third-party
+      distributor to nine states. No illnesses reported.
+    citations:
+      - title: Recalled tuna accidentally shipped to stores in 9 states
+        url: https://www.usatoday.com/story/money/2026/01/20/fda-tuna-recall-botulism/88274032007/
+        publisher: USA Today
+        accessed: 2026-08-18
+      - title: Canned tuna recalled for potential botulism risk
+        url: https://www.health.com/canned-tuna-recall-january-2026-11888683
+        publisher: Health
+        accessed: 2026-08-18
+
   - id: 2026-01-suzannas-kitchen-grilled-chicken
     date: 2026-01-16
     title: Ready-to-eat grilled chicken breast fillets
