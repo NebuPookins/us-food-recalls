@@ -85,25 +85,107 @@ recalls:
 
   - id: 2026-08-taylor-fresh-jalapenos-salmonella
     date: 2026-08-09
-    title: Fresh jalapeño salsa, guacamole and dips
+    title: Jalapeño salsa, guacamole and prepared meals
     summary:
       - jalapeños
+      - salsa & guacamole
+      - chicken wraps
+      - enchiladas
+      - burritos & bowls
+      - salads with chicken
     recalling_firm: Taylor Fresh Foods (parent of Taylor Farms)
     agency: FDA
     hazard: salmonella
     distribution: Retail centers in 26 states
     illnesses: 345
     products:
-      - name: Jalapeño-based salsa, guacamole, taco dip and sandwiches
-        brand: Taylor Farms (also Trader Joe's, Kroger Private Selection, Freshness Guaranteed)
+      - name: Jalapeño-based salsa, guacamole and dips
+        brand: Taylor Farms (Trader Joe's, Kroger Private Selection, Freshness Guaranteed)
         codes:
           - Best if used by up to and including 2026-08-16
+      - name: Chipotle Cheddar Chicken Wrap
+        brand: Taylor Farms / Deli Kitchen (Kroger, Dillons)
+        codes:
+          - Use by 2026-08-07 through 2026-08-13
+      - name: Cajun Chicken Mashed Potatoes & Corn
+        brand: Taylor Farms (Kroger)
+        codes:
+          - Use by 2026-08-07 through 2026-08-14
+      - name: Chicken Enchiladas
+        brand: Taylor Farms (Kroger)
+        codes:
+          - Use by 2026-08-07 through 2026-08-16
+      - name: Southwest Style Salad with Chicken
+        brand: Taylor Farms (RaceTrac)
+        codes:
+          - Use by 2026-08-07 through 2026-08-13
+      - name: Chicken & Beef Chimichurri
+        brand: H-E-B (Higher Harvest / Meal Simple)
+        codes:
+          - Use by 2026-08-06, 2026-08-09, 2026-08-13
+      - name: Creamy Cilantro Chicken
+        brand: H-E-B
+        codes:
+          - Use by 2026-08-04 through 2026-08-12
+      - name: Southwest Chicken Shake Rattle Bowls
+        brand: H-E-B
+        codes:
+          - Use by 2026-08-07 through 2026-08-15
+      - name: Pork Carnitas Bowl
+        brand: H-E-B Meal Simple
+        codes:
+          - Use by 2026-08-03, 2026-08-07, 2026-08-10, 2026-08-14
+      - name: Chicken & Rice with Cilantro Jalapeño Sauce
+        brand: H-E-B Meal Simple
+        codes:
+          - Use by 2026-08-03, 2026-08-07, 2026-08-10, 2026-08-14
+      - name: Southwest Style Salad with Chicken
+        brand: Marketside (Walmart)
+        codes:
+          - Use by 2026-08-08 through 2026-08-16
+      - name: Spicy Chipotle Chicken Wrap
+        brand: Wawa
+        codes:
+          - Use by 2026-08-06 through 2026-08-08
+      - name: Beef Barbacoa Bowl
+        brand: Albertsons / Randalls / Tom Thumb
+        codes:
+          - Use by 2026-08-07 through 2026-08-12
+      - name: Chile Lime Rice Chicken Bowl
+        brand: Albertsons / Randalls / Tom Thumb
+        codes:
+          - Use by 2026-08-07 through 2026-08-12
+      - name: Pork Chile Verde Bowl
+        brand: Albertsons / Randalls / Tom Thumb
+        codes:
+          - Use by 2026-08-07 through 2026-08-12
+      - name: Chipotle Chicken Wrap
+        brand: Albertsons / Randalls / Tom Thumb
+        codes:
+          - Use by 2026-08-07 through 2026-08-12
+      - name: Classic Beef Burrito
+        brand: Taylor Farms (Hannaford)
+        codes:
+          - Use by 2026-08-07 through 2026-08-12
+      - name: Chipotle Chicken Tortilla Wrap
+        brand: Taylor Farms (Hannaford)
+        codes:
+          - Use by 2026-08-07 through 2026-08-12
+      - name: Chicken Verde Burrito
+        brand: Taylor Farms (Hannaford)
+        codes:
+          - Use by 2026-08-07 through 2026-08-12
     note: |
       A multistate Salmonella outbreak was linked to fresh jalapeños grown in
       Sinaloa, Mexico and distributed by Coast Citrus Distributors. Taylor Fresh
       Foods recalled finished products containing the jalapeños; restaurants
       including Chipotle and QDOBA also stopped serving them. As of August 5 the
       CDC counted 345 illnesses and 36 hospitalizations across 27 states.
+
+      The recall also covers ready-to-eat meals sold under store brands
+      including Kroger, H-E-B, Walmart (Marketside), Wawa, Albertsons and
+      Hannaford — chicken wraps, burritos, bowls, enchiladas and salads with
+      chicken.
     citations:
       - title: Taylor Fresh Foods Recalls Products Made With Jalapeno Peppers Because of Possible Health Risk
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/taylor-fresh-foods-recalls-products-made-jalapeno-peppers-because-possible-health-risk
@@ -112,6 +194,10 @@ recalls:
       - title: Taylor Farms recalls jalapeno products over salmonella concerns
         url: https://apnews.com/article/taylor-fresh-foods-trump-jalapenos-lettuce-salmonella-6cc2f9e17fdd4cb45953c21bee841e1e
         publisher: AP News
+        accessed: 2026-08-18
+      - title: 18 prepared foods under alert as jalapeño Salmonella outbreak sickens 345
+        url: https://www.foxbusiness.com/lifestyle/jalapeno-salmonella-outbreak-prepared-foods-alert
+        publisher: Fox Business
         accessed: 2026-08-18
 
   - id: 2026-08-city-foods-pastrami-corned-beef
