@@ -270,6 +270,41 @@ recalls:
         publisher: FDA
         accessed: 2026-08-18
 
+  - id: 2026-06-morningstar-farms-nuggets-patties
+    date: 2026-06-18
+    title: MorningStar Farms Buffalo Chik'n Nuggets and Hot & Spicy Sausage Patties
+    summary:
+      - chicken nuggets
+      - sausage patties
+    recalling_firm: MorningStar Farms
+    agency: FDA
+    hazard: foreign-material
+    distribution: Nationwide, plus Puerto Rico and Costa Rica
+    products:
+      - name: Buffalo Chik'n Nuggets, 10.5 oz bag
+        brand: MorningStar Farms
+        codes:
+          - UPC 000 28989 10110 5
+          - Better if used before 2027-07-07 and 2027-07-08
+      - name: Hot & Spicy Sausage Patties, 8 oz bag
+        brand: MorningStar Farms
+        codes:
+          - UPC 000 28989 10094 8
+          - Better if used before 2027-07-05 through 2027-07-07
+    note: |
+      Frozen plant-based nuggets and sausage patties may contain plastic pieces,
+      recalled after customer complaints. Distributed nationwide and to Puerto
+      Rico and Costa Rica. No injuries or illnesses reported.
+    citations:
+      - title: MorningStar Farms Voluntarily Recalling Two Varieties Due to Possible Plastic Presence
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/morningstar-farms-voluntarily-recalling-two-varieties-due-possible-plastic-presence
+        publisher: FDA
+        accessed: 2026-08-18
+      - title: Frozen nuggets, sausage patties voluntarily recalled for possible plastic contamination
+        url: https://abcnews.com/amp/GMA/Food/morningstar-farms-voluntarily-recalls-frozen-nuggets-sausage-patties/story?id=134111079
+        publisher: ABC News
+        accessed: 2026-08-18
+
   - id: 2026-06-bef-foods-mac-and-cheese
     date: 2026-06-10
     title: Park St. Deli Macaroni & Cheese (Aldi)
