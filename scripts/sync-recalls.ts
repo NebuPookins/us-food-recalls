@@ -1,17 +1,21 @@
 /**
- * Fetch recent FDA/FSIS recall reports and turn new ones into curated entries in
- * `data/recalls/<year>-auto.yaml`, then open a pull request for review.
+ * Fetch recent FDA/FSIS recall reports and turn the next new one into a curated
+ * entry in `data/recalls/<year>-auto.yaml`, then open a pull request for review.
  *
- * The curated fields are drafted by an LLM (Groq free tier) when `GROQ_API_KEY`
- * is set, and fall back to a deterministic field mapping otherwise. The stable
- * fields (`id`, `date`, `agency`) are always produced by this script, never the
- * model, so slugs stay unique and dates stay well-formed.
+ * Only one significant recall is added per run (the first one encountered), so
+ * the reviewer merges incremental PRs instead of one large batch. If an earlier
+ * auto PR is still open, this run exits early and waits for it to be merged.
+ *
+ * The curated fields are drafted by an LLM (Groq free tier); `GROQ_API_KEY` is
+ * required whenever there is a new record to draft. The stable fields (`id`,
+ * `date`, `agency`) are always produced by this script, never the model, so
+ * slugs stay unique and dates stay well-formed.
  *
  * Usage:
  *   node scripts/sync-recalls.ts [--dry-run]
  *
  * Env:
- *   GROQ_API_KEY      optional; enables LLM drafting.
+ *   GROQ_API_KEY      required to draft new recalls (fails loudly if unset).
  *   GH_TOKEN          used by `gh` to push the branch and open the PR.
  *   RECALL_REVIEWER   GitHub login to request review from (defaults to repo owner).
  */
@@ -43,6 +47,8 @@ const GROQ_MODEL = 'openai/gpt-oss-120b';
 const SEEN_FILE = join(DATA_DIR, '.seen.json');
 const LOOKBACK_DAYS = 30;
 const MAX_SEEN = 500;
+// Head branch prefix written by openPr() and checked by hasOpenAutoPr().
+const AUTO_BRANCH_PREFIX = 'auto/recalls-';
 
 // ---------------------------------------------------------------- helpers
 
@@ -68,6 +74,12 @@ function isoDate(d: Date): string {
 }
 function compactDate(d: Date): string {
   return isoDate(d).replace(/-/g, '');
+}
+
+/** YYYY-MM-DD -> local-midnight Date. */
+function parseIsoDate(s: string): Date {
+  const [y, m, d] = s.split('-').map(Number);
+  return new Date(y, m - 1, d);
 }
 
 /** Accepts YYYY-MM-DD or YYYYMMDD; returns YYYY-MM-DD or ''. */
@@ -449,50 +461,20 @@ function writeAutoFile(file: string, recalls: unknown[]): void {
   writeFileSync(file, `${AUTO_FILE_HEADER}${stringify({ recalls }, { lineWidth: 0 })}\n`);
 }
 
-/**
- * Persist the watermark plus the auto-drafted entries so far. Called after each
- * successful record, so a throttle or crash partway through still leaves a
- * resumable, mergeable PR. `autoCache` holds the on-disk entries per year from
- * before this run, so re-writing never duplicates them.
- */
-function persistProgress(
-  accepted: Recall[],
-  seenSet: Set<string>,
-  todayIso: string,
-  autoCache: Map<string, unknown[]>,
-): void {
-  saveSeen({ seen: [...seenSet].slice(-MAX_SEEN), lastRun: todayIso });
-  const byYear = Map.groupBy(accepted, (r) => r.date.slice(0, 4));
-  for (const [year, items] of byYear) {
-    const file = join(DATA_DIR, `${year}-auto.yaml`);
-    const existing = autoCache.get(year) ?? readAutoRecalls(file);
-    autoCache.set(year, existing);
-    writeAutoFile(file, [...existing, ...items]);
-  }
+/** Append one drafted recall to its year's auto file (which holds prior runs' entries). */
+function appendAutoEntry(recall: Recall): void {
+  const file = join(DATA_DIR, `${recall.date.slice(0, 4)}-auto.yaml`);
+  writeAutoFile(file, [...readAutoRecalls(file), recall]);
 }
 
-function buildSummary(
-  accepted: Recall[],
-  excluded: { rec: SourceRecord; reason: string }[],
-  interrupted: string | null = null,
-): string {
-  const lines: string[] = ['## New recalls (auto-drafted)', ''];
-  if (accepted.length === 0) {
-    lines.push('_No new significant recalls._');
-  } else {
-    lines.push(
-      `_${accepted.length} draft(s) appended to data/recalls/<year>-auto.yaml. ` +
-        'Review the diff before merging._',
-    );
-    lines.push('');
-    for (const r of accepted) {
-      lines.push(`- ${r.date} — ${r.title} (${r.agency}${r.hazard ? `, ${r.hazard}` : ''})`);
-    }
-  }
-  if (interrupted) {
-    lines.push('', `> ⚠ Interrupted partway through the batch: ${interrupted}`);
-    lines.push('> Remaining records will be picked up on the next run.');
-  }
+function buildSummary(added: Recall, excluded: { rec: SourceRecord; reason: string }[]): string {
+  const lines: string[] = [
+    '## New recalls (auto-drafted)',
+    '',
+    '_Drafted 1 recall for data/recalls/<year>-auto.yaml. Review the diff before merging._',
+    '',
+    `- ${added.date} — ${added.title} (${added.agency}${added.hazard ? `, ${added.hazard}` : ''})`,
+  ];
   if (excluded.length > 0) {
     lines.push('', '## Excluded (filtered as local/insignificant)');
     for (const e of excluded) {
@@ -513,12 +495,29 @@ function repoOwner(): string {
   }
 }
 
+/** True when a prior run's review PR is still open (head branch `auto/recalls-*`). */
+function hasOpenAutoPr(): boolean {
+  if (DRY_RUN) return false;
+  try {
+    const out = execFileSync(
+      'gh',
+      ['pr', 'list', '--state', 'open', '--json', 'headRefName', '--jq', '.[].headRefName'],
+      { encoding: 'utf8', cwd: ROOT },
+    );
+    return out.split('\n').some((branch) => branch.startsWith(AUTO_BRANCH_PREFIX));
+  } catch (e) {
+    // Listing PRs is also a prerequisite for openPr(), so a failure here means the
+    // run cannot complete anyway — fail loudly rather than silently disabling the guard.
+    throw new Error(`could not check for an open auto PR: ${msg(e)}`);
+  }
+}
+
 function openPr(summary: string): void {
   if (DRY_RUN) {
     log(`\n[dry-run] would open a PR with body:\n\n${summary}`);
     return;
   }
-  const branch = `auto/recalls-${process.env.GITHUB_RUN_ID ?? 'local'}`;
+  const branch = `${AUTO_BRANCH_PREFIX}${process.env.GITHUB_RUN_ID ?? 'local'}`;
   run('git', ['config', 'user.name', 'github-actions[bot]']);
   run('git', ['config', 'user.email', '41898282+github-actions[bot]@users.noreply.github.com']);
   run('git', ['checkout', '-b', branch]);
@@ -543,6 +542,11 @@ function openPr(summary: string): void {
 // ---------------------------------------------------------------- main
 
 async function main(): Promise<void> {
+  if (hasOpenAutoPr()) {
+    log('An auto-recall PR is still open — skipping this run so it can be reviewed/merged first.');
+    return;
+  }
+
   const state = loadSeen();
   const seen = new Set(state.seen);
 
@@ -553,9 +557,13 @@ async function main(): Promise<void> {
   );
 
   const today = new Date();
-  const from = new Date(today);
-  from.setDate(from.getDate() - LOOKBACK_DAYS);
   const todayIso = isoDate(today);
+  const defaultFrom = new Date(today);
+  defaultFrom.setDate(defaultFrom.getDate() - LOOKBACK_DAYS);
+  // If a prior run stalled (an open PR blocked runs for > LOOKBACK_DAYS), extend
+  // the window back to the last successful run so recalls don't scroll out.
+  const lastRun = state.lastRun ? normalizeDate(state.lastRun) : '';
+  const from = lastRun && lastRun < isoDate(defaultFrom) ? parseIsoDate(lastRun) : defaultFrom;
 
   const records: SourceRecord[] = [];
   try {
@@ -574,30 +582,25 @@ async function main(): Promise<void> {
     throw new Error('GROQ_API_KEY is not set — set it as a repository secret.');
   }
 
-  const accepted: Recall[] = [];
   const excluded: { rec: SourceRecord; reason: string }[] = [];
-  const autoCache = new Map<string, unknown[]>();
-  let interrupted: string | null = null;
+  let added: Recall | null = null;
 
+  // One recall per run: scan past excluded (local/insignificant) records and stop
+  // at the first significant one. A drafting error aborts the run (failing the
+  // workflow); the unfinished record is retried on the next run.
   for (const rec of fresh) {
-    try {
-      const result = await groqDraft(rec, used, todayIso);
-      seen.add(rec.key);
-      if (result.recall) accepted.push(result.recall);
-      else if (result.excluded) excluded.push({ rec, reason: result.excluded });
-      // Save progress after each success so a later throttle/crash is resumable.
-      if (!DRY_RUN) persistProgress(accepted, seen, todayIso, autoCache);
-    } catch (e) {
-      interrupted = msg(e);
-      warn(`stopping after error on ${rec.key}: ${interrupted}`);
+    const result = await groqDraft(rec, used, todayIso);
+    seen.add(rec.key);
+    if (result.recall) {
+      added = result.recall;
       break;
     }
+    if (result.excluded) excluded.push({ rec, reason: result.excluded });
   }
 
-  if (accepted.length === 0) {
-    if (interrupted) {
-      throw new Error(`drafting was interrupted before any recalls were added: ${interrupted}`);
-    }
+  if (!DRY_RUN) saveSeen({ seen: [...seen].slice(-MAX_SEEN), lastRun: todayIso });
+
+  if (!added) {
     log('No new recalls to add.');
     if (DRY_RUN) {
       for (const e of excluded) log(`  [dry-run] excluded: ${e.rec.firm} — ${e.rec.product}`);
@@ -605,14 +608,16 @@ async function main(): Promise<void> {
     return;
   }
 
-  const summary = buildSummary(accepted, excluded, interrupted);
+  const summary = buildSummary(added, excluded);
   log(summary);
 
   if (DRY_RUN) {
-    log('\n[dry-run] drafted entries:\n');
-    log(stringify({ recalls: accepted }, { lineWidth: 0 }));
+    log('\n[dry-run] drafted entry:\n');
+    log(stringify({ recalls: [added] }, { lineWidth: 0 }));
     return;
   }
+
+  appendAutoEntry(added);
 
   // Gate on the same validator the site and CI use; abort before touching git if invalid.
   const check = loadRecalls(DATA_DIR);

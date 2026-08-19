@@ -14,6 +14,13 @@ permissions:
   contents: write
   pull-requests: write
 
+# One run at a time: an overlapping run would race hasOpenAutoPr() and open a
+# duplicate PR for the same recall. Queue (don't cancel) so a queued run then
+# sees the first run's open PR and skips.
+concurrency:
+  group: sync-recalls
+  cancel-in-progress: false
+
 jobs:
   sync:
     runs-on: ubuntu-latest
