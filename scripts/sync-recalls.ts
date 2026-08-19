@@ -103,6 +103,10 @@ function run(cmd: string, args: string[]): void {
   execFileSync(cmd, args, { stdio: 'inherit', cwd: ROOT });
 }
 
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 // ---------------------------------------------------------------- sources
 
 type SourceRecord = {
@@ -326,6 +330,17 @@ function safeHttpUrl(url: string, fallback: string): string {
   return /^https?:\/\//i.test(url) ? url : fallback;
 }
 
+// Free tier is 8k tokens/min, so a 429 clears after ~60s; retry rather than fail.
+const MAX_GROQ_RETRIES = 10;
+
+async function postGroq(key: string, payload: object): Promise<Response> {
+  return fetch(GROQ_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${key}` },
+    body: JSON.stringify(payload),
+  });
+}
+
 async function groqDraft(
   rec: SourceRecord,
   used: Set<string>,
@@ -333,19 +348,29 @@ async function groqDraft(
 ): Promise<DraftResult> {
   const key = process.env.GROQ_API_KEY;
   if (!key) throw new Error('GROQ_API_KEY is not set');
-  const res = await fetch(GROQ_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${key}` },
-    body: JSON.stringify({
-      model: GROQ_MODEL,
-      temperature: 0,
-      response_format: { type: 'json_object' },
-      messages: [
-        { role: 'system', content: SYSTEM_PROMPT },
-        { role: 'user', content: JSON.stringify(rec, null, 2) },
-      ],
-    }),
-  });
+  const payload = {
+    model: GROQ_MODEL,
+    temperature: 0,
+    response_format: { type: 'json_object' },
+    messages: [
+      { role: 'system', content: SYSTEM_PROMPT },
+      { role: 'user', content: JSON.stringify(rec, null, 2) },
+    ],
+  };
+
+  let res = await postGroq(key, payload);
+  for (let attempt = 0; res.status === 429 && attempt < MAX_GROQ_RETRIES; attempt++) {
+    const retryAfter = Number(res.headers.get('retry-after'));
+    const waitSec = Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter : 60;
+    warn(`Groq rate-limited on ${rec.key} — waiting ${waitSec}s (attempt ${attempt + 1}/${MAX_GROQ_RETRIES})`);
+    await sleep(waitSec * 1000);
+    res = await postGroq(key, payload);
+  }
+
+  if (res.status === 429) {
+    const detail = (await res.text().catch(() => '')).slice(0, 200);
+    throw new Error(`Groq still rate-limited after ${MAX_GROQ_RETRIES} retries: ${detail}`);
+  }
   if (!res.ok) {
     const detail = (await res.text().catch(() => '')).slice(0, 200);
     throw new Error(`Groq HTTP ${res.status}: ${detail}`);
@@ -424,9 +449,32 @@ function writeAutoFile(file: string, recalls: unknown[]): void {
   writeFileSync(file, `${AUTO_FILE_HEADER}${stringify({ recalls }, { lineWidth: 0 })}\n`);
 }
 
+/**
+ * Persist the watermark plus the auto-drafted entries so far. Called after each
+ * successful record, so a throttle or crash partway through still leaves a
+ * resumable, mergeable PR. `autoCache` holds the on-disk entries per year from
+ * before this run, so re-writing never duplicates them.
+ */
+function persistProgress(
+  accepted: Recall[],
+  seenSet: Set<string>,
+  todayIso: string,
+  autoCache: Map<string, unknown[]>,
+): void {
+  saveSeen({ seen: [...seenSet].slice(-MAX_SEEN), lastRun: todayIso });
+  const byYear = Map.groupBy(accepted, (r) => r.date.slice(0, 4));
+  for (const [year, items] of byYear) {
+    const file = join(DATA_DIR, `${year}-auto.yaml`);
+    const existing = autoCache.get(year) ?? readAutoRecalls(file);
+    autoCache.set(year, existing);
+    writeAutoFile(file, [...existing, ...items]);
+  }
+}
+
 function buildSummary(
   accepted: Recall[],
   excluded: { rec: SourceRecord; reason: string }[],
+  interrupted: string | null = null,
 ): string {
   const lines: string[] = ['## New recalls (auto-drafted)', ''];
   if (accepted.length === 0) {
@@ -440,6 +488,10 @@ function buildSummary(
     for (const r of accepted) {
       lines.push(`- ${r.date} — ${r.title} (${r.agency}${r.hazard ? `, ${r.hazard}` : ''})`);
     }
+  }
+  if (interrupted) {
+    lines.push('', `> ⚠ Interrupted partway through the batch: ${interrupted}`);
+    lines.push('> Remaining records will be picked up on the next run.');
   }
   if (excluded.length > 0) {
     lines.push('', '## Excluded (filtered as local/insignificant)');
@@ -524,15 +576,28 @@ async function main(): Promise<void> {
 
   const accepted: Recall[] = [];
   const excluded: { rec: SourceRecord; reason: string }[] = [];
+  const autoCache = new Map<string, unknown[]>();
+  let interrupted: string | null = null;
 
   for (const rec of fresh) {
-    seen.add(rec.key);
-    const result = await groqDraft(rec, used, todayIso);
-    if (result.recall) accepted.push(result.recall);
-    else if (result.excluded) excluded.push({ rec, reason: result.excluded });
+    try {
+      const result = await groqDraft(rec, used, todayIso);
+      seen.add(rec.key);
+      if (result.recall) accepted.push(result.recall);
+      else if (result.excluded) excluded.push({ rec, reason: result.excluded });
+      // Save progress after each success so a later throttle/crash is resumable.
+      if (!DRY_RUN) persistProgress(accepted, seen, todayIso, autoCache);
+    } catch (e) {
+      interrupted = msg(e);
+      warn(`stopping after error on ${rec.key}: ${interrupted}`);
+      break;
+    }
   }
 
   if (accepted.length === 0) {
+    if (interrupted) {
+      throw new Error(`drafting was interrupted before any recalls were added: ${interrupted}`);
+    }
     log('No new recalls to add.');
     if (DRY_RUN) {
       for (const e of excluded) log(`  [dry-run] excluded: ${e.rec.firm} — ${e.rec.product}`);
@@ -540,7 +605,7 @@ async function main(): Promise<void> {
     return;
   }
 
-  const summary = buildSummary(accepted, excluded);
+  const summary = buildSummary(accepted, excluded, interrupted);
   log(summary);
 
   if (DRY_RUN) {
@@ -548,16 +613,6 @@ async function main(): Promise<void> {
     log(stringify({ recalls: accepted }, { lineWidth: 0 }));
     return;
   }
-
-  // Write new entries grouped by the year they were announced.
-  const byYear = Map.groupBy(accepted, (r) => r.date.slice(0, 4));
-  for (const [year, items] of byYear) {
-    const file = join(DATA_DIR, `${year}-auto.yaml`);
-    writeAutoFile(file, [...readAutoRecalls(file), ...items]);
-  }
-
-  // Persist the watermark (including excluded keys) only now that a commit will happen.
-  saveSeen({ seen: [...seen].slice(-MAX_SEEN), lastRun: todayIso });
 
   // Gate on the same validator the site and CI use; abort before touching git if invalid.
   const check = loadRecalls(DATA_DIR);
