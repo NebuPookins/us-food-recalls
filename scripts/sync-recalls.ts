@@ -25,7 +25,6 @@ import {
   CLASSIFICATIONS,
   HAZARDS,
   RecallSchema,
-  type Hazard,
   type Recall,
 } from '../src/schema.ts';
 import { loadRecalls } from '../src/load.ts';
@@ -37,7 +36,9 @@ const ROOT = join(DATA_DIR, '..', '..');
 const OPENFDA_URL = 'https://api.fda.gov/food/enforcement.json';
 const FSIS_URL = 'https://www.fsis.usda.gov/fsis/api/recall/v/1';
 const GROQ_URL = 'https://api.groq.com/openai/v1/chat/completions';
-const GROQ_MODEL = 'llama-3.3-70b-versatile';
+// Groq retires model IDs without notice. When this one stops resolving, the
+// workflow fails loudly (see groqDraft) so it's easy to spot and update.
+const GROQ_MODEL = 'openai/gpt-oss-120b';
 
 const SEEN_FILE = join(DATA_DIR, '.seen.json');
 const LOOKBACK_DAYS = 30;
@@ -325,9 +326,13 @@ function safeHttpUrl(url: string, fallback: string): string {
   return /^https?:\/\//i.test(url) ? url : fallback;
 }
 
-async function groqDraft(rec: SourceRecord, used: Set<string>, today: string): Promise<DraftResult | null> {
+async function groqDraft(
+  rec: SourceRecord,
+  used: Set<string>,
+  today: string,
+): Promise<DraftResult> {
   const key = process.env.GROQ_API_KEY;
-  if (!key) return null;
+  if (!key) throw new Error('GROQ_API_KEY is not set');
   const res = await fetch(GROQ_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${key}` },
@@ -341,7 +346,10 @@ async function groqDraft(rec: SourceRecord, used: Set<string>, today: string): P
       ],
     }),
   });
-  if (!res.ok) throw new Error(`Groq HTTP ${res.status}`);
+  if (!res.ok) {
+    const detail = (await res.text().catch(() => '')).slice(0, 200);
+    throw new Error(`Groq HTTP ${res.status}: ${detail}`);
+  }
   const body = (await res.json()) as { choices?: { message?: { content?: string } }[] };
   const content = body.choices?.[0]?.message?.content ?? '';
   const parsed = LlmResponseSchema.safeParse(parseJsonLoose(content));
@@ -390,77 +398,6 @@ function assemble(
   }
   used.add(checked.data.id);
   return checked.data;
-}
-
-function mapHazard(text: string): Hazard {
-  const t = text.toLowerCase();
-  const rules: [RegExp, Hazard][] = [
-    [/listeria|monocytogenes/, 'listeria'],
-    [/salmonella/, 'salmonella'],
-    [/e\.?\s?coli|escherichia|o157/, 'e-coli'],
-    [/botulis/, 'botulism'],
-    [/hepatitis\s*a/, 'hepatitis-a'],
-    [/norovirus/, 'norovirus'],
-    [/undeclared|allergen|\bmilk\b|\bsoy\b|\bwheat\b|peanut|tree nut|\begg\b|\bfish\b|shellfish|sesame|sulfite/, 'undeclared-allergen'],
-    [/glass|metal|plastic|foreign (material|matter|object)|\bwood\b/, 'foreign-material'],
-    [/lead|mercury|arsenic|chemical/, 'chemical-contamination'],
-    [/without (benefit of )?inspection|produced without|under-process|insanitary/, 'processing-defect'],
-    [/misbrand|mislabel/, 'mislabeling'],
-  ];
-  for (const [re, hazard] of rules) if (re.test(t)) return hazard;
-  return 'other';
-}
-
-function mapClassification(raw: string): 'I' | 'II' | 'III' | undefined {
-  const t = raw.toLowerCase();
-  if (!t || t.includes('not yet') || t.includes('public health alert')) return undefined;
-  if (t.includes('class i') || t === 'i') return 'I';
-  if (t.includes('class ii') || t === 'ii') return 'II';
-  if (t.includes('class iii') || t === 'iii') return 'III';
-  return undefined;
-}
-
-function deterministicDraft(rec: SourceRecord, used: Set<string>, today: string): DraftResult {
-  const id = makeId(rec.date, rec.firm, rec.product, used);
-  used.add(id);
-  const note =
-    [rec.reason, rec.quantity && `Quantity: ${rec.quantity}`, rec.codes && `Codes: ${rec.codes}`]
-      .filter(Boolean)
-      .join('. ') || `Recall announced by ${rec.firm || 'the firm'}.`;
-  const fallbackUrl = rec.citationUrl ?? `${OPENFDA_URL}?search=${encodeURIComponent(rec.key)}`;
-  const recall: Recall = {
-    id,
-    date: rec.date || today,
-    title: rec.product || rec.firm || 'Recall',
-    recalling_firm: rec.firm || undefined,
-    agency: rec.agency,
-    hazard: mapHazard(`${rec.reason} ${rec.product}`),
-    classification: mapClassification(rec.classification),
-    products: [{ name: rec.product || 'Unknown product' }],
-    distribution: rec.distribution || undefined,
-    note,
-    citations: [
-      {
-        title: rec.firm ? `${rec.firm} — ${rec.agency} recall` : `${rec.agency} recall announcement`,
-        url: safeHttpUrl(rec.citationUrl ?? '', fallbackUrl),
-        publisher: rec.agency,
-        accessed: today,
-      },
-    ],
-  };
-  return { recall: RecallSchema.parse(recall) };
-}
-
-async function draft(rec: SourceRecord, used: Set<string>, today: string): Promise<DraftResult> {
-  if (process.env.GROQ_API_KEY) {
-    try {
-      const result = await groqDraft(rec, used, today);
-      if (result) return result;
-    } catch (e) {
-      warn(`Groq draft failed for ${rec.key}: ${msg(e)} — using deterministic fallback`);
-    }
-  }
-  return deterministicDraft(rec, used, today);
 }
 
 // ---------------------------------------------------------------- output
@@ -539,7 +476,16 @@ function openPr(summary: string): void {
   const reviewer = process.env.RECALL_REVIEWER || repoOwner();
   const args = ['pr', 'create', '--title', 'New recalls (auto)', '--body', summary];
   if (reviewer) args.push('--reviewer', reviewer);
-  run('gh', args);
+  try {
+    run('gh', args);
+  } catch (e) {
+    warn(
+      `opening the PR failed: ${msg(e)}\n` +
+        '  If the error is "GitHub Actions is not permitted to create or approve pull requests",\n' +
+        '  enable Settings → Actions → General → "Allow GitHub Actions to create and approve pull requests".',
+    );
+    throw e;
+  }
 }
 
 // ---------------------------------------------------------------- main
@@ -572,12 +518,16 @@ async function main(): Promise<void> {
   );
   log(`${records.length} record(s) fetched, ${fresh.length} new.`);
 
+  if (fresh.length > 0 && !process.env.GROQ_API_KEY) {
+    throw new Error('GROQ_API_KEY is not set — set it as a repository secret.');
+  }
+
   const accepted: Recall[] = [];
   const excluded: { rec: SourceRecord; reason: string }[] = [];
 
   for (const rec of fresh) {
     seen.add(rec.key);
-    const result = await draft(rec, used, todayIso);
+    const result = await groqDraft(rec, used, todayIso);
     if (result.recall) accepted.push(result.recall);
     else if (result.excluded) excluded.push({ rec, reason: result.excluded });
   }

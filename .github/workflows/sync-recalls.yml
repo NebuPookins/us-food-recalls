@@ -1,3 +1,7 @@
+# Requires the repository setting "Allow GitHub Actions to create and approve
+# pull requests" (Settings → Actions → General → Workflow permissions), otherwise
+# the GITHUB_TOKEN cannot open the review PR.
+
 name: Sync recalls
 
 on:
