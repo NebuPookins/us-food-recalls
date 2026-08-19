@@ -43,6 +43,8 @@ const GROQ_URL = 'https://api.groq.com/openai/v1/chat/completions';
 // Groq retires model IDs without notice. When this one stops resolving, the
 // workflow fails loudly (see groqDraft) so it's easy to spot and update.
 const GROQ_MODEL = 'openai/gpt-oss-120b';
+// Keyless RSS feed used to find a human-facing news story for each citation.
+const BING_NEWS_URL = 'https://www.bing.com/news/search';
 
 const SEEN_FILE = join(DATA_DIR, '.seen.json');
 const LOOKBACK_DAYS = 30;
@@ -289,8 +291,6 @@ When "include": true, produce a "draft" object with these fields:
 - deaths: integer count if stated, otherwise omit.
 - note: 2-4 sentences of plain prose describing what was recalled, why, the hazard, and what
   consumers should do. No markdown, no links, no bullet points.
-- citation: { title, url, publisher? }. Prefer citationUrl when provided; otherwise use the
-  openFDA record URL. publisher is "FDA" or "FSIS".
 
 Return JSON of exactly this shape:
 { "include": true, "draft": { ... } }   or   { "include": false, "exclude_reason": "..." }
@@ -316,11 +316,6 @@ const DraftSchema = z.object({
   illnesses: z.number().int().nonnegative().optional(),
   deaths: z.number().int().nonnegative().optional(),
   note: z.string().min(1),
-  citation: z.object({
-    title: z.string().min(1),
-    url: z.string().min(1),
-    publisher: z.string().min(1).optional(),
-  }),
 });
 
 const LlmResponseSchema = z.object({
@@ -337,9 +332,70 @@ function parseJsonLoose(text: string): unknown {
   return JSON.parse(fenced ? fenced[1] : trimmed);
 }
 
-/** Coerce an http(s) URL so the final RecallSchema's `z.url({ protocol: /^https?$/ })` passes. */
-function safeHttpUrl(url: string, fallback: string): string {
-  return /^https?:\/\//i.test(url) ? url : fallback;
+type NewsCitation = { title: string; url: string; publisher?: string };
+
+function decodeXml(s: string): string {
+  return s
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, h) => String.fromCodePoint(parseInt(h, 16)))
+    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(parseInt(d, 10)))
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&amp;/g, '&');
+}
+
+/** True if `s` parses as an http(s) URL (mirrors the schema's `z.url({ protocol })`). */
+function isHttpUrl(s: string): boolean {
+  try {
+    const u = new URL(s);
+    return u.protocol === 'http:' || u.protocol === 'https:';
+  } catch {
+    return false;
+  }
+}
+
+/** Pull the top story's title/url/publisher out of a Bing News RSS body. */
+function parseFirstNewsItem(xml: string): NewsCitation | null {
+  const item = xml.match(/<item>([\s\S]*?)<\/item>/)?.[1];
+  if (!item) return null;
+  const title = item.match(/<title>([\s\S]*?)<\/title>/)?.[1];
+  const link = item.match(/<link>([\s\S]*?)<\/link>/)?.[1];
+  const source = item.match(/<News:Source>([\s\S]*?)<\/News:Source>/)?.[1];
+  if (!title || !link) return null;
+  // The <link> is a Bing redirect whose `url` param carries the real article URL.
+  const url = new URL(decodeXml(link.trim())).searchParams.get('url');
+  // Re-check before it reaches the strict RecallSchema: a malformed value should
+  // drop the news citation, not make assemble() throw.
+  if (!url || !isHttpUrl(url)) return null;
+  return {
+    title: decodeXml(title.trim()),
+    url,
+    publisher: source ? decodeXml(source.trim()).replace(/ on MSN$/, '') : undefined,
+  };
+}
+
+/**
+ * Best-effort: find a human-facing news story for a recall via Bing News' keyless
+ * RSS feed. Returns null (and the entry keeps just its provenance citation) on any
+ * failure or when no story is found.
+ */
+async function findNewsCitation(rec: SourceRecord): Promise<NewsCitation | null> {
+  const terms = [rec.firm, rec.product].filter(Boolean);
+  if (terms.length === 0) return null;
+  try {
+    // "recall" goes first so the slice never cuts it off for long product descriptions.
+    const params = new URLSearchParams({ q: `recall ${terms.join(' ')}`.slice(0, 160), format: 'rss' });
+    const res = await fetch(`${BING_NEWS_URL}?${params.toString()}`, {
+      headers: { 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36' },
+      signal: AbortSignal.timeout(10_000),
+    });
+    if (!res.ok) return null;
+    return parseFirstNewsItem(await res.text());
+  } catch (e) {
+    warn(`news search failed for ${rec.key}: ${msg(e)}`);
+    return null;
+  }
 }
 
 // Free tier is 8k tokens/min, so a 429 clears after ~60s; retry rather than fail.
@@ -396,12 +452,14 @@ async function groqDraft(
   const answer = parsed.data;
   if (!answer.include) return { excluded: answer.exclude_reason || 'not significant' };
   const draft = answer.draft!;
-  return { recall: assemble(rec, draft, used, today) };
+  const news = await findNewsCitation(rec);
+  return { recall: assemble(rec, draft, news, used, today) };
 }
 
 function assemble(
   rec: SourceRecord,
   draft: z.infer<typeof DraftSchema>,
+  news: NewsCitation | null,
   used: Set<string>,
   today: string,
 ): Recall {
@@ -421,12 +479,11 @@ function assemble(
     deaths: draft.deaths,
     note: draft.note,
     citations: [
-      {
-        title: draft.citation.title,
-        url: safeHttpUrl(draft.citation.url, fallbackUrl),
-        publisher: draft.citation.publisher ?? rec.agency,
-        accessed: today,
-      },
+      // The news link is taken blindly from search, so it isn't stamped `accessed`.
+      ...(news ? [{ ...news }] : []),
+      // Keep the raw record as provenance so the entry stays verifiable even if
+      // the news link rots or a search surfaces the wrong story.
+      { title: `${rec.agency} recall record`, url: fallbackUrl, publisher: rec.agency, accessed: today },
     ],
   };
   const checked = RecallSchema.safeParse(candidate);
