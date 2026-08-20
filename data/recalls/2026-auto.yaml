@@ -151,28 +151,3 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99386
         publisher: FDA
         accessed: 2026-08-20
-  - id: 2026-07-22-frutas-y-hortalizas-del-sur-s-organic-whole-blueberries-net
-    date: 2026-07-22
-    title: Frutas y Hortalizas del Sur recalls organic whole blueberries
-    summary:
-      - blueberries
-    recalling_firm: Frutas y Hortalizas del Sur S.A.
-    agency: FDA
-    hazard: e-coli
-    classification: I
-    products:
-      - name: Organic Whole Blueberries, 10 oz (284g) plastic bag
-        codes:
-          - Lot 6040 01
-          - Best by Date Feb 09 2028
-    distribution: Florida
-    note: Frutas y Hortalizas del Sur S.A. is recalling its organic whole blueberries packaged in 10‑oz plastic bags because the product may be contaminated with E. coli O145:H28. The recall covers 3,640 cases distributed in Florida. Consumers should not eat the product and should discard it or return it to the place of purchase. The FDA classifies the recall as Class I, indicating a serious health risk.
-    citations:
-      - title: "Publix Frozen Blueberry Recall Receives Class I Status by FDA: See Full List of Products"
-        url: https://www.today.com/health/recall/publix-frozen-blueberry-recall-fda-class-i-rcna593566
-        publisher: TODAY
-      - title: FDA recall record
-        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99373
-        publisher: FDA
-        accessed: 2026-08-20
-
