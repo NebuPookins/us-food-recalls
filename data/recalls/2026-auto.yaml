@@ -126,29 +126,3 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99460
         publisher: FDA
         accessed: 2026-08-20
-  - id: 2026-07-29-green-jeeva-llc-organic-moringa-powder-15kg-ba
-    date: 2026-07-29
-    title: Green Jeeva LLC recalls organic moringa powder
-    summary:
-      - moringa
-      - powder
-    recalling_firm: Green Jeeva LLC
-    agency: FDA
-    hazard: salmonella
-    classification: I
-    products:
-      - name: Organic Moringa Powder
-        codes:
-          - lot 25/08001
-          - expiration 02-11-2028
-    distribution: Distributed to four consignees for further processing
-    note: Green Jeeva LLC is recalling 2,490 kg of organic moringa powder after testing showed the ingredient was positive for salmonella. The product was shipped to four different consignees who use it in further processing and distribution. Consumers should avoid any foods that may contain this ingredient and contact the firm for a refund or replacement. The FDA classifies this as a Class I recall due to the serious health risk posed by salmonella.
-    citations:
-      - title: A third company recalls moringa powder linked to Salmonella outbreak
-        url: https://www.foodsafetynews.com/2025/11/a-third-company-recalls-moringa-powder-linked-to-salmonella-outbreak/
-        publisher: Food Safety News
-      - title: FDA recall record
-        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99387
-        publisher: FDA
-        accessed: 2026-08-20
-
