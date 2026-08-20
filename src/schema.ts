@@ -29,6 +29,7 @@ export const HAZARDS = [
   'botulism',
   'hepatitis-a',
   'norovirus',
+  'cyclospora',
   'undeclared-allergen',
   'foreign-material',
   'chemical-contamination',
@@ -126,10 +127,46 @@ export const HAZARD_LABELS: Readonly<Record<Hazard, string>> = {
   botulism: 'Botulism',
   'hepatitis-a': 'Hepatitis A',
   norovirus: 'Norovirus',
+  cyclospora: 'Cyclospora',
   'undeclared-allergen': 'Undeclared allergen',
   'foreign-material': 'Foreign material',
   'chemical-contamination': 'Chemical contamination',
   'processing-defect': 'Processing defect',
   mislabeling: 'Mislabeling',
   other: 'Other',
+};
+
+/** Reader-facing buckets for the "what do you care about" filter. */
+export const HAZARD_CATEGORIES = [
+  'pathogens',
+  'foreign-objects',
+  'undeclared-allergens',
+  'other',
+] as const;
+
+export type HazardCategory = (typeof HAZARD_CATEGORIES)[number];
+
+/** Human-readable labels for the buckets, used by the renderer. */
+export const CATEGORY_LABELS: Readonly<Record<HazardCategory, string>> = {
+  pathogens: 'Bacteria & pathogens',
+  'foreign-objects': 'Foreign objects',
+  'undeclared-allergens': 'Undisclosed allergens & mislabeling',
+  other: 'Everything else',
+};
+
+/** Which bucket each hazard falls into. Total over `Hazard` by construction. */
+export const HAZARD_TO_CATEGORY: Readonly<Record<Hazard, HazardCategory>> = {
+  listeria: 'pathogens',
+  salmonella: 'pathogens',
+  'e-coli': 'pathogens',
+  botulism: 'pathogens',
+  'hepatitis-a': 'pathogens',
+  norovirus: 'pathogens',
+  cyclospora: 'pathogens',
+  'undeclared-allergen': 'undeclared-allergens',
+  'foreign-material': 'foreign-objects',
+  'chemical-contamination': 'pathogens',
+  'processing-defect': 'other',
+  mislabeling: 'undeclared-allergens',
+  other: 'other',
 };

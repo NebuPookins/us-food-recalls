@@ -1,4 +1,13 @@
-import { HAZARD_LABELS, type Citation, type Product, type Recall } from './schema.ts';
+import {
+  CATEGORY_LABELS,
+  HAZARD_CATEGORIES,
+  HAZARD_LABELS,
+  HAZARD_TO_CATEGORY,
+  type Citation,
+  type HazardCategory,
+  type Product,
+  type Recall,
+} from './schema.ts';
 
 /**
  * Pure data -> string rendering. Every value that came out of the YAML passes
@@ -96,6 +105,7 @@ function renderRecall(recall: Recall, byId: ReadonlyMap<string, Recall>): string
   return `
 <article class="recall" id="${escapeHtml(recall.id)}"
          data-hazard="${escapeHtml(recall.hazard)}"
+         data-category="${escapeHtml(HAZARD_TO_CATEGORY[recall.hazard])}"
          data-year="${escapeHtml(recall.date.slice(0, 4))}"
          data-search="${escapeHtml(searchIndex(recall))}">
   <header>
@@ -143,14 +153,26 @@ export type SiteMeta = {
 
 /** Compact "foods to check" list with anchor links to each entry, newest first. */
 function renderSummary(recalls: readonly Recall[]): string {
-  const links = recalls.flatMap((r) =>
-    (r.summary ?? []).map((food) => `<a href="#${escapeHtml(r.id)}">${escapeHtml(food)}</a>`),
+  const items = recalls.flatMap((r) =>
+    (r.summary ?? []).map((food) => ({ id: r.id, category: HAZARD_TO_CATEGORY[r.hazard], food })),
   );
-  if (links.length === 0) return '';
+  if (items.length === 0) return '';
+
+  // Each item is wrapped so the client can hide it by category; the trailing
+  // separator lives inside the wrapper so hiding an item hides its comma too.
+  const links = items
+    .map(
+      (it, i) =>
+        `<span class="food" data-category="${escapeHtml(it.category)}">` +
+        `<a href="#${escapeHtml(it.id)}">${escapeHtml(it.food)}</a>` +
+        (i < items.length - 1 ? '<span class="sep">, </span>' : '') +
+        '</span>',
+    )
+    .join('');
 
   return `<section class="summary" aria-labelledby="summary-title">
   <h2 id="summary-title">Foods to check</h2>
-  <p class="food-list">${links.join(', ')}</p>
+  <p class="food-list">${links}</p>
 </section>`;
 }
 
@@ -159,6 +181,43 @@ function renderActions(): string {
   return `<section class="actions" aria-label="Get involved">
   <a class="button" href="mailto:nebupookins@gmail.com?subject=New%20food%20recall%20to%20report">📧 Spotted a recall I missed? Let me know!</a>
   <a class="button button-secondary" href="https://ko-fi.com/nebupookins" target="_blank" rel="noopener noreferrer">☕ Find this list useful? Support the site!</a>
+</section>`;
+}
+
+const CATEGORY_DESCRIPTIONS: Readonly<Record<HazardCategory, string>> = {
+  pathogens: 'Germs like Salmonella, E. coli, Listeria and Cyclospora, plus chemical contamination — things you can’t see that shouldn’t be in your food.',
+  'foreign-objects': 'Glass, metal, plastic or other things that shouldn’t be in food — but that you could spot if you looked.',
+  'undeclared-allergens': 'Ingredients that are fine for some people but not others — nuts, milk, eggs, wheat, soy — when the label doesn’t say they’re there.',
+  other: 'Processing problems and any other reason that doesn’t fit the three above.',
+};
+
+/** Collapsible "what do you care about" filter. Rendered open so it works with
+ *  JS off; the client collapses it once preferences have been saved. */
+function renderPreferences(): string {
+  const checkboxes = HAZARD_CATEGORIES.map(
+    (category) => `
+    <label class="category">
+      <input type="checkbox" name="category" value="${escapeHtml(category)}" checked>
+      <span class="category-text">
+        <span class="category-label">${escapeHtml(CATEGORY_LABELS[category])}</span>
+        <span class="category-desc">${escapeHtml(CATEGORY_DESCRIPTIONS[category])}</span>
+      </span>
+    </label>`,
+  ).join('\n');
+
+  return `<section class="preferences" id="preferences" aria-label="What you care about">
+  <button class="preferences-toggle" id="preferences-toggle" type="button" aria-expanded="true" aria-controls="preferences-body">
+    <span class="preferences-heading">What do you care about?</span>
+    <span class="preferences-caret" aria-hidden="true"></span>
+  </button>
+  <div class="preferences-body" id="preferences-body">
+    <p class="preferences-intro">Only show recalls in the categories you check:</p>
+    <div class="categories">
+${checkboxes}
+    </div>
+    <button class="button" id="save-preferences" type="button">Save preferences</button>
+    <p class="preferences-warning" id="preferences-warning" hidden>Choose at least one category to save.</p>
+  </div>
 </section>`;
 }
 
@@ -197,6 +256,8 @@ export function renderIndex(recalls: readonly Recall[], meta: SiteMeta): string 
   </p>
 </header>
 
+${renderPreferences()}
+
 ${renderSummary(active)}
 
 ${renderActions()}
@@ -221,6 +282,7 @@ ${renderActions()}
 
 <p class="result-count" id="count" role="status"></p>
 <p class="retracted-hits" id="retracted-hits"></p>
+<p class="filtered-out-hits" id="filtered-out-hits"></p>
 
 <main id="recalls">
 ${active.map((r) => renderRecall(r, byId)).join('\n')}
