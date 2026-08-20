@@ -13,8 +13,9 @@ if git diff --cached --name-only --diff-filter=ACMR | grep -qE '^(data/|src/sche
   npm run --silent validate
 fi
 
-# Nothing to test if this commit doesn't touch the client-side filter or its tests.
-if git diff --cached --name-only --diff-filter=ACMR | grep -qE '^(static/|test/)'; then
+# Nothing to test if this commit doesn't touch the rendered output, the
+# client-side filter, or the tests themselves.
+if git diff --cached --name-only --diff-filter=ACMR | grep -qE '^(src/|static/|test/)'; then
   echo "Running tests..."
   npm run --silent test
 fi

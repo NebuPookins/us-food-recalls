@@ -57,6 +57,16 @@ a { color: var(--accent); }
    older "also previously" recall kept it visible) should read as plain text. */
 .food-list a:not([href]) { color: inherit; text-decoration: none; cursor: default; }
 
+.summary-bucket-title {
+  margin: 0 0 .25rem;
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.summary-bucket + .summary-bucket { margin-top: .6rem; }
+
 /* ---- actions ---- */
 
 .actions { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.25rem 0 0; }

@@ -39,31 +39,37 @@ import { decideFoods } from './food-filter.js';
     search: el.dataset.search,
   }));
 
-  // Foods in the "foods to check" list, read once. The food-name link normally
-  // targets the newest recall (`mainHref`); if that recall's own category gets
-  // filtered out while an older one stays active, its `href` is stripped (see
-  // `applyFoods` below) so it renders as inert text instead of a dead link.
-  // `alsoLinks` are the earlier-recall "also previously" entries, each carrying
-  // the category of the recall it points at.
-  const foods = Array.from(document.querySelectorAll('.food-list .food')).map((el) => {
-    const mainLink = el.querySelector('a');
-    const alsoLinks = Array.from(el.querySelectorAll('.also-previously .also-link'));
+  // Foods in the "foods to check" list, read once and grouped into recency
+  // buckets. Within each bucket, the food-name link normally targets the newest
+  // recall (`mainHref`); if that recall's own category gets filtered out while
+  // an older one stays active, its `href` is stripped (see `applyFoods` below)
+  // so it renders as inert text instead of a dead link. `alsoLinks` are the
+  // earlier-recall "also previously" entries, each carrying the category of the
+  // recall it points at.
+  const buckets = Array.from(document.querySelectorAll('.summary-bucket')).map((bucketEl) => {
+    const foods = Array.from(bucketEl.querySelectorAll('.food')).map((el) => {
+      const mainLink = el.querySelector('a');
+      const alsoLinks = Array.from(el.querySelectorAll('.also-previously .also-link'));
+      return {
+        el,
+        mainLink,
+        mainHref: mainLink.getAttribute('href'),
+        primaryCategory: mainLink.dataset.category,
+        sep: el.querySelector('.sep'),
+        also: el.querySelector('.also-previously'),
+        alsoLinks,
+        alsoSeps: alsoLinks.map((link) => link.querySelector('.also-sep')),
+        alsoCategories: alsoLinks.map((link) => link.querySelector('a')?.dataset.category ?? ''),
+      };
+    });
     return {
-      el,
-      mainLink,
-      mainHref: mainLink.getAttribute('href'),
-      primaryCategory: mainLink.dataset.category,
-      sep: el.querySelector('.sep'),
-      also: el.querySelector('.also-previously'),
-      alsoLinks,
-      alsoSeps: alsoLinks.map((link) => link.querySelector('.also-sep')),
-      alsoCategories: alsoLinks.map((link) => link.querySelector('a')?.dataset.category ?? ''),
+      el: bucketEl,
+      foods,
+      // The plain-data view `decideFoods` needs: no DOM elements, so the decision
+      // logic stays testable without a browser.
+      foodData: foods.map(({ primaryCategory, alsoCategories }) => ({ primaryCategory, alsoCategories })),
     };
   });
-
-  // The plain-data view `decideFoods` needs: no DOM elements, so the decision
-  // logic stays testable without a browser.
-  const foodData = foods.map(({ primaryCategory, alsoCategories }) => ({ primaryCategory, alsoCategories }));
 
   const escapeHtml = (s) =>
     s
@@ -141,25 +147,35 @@ import { decideFoods } from './food-filter.js';
   // otherwise dangle once filtered-out items drop out, at both the food level
   // and the "also previously" level, so this loop only has to apply its verdict.
   const applyFoods = () => {
-    const decisions = decideFoods(foodData, activeCategories());
+    const categories = activeCategories();
 
-    foods.forEach((f, i) => {
-      const d = decisions[i];
-      f.el.hidden = !d.visible;
-      if (f.sep) f.sep.hidden = !d.sepVisible;
+    // `decideFoods` is applied per bucket so its separator logic (drop the
+    // trailing comma after the last visible food) runs within each bucket, not
+    // across the whole list. A bucket whose foods are all filtered out is
+    // hidden along with its heading.
+    for (const bucket of buckets) {
+      const decisions = decideFoods(bucket.foodData, categories);
 
-      // Strip the food-name link's href when its own (newest-recall) category
-      // is filtered out, so it renders as inert text instead of a dead link;
-      // restore it once that category is active again.
-      if (d.primaryVisible) f.mainLink.setAttribute('href', f.mainHref);
-      else f.mainLink.removeAttribute('href');
+      bucket.foods.forEach((f, i) => {
+        const d = decisions[i];
+        f.el.hidden = !d.visible;
+        if (f.sep) f.sep.hidden = !d.sepVisible;
 
-      f.alsoLinks.forEach((link, j) => {
-        link.hidden = !d.alsoVisible[j];
-        if (f.alsoSeps[j]) f.alsoSeps[j].hidden = !d.alsoSepVisible[j];
+        // Strip the food-name link's href when its own (newest-recall) category
+        // is filtered out, so it renders as inert text instead of a dead link;
+        // restore it once that category is active again.
+        if (d.primaryVisible) f.mainLink.setAttribute('href', f.mainHref);
+        else f.mainLink.removeAttribute('href');
+
+        f.alsoLinks.forEach((link, j) => {
+          link.hidden = !d.alsoVisible[j];
+          if (f.alsoSeps[j]) f.alsoSeps[j].hidden = !d.alsoSepVisible[j];
+        });
+        if (f.also) f.also.hidden = !d.anyAlsoVisible;
       });
-      if (f.also) f.also.hidden = !d.anyAlsoVisible;
-    });
+
+      bucket.el.hidden = !decisions.some((d) => d.visible);
+    }
   };
 
   const persist = () => {
