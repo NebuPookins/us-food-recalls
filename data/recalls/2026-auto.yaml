@@ -179,9 +179,9 @@ recalls:
         accessed: 2026-08-20
   - id: 2026-08-12-eunha-fisheries-co-ltd-flounder-sashimi-with-sauce-ke
     date: 2026-08-12
-    title: Eunha Fisheries recalls flounder sashimi with sauce
+    title: "Eunha Fisheries flounder sashimi contains undisclosed wheat, soy, sesame, and the color additives Yellow #5 and Blue #1"
     summary:
-      - flounder
+      - flounder sashimi
     recalling_firm: Eunha Fisheries Co., LTD
     agency: FDA
     hazard: undeclared-allergen
