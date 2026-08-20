@@ -126,3 +126,25 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99460
         publisher: FDA
         accessed: 2026-08-20
+  - id: 2026-07-29-man-fon-inc-man-fon-inc-won-ton-wrappers-e
+    date: 2026-07-29
+    title: Man Fon Inc. recalls extra thin wonton wrappers
+    summary:
+      - wonton wrappers
+    recalling_firm: Man Fon, Inc.
+    agency: FDA
+    hazard: mislabeling
+    classification: II
+    products:
+      - name: Man Fon Inc. Won Ton Wrappers Extra Thin
+        brand: Man Fon, Inc.
+        codes:
+          - 757168 977315
+    distribution: Distributed to restaurants in California and to limited retail grocery stores in New Mexico via a wholesaler
+    note: "The FDA announced a recall of Man Fon Inc. extra thin wonton wrappers because they contain undeclared colors Yellow #5 and Yellow #6, which may cause reactions in sensitive individuals. The product was sent to California restaurants and some grocery stores in New Mexico. Consumers should discard the product or return it to the place of purchase. No illnesses have been reported."
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99386
+        publisher: FDA
+        accessed: 2026-08-20
+
