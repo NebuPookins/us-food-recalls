@@ -70,4 +70,40 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99444
         publisher: FDA
         accessed: 2026-08-20
+  - id: 2026-08-12-pt-organics-limited-pumpkin-tree-peter-rabbit-orga
+    date: 2026-08-12
+    title: PT Organics recalls banana & strawberry fruit puree pouches
+    summary:
+      - fruit puree
+    recalling_firm: PT Organics Limited
+    agency: FDA
+    hazard: foreign-material
+    classification: II
+    products:
+      - name: Pumpkin Tree Peter Rabbit Organics Banana & Strawberry fruit puree, 4‑oz pouch
+        brand: Pumpkin Tree Peter Rabbit Organics
+        codes:
+          - "815367010780"
+          - "260119"
+          - "260120"
+          - "260317"
+          - "260318"
+          - "260514"
+          - "260515"
+          - 01/19/2027
+          - 01/20/2027
+          - 03/17/2027
+          - 03/18/2027
+          - 05/14/2027
+          - 05/15/2027
+    distribution: Alabama, Arizona, California, Colorado, Georgia, Iowa, Illinois, Indiana, Kansas, Michigan, Minnesota, North Carolina, New Jersey, New York, Ohio, Oregon, Pennsylvania, South Carolina, Tennessee, Texas, Virginia, Washington, and Wisconsin
+    note: PT Organics Limited is recalling its 4‑oz banana‑and‑strawberry fruit puree pouches after a possible foreign object—thin, soft plastic strands—was found in the product. The affected pouches were distributed to stores in 23 states and are identified by specific lot codes and best‑by dates. Consumers who have purchased the product should check the UPC 815367010780 and the listed lot numbers, and discard any recalled items or return them to the place of purchase. No illnesses have been reported.
+    citations:
+      - title: Pumpkin Tree Peter Rabbit Organics Recalls Fruit Puree Pouches Sold At Kroger, Target, Meijer
+        url: https://www.yahoo.com/news/us/articles/pumpkin-tree-peter-rabbit-organics-150033607.html
+        publisher: Yahoo
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99448
+        publisher: FDA
+        accessed: 2026-08-20
 
