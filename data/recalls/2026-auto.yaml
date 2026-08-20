@@ -370,6 +370,15 @@ recalls:
       - title: General Mills recalls 730,000 Pillsbury rolls sold at Walmart over possible glass contamination
         url: https://www.msn.com/en-us/money/news/general-mills-recalls-730000-pillsbury-rolls-sold-at-walmart-over-possible-glass-contamination/ar-AA28jKlQ
         publisher: MSN
+        accessed: 2026-08-20
+      - title: General Mills recalls 730,000 Pillsbury rolls for possible glass - Walmart
+        url: https://www.usatoday.com/story/money/2026/07/18/general-mills-recall-pillsbury-rolls-walmart-glass/90967806007/
+        publisher: USA Today
+        accessed: 2026-08-18
+      - title: Bread roll recall (July 2026)
+        url: https://www.health.com/bread-roll-recall-july-2026-12021093
+        publisher: Health
+        accessed: 2026-08-18
       - title: FDA recall record
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99293
         publisher: FDA
