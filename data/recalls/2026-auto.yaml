@@ -204,7 +204,7 @@ recalls:
         accessed: 2026-08-20
   - id: 2026-08-12-jina-f-and-c-ultimate-mother-s-day-wangshin
     date: 2026-08-12
-    title: "JINA F&C Ultimate Mother's Day Wangshin Doenjang soy paste contains undeclared anchovy"
+    title: JINA F&C Ultimate Mother's Day Wangshin Doenjang soy paste contains undeclared anchovy
     summary:
       - soybean paste
     recalling_firm: JINA F&C
@@ -230,6 +230,38 @@ recalls:
         accessed: 2026-08-20
       - title: FDA recall record
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99358
+        publisher: FDA
+        accessed: 2026-08-20
+  - id: 2026-07-29-total-nutrition-inc-1-tnvitamins-100-organic-morin
+    date: 2026-07-29
+    title: Total Nutrition recalls Moringa capsules and powder
+    summary:
+      - moringa
+    recalling_firm: Total Nutrition Inc
+    agency: FDA
+    hazard: salmonella
+    classification: I
+    products:
+      - name: TNVitamins 100% Organic Moringa Capsules 1,200 mg
+        brand: TNVitamins
+        codes:
+          - AB9917
+          - Lot 2800
+          - Exp 2/2028
+      - name: TNVitamins 100% Organic Moringa Powder 96 grams
+        brand: TNVitamins
+        codes:
+          - AB9904
+          - Lot 2782
+          - Exp 5/2028
+    distribution: Nationwide
+    note: Total Nutrition Inc is recalling its TNVitamins 100% Organic Moringa Capsules and Moringa Powder after testing revealed contamination with Salmonella. The products were distributed nationwide and were sold under the TNVitamins brand. Consumers should stop using the recalled items and return them to the place of purchase for a full refund or contact the company for disposal instructions. The FDA classifies this as a Class I recall due to the serious health risk posed by Salmonella.
+    citations:
+      - title: TNVitamins recalls moringa supplements over salmonella risk
+        url: https://www.yahoo.com/news/science/articles/tnvitamins-recalls-moringa-supplements-over-143458912.html
+        publisher: Yahoo
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99317
         publisher: FDA
         accessed: 2026-08-20
 
