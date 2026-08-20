@@ -4,11 +4,11 @@
 # to keep into the hand-curated <year>.yaml and delete them from this file.
 recalls:
   - id: 2026-08-12-m-g-foods-inc-spicy-breakfast-burrito-sold-u
-    date: 2026-08-12
-    title: M.G. Foods recalls spicy breakfast burritos for undeclared soy
+    date: 2026-07-21
+    title: Fresh & Ready Foods recalls spicy breakfast burritos for undeclared soy
     summary:
       - burrito
-    recalling_firm: M.G. Foods, Inc.
+    recalling_firm: Fresh & Ready Foods LLC
     agency: FDA
     hazard: undeclared-allergen
     classification: I
@@ -24,10 +24,14 @@ recalls:
           - UPC 100001000297
           - "Fresh Thru: 07/20/26"
     distribution: Alabama, Georgia, Kentucky, North Carolina, South Carolina, Tennessee, Virginia, West Virginia
-    note: M.G. Foods, Inc. is recalling approximately 498 spicy breakfast burritos sold under the FRESH & READY FOODS and Sprig & Sprout brands because the sausage filling contains soy that was not declared on the label. The undeclared soy poses a risk to consumers with soy allergies. The products were distributed to eight states in the southeastern United States. Consumers should not eat the burritos and may return them to the place of purchase for a refund or contact the company for further instructions.
+    note: Fresh & Ready Foods LLC is recalling approximately 498 spicy breakfast burritos sold under the FRESH & READY FOODS and Sprig & Sprout brands because the sausage filling contains soy that was not declared on the label. The undeclared soy poses a risk to consumers with soy allergies. The products were distributed to eight states in the southeastern United States. Consumers should not eat the burritos and may return them to the place of purchase for a refund or contact the company for further instructions.
     citations:
-      - title: FDA recall notice
+      - title: Fresh & Ready Foods LLC Recalls Spicy Breakfast Burrito due to Undeclared Soy
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/fresh-ready-foods-llc-recalls-spicy-breakfast-burrito-due-undeclared-soy
+        publisher: FDA
+        accessed: 2026-08-20
+      - title: FDA enforcement record (JSON)
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99458
         publisher: FDA
-        accessed: 2026-08-19
+        accessed: 2026-08-20
 
