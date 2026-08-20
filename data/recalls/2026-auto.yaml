@@ -234,7 +234,7 @@ recalls:
         accessed: 2026-08-20
   - id: 2026-07-29-total-nutrition-inc-1-tnvitamins-100-organic-morin
     date: 2026-07-29
-    title: Total Nutrition recalls Moringa capsules and powder
+    title: Total Nutrition Moringa capsules and powder contaminated with Salmonella
     summary:
       - moringa
     recalling_firm: Total Nutrition Inc
@@ -260,6 +260,7 @@ recalls:
       - title: TNVitamins recalls moringa supplements over salmonella risk
         url: https://www.yahoo.com/news/science/articles/tnvitamins-recalls-moringa-supplements-over-143458912.html
         publisher: Yahoo
+        accessed: 2026-08-20
       - title: FDA recall record
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99317
         publisher: FDA
