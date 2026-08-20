@@ -1,9 +1,9 @@
 #!/bin/sh
-# Validates the recall data before every commit.
+# Validates the recall data and runs the JS unit tests before every commit.
 #
 # Wired up by `npm install` (see the "prepare" script), which sets
 # core.hooksPath to this directory. Bypass with `git commit --no-verify`;
-# CI runs the same check, so a bypass will still be caught on push.
+# CI runs the same checks, so a bypass will still be caught on push.
 
 set -e
 
@@ -11,4 +11,10 @@ set -e
 if git diff --cached --name-only --diff-filter=ACMR | grep -qE '^(data/|src/schema\.ts$)'; then
   echo "Validating recall data..."
   npm run --silent validate
+fi
+
+# Nothing to test if this commit doesn't touch the client-side filter or its tests.
+if git diff --cached --name-only --diff-filter=ACMR | grep -qE '^(static/|test/)'; then
+  echo "Running tests..."
+  npm run --silent test
 fi

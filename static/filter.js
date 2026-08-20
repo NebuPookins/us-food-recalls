@@ -1,3 +1,5 @@
+import { decideFoods } from './food-filter.js';
+
 // Progressive enhancement: the full list is already in the HTML, this only hides
 // non-matching cards. With JS off the page still works, just unfiltered.
 (() => {
@@ -37,12 +39,31 @@
     search: el.dataset.search,
   }));
 
-  // Foods in the "foods to check" list; category and separator read once.
-  const foods = Array.from(document.querySelectorAll('.food-list .food')).map((el) => ({
-    el,
-    category: el.dataset.category,
-    sep: el.querySelector('.sep'),
-  }));
+  // Foods in the "foods to check" list, read once. The food-name link normally
+  // targets the newest recall (`mainHref`); if that recall's own category gets
+  // filtered out while an older one stays active, its `href` is stripped (see
+  // `applyFoods` below) so it renders as inert text instead of a dead link.
+  // `alsoLinks` are the earlier-recall "also previously" entries, each carrying
+  // the category of the recall it points at.
+  const foods = Array.from(document.querySelectorAll('.food-list .food')).map((el) => {
+    const mainLink = el.querySelector('a');
+    const alsoLinks = Array.from(el.querySelectorAll('.also-previously .also-link'));
+    return {
+      el,
+      mainLink,
+      mainHref: mainLink.getAttribute('href'),
+      primaryCategory: mainLink.dataset.category,
+      sep: el.querySelector('.sep'),
+      also: el.querySelector('.also-previously'),
+      alsoLinks,
+      alsoSeps: alsoLinks.map((link) => link.querySelector('.also-sep')),
+      alsoCategories: alsoLinks.map((link) => link.querySelector('a')?.dataset.category ?? ''),
+    };
+  });
+
+  // The plain-data view `decideFoods` needs: no DOM elements, so the decision
+  // logic stays testable without a browser.
+  const foodData = foods.map(({ primaryCategory, alsoCategories }) => ({ primaryCategory, alsoCategories }));
 
   const escapeHtml = (s) =>
     s
@@ -72,7 +93,9 @@
       : '';
   };
 
-  const apply = () => {
+  // Recall cards depend on search/hazard/year *and* category, so this reruns on
+  // every keystroke as well as every category change.
+  const applyRecalls = () => {
     const terms = q.value.toLowerCase().split(/\s+/).filter(Boolean);
     const categories = activeCategories();
 
@@ -90,17 +113,6 @@
       if (show) visible++;
       else if (terms.length > 0 && !inCategory && searchHit) hidden.push(r);
     }
-
-    // The "foods to check" list reflects only the category preferences, not the
-    // search/hazard/year controls — its labels wouldn't match the search text.
-    let lastFood = null;
-    for (const f of foods) {
-      f.el.hidden = !categories.has(f.category);
-      if (!f.el.hidden) lastFood = f;
-    }
-    // Hide the comma on the last visible food so filtering out the final item
-    // can't leave a dangling ", " behind.
-    for (const f of foods) if (f.sep) f.sep.hidden = f === lastFood;
 
     count.textContent = `Showing ${visible} of ${recalls.length} recalls`;
     empty.hidden = visible > 0;
@@ -120,6 +132,34 @@
       'Filtered out alerts matching your search',
       hidden.map((r) => ({ title: r.title })),
     );
+  };
+
+  // The "foods to check" list reflects only the category preferences, not the
+  // search/hazard/year controls, so it's kept separate from `applyRecalls` and
+  // only called where a category might actually have changed — not on every
+  // search keystroke. `decideFoods` also decides which separators would
+  // otherwise dangle once filtered-out items drop out, at both the food level
+  // and the "also previously" level, so this loop only has to apply its verdict.
+  const applyFoods = () => {
+    const decisions = decideFoods(foodData, activeCategories());
+
+    foods.forEach((f, i) => {
+      const d = decisions[i];
+      f.el.hidden = !d.visible;
+      if (f.sep) f.sep.hidden = !d.sepVisible;
+
+      // Strip the food-name link's href when its own (newest-recall) category
+      // is filtered out, so it renders as inert text instead of a dead link;
+      // restore it once that category is active again.
+      if (d.primaryVisible) f.mainLink.setAttribute('href', f.mainHref);
+      else f.mainLink.removeAttribute('href');
+
+      f.alsoLinks.forEach((link, j) => {
+        link.hidden = !d.alsoVisible[j];
+        if (f.alsoSeps[j]) f.alsoSeps[j].hidden = !d.alsoSepVisible[j];
+      });
+      if (f.also) f.also.hidden = !d.anyAlsoVisible;
+    });
   };
 
   const persist = () => {
@@ -143,11 +183,12 @@
     setExpanded(false);
   };
 
-  for (const control of [q, hazard, year]) control.addEventListener('input', apply);
+  for (const control of [q, hazard, year]) control.addEventListener('input', applyRecalls);
   for (const input of categoryInputs) {
     input.addEventListener('change', () => {
       prefsWarning.hidden = true;
-      apply();
+      applyRecalls();
+      applyFoods();
     });
   }
 
@@ -159,7 +200,8 @@
     prefsWarning.hidden = true;
     persist();
     setExpanded(false);
-    apply();
+    applyRecalls();
+    applyFoods();
   });
 
   prefsToggle.addEventListener('click', () => {
@@ -167,5 +209,6 @@
   });
 
   restore();
-  apply();
+  applyRecalls();
+  applyFoods();
 })();

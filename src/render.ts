@@ -21,13 +21,25 @@ const MONTHS = [
 ] as const;
 
 /**
- * Formats `YYYY-MM-DD` by slicing the string. Deliberately avoids `new Date()`,
- * which parses a bare ISO date as UTC midnight and would render the previous
- * day for every reader in a US timezone.
+ * Splits `YYYY-MM-DD` into parts. Deliberately avoids `new Date()`, which parses
+ * a bare ISO date as UTC midnight and would render the previous day for every
+ * reader in a US timezone.
  */
-export function formatDate(iso: string): string {
+function parseIsoDate(iso: string): { readonly y: string; readonly m: number; readonly d: string } {
   const [y, m, d] = iso.split('-');
-  return `${MONTHS[Number(m) - 1]} ${Number(d)}, ${y}`;
+  return { y, m: Number(m), d };
+}
+
+/** `February 11, 2026`. */
+export function formatDate(iso: string): string {
+  const { y, m, d } = parseIsoDate(iso);
+  return `${MONTHS[m - 1]} ${Number(d)}, ${y}`;
+}
+
+/** Compact, zero-padded `2026-Feb-11`, for the inline "also previously" links. */
+function formatDateShort(iso: string): string {
+  const { y, m, d } = parseIsoDate(iso);
+  return `${y}-${MONTHS[m - 1].slice(0, 3)}-${d}`;
 }
 
 export function escapeHtml(value: string): string {
@@ -151,23 +163,59 @@ export type SiteMeta = {
   readonly buildDate: string;
 };
 
-/** Compact "foods to check" list with anchor links to each entry, newest first. */
+/** Trailing separator for an item in a comma-joined list of sibling spans; empty
+ *  for the last item. Lives inside the item's own span (call site's job) so
+ *  hiding the item also hides its separator — used at both list levels below. */
+function sepHtml(sepClass: string, isLast: boolean): string {
+  return isLast ? '' : `<span class="${sepClass}">, </span>`;
+}
+
+/** Compact "foods to check" list with anchor links to each entry, newest first.
+ *  When one food label maps to several recalls, it is listed once (linking to
+ *  the newest recall) and earlier ones follow as dated "also previously" links. */
 function renderSummary(recalls: readonly Recall[]): string {
   const items = recalls.flatMap((r) =>
-    (r.summary ?? []).map((food) => ({ id: r.id, category: HAZARD_TO_CATEGORY[r.hazard], food })),
+    (r.summary ?? []).map((food) => ({
+      id: r.id,
+      date: r.date,
+      category: HAZARD_TO_CATEGORY[r.hazard],
+      food,
+    })),
   );
   if (items.length === 0) return '';
 
-  // Each item is wrapped so the client can hide it by category; the trailing
-  // separator lives inside the wrapper so hiding an item hides its comma too.
-  const links = items
-    .map(
-      (it, i) =>
-        `<span class="food" data-category="${escapeHtml(it.category)}">` +
-        `<a href="#${escapeHtml(it.id)}">${escapeHtml(it.food)}</a>` +
-        (i < items.length - 1 ? '<span class="sep">, </span>' : '') +
-        '</span>',
-    )
+  // Group by food label, preserving first-occurrence (newest-first) order. Each
+  // group becomes one span so the client can hide it by category; the trailing
+  // separator lives inside the span so hiding an item hides its comma too.
+  const groups = Map.groupBy(items, (it) => it.food);
+
+  const links = [...groups.entries()]
+    .map(([food, occurrences], i) => {
+      const primary = occurrences[0];
+      // Earlier recalls become dated links, each tagged with its own category so
+      // the client can hide the ones the reader has filtered out. The primary
+      // link carries its own category too: if the newest recall's category gets
+      // filtered out while an older one stays active, the client strips its href
+      // instead of leaving it pointing at a now-hidden recall.
+      const rest = occurrences.slice(1);
+      const alsoLinks = rest
+        .map(
+          (o, k) =>
+            `<span class="also-link">` +
+            `<a href="#${escapeHtml(o.id)}" data-category="${escapeHtml(o.category)}">${escapeHtml(formatDateShort(o.date))}</a>` +
+            sepHtml('also-sep', k === rest.length - 1) +
+            `</span>`,
+        )
+        .join('');
+      const extra = rest.length > 0 ? `<span class="also-previously"> (also previously ${alsoLinks})</span>` : '';
+      return (
+        `<span class="food">` +
+        `<a href="#${escapeHtml(primary.id)}" data-category="${escapeHtml(primary.category)}">${escapeHtml(food)}</a>` +
+        extra +
+        sepHtml('sep', i === groups.size - 1) +
+        '</span>'
+      );
+    })
     .join('');
 
   return `<section class="summary" aria-labelledby="summary-title">
@@ -297,7 +345,7 @@ ${active.map((r) => renderRecall(r, byId)).join('\n')}
 </footer>
 
 <script id="retracted-data" type="application/json">${retractedData}</script>
-<script src="filter.js"></script>
+<script type="module" src="filter.js"></script>
 </body>
 </html>
 `;

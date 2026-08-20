@@ -23,6 +23,7 @@ jobs:
       - run: npm ci
       - run: npm run validate
       - run: npm run typecheck
+      - run: npm test
       # Fails if schema.json is stale relative to src/schema.ts.
       - run: npm run schema && git diff --exit-code schema.json
       - run: npm run build

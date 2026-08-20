@@ -7,6 +7,7 @@
     "validate": "node src/validate.ts",
     "schema": "node src/gen-schema.ts",
     "typecheck": "tsc --noEmit",
+    "test": "node --test",
     "preview": "npm run build && node src/serve.ts",
     "prepare": "git config core.hooksPath .githooks || true"
   },
