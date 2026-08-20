@@ -290,4 +290,30 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99357
         publisher: FDA
         accessed: 2026-08-20
+  - id: 2026-07-22-amy-s-kitchen-inc-amy-s-organic-soups-lentil-lig
+    date: 2026-07-22
+    title: Amy's Kitchen recalls organic lentil soup
+    summary:
+      - soup
+    recalling_firm: Amy's Kitchen Inc.
+    agency: FDA
+    hazard: other
+    classification: II
+    products:
+      - name: Amy's Organic Soups Lentil Light in Sodium 14.5 oz
+        brand: Amy's Kitchen
+        codes:
+          - LOT 60D0924
+          - BEST BEFORE 4/2027
+          - "042272005833"
+    distribution: Nationwide in 27 U.S. states and Canada
+    note: Amy's Kitchen is recalling its Organic Lentil Light in Sodium soup due to a potential spoilage issue. The recall covers about 15,350 cases distributed across many states and Canada. Consumers should check the lot code 60D0924 and best‑before date 4/2027, and discard any product that matches these identifiers. For refunds or questions, contact Amy's Kitchen using the information on the company’s website.
+    citations:
+      - title: Amy’s Kitchen recalls organic lentil soup over spoilage concerns
+        url: https://www.news4jax.com/news/2026/07/23/amys-kitchen-recalls-organic-lentil-soup-over-spoilage-concerns/
+        publisher: News4Jax
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99306
+        publisher: FDA
+        accessed: 2026-08-20
 
