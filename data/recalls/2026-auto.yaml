@@ -177,4 +177,29 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99419
         publisher: FDA
         accessed: 2026-08-20
+  - id: 2026-08-12-eunha-fisheries-co-ltd-flounder-sashimi-with-sauce-ke
+    date: 2026-08-12
+    title: Eunha Fisheries recalls flounder sashimi with sauce
+    summary:
+      - flounder
+    recalling_firm: Eunha Fisheries Co., LTD
+    agency: FDA
+    hazard: undeclared-allergen
+    classification: II
+    products:
+      - name: Flounder Sashimi with Sauce
+        codes:
+          - "UPC: 8 809342 366186"
+          - "Best By: 2026.07.11"
+          - "Best By: 2026.12.08"
+    distribution: California and New Jersey
+    note: "Eunha Fisheries Co., LTD is recalling its frozen flounder sashimi with sauce because the label from the foreign manufacturer failed to list several allergens, including wheat, soy, sesame, and the color additives Yellow #5 and Blue #1. The undeclared allergens pose a risk to consumers with food allergies. The product was distributed in California and New Jersey and is identified by UPC 8 809342 366186 and best‑by dates of July 11, 2026 and December 8, 2026. Consumers should not eat the product and may return it to the place of purchase for a refund or contact the company for further instructions."
+    citations:
+      - title: Imported sashimi recalled because of undeclared allergens
+        url: https://www.foodsafetynews.com/2026/07/imported-sashimi-recalled-because-of-undeclared-allergens/
+        publisher: Food Safety News
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99351
+        publisher: FDA
+        accessed: 2026-08-20
 
