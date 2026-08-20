@@ -705,34 +705,6 @@ recalls:
         publisher: NBC News
         accessed: 2026-08-18
 
-  - id: 2026-07-pillsbury-bread-rolls-glass
-    date: 2026-07-13
-    title: Pillsbury frozen bread rolls (glass)
-    summary:
-      - bread rolls
-    recalling_firm: General Mills
-    agency: FDA
-    hazard: foreign-material
-    classification: II
-    distribution: Walmart in-store bakeries in 19 states
-    products:
-      - name: Pillsbury Bread Rolls (Hard Roll Dough and Kaiser Roll Dough)
-        brand: Pillsbury
-        codes:
-          - Best if used by 2026-10-12 and 2026-10-13
-    note: |
-      About 735,000 frozen dough rolls baked and sold at Walmart bakeries
-      recalled for possible glass. No injuries reported.
-    citations:
-      - title: General Mills recalls 730,000 Pillsbury rolls for possible glass - Walmart
-        url: https://www.usatoday.com/story/money/2026/07/18/general-mills-recall-pillsbury-rolls-walmart-glass/90967806007/
-        publisher: USA Today
-        accessed: 2026-08-18
-      - title: Bread roll recall (July 2026)
-        url: https://www.health.com/bread-roll-recall-july-2026-12021093
-        publisher: Health
-        accessed: 2026-08-18
-
   - id: 2026-06-la-ceiba-cottage-cheese
     date: 2026-06-26
     title: Requesón cottage cheese (Salvadoran and Mexican)
