@@ -317,4 +317,32 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99306
         publisher: FDA
         accessed: 2026-08-20
+  - id: 2026-07-22-fayus-inc-ola-ola-pounded-groundnuts-int
+    date: 2026-07-22
+    title: Fayus Inc. recalls OLA-OLA pounded groundnuts due to undeclared peanuts
+    summary:
+      - groundnuts
+      - peanuts
+    recalling_firm: Fayus Inc.
+    agency: FDA
+    hazard: undeclared-allergen
+    classification: II
+    products:
+      - name: OLA-OLA POUNDED GROUNDNUTS (INTWILO) 32 oz
+        brand: OLA-OLA
+        codes:
+          - L536531
+          - L500505
+          - "Exp: 12/28"
+          - "UPC: 650655764330"
+    distribution: Texas
+    note: Fayus Inc. is recalling its OLA-OLA pounded groundnuts after discovering that peanuts, an undeclared allergen, are present in the product. The recall covers 120 cases (approximately 1,920 bags) distributed in Texas. The product is classified as a Class II recall, indicating a moderate health risk. Consumers who purchased the product should discard it or return it to the place of purchase.
+    citations:
+      - title: Fayus Inc., dba Yusol International Foods Expands Recall of OLA-OLA POUNDED YAM Due to Undeclared Milk Allergen
+        url: https://www.usatoday.com/recalls/food-and-drug/FDA-8w1wfgu7yiw/
+        publisher: USA Today
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99282
+        publisher: FDA
+        accessed: 2026-08-20
 
