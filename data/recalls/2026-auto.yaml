@@ -151,28 +151,3 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99386
         publisher: FDA
         accessed: 2026-08-20
-  - id: 2026-07-29-brooklyn-roasting-works-llc-brooklyn-roasting-company-past
-    date: 2026-07-29
-    title: Brooklyn Roasting Works recalls cold brew concentrate
-    summary:
-      - coffee
-    recalling_firm: Brooklyn Roasting Works LLC
-    agency: FDA
-    hazard: botulism
-    classification: II
-    products:
-      - name: Brooklyn Roasting Company Pasteurized Cold Brew Concentrate
-        brand: Brooklyn Roasting Company
-        codes:
-          - 063026-093026
-    distribution: New York and New Jersey
-    note: Brooklyn Roasting Works LLC is recalling its 2.5‑gallon pasteurized cold‑brew coffee concentrate after discovering that ambient storage could allow growth of Clostridium botulinum and toxin formation. The product was distributed in New York and New Jersey between April 1 and June 20, 2026, with about 1,219 units affected. Consumers who purchased the concentrate should not consume it and should return it to the place of purchase or contact the company for a refund. The FDA classifies this as a Class II recall due to the potential for serious health effects.
-    citations:
-      - title: "Cold brew recall: Why botulism is a serious threat"
-        url: https://www.msn.com/en-us/foodanddrink/foodnews/cold-brew-recall-why-botulism-is-a-serious-threat/ar-AA2ahUHI
-        publisher: Gentleman's Pursuits
-      - title: FDA recall record
-        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99355
-        publisher: FDA
-        accessed: 2026-08-20
-
