@@ -345,4 +345,33 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99282
         publisher: FDA
         accessed: 2026-08-20
+  - id: 2026-07-22-general-mills-james-ford-bell-pillsbury-bread-rolls-hard-rol
+    date: 2026-07-22
+    title: General Mills recalls Pillsbury Hard Roll Dough
+    summary:
+      - bread
+    recalling_firm: General Mills James Ford Bell Technical Center
+    agency: FDA
+    hazard: foreign-material
+    classification: II
+    products:
+      - name: Pillsbury Hard Roll Dough
+        brand: Pillsbury
+        codes:
+          - UPC 721582-13283
+          - Case UPC 107-21582-13283-1
+          - Better if Used by OCT 12 26
+          - "Lot: 11JUN6JL"
+          - Better if Used by OCT 13 26
+          - "Lot: 12JUN6JL"
+    distribution: "Multiple states: AR, CA, FL, GA, IN, LA, ME, MO, NM, NY, OH, OK, PA, SC, TN, TX, VA, WA, WY"
+    note: General Mills is recalling approximately 3,080 cases of Pillsbury Hard Roll Dough distributed to stores in 19 states due to possible glass contamination. The product, identified by UPC 721582-13283 and lot codes 11JUN6JL and 12JUN6JL, may contain foreign material that could cause injury if consumed. Consumers should check their freezers for the recalled dough and discard it or return it to the place of purchase. No illnesses have been reported.
+    citations:
+      - title: General Mills recalls 730,000 Pillsbury rolls sold at Walmart over possible glass contamination
+        url: https://www.msn.com/en-us/money/news/general-mills-recalls-730000-pillsbury-rolls-sold-at-walmart-over-possible-glass-contamination/ar-AA28jKlQ
+        publisher: MSN
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99293
+        publisher: FDA
+        accessed: 2026-08-20
 
