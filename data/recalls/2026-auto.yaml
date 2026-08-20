@@ -151,3 +151,30 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99386
         publisher: FDA
         accessed: 2026-08-20
+  - id: 2026-08-05-mellish-island-corp-mellish-island-super-skin-diet
+    date: 2026-08-05
+    title: Mellish Island Super Skin supplement recalled for undeclared fish collagen
+    summary:
+      - supplement
+    recalling_firm: Mellish Island Corp
+    agency: FDA
+    hazard: undeclared-allergen
+    classification: II
+    products:
+      - name: Mellish Island Super Skin
+        brand: Mellish Island
+        codes:
+          - UPC 858792003323
+          - Lot CA1G24
+          - Expiration 08-2027
+    distribution: Nationwide via TikTok (online)
+    note: Mellish Island Corp is recalling its Super Skin dietary supplement because the label failed to disclose that the marine collagen source is fish, posing an allergen risk. The recall covers about 1,600 bottles distributed exclusively through TikTok, which reaches consumers across the United States. Consumers should stop using the product and return it to the retailer or contact the company for a refund.
+    citations:
+      - title: This popular collagen supplement was just recalled—here's how to know if you need to toss yours
+        url: https://www.msn.com/en-us/foodanddrink/foodnews/this-popular-collagen-supplement-was-just-recalled-here-s-how-to-know-if-you-need-to-toss-yours/ar-AA29VMa3
+        publisher: Women's Health
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99419
+        publisher: FDA
+        accessed: 2026-08-20
+
