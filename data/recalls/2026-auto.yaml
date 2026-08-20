@@ -204,7 +204,7 @@ recalls:
         accessed: 2026-08-20
   - id: 2026-08-12-jina-f-and-c-ultimate-mother-s-day-wangshin
     date: 2026-08-12
-    title: JINA F&C recalls Ultimate Mother's Day Wangshin Doenjang soy paste
+    title: "JINA F&C Ultimate Mother's Day Wangshin Doenjang soy paste contains undeclared anchovy"
     summary:
       - soybean paste
     recalling_firm: JINA F&C
@@ -224,6 +224,10 @@ recalls:
     distribution: Distributed nationwide through online sales and a distributor's warehouse
     note: JINA F&C is recalling 4,153 units of its Ultimate Mother's Day Wangshin Doenjang soy paste because the label fails to list anchovy, a fish allergen, as an ingredient. The undeclared allergen could cause serious allergic reactions in consumers with fish sensitivities. The product was sold online and shipped to a distributor's warehouse for further distribution. Consumers who purchased the product should stop using it and return it to the place of purchase for a full refund.
     citations:
+      - title: FDA Enforcement Report
+        url: https://www.accessdata.fda.gov/scripts/ires/index.cfm?Product=221408
+        publisher: FDA
+        accessed: 2026-08-20
       - title: FDA recall record
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99358
         publisher: FDA
