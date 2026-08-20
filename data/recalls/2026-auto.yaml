@@ -94,7 +94,7 @@ recalls:
     date: 2026-08-12
     title: Pack'n Fresh Hondashi seasoning missing fish allergen label
     summary:
-      - seasoning
+      - Hondashi seasoning
     recalling_firm: Pack'n Fresh LLC
     agency: FDA
     hazard: undeclared-allergen
@@ -118,6 +118,10 @@ recalls:
     distribution: New Jersey and California
     note: Pack'n Fresh LLC is recalling approximately 109,600 packets of Hondashi 0.25‑oz seasoning because the label fails to declare the presence of fish, an allergen. The product was distributed to stores in New Jersey and California. Consumers who purchased this seasoning should check the lot numbers and best‑by dates listed and discard any affected packages. For more information, contact the firm or the FDA.
     citations:
+      - title: FDA Hondashi 0.25oz seasoning pouch Enforcement Report
+        url: https://www.accessdata.fda.gov/scripts/ires/index.cfm?Event=99460
+        publisher: FDA
+        accessed: 2026-08-20
       - title: FDA recall record
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99460
         publisher: FDA
