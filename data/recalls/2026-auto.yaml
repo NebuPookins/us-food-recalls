@@ -34,4 +34,41 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99458
         publisher: FDA
         accessed: 2026-08-20
+  - id: 2026-08-12-cheer-pack-flexible-food-pouch-3-layer-fo
+    date: 2026-08-12
+    title: CHEER PACK flexible food pouch may release plastic strips
+    summary:
+      - banana
+      - strawberry
+    recalling_firm: CHEER PACK
+    agency: FDA
+    hazard: foreign-material
+    classification: II
+    products:
+      - name: Pumpkin Tree Peter Rabbit Organics Banana & Strawberry 4 oz food puree
+        brand: Peter Rabbit Organics
+        codes:
+          - "815367010780"
+          - LSS20100005297
+          - LSS2010000598
+          - LSS20100005300
+          - LSS20100005301
+          - LSS20100005302
+          - LSS20100005303
+          - LSS20100005304
+          - LSS2015306
+          - LSS20100005307
+          - LSS20100005308
+          - LSS20100005309
+          - LSS20100005310
+    distribution: Oregon only
+    note: CHEER PACK is recalling about 322,450 four‑ounce flexible food pouches used for Pumpkin Tree Peter Rabbit Organics Banana & Strawberry puree that were sold only in Oregon. The pouches may release thin plastic strips into the food, posing a foreign‑material hazard. Consumers should check the pouch part number CP6088 and lot numbers LSS20100005297 through LSS2015306, and discard any product that matches, or return it to the retailer for a refund. No illnesses have been reported.
+    citations:
+      - title: Fruit puree pouches recalled nationwide over plastic risk. Check if yours is affected
+        url: https://www.msn.com/en-us/health/wellness/fruit-puree-pouches-recalled-nationwide-over-plastic-risk-check-if-yours-is-affected/ar-AA28wFbM
+        publisher: MSN
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99444
+        publisher: FDA
+        accessed: 2026-08-20
 
