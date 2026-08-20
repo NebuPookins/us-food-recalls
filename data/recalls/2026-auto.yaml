@@ -292,9 +292,9 @@ recalls:
         accessed: 2026-08-20
   - id: 2026-07-22-amy-s-kitchen-inc-amy-s-organic-soups-lentil-lig
     date: 2026-07-22
-    title: Amy's Kitchen recalls organic lentil soup
+    title: Amy's Kitchen organic lentil soup potential spoilage issue
     summary:
-      - soup
+      - lentil soup
     recalling_firm: Amy's Kitchen Inc.
     agency: FDA
     hazard: other
@@ -312,6 +312,7 @@ recalls:
       - title: Amy’s Kitchen recalls organic lentil soup over spoilage concerns
         url: https://www.news4jax.com/news/2026/07/23/amys-kitchen-recalls-organic-lentil-soup-over-spoilage-concerns/
         publisher: News4Jax
+        accessed: 2026-08-20
       - title: FDA recall record
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99306
         publisher: FDA
