@@ -713,21 +713,33 @@ recalls:
     recalling_firm: La Ceiba Foods Latin Market Inc.
     agency: FDA
     hazard: listeria
+    classification: I
     distribution: Maryland, Virginia and Washington, D.C.
     products:
       - name: Requesón Salvadoreño (Salvadoran cottage cheese)
         brand: La Colonia / Selectos Latinos
-      - name: Requesón Mexicano (Mexican cottage cheese)
+      - name: Requesón Mexicano (Mexican cottage cheese), 16 oz
         brand: La Colonia / Selectos Latinos
+        codes:
+          - Selec1011
     note: |
       Cottage cheese products may be contaminated with Listeria monocytogenes
       from supplier Clover Hill Dairy, which is the subject of a multistate
       outbreak. No additional illnesses specific to this product were reported.
+      FDA enforcement record 99325 lists La Colonia Foods Llc as the recalling
+      firm for the 16 oz Requesón Mexicano (code Selec1011).
     citations:
       - title: La Ceiba Foods Latin Market Inc. Recalls Cottage Cheese Products Because of Possible Health Risk
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/la-ceiba-foods-latin-market-inc-recalls-cottage-cheese-products-because-possible-health-risk
         publisher: FDA
         accessed: 2026-08-18
+      - title: Soft Cheese Recall Expands for Potential Listeria Contamination Causing Deadly Multi-State Outbreak
+        url: https://www.yahoo.com/news/us/articles/soft-cheese-recall-expands-potential-194722335.html
+        publisher: Yahoo
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99325
+        publisher: FDA
+        accessed: 2026-08-20
 
   - id: 2026-06-morningstar-farms-nuggets-patties
     date: 2026-06-18

@@ -383,28 +383,4 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99293
         publisher: FDA
         accessed: 2026-08-20
-  - id: 2026-08-12-la-colonia-foods-llc-selectos-latinos-requeson-mexi
-    date: 2026-08-12
-    title: La Colonia Foods recalls Selectos Latinos Mexican cottage cheese
-    summary:
-      - cottage cheese
-    recalling_firm: La Colonia Foods Llc
-    agency: FDA
-    hazard: listeria
-    classification: I
-    products:
-      - name: Selectos Latinos Requeson Mexicano Mexican Cottage Cheese 16 oz
-        brand: Selectos Latinos
-        codes:
-          - Selec1011
-    distribution: Distributed to Maryland and Virginia
-    note: The FDA announced a recall of Selectos Latinos Requeson Mexicano Mexican Cottage Cheese because the product may be contaminated with Listeria monocytogenes. The affected items were shipped to retail locations in Maryland and Virginia. Consumers who purchased this 16‑oz cottage cheese should discard it or return it to the place of purchase and avoid consuming it.
-    citations:
-      - title: Soft Cheese Recall Expands for Potential Listeria Contamination Causing Deadly Multi-State Outbreak
-        url: https://www.yahoo.com/news/us/articles/soft-cheese-recall-expands-potential-194722335.html
-        publisher: Yahoo
-      - title: FDA recall record
-        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99325
-        publisher: FDA
-        accessed: 2026-08-20
 
