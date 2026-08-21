@@ -10,6 +10,9 @@ import { decideFoods } from './food-filter.js';
   const empty = document.getElementById('empty');
   const retractedHits = document.getElementById('retracted-hits');
   const filteredOutHits = document.getElementById('filtered-out-hits');
+  const recallModal = document.getElementById('recall-modal');
+  const recallModalBody = document.getElementById('recall-modal-body');
+  const recallModalClose = document.getElementById('recall-modal-close');
   const recalls = Array.from(document.querySelectorAll('.recall'));
 
   const categoryInputs = Array.from(document.querySelectorAll('input[name="category"]'));
@@ -90,14 +93,58 @@ import { decideFoods } from './food-filter.js';
 
   // One renderer for the two "… matching your search" notices (retracted alerts
   // and category-filtered-out recalls), so their markup stays in sync. Items
-  // with an `href` become links; without one they render as plain text.
+  // with an `href` become links; items without one (category-filtered recalls,
+  // which have no page to link to) become a button that opens the recall in a
+  // modal instead.
   const renderNotice = (el, label, items) => {
     el.innerHTML = items.length
       ? `${label}: ${items
-          .map((i) => (i.href ? `<a href="${i.href}">${escapeHtml(i.title)}</a>` : escapeHtml(i.title)))
+          .map((i) =>
+            i.href
+              ? `<a href="${i.href}">${escapeHtml(i.title)}</a>`
+              : `<button type="button" class="link-button" data-recall-id="${escapeHtml(i.recallId)}">${escapeHtml(i.title)}</button>`,
+          )
           .join(', ')}`
       : '';
   };
+
+  // A category-filtered recall's `.recall-body` (the reusable content — see
+  // `renderRecallBody` in src/render.ts) is still in the DOM, just inside a
+  // `.recall` article that's currently `hidden`. Cloning `.recall-body`
+  // specifically, rather than the whole article, means the clone never carries
+  // the list-only `id`/`data-*` attributes in the first place — nothing to
+  // strip. It does still carry two in-page anchors — the permalink and, for a
+  // recall with a parent, the "Part of: …" link — whose `href="#id"` would
+  // scroll the page behind the dialog to a (still-hidden) recall instead of
+  // doing anything useful inside the modal, so both get removed.
+  const openRecallModal = (recallId) => {
+    const match = recallMeta.find((r) => r.id === recallId);
+    if (!match) return;
+    const clone = match.el.querySelector('.recall-body').cloneNode(true);
+    clone.querySelector('.permalink')?.removeAttribute('href');
+    clone.querySelector('.part-of a')?.removeAttribute('href');
+    recallModalBody.replaceChildren(clone);
+    recallModal.showModal();
+    // The dialog box itself is the scrollable element (`dialog:modal` gets
+    // `overflow: auto` from the UA stylesheet); reset it after showing so a
+    // long recall scrolled last time doesn't leave the next one opening
+    // mid-scroll. Setting this before `showModal()`, while the dialog is
+    // still `display: none`, isn't reliable across browsers.
+    recallModal.scrollTop = 0;
+  };
+
+  filteredOutHits.addEventListener('click', (event) => {
+    const button = event.target.closest('button[data-recall-id]');
+    if (button) openRecallModal(button.dataset.recallId);
+  });
+
+  recallModalClose.addEventListener('click', () => recallModal.close());
+
+  // Light-dismiss: a click that lands on the dialog element itself (not its
+  // content, which is a child of the padded dialog box) hit the backdrop area.
+  recallModal.addEventListener('click', (event) => {
+    if (event.target === recallModal) recallModal.close();
+  });
 
   // Recall cards depend on search/hazard/year *and* category, so this reruns on
   // every keystroke as well as every category change.
@@ -132,11 +179,12 @@ import { decideFoods } from './food-filter.js';
     );
 
     // No href: the matching recalls are hidden on this page (by category), so a
-    // link couldn't scroll to them — just name them so the reader knows why.
+    // link couldn't scroll to them — offer a button that opens the recall in a
+    // modal instead.
     renderNotice(
       filteredOutHits,
       'Filtered out alerts matching your search',
-      hidden.map((r) => ({ title: r.title })),
+      hidden.map((r) => ({ title: r.title, recallId: r.id })),
     );
   };
 

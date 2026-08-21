@@ -112,6 +112,39 @@ function renderParentLink(recall: Recall, byId: ReadonlyMap<string, Recall>): st
   return `<p class="part-of">Part of: <a href="#${escapeHtml(parent.id)}">${escapeHtml(parent.title)}</a></p>`;
 }
 
+/** Everything about a recall that's meaningful outside the list page too — the
+ *  client-side modal preview clones this element directly instead of the whole
+ *  `.recall` article, so it never carries the list-only `id`/`data-*`
+ *  attributes in the first place. It still includes the permalink anchor
+ *  (`href="#id"`, only meaningful on the list page); the client strips that
+ *  `href` on its clone, same as it strips it from any link whose target got
+ *  filtered out elsewhere on the page (see `.food-list a:not([href])`). */
+function renderRecallBody(recall: Recall, byId: ReadonlyMap<string, Recall>): string {
+  return `
+  <div class="recall-body">
+    <header>
+      <p class="meta">
+        <time datetime="${escapeHtml(recall.date)}">${escapeHtml(formatDate(recall.date))}</time>
+        <span class="hazard hazard-${escapeHtml(recall.hazard)}">${escapeHtml(HAZARD_LABELS[recall.hazard])}</span>
+        ${recall.ended ? '<span class="closed">Closed</span>' : ''}
+        ${recall.status === 'retracted' ? '<span class="closed">Retracted</span>' : ''}
+      </p>
+      <h2><a class="permalink" href="#${escapeHtml(recall.id)}">${escapeHtml(recall.title)}</a></h2>
+      ${renderParentLink(recall, byId)}
+    </header>
+    ${renderFacts(recall)}
+    <div class="note">${paragraphs(recall.note)}</div>
+    <section class="products">
+      <h3>Recalled products</h3>
+      <ul>${recall.products.map(renderProduct).join('\n')}</ul>
+    </section>
+    <section class="citations">
+      <h3>Citations</h3>
+      <ol>${recall.citations.map(renderCitation).join('\n')}</ol>
+    </section>
+  </div>`;
+}
+
 function renderRecall(recall: Recall, byId: ReadonlyMap<string, Recall>): string {
   // Data attributes drive the client-side filter; they hold raw values, not display text.
   return `
@@ -119,27 +152,7 @@ function renderRecall(recall: Recall, byId: ReadonlyMap<string, Recall>): string
          data-hazard="${escapeHtml(recall.hazard)}"
          data-category="${escapeHtml(HAZARD_TO_CATEGORY[recall.hazard])}"
          data-year="${escapeHtml(recall.date.slice(0, 4))}"
-         data-search="${escapeHtml(searchIndex(recall))}">
-  <header>
-    <p class="meta">
-      <time datetime="${escapeHtml(recall.date)}">${escapeHtml(formatDate(recall.date))}</time>
-      <span class="hazard hazard-${escapeHtml(recall.hazard)}">${escapeHtml(HAZARD_LABELS[recall.hazard])}</span>
-      ${recall.ended ? '<span class="closed">Closed</span>' : ''}
-      ${recall.status === 'retracted' ? '<span class="closed">Retracted</span>' : ''}
-    </p>
-    <h2><a class="permalink" href="#${escapeHtml(recall.id)}">${escapeHtml(recall.title)}</a></h2>
-    ${renderParentLink(recall, byId)}
-  </header>
-  ${renderFacts(recall)}
-  <div class="note">${paragraphs(recall.note)}</div>
-  <section class="products">
-    <h3>Recalled products</h3>
-    <ul>${recall.products.map(renderProduct).join('\n')}</ul>
-  </section>
-  <section class="citations">
-    <h3>Citations</h3>
-    <ol>${recall.citations.map(renderCitation).join('\n')}</ol>
-  </section>
+         data-search="${escapeHtml(searchIndex(recall))}">${renderRecallBody(recall, byId)}
 </article>`;
 }
 
@@ -390,6 +403,11 @@ ${renderActions()}
 <p class="result-count" id="count" role="status"></p>
 <p class="retracted-hits" id="retracted-hits"></p>
 <p class="filtered-out-hits" id="filtered-out-hits"></p>
+
+<dialog class="recall-modal" id="recall-modal">
+  <button class="recall-modal-close" id="recall-modal-close" type="button" aria-label="Close">&times;</button>
+  <div class="recall-modal-body" id="recall-modal-body"></div>
+</dialog>
 
 <main id="recalls">
 ${active.map((r) => renderRecall(r, byId)).join('\n')}
