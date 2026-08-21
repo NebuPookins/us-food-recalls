@@ -457,4 +457,28 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99081
         publisher: FDA
         accessed: 2026-08-21
+  - id: 2026-07-22-gellert-global-group-ruby-artichoke-hearts-quartere
+    date: 2026-07-22
+    title: Ruby Artichoke Hearts quartered canned product contains glass
+    summary:
+      - artichoke hearts
+    recalling_firm: GELLERT GLOBAL GROUP
+    agency: FDA
+    hazard: foreign-material
+    classification: II
+    products:
+      - name: Ruby Artichoke Hearts Quartered
+        brand: Ruby
+        codes:
+          - "P: 25/06/2026"
+          - "BN: 186/2A"
+          - "E: 24/06/2028"
+          - Q.A NG
+    distribution: New York, Pennsylvania, New Jersey, Connecticut
+    note: Gellert Global Group is recalling 1,150 cases of Ruby quartered artichoke hearts after glass fragments were found in the canned product. The recall covers shipments to New York, Pennsylvania, New Jersey and Connecticut. Consumers who purchased this product should stop using it and return it to the place of purchase for a refund or contact the company for instructions. The presence of glass poses a serious risk of injury if ingested.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99055
+        publisher: FDA
+        accessed: 2026-08-21
 
