@@ -81,7 +81,12 @@ export const RecallSchema = z.strictObject({
     .optional()
     .describe('id of the umbrella recall this entry is part of.'),
   date: IsoDate.describe('Date the recall was announced.'),
-  title: z.string().min(1).describe('One-line headline, e.g. "Acme Foods bagged spinach".'),
+  title: z
+    .string()
+    .min(1)
+    .describe(
+      'One-line headline naming the product and what\'s wrong with it, e.g. "DQ Chocolate Reduced Fat Ice Cream Mix contains metal shavings".',
+    ),
   summary: z
     .array(z.string().min(1))
     .min(1)
