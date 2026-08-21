@@ -776,6 +776,62 @@ recalls:
         publisher: ABC News
         accessed: 2026-08-18
 
+  - id: 2026-06-nara-organics-infant-formula-botulism
+    date: 2026-06-13
+    title: Nara Organics Whole Milk Organic Powdered Infant Formula (botulism)
+    summary:
+      - infant formula
+    recalling_firm: Nara Organics
+    agency: FDA
+    hazard: botulism
+    classification: I
+    distribution: Nationwide via nara.com, Target stores and target.com
+    illnesses: 4
+    products:
+      - name: Whole Milk Organic Powdered Infant Formula, 400g and 700g cans, all lots
+        brand: Nara Organics
+        codes:
+          - Lot 408125075E14F2
+          - Lot 708125076E14F2
+          - Lot 708125083E14F2
+          - Lot 408125139E14F2
+          - Lot 708125141E14F2
+          - Lot 708125145E14F2
+          - Lot 708125174E14F2
+          - Lot 709125273E14F2
+          - Lot 709125280E14F2
+          - Lot 709125288E14F2
+          - Lot 409125307E14F2
+          - Lot 70926019ENNB
+          - Lot 70926029ENNB
+          - Lot 70926035ENNB
+          - Lot 70926039ENNB
+          - Lot 70926042ENNB
+    note: |
+      The FDA and CDC linked Nara Organics infant formula to a multistate
+      outbreak of infant botulism, with cases in California, Pennsylvania
+      and Washington in babies who fell ill in April and May 2026. The FDA
+      notified the company on June 10 and recommended a recall on June 12;
+      Nara Organics voluntarily recalled all lots and both can sizes of its
+      Whole Milk Organic Powdered Infant Formula on June 13. No lots have
+      tested positive for Clostridium botulinum. This is the second
+      botulism outbreak tied to a premium organic whole-milk infant formula
+      in seven months, following ByHeart's November 2025 recall. No deaths
+      reported.
+    citations:
+      - title: Nara Organics infant formula recalled due to botulism
+        url: https://www.kcra.com/article/nara-organics-infant-formula-recall-botulism/71581963
+        publisher: KCRA
+        accessed: 2026-08-21
+      - title: Nara Organics Recalls All Lots of Nara Infant Formula Because of Possible Health Risk
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/nara-organics-recalls-all-lots-nara-infant-formula-because-possible-health-risk
+        publisher: FDA
+        accessed: 2026-08-21
+      - title: Nara Organics infant formula linked to another case of botulism
+        url: https://www.cbsnews.com/news/nara-organics-infant-formula-botulism-recall-fda/
+        publisher: CBS News
+        accessed: 2026-08-21
+
   - id: 2026-06-bef-foods-mac-and-cheese
     date: 2026-06-10
     title: Park St. Deli Macaroni & Cheese (Aldi)
