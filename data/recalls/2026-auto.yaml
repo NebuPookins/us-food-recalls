@@ -477,6 +477,10 @@ recalls:
     distribution: New York, Pennsylvania, New Jersey, Connecticut
     note: Gellert Global Group is recalling 1,150 cases of Ruby quartered artichoke hearts after glass fragments were found in the canned product. The recall covers shipments to New York, Pennsylvania, New Jersey and Connecticut. Consumers who purchased this product should stop using it and return it to the place of purchase for a refund or contact the company for instructions. The presence of glass poses a serious risk of injury if ingested.
     citations:
+      - title: FDA Enforcement Report
+        url: https://www.accessdata.fda.gov/scripts/ires/index.cfm?Event=99055
+        publisher: FDA
+        accessed: 2026-08-21
       - title: FDA recall record
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99055
         publisher: FDA
