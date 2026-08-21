@@ -434,7 +434,7 @@ recalls:
         accessed: 2026-08-21
   - id: 2026-08-05-galliker-dairy-co-inc-dq-chocolate-reduced-fat-ice-c
     date: 2026-08-05
-    title: Galliker Dairy Co, Inc. recalls DQ Chocolate Reduced Fat Ice Cream Mix
+    title: DQ Chocolate Reduced Fat Ice Cream Mix contains metal shavings
     summary:
       - ice cream
     recalling_firm: Galliker Dairy Co, Inc.
@@ -452,6 +452,7 @@ recalls:
       - title: Ice cream sold at Dairy Queen recalled over metal shavings concerns
         url: https://www.msn.com/en-us/foodanddrink/foodnews/ice-cream-sold-at-dairy-queen-recalled-over-metal-shavings-concerns/ar-AA29tT7p
         publisher: PIX11
+        accessed: 2026-08-21
       - title: FDA recall record
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99081
         publisher: FDA
