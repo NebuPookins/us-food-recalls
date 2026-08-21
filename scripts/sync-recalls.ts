@@ -273,7 +273,10 @@ First decide significance:
 - "include": true for nationwide or multi-state recalls, notable volume, or any illness/death.
 
 When "include": true, produce a "draft" object with these fields:
-- title: a one-line headline, e.g. "Acme Foods bagged spinach".
+- title: a one-line headline naming the product and what's wrong with it, e.g.
+  "DQ Chocolate Reduced Fat Ice Cream Mix contains metal shavings" or
+  "Acme Foods bagged spinach recalled for listeria". Lead with the product as a
+  shopper would recognise it, not the firm name, and state the hazard/defect.
 - summary: an array of 1-2 lowercase food labels, e.g. ["spinach"].
 - recalling_firm: the firm name (omit if unknown).
 - hazard: exactly one of: listeria, salmonella, e-coli, botulism, hepatitis-a, norovirus,

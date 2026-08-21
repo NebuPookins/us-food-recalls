@@ -26,7 +26,7 @@
           "title": {
             "type": "string",
             "minLength": 1,
-            "description": "One-line headline, e.g. \"Acme Foods bagged spinach\"."
+            "description": "One-line headline naming the product and what's wrong with it, e.g. \"DQ Chocolate Reduced Fat Ice Cream Mix contains metal shavings\"."
           },
           "summary": {
             "description": "One- or two-word food labels for the \"at a glance\" list at the top of the page.",
