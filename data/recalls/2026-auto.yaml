@@ -409,4 +409,27 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99238
         publisher: FDA
         accessed: 2026-08-21
+  - id: 2026-08-12-clover-hill-dairy-llc-clover-hill-dairy-llp-mild-che
+    date: 2026-08-12
+    title: Clover Hill Dairy recalls mild cheese snack packs
+    summary:
+      - cheese
+    recalling_firm: Clover Hill Dairy, LLC
+    agency: FDA
+    hazard: listeria
+    classification: I
+    products:
+      - name: Clover Hill Dairy mild cheese snack pack (Assorted Regular Mild Stix White Colby, Marble Jack, Yummy Cheddar)
+        codes:
+          - AA051526
+    distribution: Maryland, Virginia, New York
+    note: Clover Hill Dairy, LLC is recalling its mild cheese snack pack varieties after testing showed contamination with Listeria monocytogenes. The products were sold in approximately 0.40‑lb (6.4 oz) units and were distributed to retail locations in Maryland, Virginia, and New York. Consumers should not eat the cheese and should discard it or return it to the place of purchase. The firm is working with the FDA to address the issue.
+    citations:
+      - title: One person has died. Now a major cheese recall is growing across multiple states
+        url: https://www.yahoo.com/news/us/articles/one-person-died-now-major-153000073.html
+        publisher: Yahoo
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99211
+        publisher: FDA
+        accessed: 2026-08-21
 
