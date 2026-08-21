@@ -550,4 +550,25 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A98392
         publisher: FDA
         accessed: 2026-08-21
+  - id: 2026-07-29-modern-warrior-life-llc-modern-warrior-ready-dietary-s
+    date: 2026-07-29
+    title: Modern Warrior Ready Dietary Supplement capsules contain unapproved ingredients
+    summary:
+      - dietary supplement
+    recalling_firm: Modern Warrior Life, LLC
+    agency: FDA
+    hazard: other
+    classification: I
+    products:
+      - name: Modern Warrior Ready Dietary Supplement, 60 capsules
+    distribution: Nationwide from April 2022 until December 8, 2025
+    note: The FDA has recalled Modern Warrior Ready dietary supplement capsules after analysis found unapproved ingredients such as tianeptine, 1,4 DMAA, and aniracetam. The product was distributed nationwide between April 2022 and December 8, 2025. Consumers should stop using the supplement and contact the firm for a refund or disposal instructions. No illnesses or deaths have been reported.
+    citations:
+      - title: FDA Recalls Modern Warrior Ready Supplement For Hidden, Dangerous Ingredients
+        url: https://www.yahoo.com/news/articles/fda-recalls-modern-warrior-ready-174647926.html
+        publisher: Yahoo
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A98304
+        publisher: FDA
+        accessed: 2026-08-21
 
