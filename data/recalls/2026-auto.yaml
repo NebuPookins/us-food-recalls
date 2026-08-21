@@ -383,4 +383,26 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99293
         publisher: FDA
         accessed: 2026-08-20
+  - id: 2026-07-22-w-y-industries-inc-wy-duck-sauce-0-35-oz-10-g-fle
+    date: 2026-07-22
+    title: W.Y. Industries recalls duck sauce packets due to possible metal fragments
+    summary:
+      - duck sauce
+    recalling_firm: W.Y. Industries, Inc.
+    agency: FDA
+    hazard: foreign-material
+    classification: II
+    products:
+      - name: WY Duck Sauce packets
+        codes:
+          - "015051010021"
+          - 152, after 15:00
+          - 153, any time
+    distribution: Distributed to NY, NJ, OH, and PA
+    note: W.Y. Industries, Inc. is recalling 1,120 cases of WY Duck Sauce packaged in flexible film packets because the product may contain metal fragments. The recall covers shipments to New York, New Jersey, Ohio and Pennsylvania and is classified as a Class II health hazard. Consumers who have purchased this product should stop using it immediately and return it to the place of purchase for a full refund.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99238
+        publisher: FDA
+        accessed: 2026-08-21
 
