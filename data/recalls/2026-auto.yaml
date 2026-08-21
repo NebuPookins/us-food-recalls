@@ -524,4 +524,30 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99040
         publisher: FDA
         accessed: 2026-08-21
+  - id: 2026-08-12-akkarco-llc-ashfiat-alharamain-energy-supp
+    date: 2026-08-12
+    title: Ashfiat Alharamain Energy Support 250ml recalled for undeclared tadalafil
+    summary:
+      - energy drink
+    recalling_firm: AKKARCO LLC
+    agency: FDA
+    hazard: other
+    classification: I
+    products:
+      - name: Ashfiat Alharamain Energy Support 250ml
+        brand: Ashfiat Alharamain
+        codes:
+          - "Batch No: ENGOT24"
+          - "EXP: OCT 2028"
+          - "UPC: 1234561870003"
+    distribution: Nationwide through Amazon.com
+    note: AKKARCO LLC is recalling its Ashfiat Alharamain Energy Support 250 ml beverage after discovering it contains undeclared tadalafil, a prescription medication. The product was sold nationwide through Amazon.com. Consumers should stop using the product and return it to the retailer for a full refund. No illnesses have been reported.
+    citations:
+      - title: Energy supplement recalled because of undeclared erectile dysfunction drug
+        url: https://www.foodsafetynews.com/2026/02/energy-supplement-recalled-because-of-undeclared-drug/
+        publisher: Food Safety News
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A98392
+        publisher: FDA
+        accessed: 2026-08-21
 
