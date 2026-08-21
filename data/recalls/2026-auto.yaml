@@ -432,4 +432,28 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99211
         publisher: FDA
         accessed: 2026-08-21
+  - id: 2026-07-22-nutricia-north-america-functional-formularies-liquid
+    date: 2026-07-22
+    title: Nutricia North America recalls liquid meal replacement formula
+    summary:
+      - meal replacement
+    recalling_firm: Nutricia North America
+    agency: FDA
+    hazard: other
+    classification: II
+    products:
+      - name: Liquid Hope Organic Whole Foods Meal Replacement Peptide Formula Berry Medley
+        brand: Nutricia
+        codes:
+          - UPC 85785800453
+          - UPC 85785800450
+          - Best if used by March 15, 2028
+          - Best if used by October 7, 2027
+    distribution: Nationwide across 45 U.S. states, Washington DC, and also shipped to Canada and Australia
+    note: Nutricia North America announced a recall of its Liquid Hope Organic Whole Foods Meal Replacement Peptide Formula Berry Medley because the product may contain less vitamin A than stated on the label. The error resulted from the laboratory using an incorrect testing method, leading to an over‑estimation of vitamin A levels. The recall covers cases and individual pouches distributed to many states, Washington DC, and internationally to Canada and Australia. Consumers should stop using the product and return it to the place of purchase for a full refund.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99074
+        publisher: FDA
+        accessed: 2026-08-21
 
