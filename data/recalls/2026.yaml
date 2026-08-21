@@ -843,6 +843,44 @@ recalls:
         publisher: CDC
         accessed: 2026-08-18
 
+  - id: 2026-06-jones-dairy-farm-chicken-sausage-pork
+    date: 2026-06-01
+    title: Jones Dairy Farm Chicken Sausage Links contain undeclared pork
+    summary:
+      - chicken sausage
+    recalling_firm: Jones Dairy Farm
+    agency: other
+    hazard: mislabeling
+    distribution: Costco warehouses
+    products:
+      - name: Chicken Sausage Links, 48 oz (3 lb)
+        brand: Jones Dairy Farm
+        codes:
+          - Costco item #1211239
+          - Use-by date 04/29/27
+    note: |
+      A packing error introduced pork links into packages labeled as chicken
+      sausage, sold at Costco between May 1 and May 28, 2026. Jones Dairy
+      Farm called it an isolated event affecting a limited amount of
+      product and said it was not a food safety concern, but a labeling
+      issue relevant to customers who avoid pork for religious, allergy or
+      dietary reasons. No official FDA or FSIS recall notice was located;
+      Costco notified members directly and is offering full refunds. No
+      illnesses reported.
+    citations:
+      - title: Costco chicken sausage recall
+        url: https://www.kcra.com/article/costco-chicken-sausage-recall/71495007
+        publisher: KCRA
+        accessed: 2026-08-21
+      - title: Costco-Sold Chicken Sausages Are Being Recalled For Not Being Entirely What They Claim
+        url: https://www.thetakeout.com/2187610/costco-sold-chicken-sausage-recalled-pork/
+        publisher: The Takeout
+        accessed: 2026-08-21
+      - title: Jones Dairy Farm Chicken Sausage Recalled For Undeclared Pork
+        url: https://foodpoisoningbulletin.com/2026/jones-dairy-farm-chicken-sausage-recalled-for-undeclared-pork/
+        publisher: Food Poisoning Bulletin
+        accessed: 2026-08-21
+
   - id: 2026-04-california-dairies-milk-powder-salmonella
     date: 2026-04-20
     title: California Dairies powdered milk (Salmonella)
