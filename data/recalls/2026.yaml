@@ -897,6 +897,41 @@ recalls:
         publisher: Health
         accessed: 2026-08-18
 
+  - id: 2026-05-coffee-connexion-alfredo-sauce-salmonella
+    parent_id: 2026-04-california-dairies-milk-powder-salmonella
+    date: 2026-05-06
+    title: The Coffee Connexion Alfredo sauce may contain Salmonella
+    summary:
+      - alfredo sauce
+    recalling_firm: The Coffee Connexion Co. Inc. (Lebanon, Tennessee)
+    agency: FDA
+    hazard: salmonella
+    classification: I
+    distribution: 41 states
+    products:
+      - name: Alfredo Sauce, 3 lb 7 oz sealed poly bag (12 bags per case)
+        brand: The Coffee Connexion
+        codes:
+          - UPC 0039954921963
+          - Product number SSP980713
+          - Lot 0126 (best by 2028-01-12)
+          - Lot 0476 (best by 2028-02-16)
+          - Lot 0686 (best by 2028-03-09)
+          - Lot 1106 (best by 2028-04-20)
+    note: |
+      Recalled because a milk powder ingredient from California Dairies may
+      contain Salmonella. The FDA classified the recall as Class I on June 4.
+      No illnesses reported.
+    citations:
+      - title: Alfredo sauce sold in 41 states recalled over potential salmonella contamination
+        url: https://www.newsnationnow.com/us-news/recalls/alfredo-sauce-recalled-salmonella/
+        publisher: NewsNation
+        accessed: 2026-08-21
+      - title: Alfredo sauce distributed to dozens of states recalled due to potential salmonella contamination
+        url: https://www.pbs.org/newshour/health/alfredo-sauce-distributed-to-dozens-of-states-recalled-due-to-potential-salmonella-contamination
+        publisher: PBS News
+        accessed: 2026-08-21
+
   - id: 2026-05-frozen-pizza-salmonella
     parent_id: 2026-04-california-dairies-milk-powder-salmonella
     date: 2026-05-01
