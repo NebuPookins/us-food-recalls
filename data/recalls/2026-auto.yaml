@@ -485,4 +485,43 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99055
         publisher: FDA
         accessed: 2026-08-21
+  - id: 2026-07-22-d-dioses-fruit-pops-inc-ice-pop-d-dioses-nuez-1-bar-81
+    date: 2026-07-22
+    title: D'Dioses Nuez Ice Pop may contain undeclared milk, nuts, and food dyes
+    summary:
+      - ice pop
+    recalling_firm: D'Dioses Fruit Pops, Inc.
+    agency: FDA
+    hazard: undeclared-allergen
+    classification: I
+    products:
+      - name: D'Dioses Nuez Ice Pop (1 Bar, 81.7 g)
+        brand: D'Dioses
+        codes:
+          - "710594511867"
+          - "710594511850"
+          - "710594511560"
+          - "827912008456"
+          - "8279120084732"
+          - "710594511829"
+          - "71059511812"
+          - "827912008487"
+          - "827912008548"
+          - "710594511836"
+          - "827912008531"
+          - "827912008494"
+          - "827912008593"
+          - "827912008449"
+          - "710594511362"
+          - "710594511225"
+    distribution: New Jersey, Connecticut, New York, Pennsylvania
+    note: "D'Dioses Fruit Pops, Inc. is recalling its Nuez ice pop bars because they may contain undeclared milk, pecans, pistachios, and the food dyes yellow #5 and red #40, which are allergens for some consumers. The products were distributed to stores in New Jersey, Connecticut, New York, and Pennsylvania. Consumers who purchased the 81.7‑gram ice pop bars should not eat them and should return them to the place of purchase for a full refund or contact the company for further instructions."
+    citations:
+      - title: Popular fruit popsicle brand sold in 4 states recalled — hidden ingredients could trigger life-threatening reactions
+        url: https://www.msn.com/en-us/foodanddrink/foodnews/popular-fruit-popsicle-brand-sold-in-4-states-recalled-hidden-ingredients-could-trigger-life-threatening-reactions/ar-AA24wRyo
+        publisher: MSN
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99040
+        publisher: FDA
+        accessed: 2026-08-21
 
