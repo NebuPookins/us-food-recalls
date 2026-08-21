@@ -180,18 +180,65 @@ a { color: var(--accent); }
 .retracted-hits:empty,
 .filtered-out-hits:empty { display: none; }
 .retracted-hits a,
-.filtered-out-hits a { font-weight: 600; }
+.filtered-out-hits a,
+.link-button { font-weight: 600; }
 .empty { padding: 2rem 0; color: var(--muted); text-align: center; }
+
+/* A notice item that opens the recall modal instead of navigating. Not an
+   `<a>`, so it still needs its own color (the global `a` rule doesn't reach
+   buttons); font-weight is shared with the links next to it above. */
+.link-button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ---- recall modal ---- */
+
+.recall-modal {
+  width: min(46rem, calc(100vw - 2rem));
+  max-height: calc(100vh - 4rem);
+  margin: auto;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+}
+.recall-modal::backdrop { background: rgb(0 0 0 / 50%); }
+.recall-modal-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  width: 2rem;
+  height: 2rem;
+  margin: -.5rem -.5rem 0 0;
+  border: 0;
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.recall-modal-close:hover { background: var(--border); }
 
 /* ---- recall card ---- */
 
+/* `.recall` is the list-only wrapper: identity (id/data-*) and list layout
+   (spacing between cards, the target highlight). `.recall-body` is everything
+   else — reused as-is inside the modal, which clones just that inner element. */
 .recall {
   padding: 1.4rem 0;
   border-top: 1px solid var(--border);
 }
 .recall:target { background: var(--surface); padding-inline: 1rem; border-radius: 8px; }
 
-.recall .meta {
+.recall-body .meta {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -200,9 +247,12 @@ a { color: var(--accent); }
   font-size: .85rem;
   color: var(--muted);
 }
-.recall h2 { margin: 0 0 .75rem; font-size: 1.25rem; line-height: 1.3; }
+.recall-body h2 { margin: 0 0 .75rem; font-size: 1.25rem; line-height: 1.3; }
 .permalink { color: inherit; text-decoration: none; }
 .permalink:hover { color: var(--accent); text-decoration: underline; }
+/* Same convention as `.food-list a:not([href])`: a permalink whose `href` was
+   stripped (the modal's clone) reads as plain text, not a dead-looking link. */
+.permalink:not([href]):hover { color: inherit; text-decoration: none; }
 .part-of { margin: 0 0 .75rem; font-size: .85rem; color: var(--muted); }
 
 .hazard {
@@ -251,7 +301,7 @@ a { color: var(--accent); }
 
 .note p { margin: 0 0 .75rem; }
 
-.recall h3 {
+.recall-body h3 {
   margin: 1.1rem 0 .4rem;
   font-size: .78rem;
   font-weight: 700;
