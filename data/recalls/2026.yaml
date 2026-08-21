@@ -709,7 +709,7 @@ recalls:
     date: 2026-06-26
     title: Requesón cottage cheese (Salvadoran and Mexican)
     summary:
-      - cottage cheese
+      - cheese
     recalling_firm: La Ceiba Foods Latin Market Inc.
     agency: FDA
     hazard: listeria
@@ -806,7 +806,7 @@ recalls:
     date: 2026-06-03
     title: Requesón / ricotta and other cheeses
     summary:
-      - soft cheese
+      - cheese
     recalling_firm: Clover Hill Dairy, LLC
     agency: FDA
     hazard: listeria
@@ -1328,7 +1328,7 @@ recalls:
     date: 2026-02-24
     title: Great Value cottage cheese (pasteurization issue)
     summary:
-      - cottage cheese
+      - cheese
     recalling_firm: Saputo Cheese USA Inc.
     agency: FDA
     hazard: processing-defect
@@ -1441,7 +1441,7 @@ recalls:
     date: 2026-03-15
     title: Raw Farm raw cheddar cheese (E. coli outbreak)
     summary:
-      - cheddar cheese
+      - cheese
     recalling_firm: Raw Farm, LLC
     agency: FDA
     hazard: e-coli
