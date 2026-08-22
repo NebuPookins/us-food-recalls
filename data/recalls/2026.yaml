@@ -150,6 +150,33 @@ recalls:
         publisher: Fox Business
         accessed: 2026-08-18
 
+  - id: 2026-08-exotique-foods-momchipz-veggie-chips-gluten
+    date: 2026-08-14
+    title: Momchipz Veggie Chips Broccoli Florets & Cauliflower (undeclared gluten)
+    summary:
+      - veggie chips
+    recalling_firm: Exotique Foods Inc (Ontario, Canada)
+    agency: FDA
+    hazards: [undeclared-allergen]
+    distribution: Sold to 49 U.S. customers via Amazon.com
+    products:
+      - name: Veggie Chips – Broccoli Florets & Cauliflower, 3 oz (85 g)
+        brand: Momchipz
+        codes:
+          - UPC 628634442166
+          - Best before 2026-08-31
+    note: |
+      Exotique Foods Inc of Ontario, Canada recalled Momchipz Veggie Chips
+      Broccoli Florets & Cauliflower after a retail sample tested by the
+      Canadian Food Inspection Agency found undeclared gluten. The product was
+      sold to 49 U.S. customers through Amazon.com between March and June
+      2026. No illnesses reported.
+    citations:
+      - title: Exotique Foods Inc Recalls Momchipz Veggie Chips Broccoli Florets & Cauliflower Due to Undeclared Gluten
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/exotique-foods-inc-recalls-momchipz-veggie-chips-broccoli-florets-cauliflower-due-undeclared-gluten
+        publisher: FDA
+        accessed: 2026-08-21
+
   - id: 2026-08-kettle-cuisine-tomato-soup-kits
     date: 2026-08-12
     title: Marketside Tomato Bisque Soup Kits (Walmart)
