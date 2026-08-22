@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { decideFoods } from '../static/food-filter.js';
+import { decideFoods, highlightHtml, matchesSearch, matchRanges } from '../static/food-filter.js';
 
 // The regression: a food shared by alerts in several categories must not show
 // its "also previously" links for categories the reader has filtered out.
@@ -111,4 +111,49 @@ test('a food whose alert spans two categories stays visible while either is acti
 
   assert.equal(decision.primaryVisible, true);
   assert.equal(decision.visible, true);
+});
+
+test('matchesSearch requires every term to appear in the haystack', () => {
+  assert.equal(matchesSearch('peanut butter recall', ['peanut', 'butter']), true);
+  assert.equal(matchesSearch('peanut butter recall', ['peanut', 'jelly']), false);
+});
+
+test('matchesSearch treats no terms as a match', () => {
+  assert.equal(matchesSearch('anything', []), true);
+});
+
+test('matchRanges finds a single case-insensitive substring', () => {
+  assert.deepEqual(matchRanges('Peanut Butter', ['peanut']), [[0, 6]]);
+});
+
+test('matchRanges finds and sorts multiple non-overlapping terms', () => {
+  assert.deepEqual(matchRanges('Peanut Butter Cups', ['cups', 'peanut']), [[0, 6], [14, 18]]);
+});
+
+test('matchRanges merges overlapping or touching spans', () => {
+  assert.deepEqual(matchRanges('Peanut', ['pea', 'anut']), [[0, 6]]);
+});
+
+test('matchRanges merges back-to-back occurrences of a repeated term', () => {
+  assert.deepEqual(matchRanges('banana split', ['an']), [[1, 5]]);
+});
+
+test('matchRanges finds non-adjacent repeats without merging them', () => {
+  assert.deepEqual(matchRanges('cat scan', ['ca']), [[0, 2], [5, 7]]);
+});
+
+test('matchRanges returns nothing when no term is found', () => {
+  assert.deepEqual(matchRanges('Peanut Butter', ['jelly']), []);
+});
+
+test('highlightHtml wraps matched ranges in <strong> and escapes the rest', () => {
+  const html = highlightHtml('<Peanut> Butter', [[1, 7]], (s) =>
+    s.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;'),
+  );
+  assert.equal(html, '&lt;<strong>Peanut</strong>&gt; Butter');
+});
+
+test('highlightHtml returns the escaped text unchanged when there are no ranges', () => {
+  const html = highlightHtml('Peanut Butter', [], (s) => s);
+  assert.equal(html, 'Peanut Butter');
 });
