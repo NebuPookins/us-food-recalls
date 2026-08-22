@@ -1,4 +1,4 @@
-# US Nationwide Food Recalls
+# US Food Safety Alerts
 
 A static site generated from YAML. You edit a data file, commit, push, and GitHub
 Actions builds and publishes the HTML to GitHub Pages.
@@ -33,12 +33,12 @@ No build step or bundler: Node runs the TypeScript directly, so `npm install` an
     - spinach
   recalling_firm: Acme Foods Inc.
   agency: FDA                   # FDA | FSIS | CDC | other
-  hazard: listeria              # see HAZARDS in src/schema.ts
+  hazards: [listeria]           # see HAZARDS in src/schema.ts
   classification: I             # I | II | III
   distribution: Nationwide
   illnesses: 12
   deaths: 1
-  ended: 2026-09-01             # omit while the recall is open
+  ended: 2026-09-01             # omit while the alert is open
   products:
     - name: Baby Spinach, 5 oz clamshell
       brand: Acme Farms
@@ -53,10 +53,10 @@ No build step or bundler: Node runs the TypeScript directly, so `npm install` an
       accessed: 2026-08-15
 ```
 
-Required: `id`, `date`, `title`, `hazard`, `products`, `note`, `citations`.
+Required: `id`, `date`, `title`, `hazards`, `products`, `note`, `citations`.
 Everything else is optional and simply omitted from the page when absent.
 
-`parent_id` links a sub-recall to its umbrella recall (rendered as a "Part of:"
+`parent_id` links a sub-alert to its umbrella alert (rendered as a "Part of:"
 link). `status: retracted` marks a report that was withdrawn or was a false
 positive; those are published on `retracted.html` rather than the main timeline.
 
@@ -96,5 +96,5 @@ API](https://www.fsis.usda.gov/science-data/developer-resources/api) both expose
 recalls as JSON. They're a firehose rather than a curated timeline, but they're
 useful for catching things you missed and for verifying dates and firm names.
 
-`data/recalls/2026.yaml` currently holds **three invented example entries**.
-Delete them before publishing.
+`data/recalls/2026.yaml` holds the hand-curated entries; `2026-auto.yaml` holds
+auto-drafted entries from `scripts/sync-recalls.ts` awaiting review.

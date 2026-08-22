@@ -14,14 +14,14 @@
             "description": "Stable unique slug. Becomes the permalink anchor, so never rename one."
           },
           "parent_id": {
-            "description": "id of the umbrella recall this entry is part of.",
+            "description": "id of the umbrella alert this entry is part of.",
             "type": "string",
             "minLength": 1
           },
           "date": {
             "type": "string",
             "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
-            "description": "Date the recall was announced."
+            "description": "Date the alert was announced."
           },
           "title": {
             "type": "string",
@@ -50,23 +50,27 @@
               "other"
             ]
           },
-          "hazard": {
-            "type": "string",
-            "enum": [
-              "listeria",
-              "salmonella",
-              "e-coli",
-              "botulism",
-              "hepatitis-a",
-              "norovirus",
-              "cyclospora",
-              "undeclared-allergen",
-              "foreign-material",
-              "chemical-contamination",
-              "processing-defect",
-              "mislabeling",
-              "other"
-            ]
+          "hazards": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "listeria",
+                "salmonella",
+                "e-coli",
+                "botulism",
+                "hepatitis-a",
+                "norovirus",
+                "cyclospora",
+                "undeclared-allergen",
+                "foreign-material",
+                "chemical-contamination",
+                "processing-defect",
+                "mislabeling",
+                "other"
+              ]
+            }
           },
           "classification": {
             "type": "string",
@@ -137,7 +141,7 @@
             ]
           },
           "ended": {
-            "description": "Date the recall was terminated or closed out.",
+            "description": "Date the alert was closed out.",
             "type": "string",
             "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
           },
@@ -179,7 +183,7 @@
           "id",
           "date",
           "title",
-          "hazard",
+          "hazards",
           "products",
           "note",
           "citations"

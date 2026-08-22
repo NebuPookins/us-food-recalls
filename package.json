@@ -1,7 +1,7 @@
 {
   "name": "us-food-recalls",
   "version": "1.0.0",
-  "description": "Static site generator for a curated timeline of US nationwide food recalls",
+  "description": "Static site generator for a curated timeline of US food safety alerts",
   "scripts": {
     "build": "node src/build.ts",
     "validate": "node src/validate.ts",

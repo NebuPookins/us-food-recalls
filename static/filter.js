@@ -1,4 +1,4 @@
-import { decideFoods } from './food-filter.js';
+import { decideFoods, overlaps } from './food-filter.js';
 
 // Progressive enhancement: the full list is already in the HTML, this only hides
 // non-matching cards. With JS off the page still works, just unfiltered.
@@ -36,9 +36,9 @@ import { decideFoods } from './food-filter.js';
     el,
     id: el.id,
     title: el.querySelector('.permalink').textContent,
-    hazard: el.dataset.hazard,
+    hazards: el.dataset.hazards.split(' '),
     year: el.dataset.year,
-    category: el.dataset.category,
+    categories: el.dataset.category.split(' '),
     search: el.dataset.search,
   }));
 
@@ -57,12 +57,12 @@ import { decideFoods } from './food-filter.js';
         el,
         mainLink,
         mainHref: mainLink.getAttribute('href'),
-        primaryCategory: mainLink.dataset.category,
+        primaryCategories: mainLink.dataset.category.split(' '),
         sep: el.querySelector('.sep'),
         also: el.querySelector('.also-previously'),
         alsoLinks,
         alsoSeps: alsoLinks.map((link) => link.querySelector('.also-sep')),
-        alsoCategories: alsoLinks.map((link) => link.querySelector('a')?.dataset.category ?? ''),
+        alsoCategories: alsoLinks.map((link) => link.querySelector('a')?.dataset.category.split(' ') ?? []),
       };
     });
     return {
@@ -70,7 +70,7 @@ import { decideFoods } from './food-filter.js';
       foods,
       // The plain-data view `decideFoods` needs: no DOM elements, so the decision
       // logic stays testable without a browser.
-      foodData: foods.map(({ primaryCategory, alsoCategories }) => ({ primaryCategory, alsoCategories })),
+      foodData: foods.map(({ primaryCategories, alsoCategories }) => ({ primaryCategories, alsoCategories })),
     };
   });
 
@@ -155,10 +155,10 @@ import { decideFoods } from './food-filter.js';
     let visible = 0;
     const hidden = [];
     for (const r of recallMeta) {
-      const inCategory = categories.has(r.category);
+      const inCategory = overlaps(r.categories, categories);
       const searchHit = matchesSearch(r.search, terms);
       const show =
-        (hazard.value === '' || r.hazard === hazard.value) &&
+        (hazard.value === '' || r.hazards.includes(hazard.value)) &&
         (year.value === '' || r.year === year.value) &&
         inCategory &&
         searchHit;
@@ -167,7 +167,7 @@ import { decideFoods } from './food-filter.js';
       else if (terms.length > 0 && !inCategory && searchHit) hidden.push(r);
     }
 
-    count.textContent = `Showing ${visible} of ${recalls.length} recalls`;
+    count.textContent = `Showing ${visible} of ${recalls.length} alerts`;
     empty.hidden = visible > 0;
 
     const retractedMatches =

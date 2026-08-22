@@ -28,6 +28,7 @@ import { z } from 'zod';
 import {
   CLASSIFICATIONS,
   HAZARDS,
+  HAZARD_LABELS,
   RecallSchema,
   type Recall,
 } from '../src/schema.ts';
@@ -264,8 +265,8 @@ function saveSeen(state: SeenState): void {
 // ---------------------------------------------------------------- drafting
 
 const SYSTEM_PROMPT = `You curate entries for a hand-maintained timeline of SIGNIFICANT United States
-food recalls (nationwide or multi-state distribution, notable firms or products, or recalls
-with reported illnesses). You receive one raw recall report as JSON and must return strict JSON.
+food safety alerts (nationwide or multi-state distribution, notable firms or products, or
+alerts with reported illnesses). You receive one raw recall report as JSON and must return strict JSON.
 
 First decide significance:
 - "include": false (with a one-line "exclude_reason") for recalls that are clearly local
@@ -279,11 +280,12 @@ When "include": true, produce a "draft" object with these fields:
   shopper would recognise it, not the firm name, and state the hazard/defect.
 - summary: an array of 1-2 lowercase food labels, e.g. ["spinach"].
 - recalling_firm: the firm name (omit if unknown).
-- hazard: exactly one of: listeria, salmonella, e-coli, botulism, hepatitis-a, norovirus,
-  undeclared-allergen, foreign-material, chemical-contamination, processing-defect,
-  mislabeling, other. Map from reason_for_recall ("undeclared egg" -> undeclared-allergen,
-  "Salmonella" -> salmonella, "glass" -> foreign-material, "produced without inspection" ->
-  processing-defect).
+- hazards: an array of one or more of: listeria, salmonella, e-coli, botulism, hepatitis-a,
+  norovirus, undeclared-allergen, foreign-material, chemical-contamination,
+  processing-defect, mislabeling, other. Map from reason_for_recall ("undeclared egg" ->
+  undeclared-allergen, "Salmonella" -> salmonella, "glass" -> foreign-material, "produced
+  without inspection" -> processing-defect). List more than one only when the report names
+  more than one hazard, e.g. ["e-coli", "salmonella"].
 - classification: exactly "I", "II", or "III"; OMIT the field entirely if the source says
   "Not Yet Classified", "Public Health Alert", or has no classification.
 - products: an array of { name, brand?, codes? }. name is the product as a shopper would
@@ -304,7 +306,7 @@ const DraftSchema = z.object({
   title: z.string().min(1),
   summary: z.array(z.string().min(1)).min(1),
   recalling_firm: z.string().min(1).optional(),
-  hazard: z.enum(HAZARDS),
+  hazards: z.array(z.enum(HAZARDS)).nonempty(),
   classification: z.enum(CLASSIFICATIONS).optional(),
   products: z
     .array(
@@ -474,7 +476,7 @@ function assemble(
     summary: draft.summary,
     recalling_firm: draft.recalling_firm || rec.firm || undefined,
     agency: rec.agency,
-    hazard: draft.hazard,
+    hazards: draft.hazards,
     classification: draft.classification,
     products: draft.products,
     distribution: draft.distribution,
@@ -533,7 +535,7 @@ function buildSummary(added: Recall, excluded: { rec: SourceRecord; reason: stri
     '',
     '_Drafted 1 recall for data/recalls/<year>-auto.yaml. Review the diff before merging._',
     '',
-    `- ${added.date} — ${added.title} (${added.agency}${added.hazard ? `, ${added.hazard}` : ''})`,
+    `- ${added.date} — ${added.title} (${added.agency}, ${added.hazards.map((h) => HAZARD_LABELS[h]).join(', ')})`,
   ];
   if (excluded.length > 0) {
     lines.push('', '## Excluded (filtered as local/insignificant)');

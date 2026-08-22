@@ -10,7 +10,7 @@ recalls:
       - burrito
     recalling_firm: Fresh & Ready Foods LLC
     agency: FDA
-    hazard: undeclared-allergen
+    hazards: [undeclared-allergen]
     classification: I
     products:
       - name: Spicy Breakfast Burrito
@@ -41,7 +41,7 @@ recalls:
       - fruit puree pouches
     recalling_firm: PT Organics Limited
     agency: FDA
-    hazard: foreign-material
+    hazards: [foreign-material]
     classification: II
     products:
       - name: Pumpkin Tree Peter Rabbit Organics Banana & Strawberry fruit puree, 4‑oz pouch
@@ -97,7 +97,7 @@ recalls:
       - Hondashi seasoning
     recalling_firm: Pack'n Fresh LLC
     agency: FDA
-    hazard: undeclared-allergen
+    hazards: [undeclared-allergen]
     classification: II
     products:
       - name: Hondashi 0.25 oz seasoning
@@ -133,7 +133,7 @@ recalls:
       - wonton wrappers
     recalling_firm: Man Fon, Inc.
     agency: FDA
-    hazard: mislabeling
+    hazards: [mislabeling]
     classification: II
     products:
       - name: Man Fon Inc. Won Ton Wrappers Extra Thin
@@ -158,7 +158,7 @@ recalls:
       - supplement
     recalling_firm: Mellish Island Corp
     agency: FDA
-    hazard: undeclared-allergen
+    hazards: [undeclared-allergen]
     classification: II
     products:
       - name: Mellish Island Super Skin
@@ -184,7 +184,7 @@ recalls:
       - flounder sashimi
     recalling_firm: Eunha Fisheries Co., LTD
     agency: FDA
-    hazard: undeclared-allergen
+    hazards: [undeclared-allergen]
     classification: II
     products:
       - name: Flounder Sashimi with Sauce
@@ -209,7 +209,7 @@ recalls:
       - soybean paste
     recalling_firm: JINA F&C
     agency: FDA
-    hazard: undeclared-allergen
+    hazards: [undeclared-allergen]
     classification: II
     products:
       - name: Ultimate Mother's Day Wangshin Doenjang Aged 3 Years 9 oz. Korean Traditional Premium Soybean Paste
@@ -239,7 +239,7 @@ recalls:
       - moringa
     recalling_firm: Total Nutrition Inc
     agency: FDA
-    hazard: salmonella
+    hazards: [salmonella]
     classification: I
     products:
       - name: TNVitamins 100% Organic Moringa Capsules 1,200 mg
@@ -273,7 +273,7 @@ recalls:
       - kimbap
     recalling_firm: Gellert Global Group
     agency: FDA
-    hazard: undeclared-allergen
+    hazards: [undeclared-allergen]
     classification: I
     products:
       - name: Fusia Asian Inspirations Kimchi & Tofu Kimbap
@@ -297,7 +297,7 @@ recalls:
       - lentil soup
     recalling_firm: Amy's Kitchen Inc.
     agency: FDA
-    hazard: other
+    hazards: [other]
     classification: II
     products:
       - name: Amy's Organic Soups Lentil Light in Sodium 14.5 oz
@@ -324,7 +324,7 @@ recalls:
       - groundnuts
     recalling_firm: Fayus Inc.
     agency: FDA
-    hazard: undeclared-allergen
+    hazards: [undeclared-allergen]
     classification: II
     products:
       - name: OLA-OLA POUNDED GROUNDNUTS (INTWILO) 32 oz
@@ -352,7 +352,7 @@ recalls:
       - bread
     recalling_firm: General Mills James Ford Bell Technical Center
     agency: FDA
-    hazard: foreign-material
+    hazards: [foreign-material]
     classification: II
     products:
       - name: Pillsbury Hard Roll Dough
@@ -390,7 +390,7 @@ recalls:
       - duck sauce
     recalling_firm: W.Y. Industries, Inc.
     agency: FDA
-    hazard: foreign-material
+    hazards: [foreign-material]
     classification: II
     products:
       - name: WY Duck Sauce packets
@@ -416,7 +416,7 @@ recalls:
       - cheese
     recalling_firm: Clover Hill Dairy, LLC
     agency: FDA
-    hazard: listeria
+    hazards: [listeria]
     classification: I
     products:
       - name: Clover Hill Dairy mild cheese snack pack (Assorted Regular Mild Stix White Colby, Marble Jack, Yummy Cheddar)
@@ -439,7 +439,7 @@ recalls:
       - ice cream
     recalling_firm: Galliker Dairy Co, Inc.
     agency: FDA
-    hazard: foreign-material
+    hazards: [foreign-material]
     classification: II
     products:
       - name: DQ Chocolate Reduced Fat Ice Cream Mix, 5 GAL (18.9L)
@@ -464,7 +464,7 @@ recalls:
       - artichoke hearts
     recalling_firm: GELLERT GLOBAL GROUP
     agency: FDA
-    hazard: foreign-material
+    hazards: [foreign-material]
     classification: II
     products:
       - name: Ruby Artichoke Hearts Quartered
@@ -492,7 +492,7 @@ recalls:
       - ice pop
     recalling_firm: D'Dioses Fruit Pops, Inc.
     agency: FDA
-    hazard: undeclared-allergen
+    hazards: [undeclared-allergen]
     classification: I
     products:
       - name: D'Dioses Nuez Ice Pop (1 Bar, 81.7 g)
@@ -531,7 +531,7 @@ recalls:
       - energy drink
     recalling_firm: AKKARCO LLC
     agency: FDA
-    hazard: other
+    hazards: [other]
     classification: I
     products:
       - name: Ashfiat Alharamain Energy Support 250ml
@@ -557,7 +557,7 @@ recalls:
       - dietary supplement
     recalling_firm: Modern Warrior Life, LLC
     agency: FDA
-    hazard: other
+    hazards: [other]
     classification: I
     products:
       - name: Modern Warrior Ready Dietary Supplement, 60 capsules
