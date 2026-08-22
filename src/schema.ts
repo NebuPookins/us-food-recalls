@@ -21,7 +21,7 @@ function isRealCalendarDate(s: string): boolean {
   return d <= lengths[m - 1];
 }
 
-/** Why the food was recalled. Closed set so the site can filter and colour-code. */
+/** Why the food is a concern. Closed set so the site can filter and colour-code. */
 export const HAZARDS = [
   'listeria',
   'salmonella',
@@ -79,8 +79,8 @@ export const RecallSchema = z.strictObject({
     .string()
     .min(1)
     .optional()
-    .describe('id of the umbrella recall this entry is part of.'),
-  date: IsoDate.describe('Date the recall was announced.'),
+    .describe('id of the umbrella alert this entry is part of.'),
+  date: IsoDate.describe('Date the alert was announced.'),
   title: z
     .string()
     .min(1)
@@ -94,7 +94,10 @@ export const RecallSchema = z.strictObject({
     .describe('One- or two-word food labels for the "at a glance" list at the top of the page.'),
   recalling_firm: z.string().min(1).optional(),
   agency: z.enum(AGENCIES).optional(),
-  hazard: z.enum(HAZARDS),
+  hazards: z
+    .array(z.enum(HAZARDS))
+    .nonempty()
+    .refine((hazards) => new Set(hazards).size === hazards.length, 'must not contain duplicates'),
   classification: z.enum(CLASSIFICATIONS).optional(),
   products: z.array(Product).nonempty(),
   distribution: z
@@ -109,7 +112,7 @@ export const RecallSchema = z.strictObject({
     .enum(RECALL_STATUSES)
     .optional()
     .describe('active (default) or retracted (withdrawn / false positive).'),
-  ended: IsoDate.optional().describe('Date the recall was terminated or closed out.'),
+  ended: IsoDate.optional().describe('Date the alert was closed out.'),
   citations: z.array(Citation).nonempty(),
 });
 
@@ -160,7 +163,7 @@ export const CATEGORY_LABELS: Readonly<Record<HazardCategory, string>> = {
 };
 
 /** Which bucket each hazard falls into. Total over `Hazard` by construction. */
-export const HAZARD_TO_CATEGORY: Readonly<Record<Hazard, HazardCategory>> = {
+const HAZARD_TO_CATEGORY: Readonly<Record<Hazard, HazardCategory>> = {
   listeria: 'pathogens',
   salmonella: 'pathogens',
   'e-coli': 'pathogens',
@@ -175,3 +178,10 @@ export const HAZARD_TO_CATEGORY: Readonly<Record<Hazard, HazardCategory>> = {
   mislabeling: 'undeclared-allergens',
   other: 'other',
 };
+
+/** The categories an entry belongs to, derived from its hazards. An entry with
+ *  hazards in more than one coarse bucket belongs to all of them, so the
+ *  category filter shows it whenever any of its categories is checked. */
+export function categoriesOf(hazards: readonly Hazard[]): readonly HazardCategory[] {
+  return [...new Set(hazards.map((h) => HAZARD_TO_CATEGORY[h]))];
+}

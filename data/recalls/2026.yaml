@@ -1,10 +1,44 @@
 # yaml-language-server: $schema=../../schema.json
 #
-# Curated timeline of significant US food recalls announced in 2026.
+# Curated timeline of significant US food safety alerts announced in 2026.
 # The $schema line above gives you autocomplete and inline errors in any editor
 # with the YAML extension (VS Code, Zed, Neovim + yaml-language-server).
 
 recalls:
+  - id: 2026-08-everything-sprouts-alfalfa-sprouts
+    date: 2026-08-21
+    title: Calco and Everything Sprouts alfalfa sprouts (E. coli and Salmonella)
+    summary:
+      - alfalfa sprouts
+    recalling_firm: Everything Sprouts, LLC
+    agency: FDA
+    hazards: [e-coli, salmonella]
+    distribution: Retailers, grocery stores and foodservice customers in 15 states
+    illnesses: 55
+    products:
+      - name: Alfalfa sprouts
+        brand: Calco and Everything Sprouts
+    note: |
+      FDA and CDC are investigating a multistate outbreak of Shiga
+      toxin-producing E. coli (serotypes O26:H11, O103:H25 and O168:H8) and
+      Salmonella Agona traced to alfalfa sprouts grown and distributed by
+      Everything Sprouts, LLC of Minneapolis, MN. As of August 21, 55 people
+      in 15 states were reported ill — 46 with E. coli, 7 with Salmonella, and
+      2 with both — with four hospitalizations and no deaths. Illnesses began
+      between May 31 and August 8. FDA initiated an inspection on August 19
+      and recommended that Everything Sprouts conduct a recall; the
+      investigation is ongoing. Do not eat, sell or serve sprouts sold under
+      the Calco and Everything Sprouts brands.
+    citations:
+      - title: "Outbreak Investigation of Shiga Toxin-producing E. coli & Salmonella: Sprouts (August 2026)"
+        url: https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-shiga-toxin-producing-e-coli-salmonella-sprouts-august-2026
+        publisher: FDA
+        accessed: 2026-08-21
+      - title: E. coli and Salmonella Outbreak Linked to Alfalfa Sprouts
+        url: https://www.cdc.gov/ecoli/outbreaks/alfalfa-sprouts-08-26/index.html
+        publisher: CDC
+        accessed: 2026-08-21
+
   - id: 2026-08-indus-foods-gangothri-pickled-meat
     date: 2026-08-17
     title: Pickled goat and chicken products
@@ -12,7 +46,7 @@ recalls:
       - pickled goat & chicken
     recalling_firm: Indus Foods, LLC (dba Gangothri Foods)
     agency: FSIS
-    hazard: processing-defect
+    hazards: [processing-defect]
     classification: I
     distribution: Nationwide (restaurants, retail and online)
     products:
@@ -41,7 +75,7 @@ recalls:
     summary:
       - fruit bars
     recalling_firm: Dreyer's Grand Ice Cream, Inc.
-    hazard: foreign-material
+    hazards: [foreign-material]
     distribution: Nationwide
     products:
       - name: Strawberry Fruit Bars, 6-count 2.5 oz paddle bars
@@ -91,7 +125,7 @@ recalls:
       - granola
     recalling_firm: The Hampton Grocer, Inc.
     agency: FDA
-    hazard: salmonella
+    hazards: [salmonella]
     distribution: Nationwide via Amazon and other online retailers
     products:
       - name: Lacnola Lactation Granola, 8 oz stand-up pouch
@@ -123,7 +157,7 @@ recalls:
       - tomato bisque soup
     recalling_firm: Kettle Cuisine LLC
     agency: FDA
-    hazard: listeria
+    hazards: [listeria]
     distribution: Walmart stores in 29 states
     products:
       - name: Marketside Tomato Bisque Soup Kit, 14 oz tray
@@ -152,7 +186,7 @@ recalls:
       - spice mix
     recalling_firm: Lidl US
     agency: FDA
-    hazard: salmonella
+    hazards: [salmonella]
     distribution: Lidl stores in 10 states and Washington, D.C.
     products:
       - name: Vitasia Asian Style Wok Spice Mix, 1.58 oz (45 g)
@@ -179,7 +213,7 @@ recalls:
       - jalapeños
     recalling_firm: Coast Citrus Distributors
     agency: FDA
-    hazard: salmonella
+    hazards: [salmonella]
     distribution: Restaurants and retailers in 27 states
     illnesses: 345
     products:
@@ -213,7 +247,7 @@ recalls:
       - chicken salad
     recalling_firm: Taylor Fresh Foods (parent of Taylor Farms)
     agency: FDA
-    hazard: salmonella
+    hazards: [salmonella]
     distribution: Retail centers in 26 states
     products:
       - name: Jalapeño-based salsa, guacamole and dips
@@ -325,7 +359,7 @@ recalls:
       - avocado dressing
     recalling_firm: Salata Dressings, LLC
     agency: FDA
-    hazard: salmonella
+    hazards: [salmonella]
     distribution: H-E-B stores in Texas
     products:
       - name: Salata Jalapeno Avocado Dressing, 12-oz bottle
@@ -354,7 +388,7 @@ recalls:
       - corned beef
     recalling_firm: City Foods, Inc. (dba Bea's Best Corned Beef)
     agency: FSIS
-    hazard: listeria
+    hazards: [listeria]
     classification: I
     distribution: Illinois, Iowa and Michigan, then nationwide
     products:
@@ -392,7 +426,7 @@ recalls:
       - green powders
     recalling_firm: Lexunder Inc. (dba Food To Live)
     agency: FDA
-    hazard: salmonella
+    hazards: [salmonella]
     distribution: Nationwide via online retailers
     products:
       - name: Food to Live green powder products (kale, moringa, spirulina, wheatgrass, algae and supergreens)
@@ -417,7 +451,7 @@ recalls:
       - pistachio nut butter
     recalling_firm: Botticelli Foods
     agency: FDA
-    hazard: salmonella
+    hazards: [salmonella]
     distribution: Walmart stores in 19 states
     products:
       - name: Bettergoods Pistachio Nut Butter, 6.7 oz glass jar
@@ -450,7 +484,7 @@ recalls:
       - bread pudding
     recalling_firm: Ukrop's Homestyle Foods
     agency: FSIS
-    hazard: foreign-material
+    hazards: [foreign-material]
     classification: I
     distribution: North Carolina, Virginia, West Virginia, military commissaries and online
     products:
@@ -489,7 +523,7 @@ recalls:
       - shortbread cookies
     recalling_firm: Lidl US
     agency: FDA
-    hazard: undeclared-allergen
+    hazards: [undeclared-allergen]
     distribution: Lidl stores in 10 states and Washington, D.C.
     products:
       - name: Shortbread Cookies with Chocolate Truffle Coating & Apricot Filling, 11.6 oz
@@ -518,7 +552,7 @@ recalls:
       - chicken salad
     recalling_firm: Mary's Harvest Fresh Foods, Inc.
     agency: FSIS
-    hazard: listeria
+    hazards: [listeria]
     distribution: Oregon and Washington
     products:
       - name: Curry Chicken Salad, 8-oz plastic package
@@ -545,7 +579,7 @@ recalls:
       - mixed berries
     recalling_firm: Publix Super Markets, Inc.
     agency: FDA
-    hazard: e-coli
+    hazards: [e-coli]
     distribution: Publix stores in 8 states (Alabama, Florida, Georgia, Kentucky, North Carolina, South Carolina, Tennessee, Virginia)
     illnesses: 12
     products:
@@ -585,7 +619,7 @@ recalls:
       - bacon
     recalling_firm: Maple Leaf Foods, Inc.
     agency: FSIS
-    hazard: processing-defect
+    hazards: [processing-defect]
     classification: I
     distribution: Grocery Outlet stores in Idaho, Oregon and Washington
     products:
@@ -616,7 +650,7 @@ recalls:
       - cold brew
     recalling_firm: Brooklyn Roasting Company
     agency: FDA
-    hazard: botulism
+    hazards: [botulism]
     classification: II
     distribution: New York and New Jersey (wholesale)
     products:
@@ -642,7 +676,7 @@ recalls:
       - eggs
     recalling_firm: Midwest Poultry Services, L.P.
     agency: FDA
-    hazard: salmonella
+    hazards: [salmonella]
     classification: I
     distribution: Texas, Oklahoma, Louisiana, Arkansas, Mississippi and New Mexico
     illnesses: 98
@@ -676,7 +710,7 @@ recalls:
       - lettuce
     recalling_firm: Taylor Farms de Mexico
     agency: FDA
-    hazard: cyclospora
+    hazards: [cyclospora]
     distribution: 27 states, plus Taco Bell restaurants in five states
     illnesses: 9481
     deaths: 2
@@ -712,7 +746,7 @@ recalls:
       - cheese
     recalling_firm: La Ceiba Foods Latin Market Inc.
     agency: FDA
-    hazard: listeria
+    hazards: [listeria]
     classification: I
     distribution: Maryland, Virginia and Washington, D.C.
     products:
@@ -749,7 +783,7 @@ recalls:
       - sausage patties
     recalling_firm: MorningStar Farms
     agency: FDA
-    hazard: foreign-material
+    hazards: [foreign-material]
     distribution: Nationwide, plus Puerto Rico and Costa Rica
     products:
       - name: Buffalo Chik'n Nuggets, 10.5 oz bag
@@ -783,7 +817,7 @@ recalls:
       - infant formula
     recalling_firm: Nara Organics
     agency: FDA
-    hazard: botulism
+    hazards: [botulism]
     classification: I
     distribution: Nationwide via nara.com, Target stores and target.com
     illnesses: 4
@@ -839,7 +873,7 @@ recalls:
       - mac & cheese
     recalling_firm: BEF Foods, Inc.
     agency: FDA
-    hazard: undeclared-allergen
+    hazards: [undeclared-allergen]
     classification: II
     distribution: Nationwide
     products:
@@ -865,7 +899,7 @@ recalls:
       - cheese
     recalling_firm: Clover Hill Dairy, LLC
     agency: FDA
-    hazard: listeria
+    hazards: [listeria]
     distribution: Maryland, Virginia, New York, North Carolina, New Jersey and Washington, D.C.
     illnesses: 12
     deaths: 1
@@ -906,7 +940,7 @@ recalls:
       - chicken sausage
     recalling_firm: Jones Dairy Farm
     agency: other
-    hazard: mislabeling
+    hazards: [mislabeling]
     distribution: Costco warehouses
     products:
       - name: Chicken Sausage Links, 48 oz (3 lb)
@@ -944,7 +978,7 @@ recalls:
       - powdered milk
     recalling_firm: California Dairies, Inc.
     agency: FDA
-    hazard: salmonella
+    hazards: [salmonella]
     classification: I
     distribution: Ingredient sold to food manufacturers nationwide
     products:
@@ -973,7 +1007,7 @@ recalls:
       - hot cocoa mixes
     recalling_firm: Ghirardelli Chocolate Company
     agency: FDA
-    hazard: salmonella
+    hazards: [salmonella]
     distribution: Nationwide (food service and e-commerce)
     products:
       - name: Hot cocoa, frappe and chocolate beverage mixes (13 products)
@@ -999,7 +1033,7 @@ recalls:
       - alfredo sauce
     recalling_firm: The Coffee Connexion Co. Inc. (Lebanon, Tennessee)
     agency: FDA
-    hazard: salmonella
+    hazards: [salmonella]
     classification: I
     distribution: 41 states
     products:
@@ -1033,7 +1067,7 @@ recalls:
     summary:
       - frozen pizza
     agency: FSIS
-    hazard: salmonella
+    hazards: [salmonella]
     distribution: Walmart, Aldi and other retailers
     products:
       - name: Great Value and Mama Cozzi's frozen pizzas (multiple varieties)
@@ -1061,7 +1095,7 @@ recalls:
       - snack mixes
     recalling_firm: John B. Sanfilippo & Son, Inc.
     agency: FDA
-    hazard: salmonella
+    hazards: [salmonella]
     distribution: Nationwide (including Target)
     products:
       - name: Snack and trail mixes (Good & Gather, Fisher, Southern Style Nuts, Squirrel Brand)
@@ -1089,7 +1123,7 @@ recalls:
       - potato chips
     recalling_firm: Utz Quality Foods, LLC
     agency: FDA
-    hazard: salmonella
+    hazards: [salmonella]
     distribution: Nationwide
     products:
       - name: Zapp's and Dirty potato chips (multiple varieties)
@@ -1117,7 +1151,7 @@ recalls:
       - cheese bread
     recalling_firm: Champion Foods LLC
     agency: FDA
-    hazard: salmonella
+    hazards: [salmonella]
     distribution: Costco, Walmart, Target, Kroger and other retailers
     products:
       - name: Motor City Pizza Co. 5 Cheese Bread (single and 2-pack)
@@ -1144,7 +1178,7 @@ recalls:
       - chicken nuggets
     recalling_firm: Dorada Foods
     agency: FSIS
-    hazard: chemical-contamination
+    hazards: [chemical-contamination]
     status: retracted
     distribution: Nationwide (Walmart)
     products:
@@ -1173,7 +1207,7 @@ recalls:
       - cantaloupe
     recalling_firm: Ayco Farms Inc.
     agency: FDA
-    hazard: salmonella
+    hazards: [salmonella]
     classification: I
     distribution: California, Florida, New York and Pennsylvania
     illnesses: 70
@@ -1204,7 +1238,7 @@ recalls:
       - peeled garlic
     recalling_firm: Tops Friendly Markets
     agency: FDA
-    hazard: botulism
+    hazards: [botulism]
     classification: I
     distribution: New York, Pennsylvania and Vermont
     products:
@@ -1233,7 +1267,7 @@ recalls:
       - pork
     recalling_firm: Blackwing Organic Meats
     agency: FSIS
-    hazard: processing-defect
+    hazards: [processing-defect]
     distribution: Nationwide (wholesale and retail)
     products:
       - name: Blackwing Organic Meats Organic Ground Beef and other raw beef and pork
@@ -1258,7 +1292,7 @@ recalls:
       - ice cream
     recalling_firm: Straus Family Creamery
     agency: FDA
-    hazard: foreign-material
+    hazards: [foreign-material]
     distribution: 17 states
     products:
       - name: Organic Super Premium Ice Cream (Vanilla Bean, Strawberry, Cookie Dough, Dutch Chocolate, Mint Chip)
@@ -1285,7 +1319,7 @@ recalls:
       - white rice
     recalling_firm: Lundberg Family Farms
     agency: FDA
-    hazard: foreign-material
+    hazards: [foreign-material]
     classification: II
     distribution: Nationwide (Wegmans, Walmart, Target, Whole Foods and others)
     products:
@@ -1314,7 +1348,7 @@ recalls:
       - ice pops
     recalling_firm: De Dios' Ice Pops II LLC
     agency: FDA
-    hazard: undeclared-allergen
+    hazards: [undeclared-allergen]
     distribution: New Jersey, New York, Pennsylvania and Connecticut
     products:
       - name: De Dios Ice Pops, 3.7 oz (multiple flavors)
@@ -1339,7 +1373,7 @@ recalls:
       - focaccia
     recalling_firm: Bakkavor
     agency: FDA
-    hazard: foreign-material
+    hazards: [foreign-material]
     classification: II
     distribution: Retail and meal-kit customers in 10 states
     products:
@@ -1372,7 +1406,7 @@ recalls:
       - raw oysters
     recalling_firm: Stellar Bay Shellfish Ltd.
     agency: FDA
-    hazard: norovirus
+    hazards: [norovirus]
     distribution: Restaurants and retailers in 10 states
     products:
       - name: Raw oysters (Kusshi, Chrome Point, Stellar Bay and Stellar Bay Gold)
@@ -1401,7 +1435,7 @@ recalls:
       - dumplings
     recalling_firm: Ajinomoto Foods North America, Inc.
     agency: FSIS
-    hazard: foreign-material
+    hazards: [foreign-material]
     classification: II
     distribution: 43 states
     products:
@@ -1431,7 +1465,7 @@ recalls:
       - frozen meatballs
     recalling_firm: Rosina Food Products, Inc.
     agency: FSIS
-    hazard: foreign-material
+    hazards: [foreign-material]
     classification: I
     distribution: Aldi stores nationwide
     products:
@@ -1460,7 +1494,7 @@ recalls:
       - cheese
     recalling_firm: Saputo Cheese USA Inc.
     agency: FDA
-    hazard: processing-defect
+    hazards: [processing-defect]
     distribution: Walmart in 24 states
     products:
       - name: Great Value cottage cheese (fat free, lowfat and small curd), 16 oz to 3 lb
@@ -1487,7 +1521,7 @@ recalls:
       - barbecue sauce
     recalling_firm: Savannah Bee Company
     agency: FDA
-    hazard: undeclared-allergen
+    hazards: [undeclared-allergen]
     classification: II
     distribution: Nationwide
     products:
@@ -1516,7 +1550,7 @@ recalls:
       - potato chips
     recalling_firm: Frito-Lay
     agency: FDA
-    hazard: undeclared-allergen
+    hazards: [undeclared-allergen]
     classification: I
     distribution: Six states
     products:
@@ -1545,7 +1579,7 @@ recalls:
       - meatloaf
     recalling_firm: Costco Wholesale
     agency: FDA
-    hazard: salmonella
+    hazards: [salmonella]
     distribution: Costco in 26 states, D.C. and Puerto Rico
     products:
       - name: Meatloaf with Mashed Yukon Potatoes and Glaze
@@ -1573,7 +1607,7 @@ recalls:
       - cheese
     recalling_firm: Raw Farm, LLC
     agency: FDA
-    hazard: e-coli
+    hazards: [e-coli]
     distribution: Illnesses in California, Florida and Texas
     illnesses: 9
     products:
@@ -1601,7 +1635,7 @@ recalls:
       - spinach bites
     recalling_firm: Dr. Praeger's Sensible Foods Inc.
     agency: FDA
-    hazard: foreign-material
+    hazards: [foreign-material]
     classification: II
     distribution: Maryland and Pennsylvania
     products:
@@ -1630,7 +1664,7 @@ recalls:
       - ground beef
     recalling_firm: CS Beef Packers, LLC
     agency: FSIS
-    hazard: e-coli
+    hazards: [e-coli]
     classification: I
     distribution: Foodservice distributors in California, Idaho and Oregon
     products:
@@ -1664,7 +1698,7 @@ recalls:
       - salmon
     recalling_firm: Slade Gorton & Co., Inc.
     agency: FDA
-    hazard: listeria
+    hazards: [listeria]
     classification: II
     distribution: BJ's Wholesale Club in 7 states
     products:
@@ -1695,7 +1729,7 @@ recalls:
       - M&M's
     recalling_firm: Beacon Promotions Inc.
     agency: FDA
-    hazard: undeclared-allergen
+    hazards: [undeclared-allergen]
     classification: II
     distribution: 20 states
     products:
@@ -1724,7 +1758,7 @@ recalls:
       - mini beignets
     recalling_firm: Costco Wholesale
     agency: FDA
-    hazard: undeclared-allergen
+    hazards: [undeclared-allergen]
     distribution: More than 20 states
     products:
       - name: Mini Beignets filled with Caramel, 22-pack
@@ -1752,7 +1786,7 @@ recalls:
       - chia seeds
     recalling_firm: Navitas Organics
     agency: FDA
-    hazard: salmonella
+    hazards: [salmonella]
     distribution: Nationwide (Whole Foods, Target, Amazon and online)
     products:
       - name: Organic Chia Seeds, 8 oz stand-up pouch
@@ -1780,7 +1814,7 @@ recalls:
       - cereals & snacks
     recalling_firm: Gold Star Distribution, Inc.
     agency: FDA
-    hazard: other
+    hazards: [other]
     classification: II
     distribution: Minnesota, Indiana and North Dakota
     products:
@@ -1807,7 +1841,7 @@ recalls:
       - canned tuna
     recalling_firm: Tri-Union Seafoods
     agency: FDA
-    hazard: botulism
+    hazards: [botulism]
     distribution: Nine states (Meijer, Giant, Safeway/Albertsons chains)
     products:
       - name: Genova Yellowfin Tuna in Olive Oil, 5 oz (4-pack)
@@ -1839,7 +1873,7 @@ recalls:
       - grilled chicken
     recalling_firm: Suzanna's Kitchen (Norcross, Georgia)
     agency: FSIS
-    hazard: listeria
+    hazards: [listeria]
     classification: I
     distribution: Foodservice in Alabama, Florida, Georgia, Missouri, New Hampshire, North Carolina and Ohio
     products:

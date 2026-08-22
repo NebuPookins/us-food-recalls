@@ -13,7 +13,7 @@ import { DATA_DIR, DIST_DIR, STATIC_DIR } from './paths.ts';
 const result = loadRecalls(DATA_DIR);
 
 if (!result.ok) {
-  console.error(`\n✗ Refusing to build; ${result.errors.length} problem(s) in the recall data:\n`);
+  console.error(`\n✗ Refusing to build; ${result.errors.length} problem(s) in the alert data:\n`);
   for (const error of result.errors) console.error(`  ${error}`);
   console.error('\nRun `npm run validate` for the same check without building.\n');
   process.exit(1);
@@ -41,4 +41,4 @@ writeFileSync(
 // file or directory whose name begins with an underscore.
 writeFileSync(join(DIST_DIR, '.nojekyll'), '');
 
-console.log(`✓ Built ${active.length} recall(s) + ${result.recalls.length - active.length} retracted alert(s) into dist/`);
+console.log(`✓ Built ${active.length} alert(s) + ${result.recalls.length - active.length} retracted alert(s) into dist/`);

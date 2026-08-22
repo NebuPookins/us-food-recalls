@@ -13,11 +13,16 @@ function separatorVisibility(visible) {
   return visible.map((v, i) => v && i !== lastVisible);
 }
 
+/** True when any value in `values` is in the `active` set. */
+export function overlaps(values, active) {
+  return values.some((v) => active.has(v));
+}
+
 /**
- * @param {ReadonlyArray<{ primaryCategory: string, alsoCategories: readonly string[] }>} foods
- *   One entry per food label. `primaryCategory` is the category of the food's
- *   own link target (the newest recall); `alsoCategories` is the category of
- *   each earlier-recall ("also previously") link, in display order.
+ * @param {ReadonlyArray<{ primaryCategories: readonly string[], alsoCategories: readonly (readonly string[])[] }>} foods
+ *   One entry per food label. `primaryCategories` are the categories of the food's
+ *   own link target (the newest alert); `alsoCategories` are the categories of
+ *   each earlier-alert ("also previously") link, in display order.
  * @param {ReadonlySet<string>} activeCategories
  * @returns {ReadonlyArray<{
  *   visible: boolean,
@@ -30,8 +35,8 @@ function separatorVisibility(visible) {
  */
 export function decideFoods(foods, activeCategories) {
   const decided = foods.map((food) => {
-    const primaryVisible = activeCategories.has(food.primaryCategory);
-    const alsoVisible = food.alsoCategories.map((c) => activeCategories.has(c));
+    const primaryVisible = overlaps(food.primaryCategories, activeCategories);
+    const alsoVisible = food.alsoCategories.map((cats) => overlaps(cats, activeCategories));
     const anyAlsoVisible = alsoVisible.some(Boolean);
     return { primaryVisible, visible: primaryVisible || anyAlsoVisible, alsoVisible, anyAlsoVisible };
   });

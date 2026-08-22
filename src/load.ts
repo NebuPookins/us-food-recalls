@@ -74,7 +74,7 @@ function findDuplicateIds(sourced: readonly Sourced[]): readonly string[] {
   const byId = Map.groupBy(sourced, (s) => s.recall.id);
   return [...byId]
     .filter(([, group]) => group.length > 1)
-    .map(([id, group]) => `Duplicate recall id "${id}" in: ${group.map((g) => g.file).join(', ')}`);
+    .map(([id, group]) => `Duplicate alert id "${id}" in: ${group.map((g) => g.file).join(', ')}`);
 }
 
 /** Every `parent_id` must point at an existing recall in the same data set. */
@@ -82,5 +82,5 @@ function findInvalidParentIds(sourced: readonly Sourced[]): readonly string[] {
   const ids = new Set(sourced.map((s) => s.recall.id));
   return sourced
     .filter((s) => s.recall.parent_id && !ids.has(s.recall.parent_id))
-    .map((s) => `Recall "${s.recall.id}" references missing parent_id "${s.recall.parent_id}" (in ${s.file}).`);
+    .map((s) => `Alert "${s.recall.id}" references missing parent_id "${s.recall.parent_id}" (in ${s.file}).`);
 }

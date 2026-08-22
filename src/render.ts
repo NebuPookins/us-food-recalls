@@ -2,7 +2,7 @@ import {
   CATEGORY_LABELS,
   HAZARD_CATEGORIES,
   HAZARD_LABELS,
-  HAZARD_TO_CATEGORY,
+  categoriesOf,
   type Citation,
   type HazardCategory,
   type Product,
@@ -84,7 +84,7 @@ type Fact = { readonly label: string; readonly value: string };
 /** Small key/value chips shown under the title for the optional fields. */
 function renderFacts(recall: Recall): string {
   const candidates: readonly (Fact | undefined)[] = [
-    fact('Recalling firm', recall.recalling_firm),
+    fact('Company', recall.recalling_firm),
     fact('Agency', recall.agency),
     fact('Class', recall.classification),
     fact('Distribution', recall.distribution),
@@ -125,7 +125,7 @@ function renderRecallBody(recall: Recall, byId: ReadonlyMap<string, Recall>): st
     <header>
       <p class="meta">
         <time datetime="${escapeHtml(recall.date)}">${escapeHtml(formatDate(recall.date))}</time>
-        <span class="hazard hazard-${escapeHtml(recall.hazard)}">${escapeHtml(HAZARD_LABELS[recall.hazard])}</span>
+        ${recall.hazards.map((h) => `<span class="hazard hazard-${escapeHtml(h)}">${escapeHtml(HAZARD_LABELS[h])}</span>`).join(' ')}
         ${recall.ended ? '<span class="closed">Closed</span>' : ''}
         ${recall.status === 'retracted' ? '<span class="closed">Retracted</span>' : ''}
       </p>
@@ -135,7 +135,7 @@ function renderRecallBody(recall: Recall, byId: ReadonlyMap<string, Recall>): st
     ${renderFacts(recall)}
     <div class="note">${paragraphs(recall.note)}</div>
     <section class="products">
-      <h3>Recalled products</h3>
+      <h3>Affected products</h3>
       <ul>${recall.products.map(renderProduct).join('\n')}</ul>
     </section>
     <section class="citations">
@@ -149,8 +149,8 @@ function renderRecall(recall: Recall, byId: ReadonlyMap<string, Recall>): string
   // Data attributes drive the client-side filter; they hold raw values, not display text.
   return `
 <article class="recall" id="${escapeHtml(recall.id)}"
-         data-hazard="${escapeHtml(recall.hazard)}"
-         data-category="${escapeHtml(HAZARD_TO_CATEGORY[recall.hazard])}"
+         data-hazards="${escapeHtml(recall.hazards.join(' '))}"
+         data-category="${escapeHtml(categoriesOf(recall.hazards).join(' '))}"
          data-year="${escapeHtml(recall.date.slice(0, 4))}"
          data-search="${escapeHtml(searchIndex(recall))}">${renderRecallBody(recall, byId)}
 </article>`;
@@ -162,7 +162,7 @@ function searchIndex(recall: Recall): string {
     recall.title,
     recall.recalling_firm ?? '',
     recall.note,
-    HAZARD_LABELS[recall.hazard],
+    ...recall.hazards.map((h) => HAZARD_LABELS[h]),
     ...recall.products.flatMap((p) => [p.name, p.brand ?? '', ...(p.codes ?? [])]),
   ]
     .join(' ')
@@ -187,7 +187,7 @@ function sepHtml(sepClass: string, isLast: boolean): string {
 type SummaryItem = {
   readonly id: string;
   readonly date: string;
-  readonly category: HazardCategory;
+  readonly categories: readonly HazardCategory[];
   readonly food: string;
 };
 
@@ -236,7 +236,7 @@ function renderFood(food: string, occurrences: readonly SummaryItem[], isLast: b
     .map(
       (o, k) =>
         `<span class="also-link">` +
-        `<a href="#${escapeHtml(o.id)}" data-category="${escapeHtml(o.category)}">${escapeHtml(formatDateShort(o.date))}</a>` +
+        `<a href="#${escapeHtml(o.id)}" data-category="${escapeHtml(o.categories.join(' '))}">${escapeHtml(formatDateShort(o.date))}</a>` +
         sepHtml('also-sep', k === rest.length - 1) +
         `</span>`,
     )
@@ -244,7 +244,7 @@ function renderFood(food: string, occurrences: readonly SummaryItem[], isLast: b
   const extra = rest.length > 0 ? `<span class="also-previously"> (also previously ${alsoLinks})</span>` : '';
   return (
     `<span class="food">` +
-    `<a href="#${escapeHtml(primary.id)}" data-category="${escapeHtml(primary.category)}">${escapeHtml(food)}</a>` +
+    `<a href="#${escapeHtml(primary.id)}" data-category="${escapeHtml(primary.categories.join(' '))}">${escapeHtml(food)}</a>` +
     extra +
     sepHtml('sep', isLast) +
     '</span>'
@@ -256,14 +256,15 @@ function renderFood(food: string, occurrences: readonly SummaryItem[], isLast: b
  *  When one food label maps to several recalls, it is listed once (linking to
  *  the newest recall) and earlier ones follow as dated "also previously" links. */
 function renderSummary(recalls: readonly Recall[], now: string): string {
-  const items: readonly SummaryItem[] = recalls.flatMap((r) =>
-    (r.summary ?? []).map((food) => ({
+  const items: readonly SummaryItem[] = recalls.flatMap((r) => {
+    const categories = categoriesOf(r.hazards);
+    return (r.summary ?? []).map((food) => ({
       id: r.id,
       date: r.date,
-      category: HAZARD_TO_CATEGORY[r.hazard],
+      categories,
       food,
-    })),
-  );
+    }));
+  });
   if (items.length === 0) return '';
 
   // Group by food label, preserving first-occurrence (newest-first) order. Each
@@ -299,7 +300,7 @@ ${body}
 /** Two calls to action: report a missed recall by email, and support the site. */
 function renderActions(): string {
   return `<section class="actions" aria-label="Get involved">
-  <a class="button" href="mailto:nebupookins@gmail.com?subject=New%20food%20recall%20to%20report">📧 Spotted a recall I missed? Let me know!</a>
+  <a class="button" href="mailto:nebupookins@gmail.com?subject=New%20food%20alert%20to%20report">📧 Spotted an alert I missed? Let me know!</a>
   <a class="button button-secondary" href="https://ko-fi.com/nebupookins" target="_blank" rel="noopener noreferrer">☕ Find this list useful? Support the site!</a>
 </section>`;
 }
@@ -331,7 +332,7 @@ function renderPreferences(): string {
     <span class="preferences-caret" aria-hidden="true"></span>
   </button>
   <div class="preferences-body" id="preferences-body">
-    <p class="preferences-intro">Only show recalls in the categories you check:</p>
+    <p class="preferences-intro">Only show alerts in the categories you check:</p>
     <div class="categories">
 ${checkboxes}
     </div>
@@ -345,7 +346,7 @@ export function renderIndex(recalls: readonly Recall[], meta: SiteMeta): string 
   const active = recalls.filter((r) => r.status !== 'retracted');
   const retracted = recalls.filter((r) => r.status === 'retracted');
   const years = [...new Set(active.map((r) => r.date.slice(0, 4)))].toSorted().toReversed();
-  const hazards = [...new Set(active.map((r) => r.hazard))].toSorted((a, b) =>
+  const hazards = [...new Set(active.flatMap((r) => r.hazards))].toSorted((a, b) =>
     HAZARD_LABELS[a].localeCompare(HAZARD_LABELS[b]),
   );
   const byId = new Map(active.map((r) => [r.id, r] as const));
@@ -371,7 +372,7 @@ export function renderIndex(recalls: readonly Recall[], meta: SiteMeta): string 
   <p class="site-links">
     <a href="feed.xml">Atom feed</a> ·
     <a href="recalls.json">JSON</a> ·
-    <span>${active.length} recall${active.length === 1 ? '' : 's'}</span> ·
+    <span>${active.length} alert${active.length === 1 ? '' : 's'}</span> ·
     <span>updated ${escapeHtml(formatDate(meta.buildDate))}</span>
   </p>
 </header>
@@ -382,7 +383,7 @@ ${renderSummary(active, meta.buildDate)}
 
 ${renderActions()}
 
-<form class="filters" role="search" aria-label="Filter recalls">
+<form class="filters" role="search" aria-label="Filter alerts">
   <label>Search
     <input type="search" id="q" placeholder="product, brand, firm…" autocomplete="off">
   </label>
@@ -413,7 +414,7 @@ ${renderActions()}
 ${active.map((r) => renderRecall(r, byId)).join('\n')}
 </main>
 
-<p class="empty" id="empty" hidden>No recalls match those filters.</p>
+<p class="empty" id="empty" hidden>No alerts match those filters.</p>
 
 <footer class="site-footer">
   <p class="site-links"><a href="retracted.html">Retracted alerts</a></p>
@@ -445,8 +446,8 @@ export function renderRetractedPage(recalls: readonly Recall[], meta: SiteMeta):
 <body>
 <header class="site-header">
   <h1>Retracted alerts</h1>
-  <p class="tagline">Reports that were withdrawn or turned out to be false positives. These are not actual recalls.</p>
-  <p class="site-links"><a href="index.html">← Back to all recalls</a></p>
+  <p class="tagline">Reports that were withdrawn or turned out to be false positives — not active alerts.</p>
+  <p class="site-links"><a href="index.html">← Back to all alerts</a></p>
 </header>
 
 <main id="recalls">
@@ -474,7 +475,7 @@ export function renderFeed(recalls: readonly Recall[], meta: SiteMeta): string {
     <link href="${escapeHtml(`${base}/#${r.id}`)}"/>
     <id>${escapeHtml(`${base}/#${r.id}`)}</id>
     <updated>${escapeHtml(r.date)}T00:00:00Z</updated>
-    <category term="${escapeHtml(r.hazard)}"/>
+    ${r.hazards.map((h) => `<category term="${escapeHtml(h)}"/>`).join('\n    ')}
     <summary>${escapeHtml(r.note)}</summary>
   </entry>`,
   );
