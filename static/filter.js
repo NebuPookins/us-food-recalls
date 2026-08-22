@@ -1,4 +1,4 @@
-import { decideFoods, overlaps } from './food-filter.js';
+import { decideFoods, highlightHtml, matchesSearch, matchRanges, overlaps } from './food-filter.js';
 
 // Progressive enhancement: the full list is already in the HTML, this only hides
 // non-matching cards. With JS off the page still works, just unfiltered.
@@ -42,6 +42,11 @@ import { decideFoods, overlaps } from './food-filter.js';
     search: el.dataset.search,
   }));
 
+  // Looked up when deciding whether a "foods to check" entry still matches the
+  // search box: each food links to one or more recalls (its primary alert plus
+  // any "also previously" ones), and the food matches if any of them do.
+  const searchById = new Map(recallMeta.map((r) => [r.id, r.search]));
+
   // Foods in the "foods to check" list, read once and grouped into recency
   // buckets. Within each bucket, the food-name link normally targets the newest
   // recall (`mainHref`); if that recall's own category gets filtered out while
@@ -53,10 +58,19 @@ import { decideFoods, overlaps } from './food-filter.js';
     const foods = Array.from(bucketEl.querySelectorAll('.food')).map((el) => {
       const mainLink = el.querySelector('a');
       const alsoLinks = Array.from(el.querySelectorAll('.also-previously .also-link'));
+      // Read at startup, before any category filtering strips `mainLink`'s
+      // `href` — every food-name link and "also previously" link still points
+      // at its recall's id at this point.
+      const recallIds = [
+        mainLink.getAttribute('href').slice(1),
+        ...alsoLinks.map((link) => link.querySelector('a').getAttribute('href').slice(1)),
+      ];
       return {
         el,
         mainLink,
         mainHref: mainLink.getAttribute('href'),
+        label: mainLink.textContent,
+        searchTexts: recallIds.map((id) => searchById.get(id)).filter(Boolean),
         primaryCategories: mainLink.dataset.category.split(' '),
         sep: el.querySelector('.sep'),
         also: el.querySelector('.also-previously'),
@@ -84,12 +98,14 @@ import { decideFoods, overlaps } from './food-filter.js';
   const activeCategories = () =>
     new Set(categoryInputs.filter((i) => i.checked).map((i) => i.value));
 
+  // Shared by `applyRecalls` and `applyFoods`, both of which rerun on every
+  // search keystroke and need the same lowercased, whitespace-split terms.
+  const searchTerms = () => q.value.toLowerCase().split(/\s+/).filter(Boolean);
+
   const setExpanded = (expanded) => {
     prefsToggle.setAttribute('aria-expanded', String(expanded));
     prefsBody.hidden = !expanded;
   };
-
-  const matchesSearch = (haystack, terms) => terms.every((t) => haystack.includes(t));
 
   // One renderer for the two "… matching your search" notices (retracted alerts
   // and category-filtered-out recalls), so their markup stays in sync. Items
@@ -149,7 +165,7 @@ import { decideFoods, overlaps } from './food-filter.js';
   // Recall cards depend on search/hazard/year *and* category, so this reruns on
   // every keystroke as well as every category change.
   const applyRecalls = () => {
-    const terms = q.value.toLowerCase().split(/\s+/).filter(Boolean);
+    const terms = searchTerms();
     const categories = activeCategories();
 
     let visible = 0;
@@ -188,14 +204,22 @@ import { decideFoods, overlaps } from './food-filter.js';
     );
   };
 
-  // The "foods to check" list reflects only the category preferences, not the
-  // search/hazard/year controls, so it's kept separate from `applyRecalls` and
-  // only called where a category might actually have changed — not on every
-  // search keystroke. `decideFoods` also decides which separators would
-  // otherwise dangle once filtered-out items drop out, at both the food level
-  // and the "also previously" level, so this loop only has to apply its verdict.
+  // The "foods to check" list's visibility (which foods/links are shown or
+  // hidden at all) reflects only the category preferences, not the
+  // search/hazard/year controls — so it's kept separate from `applyRecalls` and
+  // only called where a category might actually have changed. `decideFoods`
+  // also decides which separators would otherwise dangle once filtered-out
+  // items drop out, at both the food level and the "also previously" level, so
+  // this loop only has to apply its verdict.
+  //
+  // The search box layers on top of that, independent of visibility: a food
+  // that's still shown gets dimmed if none of its recalls match the typed
+  // terms, and bolded where the terms land inside its own label. This part
+  // *does* need to rerun on every search keystroke, so `applyFoods` is called
+  // from both the category-change and search-input handlers below.
   const applyFoods = () => {
     const categories = activeCategories();
+    const terms = searchTerms();
 
     // `decideFoods` is applied per bucket so its separator logic (drop the
     // trailing comma after the last visible food) runs within each bucket, not
@@ -220,6 +244,16 @@ import { decideFoods, overlaps } from './food-filter.js';
           if (f.alsoSeps[j]) f.alsoSeps[j].hidden = !d.alsoSepVisible[j];
         });
         if (f.also) f.also.hidden = !d.anyAlsoVisible;
+
+        // Dimming/highlighting is only meaningful on a food `decideFoods` is
+        // already showing — skip the DOM work for one it's hiding by category.
+        if (d.visible) {
+          const matches = terms.length === 0 || f.searchTexts.some((h) => matchesSearch(h, terms));
+          f.el.classList.toggle('dim', !matches);
+          f.mainLink.innerHTML = matches
+            ? highlightHtml(f.label, matchRanges(f.label, terms), escapeHtml)
+            : escapeHtml(f.label);
+        }
       });
 
       bucket.el.hidden = !decisions.some((d) => d.visible);
@@ -248,6 +282,7 @@ import { decideFoods, overlaps } from './food-filter.js';
   };
 
   for (const control of [q, hazard, year]) control.addEventListener('input', applyRecalls);
+  q.addEventListener('input', applyFoods);
   for (const input of categoryInputs) {
     input.addEventListener('change', () => {
       prefsWarning.hidden = true;
