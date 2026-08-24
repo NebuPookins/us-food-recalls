@@ -3,6 +3,8 @@
 A static site generated from YAML. You edit a data file, commit, push, and GitHub
 Actions builds and publishes the HTML to GitHub Pages.
 
+View the live site at https://nebupookins.github.io/us-food-recalls/
+
 ## Everyday use
 
 1. Add an entry to `data/recalls/<year>.yaml` (create the file if the year is new).
