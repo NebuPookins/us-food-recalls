@@ -10,7 +10,8 @@ recalls:
       - burrito
     recalling_firm: Fresh & Ready Foods LLC
     agency: FDA
-    hazards: [undeclared-allergen]
+    hazards:
+      - undeclared-allergen
     classification: I
     products:
       - name: Spicy Breakfast Burrito
@@ -41,7 +42,8 @@ recalls:
       - fruit puree pouches
     recalling_firm: PT Organics Limited
     agency: FDA
-    hazards: [foreign-material]
+    hazards:
+      - foreign-material
     classification: II
     products:
       - name: Pumpkin Tree Peter Rabbit Organics Banana & Strawberry fruit puree, 4‑oz pouch
@@ -97,7 +99,8 @@ recalls:
       - Hondashi seasoning
     recalling_firm: Pack'n Fresh LLC
     agency: FDA
-    hazards: [undeclared-allergen]
+    hazards:
+      - undeclared-allergen
     classification: II
     products:
       - name: Hondashi 0.25 oz seasoning
@@ -133,7 +136,8 @@ recalls:
       - wonton wrappers
     recalling_firm: Man Fon, Inc.
     agency: FDA
-    hazards: [mislabeling]
+    hazards:
+      - mislabeling
     classification: II
     products:
       - name: Man Fon Inc. Won Ton Wrappers Extra Thin
@@ -158,7 +162,8 @@ recalls:
       - supplement
     recalling_firm: Mellish Island Corp
     agency: FDA
-    hazards: [undeclared-allergen]
+    hazards:
+      - undeclared-allergen
     classification: II
     products:
       - name: Mellish Island Super Skin
@@ -184,7 +189,8 @@ recalls:
       - flounder sashimi
     recalling_firm: Eunha Fisheries Co., LTD
     agency: FDA
-    hazards: [undeclared-allergen]
+    hazards:
+      - undeclared-allergen
     classification: II
     products:
       - name: Flounder Sashimi with Sauce
@@ -209,7 +215,8 @@ recalls:
       - soybean paste
     recalling_firm: JINA F&C
     agency: FDA
-    hazards: [undeclared-allergen]
+    hazards:
+      - undeclared-allergen
     classification: II
     products:
       - name: Ultimate Mother's Day Wangshin Doenjang Aged 3 Years 9 oz. Korean Traditional Premium Soybean Paste
@@ -239,7 +246,8 @@ recalls:
       - moringa
     recalling_firm: Total Nutrition Inc
     agency: FDA
-    hazards: [salmonella]
+    hazards:
+      - salmonella
     classification: I
     products:
       - name: TNVitamins 100% Organic Moringa Capsules 1,200 mg
@@ -273,7 +281,8 @@ recalls:
       - kimbap
     recalling_firm: Gellert Global Group
     agency: FDA
-    hazards: [undeclared-allergen]
+    hazards:
+      - undeclared-allergen
     classification: I
     products:
       - name: Fusia Asian Inspirations Kimchi & Tofu Kimbap
@@ -297,7 +306,8 @@ recalls:
       - lentil soup
     recalling_firm: Amy's Kitchen Inc.
     agency: FDA
-    hazards: [other]
+    hazards:
+      - other
     classification: II
     products:
       - name: Amy's Organic Soups Lentil Light in Sodium 14.5 oz
@@ -324,7 +334,8 @@ recalls:
       - groundnuts
     recalling_firm: Fayus Inc.
     agency: FDA
-    hazards: [undeclared-allergen]
+    hazards:
+      - undeclared-allergen
     classification: II
     products:
       - name: OLA-OLA POUNDED GROUNDNUTS (INTWILO) 32 oz
@@ -352,7 +363,8 @@ recalls:
       - bread
     recalling_firm: General Mills James Ford Bell Technical Center
     agency: FDA
-    hazards: [foreign-material]
+    hazards:
+      - foreign-material
     classification: II
     products:
       - name: Pillsbury Hard Roll Dough
@@ -390,7 +402,8 @@ recalls:
       - duck sauce
     recalling_firm: W.Y. Industries, Inc.
     agency: FDA
-    hazards: [foreign-material]
+    hazards:
+      - foreign-material
     classification: II
     products:
       - name: WY Duck Sauce packets
@@ -416,7 +429,8 @@ recalls:
       - cheese
     recalling_firm: Clover Hill Dairy, LLC
     agency: FDA
-    hazards: [listeria]
+    hazards:
+      - listeria
     classification: I
     products:
       - name: Clover Hill Dairy mild cheese snack pack (Assorted Regular Mild Stix White Colby, Marble Jack, Yummy Cheddar)
@@ -439,7 +453,8 @@ recalls:
       - ice cream
     recalling_firm: Galliker Dairy Co, Inc.
     agency: FDA
-    hazards: [foreign-material]
+    hazards:
+      - foreign-material
     classification: II
     products:
       - name: DQ Chocolate Reduced Fat Ice Cream Mix, 5 GAL (18.9L)
@@ -464,7 +479,8 @@ recalls:
       - artichoke hearts
     recalling_firm: GELLERT GLOBAL GROUP
     agency: FDA
-    hazards: [foreign-material]
+    hazards:
+      - foreign-material
     classification: II
     products:
       - name: Ruby Artichoke Hearts Quartered
@@ -492,7 +508,8 @@ recalls:
       - ice pop
     recalling_firm: D'Dioses Fruit Pops, Inc.
     agency: FDA
-    hazards: [undeclared-allergen]
+    hazards:
+      - undeclared-allergen
     classification: I
     products:
       - name: D'Dioses Nuez Ice Pop (1 Bar, 81.7 g)
@@ -531,7 +548,8 @@ recalls:
       - energy drink
     recalling_firm: AKKARCO LLC
     agency: FDA
-    hazards: [other]
+    hazards:
+      - other
     classification: I
     products:
       - name: Ashfiat Alharamain Energy Support 250ml
@@ -557,7 +575,8 @@ recalls:
       - dietary supplement
     recalling_firm: Modern Warrior Life, LLC
     agency: FDA
-    hazards: [other]
+    hazards:
+      - other
     classification: I
     products:
       - name: Modern Warrior Ready Dietary Supplement, 60 capsules
@@ -571,4 +590,28 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A98304
         publisher: FDA
         accessed: 2026-08-21
+  - id: 2026-08-12-kerry-inc-kc-everyday-mac-and-cheese-3lb
+    date: 2026-08-12
+    title: KC Everyday Mac & Cheese recalled for undeclared egg allergen
+    summary:
+      - macaroni and cheese
+    recalling_firm: Kerry, Inc
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: I
+    products:
+      - name: KC Everyday Mac & Cheese
+        brand: KC
+        codes:
+          - "0011849964"
+          - "0011988192"
+          - "0012085206"
+    distribution: IA, IL, OK, SD, TX
+    note: Kerry, Inc is recalling its KC Everyday Mac & Cheese fully cooked frozen product because it may contain undeclared egg, an allergen not listed on the label. The recall covers approximately 6,970 cases distributed to stores in Iowa, Illinois, Oklahoma, South Dakota, and Texas. Consumers who purchased this product should not eat it and should discard it or return it to the place of purchase. The firm is working with the FDA to address the issue.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99539
+        publisher: FDA
+        accessed: 2026-08-26
 
