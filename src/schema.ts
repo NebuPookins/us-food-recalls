@@ -67,6 +67,18 @@ const Citation = z.strictObject({
   accessed: IsoDate.optional().describe('When you last confirmed this link worked.'),
 });
 
+/** An alert that has been closed out. Presence of `ended` on an entry is itself
+ *  the "ended" signal; the citations here are the sources that say so. */
+const Ended = z.strictObject({
+  announced: IsoDate.optional().describe('Date the end was officially announced.'),
+  note: z
+    .string()
+    .min(1)
+    .optional()
+    .describe('Notes on the ending, e.g. that product should be past expiration and off shelves.'),
+  citations: z.array(Citation).nonempty().describe('Citations showing that the alert has ended.'),
+});
+
 export const RecallSchema = z.strictObject({
   id: z
     .string()
@@ -112,7 +124,7 @@ export const RecallSchema = z.strictObject({
     .enum(RECALL_STATUSES)
     .optional()
     .describe('active (default) or retracted (withdrawn / false positive).'),
-  ended: IsoDate.optional().describe('Date the alert was closed out.'),
+  ended: Ended.optional().describe('When present, the alert has ended.'),
   citations: z.array(Citation).nonempty(),
 });
 
@@ -125,6 +137,7 @@ export type Recall = z.infer<typeof RecallSchema>;
 export type RecallFile = z.infer<typeof RecallFileSchema>;
 export type Product = z.infer<typeof Product>;
 export type Citation = z.infer<typeof Citation>;
+export type Ended = z.infer<typeof Ended>;
 export type Hazard = (typeof HAZARDS)[number];
 
 /** Human-readable labels for the closed sets, used by the renderer and filters. */

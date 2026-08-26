@@ -963,8 +963,16 @@ recalls:
     agency: FDA
     hazards: [listeria]
     distribution: Maryland, Virginia, New York, North Carolina, New Jersey and Washington, D.C.
-    illnesses: 12
+    illnesses: 15
     deaths: 1
+    ended:
+      announced: 2026-08-26
+      note: The recalled cheeses should no longer be available in stores or restaurants, and most are past expiration.
+      citations:
+        - title: "Outbreak Investigation of Listeria monocytogenes: Soft Cheese (June 2026)"
+          url: https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-listeria-monocytogenes-soft-cheese-june-2026
+          publisher: FDA
+          accessed: 2026-08-26
     products:
       - name: Soft Ricotta / Requesón cheese (clamshells to 5-gal buckets)
         brand: Clover Hill Dairy
@@ -979,8 +987,8 @@ recalls:
       other cheeses from Clover Hill Dairy. The company first recalled its
       ricotta/requesón in early June and expanded to all Clover Hill Dairy
       cheeses on June 18 after product and environmental samples matched the
-      outbreak strain. As of late June there were 12 cases, 10 hospitalizations
-      and one death across four states.
+      outbreak strain. The outbreak ultimately involved 15 illnesses, 14
+      hospitalizations and one death across four states.
     citations:
       - title: Clover Hill Dairy Recalls Soft Ricotta/Requeson Cheese Due to Possible Health Risk
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/clover-hill-dairy-recalls-soft-ricottarequeson-cheese-due-possible-health-risk
@@ -1672,6 +1680,14 @@ recalls:
     hazards: [e-coli]
     distribution: Illnesses in California, Florida and Texas
     illnesses: 9
+    ended:
+      announced: 2026-04-30
+      note: The raw cheddar cheese that tested positive for E. coli was not shipped to stores and is not available for sale.
+      citations:
+        - title: "Outbreak Investigation of E. coli O157:H7: Raw Cheddar Cheese (March 2026)"
+          url: https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-o157h7-raw-cheddar-cheese-march-2026
+          publisher: FDA
+          accessed: 2026-04-30
     products:
       - name: Raw Farm raw cheddar cheese (block and shredded)
         brand: Raw Farm
