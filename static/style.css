@@ -305,6 +305,21 @@ a { color: var(--accent); }
 
 .note p { margin: 0 0 .75rem; }
 
+/* The "this is over" callout rendered from an entry's `ended` block. */
+.ended {
+  margin: 1rem 0;
+  padding: .75rem 1rem;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  background: var(--surface);
+}
+.ended h3 { margin: 0 0 .4rem; }
+.ended .ended-date { margin: 0 0 .4rem; color: var(--muted); font-size: .85rem; }
+.ended p { margin: 0 0 .5rem; }
+.ended p:last-of-type { margin-bottom: 0; }
+.ended ol { margin: .5rem 0 0; padding-left: 1.3rem; }
+
 .recall-body h3 {
   margin: 1.1rem 0 .4rem;
   font-size: .78rem;

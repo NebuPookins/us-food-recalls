@@ -40,7 +40,14 @@ No build step or bundler: Node runs the TypeScript directly, so `npm install` an
   distribution: Nationwide
   illnesses: 12
   deaths: 1
-  ended: 2026-09-01             # omit while the alert is open
+  ended:                        # optional: omit while the alert is open
+    announced: 2026-09-01       # date the end was officially announced
+    note: Most product should be past expiration and off shelves.
+    citations:                  # required: sources showing it ended
+      - title: Acme Foods outbreak investigation (closed)
+        url: https://www.fda.gov/...
+        publisher: FDA
+        accessed: 2026-09-01
   products:
     - name: Baby Spinach, 5 oz clamshell
       brand: Acme Farms
@@ -61,6 +68,11 @@ Everything else is optional and simply omitted from the page when absent.
 `parent_id` links a sub-alert to its umbrella alert (rendered as a "Part of:"
 link). `status: retracted` marks a report that was withdrawn or was a false
 positive; those are published on `retracted.html` rather than the main timeline.
+
+`ended` marks a recall or outbreak as over: the entry is removed from the
+"Foods to check" list at the top but still appears in the timeline and search
+with an "Ended" tag, followed by a callout with the announcement date, an
+optional note, and the `citations` (required, non-empty) that show it ended.
 
 The `# yaml-language-server: $schema=../../schema.json` line at the top of each
 data file gives you autocomplete and inline errors in VS Code / Zed / Neovim

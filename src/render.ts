@@ -4,6 +4,7 @@ import {
   HAZARD_LABELS,
   categoriesOf,
   type Citation,
+  type Ended,
   type HazardCategory,
   type Product,
   type Recall,
@@ -79,6 +80,11 @@ function renderCitation(citation: Citation): string {
   return `<li><a href="${escapeHtml(citation.url)}" target="_blank" rel="noopener noreferrer nofollow">${escapeHtml(citation.title)}</a>${publisher}${accessed}</li>`;
 }
 
+/** A citation `<ol>`, shared by the main "Citations" section and the ended callout. */
+function renderCitations(citations: readonly Citation[]): string {
+  return `<ol>${citations.map(renderCitation).join('\n')}</ol>`;
+}
+
 type Fact = { readonly label: string; readonly value: string };
 
 /** Small key/value chips shown under the title for the optional fields. */
@@ -90,7 +96,6 @@ function renderFacts(recall: Recall): string {
     fact('Distribution', recall.distribution),
     fact('Illnesses', recall.illnesses),
     fact('Deaths', recall.deaths),
-    fact('Closed', recall.ended && formatDate(recall.ended)),
   ];
   const facts = candidates.filter((f) => f !== undefined);
 
@@ -112,6 +117,21 @@ function renderParentLink(recall: Recall, byId: ReadonlyMap<string, Recall>): st
   return `<p class="part-of">Part of: <a href="#${escapeHtml(parent.id)}">${escapeHtml(parent.title)}</a></p>`;
 }
 
+/** The "this is over" callout: when the end was announced, a note on the ending,
+ *  and the citations that show it ended. */
+function renderEnded(ended: Ended): string {
+  const date = ended.announced
+    ? `<p class="ended-date">Announced ${escapeHtml(formatDate(ended.announced))}</p>`
+    : '';
+  const note = ended.note ? paragraphs(ended.note) : '';
+  return `<section class="ended">
+  <h3>Ended</h3>
+  ${date}
+  ${note}
+  ${renderCitations(ended.citations)}
+</section>`;
+}
+
 /** Everything about a recall that's meaningful outside the list page too — the
  *  client-side modal preview clones this element directly instead of the whole
  *  `.recall` article, so it never carries the list-only `id`/`data-*`
@@ -126,7 +146,7 @@ function renderRecallBody(recall: Recall, byId: ReadonlyMap<string, Recall>): st
       <p class="meta">
         <time datetime="${escapeHtml(recall.date)}">${escapeHtml(formatDate(recall.date))}</time>
         ${recall.hazards.map((h) => `<span class="hazard hazard-${escapeHtml(h)}">${escapeHtml(HAZARD_LABELS[h])}</span>`).join(' ')}
-        ${recall.ended ? '<span class="closed">Closed</span>' : ''}
+        ${recall.ended ? '<span class="closed">Ended</span>' : ''}
         ${recall.status === 'retracted' ? '<span class="closed">Retracted</span>' : ''}
       </p>
       <h2><a class="permalink" href="#${escapeHtml(recall.id)}">${escapeHtml(recall.title)}</a></h2>
@@ -134,13 +154,14 @@ function renderRecallBody(recall: Recall, byId: ReadonlyMap<string, Recall>): st
     </header>
     ${renderFacts(recall)}
     <div class="note">${paragraphs(recall.note)}</div>
+    ${recall.ended ? renderEnded(recall.ended) : ''}
     <section class="products">
       <h3>Affected products</h3>
       <ul>${recall.products.map(renderProduct).join('\n')}</ul>
     </section>
     <section class="citations">
       <h3>Citations</h3>
-      <ol>${recall.citations.map(renderCitation).join('\n')}</ol>
+      ${renderCitations(recall.citations)}
     </section>
   </div>`;
 }
@@ -162,6 +183,7 @@ function searchIndex(recall: Recall): string {
     recall.title,
     recall.recalling_firm ?? '',
     recall.note,
+    recall.ended?.note ?? '',
     ...recall.hazards.map((h) => HAZARD_LABELS[h]),
     ...recall.products.flatMap((p) => [p.name, p.brand ?? '', ...(p.codes ?? [])]),
   ]
@@ -345,6 +367,9 @@ ${checkboxes}
 export function renderIndex(recalls: readonly Recall[], meta: SiteMeta): string {
   const active = recalls.filter((r) => r.status !== 'retracted');
   const retracted = recalls.filter((r) => r.status === 'retracted');
+  // Ended alerts still appear in the timeline and search, but not in the
+  // "foods to check" summary — there's nothing left to check once it's over.
+  const ongoing = active.filter((r) => !r.ended);
   const years = [...new Set(active.map((r) => r.date.slice(0, 4)))].toSorted().toReversed();
   const hazards = [...new Set(active.flatMap((r) => r.hazards))].toSorted((a, b) =>
     HAZARD_LABELS[a].localeCompare(HAZARD_LABELS[b]),
@@ -379,7 +404,7 @@ export function renderIndex(recalls: readonly Recall[], meta: SiteMeta): string 
 
 ${renderPreferences()}
 
-${renderSummary(active, meta.buildDate)}
+${renderSummary(ongoing, meta.buildDate)}
 
 ${renderActions()}
 
@@ -464,6 +489,14 @@ ${retracted.map((r) => renderRecall(r, byId)).join('\n')}
 }
 
 /** Atom feed. Uses each recall's date as the entry timestamp at UTC midnight. */
+/** Plain-text "this is over" line for the Atom feed, which has no "Ended" pill
+ *  to borrow from the HTML page. */
+function renderFeedEnded(ended: Ended): string {
+  const date = ended.announced ? ` (announced ${formatDate(ended.announced)})` : '';
+  const note = ended.note ? ` ${ended.note}` : '';
+  return `This alert has ended${date}.${note}`;
+}
+
 export function renderFeed(recalls: readonly Recall[], meta: SiteMeta): string {
   const base = meta.siteUrl.replace(/\/$/, '');
   const active = recalls.filter((r) => r.status !== 'retracted');
@@ -471,12 +504,12 @@ export function renderFeed(recalls: readonly Recall[], meta: SiteMeta): string {
 
   const entries = active.slice(0, 50).map(
     (r) => `  <entry>
-    <title>${escapeHtml(r.title)}</title>
+    <title>${r.ended ? '[Ended] ' : ''}${escapeHtml(r.title)}</title>
     <link href="${escapeHtml(`${base}/#${r.id}`)}"/>
     <id>${escapeHtml(`${base}/#${r.id}`)}</id>
     <updated>${escapeHtml(r.date)}T00:00:00Z</updated>
     ${r.hazards.map((h) => `<category term="${escapeHtml(h)}"/>`).join('\n    ')}
-    <summary>${escapeHtml(r.note)}</summary>
+    <summary>${escapeHtml(r.note)}${r.ended ? `\n\n${escapeHtml(renderFeedEnded(r.ended))}` : ''}</summary>
   </entry>`,
   );
 
