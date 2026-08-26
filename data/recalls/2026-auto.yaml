@@ -610,8 +610,11 @@ recalls:
     distribution: IA, IL, OK, SD, TX
     note: Kerry, Inc is recalling its KC Everyday Mac & Cheese fully cooked frozen product because it may contain undeclared egg, an allergen not listed on the label. The recall covers approximately 6,970 cases distributed to stores in Iowa, Illinois, Oklahoma, South Dakota, and Texas. Consumers who purchased this product should not eat it and should discard it or return it to the place of purchase. The firm is working with the FDA to address the issue.
     citations:
+      - title: FDA Enforcement Report
+        url: https://www.accessdata.fda.gov/scripts/ires/index.cfm?Event=99539
+        publisher: FDA
+        accessed: 2026-08-26
       - title: FDA recall record
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99539
         publisher: FDA
         accessed: 2026-08-26
-
