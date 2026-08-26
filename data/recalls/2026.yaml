@@ -5,6 +5,39 @@
 # with the YAML extension (VS Code, Zed, Neovim + yaml-language-server).
 
 recalls:
+  - id: 2026-08-jaimes-foods-jalapeno-ranch-egg
+    date: 2026-08-25
+    title: Jaime's Spanish Village Jalapeno Ranch (undeclared egg)
+    summary:
+      - ranch dressing
+    recalling_firm: Jaime's Foods ATX
+    agency: FDA
+    hazards: [undeclared-allergen]
+    distribution: Central Market stores in Texas and local independent retailers in Austin, Texas
+    products:
+      - name: Jaime's Spanish Village Jalapeno Ranch Dressing, 16 oz glass jar
+        brand: Jaime's Spanish Village
+        codes:
+          - UPC 199284564923
+          - Lots 69, 86, 108, 113, 116 and 121 (stamped on the bottom of the jar)
+    note: |
+      Jaime's Foods ATX of Austin, Texas recalled Jaime's Spanish Village
+      Jalapeno Ranch because it contains undeclared eggs. People with an egg
+      allergy or severe sensitivity risk a serious or life-threatening reaction
+      if they consume the product.
+
+      The dressing was sold beginning April 3, 2026 at Central Market retail
+      stores in Texas and local independent retailers in Austin. The omission of
+      egg from the ingredient list and allergen warning was discovered during an
+      FDA inspection of the bottling facility. No illnesses have been reported.
+      Consumers may return the product for a full refund or contact the company
+      at 1-855-833-1442 or info@jaimessalsas.com.
+    citations:
+      - title: Jaime's Foods ATX Issues Allergy Alert on Undeclared Egg Allergen in Jaime's Spanish Village Jalapeno Ranch
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/jaimes-foods-atx-issues-allergy-alert-undeclared-egg-allergen-jaimes-spanish-village-jalapeno-ranch
+        publisher: FDA
+        accessed: 2026-08-26
+
   - id: 2026-08-better-bakehouse-donutful-donuts-milk
     date: 2026-08-24
     title: Donutful Chocolate Dipped Vanilla Cake Donuts (undeclared milk)
