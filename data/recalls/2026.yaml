@@ -5,6 +5,41 @@
 # with the YAML extension (VS Code, Zed, Neovim + yaml-language-server).
 
 recalls:
+  - id: 2026-08-better-bakehouse-donutful-donuts-milk
+    date: 2026-08-24
+    title: Donutful Chocolate Dipped Vanilla Cake Donuts (undeclared milk)
+    summary:
+      - donuts
+    recalling_firm: The Better Bakehouse Snack Company
+    agency: FDA
+    hazards: [undeclared-allergen]
+    distribution: Retailers nationwide and Amazon.com
+    illnesses: 1
+    products:
+      - name: Chocolate Dipped Vanilla Cake Donuts, 10 mini donuts, 7.05 oz carton of 5 × 1.41 oz (40 g) pouches
+        brand: Donutful
+        codes:
+          - UPC 3 50041 39210 3
+          - Best if used by 2026-09-15, Lot 26078
+    note: |
+      The Better Bakehouse Snack Company of Las Vegas, NV recalled certain lots
+      of Donutful Chocolate Dipped Vanilla Cake Donuts that may contain
+      undeclared milk. People with an allergy or severe sensitivity to milk
+      risk a serious or life-threatening reaction if they eat this product.
+
+      The recall covers product manufactured and distributed in March 2026 and
+      sold to retailers nationwide and through Amazon.com. The problem was
+      found after one allergic reaction was reported; the person has fully
+      recovered. The contract manufacturer identified the cause of the
+      mislabeling and has taken corrective measures. Consumers can return the
+      product to the point of purchase for a refund, or dispose of it and
+      obtain a refund with a receipt.
+    citations:
+      - title: The Better Bakehouse Snack Company is Recalling Certain Lots of Donutful Chocolate Dipped Vanilla Cake Donuts to Undeclared Milk Allergen
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/better-bakehouse-snack-company-recalling-certain-lots-donutful-chocolate-dipped-vanilla-cake-donuts
+        publisher: FDA
+        accessed: 2026-08-25
+
   - id: 2026-08-everything-sprouts-alfalfa-sprouts
     date: 2026-08-21
     title: Calco and Everything Sprouts alfalfa sprouts (E. coli and Salmonella)
