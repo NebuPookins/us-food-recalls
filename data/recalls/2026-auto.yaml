@@ -634,3 +634,27 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99539
         publisher: FDA
         accessed: 2026-08-26
+  - id: 2026-08-19-flavorsandcolor-com-honeyville-yellow-color-1-gall
+    date: 2026-08-19
+    title: "Honeyville Yellow Color 1 Gallon contains undeclared Red #40"
+    summary:
+      - food color
+    recalling_firm: FlavorsandColor.Com
+    agency: FDA
+    hazards:
+      - mislabeling
+    classification: III
+    products:
+      - name: Honeyville Yellow Color 1 Gallon
+        brand: Honeyville
+        codes:
+          - "Lot: 60609-8"
+          - "EXP: 06/08/28"
+    distribution: Independent manufacturer locations in Nevada, Arizona, Oregon, and California (12 locations)
+    note: The FDA announced a recall of Honeyville Yellow Color 1‑gallon because it contains the undeclared dye Red #40. The product was sold to independent manufacturers in Nevada, Arizona, Oregon and California. Consumers who may have received the product should stop using it and contact the firm for a refund or replacement. The recall is classified as Class III.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99540
+        publisher: FDA
+        accessed: 2026-08-27
+
