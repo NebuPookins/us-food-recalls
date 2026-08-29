@@ -79,6 +79,27 @@ const Ended = z.strictObject({
   citations: z.array(Citation).nonempty().describe('Citations showing that the alert has ended.'),
 });
 
+/** Case counts at a point in time. The `as_of` date is what makes the numbers
+ *  meaningful — without it a count is just a stale snapshot presented as current.
+ *  Omit any count you don't have; `0` means "none reported as of `as_of`". */
+const CaseCountsBase = z.strictObject({
+  as_of: IsoDate.describe('Date the counts were last confirmed current.'),
+  illnesses: z.int().nonnegative().optional().describe('Reported illnesses as of `as_of`.'),
+  hospitalizations: z.int().nonnegative().optional().describe('Reported hospitalizations as of `as_of`.'),
+  deaths: z.int().nonnegative().optional().describe('Reported deaths as of `as_of`.'),
+});
+
+/** At least one of the three counts is required — a `cases` block that holds only
+ *  an `as_of` date is a timestamp for nothing. Expressed as an intersection (not a
+ *  `.refine`) so `z.toJSONSchema` emits the same rule for the editor. */
+export const CaseCounts = CaseCountsBase.and(
+  z.union([
+    z.object({ illnesses: z.int().nonnegative() }),
+    z.object({ hospitalizations: z.int().nonnegative() }),
+    z.object({ deaths: z.int().nonnegative() }),
+  ]),
+);
+
 export const RecallSchema = z.strictObject({
   id: z
     .string()
@@ -117,8 +138,7 @@ export const RecallSchema = z.strictObject({
     .min(1)
     .optional()
     .describe('Free text, e.g. "Nationwide" or "Nationwide via online orders".'),
-  illnesses: z.int().nonnegative().optional().describe('Reported illnesses at time of writing.'),
-  deaths: z.int().nonnegative().optional(),
+  cases: CaseCounts.optional().describe('Timestamped case counts. Omit if no "as of" date is known.'),
   note: z.string().min(1).describe('Short plain-text description. HTML and markdown are escaped.'),
   status: z
     .enum(RECALL_STATUSES)
@@ -138,6 +158,7 @@ export type RecallFile = z.infer<typeof RecallFileSchema>;
 export type Product = z.infer<typeof Product>;
 export type Citation = z.infer<typeof Citation>;
 export type Ended = z.infer<typeof Ended>;
+export type CaseCounts = z.infer<typeof CaseCounts>;
 export type Hazard = (typeof HAZARDS)[number];
 
 /** Human-readable labels for the closed sets, used by the renderer and filters. */

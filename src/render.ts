@@ -3,6 +3,7 @@ import {
   HAZARD_CATEGORIES,
   HAZARD_LABELS,
   categoriesOf,
+  type CaseCounts,
   type Citation,
   type Ended,
   type HazardCategory,
@@ -41,6 +42,24 @@ export function formatDate(iso: string): string {
 function formatDateShort(iso: string): string {
   const { y, m, d } = parseIsoDate(iso);
   return `${y}-${MONTHS[m - 1].slice(0, 3)}-${d}`;
+}
+
+/** Renders timestamped case counts as one string, e.g. "8 illnesses, 3 deaths
+ *  (as of 2026-Aug-27)". A count of `0` reads as "no deaths"; a count that was
+ *  never recorded is simply absent, never guessed at. */
+function formatCases(cases: CaseCounts | undefined): string | undefined {
+  if (!cases) return undefined;
+  const parts = (
+    [
+      [cases.illnesses, 'illness', 'illnesses'],
+      [cases.hospitalizations, 'hospitalization', 'hospitalizations'],
+      [cases.deaths, 'death', 'deaths'],
+    ] as const
+  ).flatMap(([n, singular, plural]) =>
+    n === undefined ? [] : [n === 0 ? `no ${plural}` : `${n} ${n === 1 ? singular : plural}`],
+  );
+  if (parts.length === 0) return undefined;
+  return `${parts.join(', ')} (as of ${formatDateShort(cases.as_of)})`;
 }
 
 export function escapeHtml(value: string): string {
@@ -94,8 +113,7 @@ function renderFacts(recall: Recall): string {
     fact('Agency', recall.agency),
     fact('Class', recall.classification),
     fact('Distribution', recall.distribution),
-    fact('Illnesses', recall.illnesses),
-    fact('Deaths', recall.deaths),
+    fact('Cases', formatCases(recall.cases)),
   ];
   const facts = candidates.filter((f) => f !== undefined);
 

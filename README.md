@@ -38,8 +38,11 @@ No build step or bundler: Node runs the TypeScript directly, so `npm install` an
   hazards: [listeria]           # see HAZARDS in src/schema.ts
   classification: I             # I | II | III
   distribution: Nationwide
-  illnesses: 12
-  deaths: 1
+  cases:                        # optional: timestamped case counts
+    as_of: 2026-08-14           # required when `cases` is present
+    illnesses: 12
+    hospitalizations: 3
+    deaths: 1
   ended:                        # optional: omit while the alert is open
     announced: 2026-09-01       # date the end was officially announced
     note: Most product should be past expiration and off shelves.
@@ -73,6 +76,14 @@ positive; those are published on `retracted.html` rather than the main timeline.
 "Foods to check" list at the top but still appears in the timeline and search
 with an "Ended" tag, followed by a callout with the announcement date, an
 optional note, and the `citations` (required, non-empty) that show it ended.
+
+`cases` holds illness, hospitalization and death counts **as of a specific
+date**. The `as_of` date is what makes a number meaningful — counts go stale as
+an outbreak evolves, so an untimestamped "12 illnesses" is a snapshot pretending
+to be current. If you can't find a reliable "as of" date for a count, omit the
+whole `cases` block rather than publishing a number without its date. A `0`
+means "none reported as of that date"; a count you simply don't have is left out
+rather than guessed at.
 
 The `# yaml-language-server: $schema=../../schema.json` line at the top of each
 data file gives you autocomplete and inline errors in VS Code / Zed / Neovim

@@ -116,16 +116,85 @@
             "type": "string",
             "minLength": 1
           },
-          "illnesses": {
-            "description": "Reported illnesses at time of writing.",
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 9007199254740991
-          },
-          "deaths": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 9007199254740991
+          "cases": {
+            "description": "Timestamped case counts. Omit if no \"as of\" date is known.",
+            "allOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "as_of": {
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+                    "description": "Date the counts were last confirmed current."
+                  },
+                  "illnesses": {
+                    "description": "Reported illnesses as of `as_of`.",
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 9007199254740991
+                  },
+                  "hospitalizations": {
+                    "description": "Reported hospitalizations as of `as_of`.",
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 9007199254740991
+                  },
+                  "deaths": {
+                    "description": "Reported deaths as of `as_of`.",
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 9007199254740991
+                  }
+                },
+                "required": [
+                  "as_of"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "illnesses": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      }
+                    },
+                    "required": [
+                      "illnesses"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "hospitalizations": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      }
+                    },
+                    "required": [
+                      "hospitalizations"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "deaths": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 9007199254740991
+                      }
+                    },
+                    "required": [
+                      "deaths"
+                    ]
+                  }
+                ]
+              }
+            ]
           },
           "note": {
             "type": "string",

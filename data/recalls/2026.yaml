@@ -14,6 +14,9 @@ recalls:
     agency: FDA
     hazards: [undeclared-allergen]
     distribution: Central Market stores in Texas and local independent retailers in Austin, Texas
+    cases:
+      as_of: 2026-08-25
+      illnesses: 0
     products:
       - name: Jaime's Spanish Village Jalapeno Ranch Dressing, 16 oz glass jar
         brand: Jaime's Spanish Village
@@ -29,7 +32,7 @@ recalls:
       The dressing was sold beginning April 3, 2026 at Central Market retail
       stores in Texas and local independent retailers in Austin. The omission of
       egg from the ingredient list and allergen warning was discovered during an
-      FDA inspection of the bottling facility. No illnesses have been reported.
+      FDA inspection of the bottling facility.
       Consumers may return the product for a full refund or contact the company
       at 1-855-833-1442 or info@jaimessalsas.com.
     citations:
@@ -47,7 +50,6 @@ recalls:
     agency: FDA
     hazards: [undeclared-allergen]
     distribution: Retailers nationwide and Amazon.com
-    illnesses: 1
     products:
       - name: Chocolate Dipped Vanilla Cake Donuts, 10 mini donuts, 7.05 oz carton of 5 × 1.41 oz (40 g) pouches
         brand: Donutful
@@ -82,7 +84,11 @@ recalls:
     agency: FDA
     hazards: [e-coli, salmonella]
     distribution: Retailers, grocery stores and foodservice customers in 15 states
-    illnesses: 55
+    cases:
+      as_of: 2026-08-21
+      illnesses: 55
+      hospitalizations: 4
+      deaths: 0
     products:
       - name: Alfalfa sprouts
         brand: Calco and Everything Sprouts
@@ -90,13 +96,10 @@ recalls:
       FDA and CDC are investigating a multistate outbreak of Shiga
       toxin-producing E. coli (serotypes O26:H11, O103:H25 and O168:H8) and
       Salmonella Agona traced to alfalfa sprouts grown and distributed by
-      Everything Sprouts, LLC of Minneapolis, MN. As of August 21, 55 people
-      in 15 states were reported ill — 46 with E. coli, 7 with Salmonella, and
-      2 with both — with four hospitalizations and no deaths. Illnesses began
-      between May 31 and August 8. FDA initiated an inspection on August 19
-      and recommended that Everything Sprouts conduct a recall; the
-      investigation is ongoing. Do not eat, sell or serve sprouts sold under
-      the Calco and Everything Sprouts brands.
+      Everything Sprouts, LLC of Minneapolis, MN. FDA initiated an inspection
+      on August 19 and recommended that Everything Sprouts conduct a recall;
+      the investigation is ongoing. Do not eat, sell or serve sprouts sold
+      under the Calco and Everything Sprouts brands.
     citations:
       - title: "Outbreak Investigation of Shiga Toxin-producing E. coli & Salmonella: Sprouts (August 2026)"
         url: https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-shiga-toxin-producing-e-coli-salmonella-sprouts-august-2026
@@ -117,6 +120,9 @@ recalls:
     hazards: [processing-defect]
     classification: I
     distribution: Nationwide (restaurants, retail and online)
+    cases:
+      as_of: 2026-08-17
+      illnesses: 0
     products:
       - name: Gangothri Goat Pickle, 8-oz jar
         brand: Gangothri Foods
@@ -129,8 +135,7 @@ recalls:
     note: |
       About 1,626 pounds of ready-to-eat pickled goat and chicken were produced
       without federal inspection, discovered during FSIS surveillance. The jars
-      have a two-year shelf life and may still be in pantries or on shelves. No
-      confirmed illnesses reported.
+      have a two-year shelf life and may still be in pantries or on shelves.
     citations:
       - title: Indus Foods, LLC DBA Gangothri Foods Recalls Ready-To-Eat Pickled Goat and Chicken Products Produced Without Benefit of Inspection
         url: https://www.fsis.usda.gov/recalls-alerts/indus-foods-llc-dba-gangothri-foods-recalls-ready-eat-pickled-goat-and-chicken
@@ -195,6 +200,9 @@ recalls:
     agency: FDA
     hazards: [salmonella]
     distribution: Nationwide via Amazon and other online retailers
+    cases:
+      as_of: 2026-08-14
+      illnesses: 0
     products:
       - name: Lacnola Lactation Granola, 8 oz stand-up pouch
         brand: Lacnola (The Hampton Grocer)
@@ -206,8 +214,7 @@ recalls:
       The Hampton Grocer recalled Lacnola Lactation Granola after its ingredient
       supplier reported that a sample of an organic greens powder containing
       moringa tested positive for Salmonella. The granola sold nationwide via
-      Amazon and the company's website between October 2025 and August 2026. No
-      illnesses reported.
+      Amazon and the company's website between October 2025 and August 2026.
     citations:
       - title: The Hampton Grocer, Inc. Recalls 8-Ounce Packages of Lacnola Lactation Granola Because of Possible Health Risk
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/hampton-grocers-inc-recalls-its-8-ounce-packages-lacnola-lactation-granola-because-possible-health
@@ -227,6 +234,9 @@ recalls:
     agency: FDA
     hazards: [undeclared-allergen]
     distribution: Sold to 49 U.S. customers via Amazon.com
+    cases:
+      as_of: 2026-08-14
+      illnesses: 0
     products:
       - name: Veggie Chips – Broccoli Florets & Cauliflower, 3 oz (85 g)
         brand: Momchipz
@@ -238,7 +248,7 @@ recalls:
       Broccoli Florets & Cauliflower after a retail sample tested by the
       Canadian Food Inspection Agency found undeclared gluten. The product was
       sold to 49 U.S. customers through Amazon.com between March and June
-      2026. No illnesses reported.
+      2026.
     citations:
       - title: Exotique Foods Inc Recalls Momchipz Veggie Chips Broccoli Florets & Cauliflower Due to Undeclared Gluten
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/exotique-foods-inc-recalls-momchipz-veggie-chips-broccoli-florets-cauliflower-due-undeclared-gluten
@@ -254,6 +264,9 @@ recalls:
     agency: FDA
     hazards: [listeria]
     distribution: Walmart stores in 29 states
+    cases:
+      as_of: 2026-08-12
+      illnesses: 0
     products:
       - name: Marketside Tomato Bisque Soup Kit, 14 oz tray
         brand: Marketside
@@ -263,7 +276,7 @@ recalls:
     note: |
       Routine finished-product testing found a presumptive positive for Listeria
       monocytogenes. Kettle Cuisine recalled 3,240 packs sold only at Walmart
-      stores in 29 states between June 30 and July 7, 2026. No illnesses reported.
+      stores in 29 states between June 30 and July 7, 2026.
     citations:
       - title: Walmart tomato soup kits recalled over Listeria contamination risk, FDA says
         url: https://www.cbsnews.com/losangeles/news/walmart-tomato-soup-kits-listeria-recall/
@@ -283,6 +296,9 @@ recalls:
     agency: FDA
     hazards: [salmonella]
     distribution: Lidl stores in 10 states and Washington, D.C.
+    cases:
+      as_of: 2026-08-12
+      illnesses: 0
     products:
       - name: Vitasia Asian Style Wok Spice Mix, 1.58 oz (45 g)
         brand: Vitasia (Lidl)
@@ -294,7 +310,7 @@ recalls:
       Routine quality testing detected Salmonella in a laboratory sample of the
       spice mix. Recalled from Lidl US stores in Delaware, Georgia, Maryland,
       New Jersey, New York, North Carolina, Pennsylvania, South Carolina,
-      Virginia and Washington, D.C. No illnesses reported.
+      Virginia and Washington, D.C.
     citations:
       - title: Lidl US Recalls Vitasia Asian Style Wok Spice Mix Due to Potential Salmonella Contamination
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/lidl-us-recalls-vitasia-asian-style-wok-spice-mix-due-potential-salmonella-contamination
@@ -310,16 +326,18 @@ recalls:
     agency: FDA
     hazards: [salmonella]
     distribution: Restaurants and retailers in 27 states
-    illnesses: 345
+    cases:
+      as_of: 2026-08-05
+      illnesses: 345
+      hospitalizations: 36
     products:
       - name: Fresh jalapeños (grown in Sinaloa, Mexico)
         brand: Coast Citrus Distributors
     note: |
       A multistate Salmonella outbreak was traced to fresh jalapeños grown in
-      Sinaloa, Mexico and distributed by Coast Citrus Distributors. As of
-      August 5 the CDC counted 345 illnesses and 36 hospitalizations across 27
-      states. Restaurants including Chipotle and QDOBA stopped serving the
-      peppers, and several prepared-food firms recalled products made with them.
+      Sinaloa, Mexico and distributed by Coast Citrus Distributors. Restaurants
+      including Chipotle and QDOBA stopped serving the peppers, and several
+      prepared-food firms recalled products made with them.
     citations:
       - title: Taylor Farms recalls jalapeno products over salmonella concerns
         url: https://apnews.com/article/taylor-fresh-foods-trump-jalapenos-lettuce-salmonella-6cc2f9e17fdd4cb45953c21bee841e1e
@@ -425,8 +443,7 @@ recalls:
       A multistate Salmonella outbreak was linked to fresh jalapeños grown in
       Sinaloa, Mexico and distributed by Coast Citrus Distributors. Taylor Fresh
       Foods recalled finished products containing the jalapeños; restaurants
-      including Chipotle and QDOBA also stopped serving them. As of August 5 the
-      CDC counted 345 illnesses and 36 hospitalizations across 27 states.
+      including Chipotle and QDOBA also stopped serving them.
 
       The recall also covers ready-to-eat meals sold under store brands
       including Kroger, H-E-B, Walmart (Marketside), Wawa, Albertsons and
@@ -456,6 +473,9 @@ recalls:
     agency: FDA
     hazards: [salmonella]
     distribution: H-E-B stores in Texas
+    cases:
+      as_of: 2026-08-11
+      illnesses: 0
     products:
       - name: Salata Jalapeno Avocado Dressing, 12-oz bottle
         brand: Salata
@@ -463,8 +483,7 @@ recalls:
           - Best by 2026-11-05, 2026-11-13, 2026-11-18 or 2026-11-25
     note: |
       Recalled because diced jalapeños from Coast Citrus Distributors may be
-      contaminated with Salmonella. No illnesses reported specific to the
-      dressing.
+      contaminated with Salmonella.
     citations:
       - title: Recall of Jalapeno Avocado Dressing Because of Possible Health Risk
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/recall-jalapeno-avocado-dressing-because-possible-health-risk
@@ -486,6 +505,9 @@ recalls:
     hazards: [listeria]
     classification: I
     distribution: Illinois, Iowa and Michigan, then nationwide
+    cases:
+      as_of: 2026-08-08
+      illnesses: 0
     products:
       - name: Midamar Premium Beef Pastrami, 10-lb box
         brand: Midamar
@@ -507,7 +529,7 @@ recalls:
       July 16, 2026 may be contaminated with Listeria monocytogenes. The bulk
       products shipped to foodservice customers in Illinois, Iowa and Michigan,
       then reached delis and kitchens nationwide. Discovered during routine FSIS
-      inspection; no illnesses reported.
+      inspection.
     citations:
       - title: City Foods, Inc. Recalls Ready-To-Eat Pastrami and Corned Beef Products Due To Possible Listeria Contamination
         url: https://www.fsis.usda.gov/recalls-alerts/city-foods-inc--recalls-ready-eat-pastrami-and-corned-beef-products-due-possible
@@ -523,6 +545,9 @@ recalls:
     agency: FDA
     hazards: [salmonella]
     distribution: Nationwide via online retailers
+    cases:
+      as_of: 2026-08-07
+      illnesses: 0
     products:
       - name: Food to Live green powder products (kale, moringa, spirulina, wheatgrass, algae and supergreens)
         brand: Food to Live
@@ -531,8 +556,8 @@ recalls:
     note: |
       FDA testing found Salmonella in a retail sample of Food to Live Organic
       SuperGreens Mix. Nine green powder products were recalled, sold nationwide
-      via foodtolive.com and online marketplaces. No illnesses reported;
-      production suspended during the investigation.
+      via foodtolive.com and online marketplaces. Production suspended during
+      the investigation.
     citations:
       - title: Lexunder Inc Recalls Food to Live Brand Green Powder Products Because of Possible Health Risk
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/lexunder-inc-recalls-food-live-brand-green-powder-products-because-possible-health-risk
@@ -548,6 +573,9 @@ recalls:
     agency: FDA
     hazards: [salmonella]
     distribution: Walmart stores in 19 states
+    cases:
+      as_of: 2026-08-03
+      illnesses: 0
     products:
       - name: Bettergoods Pistachio Nut Butter, 6.7 oz glass jar
         brand: Bettergoods (Walmart)
@@ -559,7 +587,7 @@ recalls:
       Salmonella was detected in three jars during a routine inspection by the
       Florida Department of Agriculture and Consumer Services at a Walmart
       store. Botticelli Foods recalled the Walmart-exclusive pistachio nut
-      butter, distributed in 19 states. No illnesses reported.
+      butter, distributed in 19 states.
     citations:
       - title: Botticelli Foods Recalls Bettergoods Pistachio Nut Butter Because of Possible Health Risk
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/boticelli-foods-recalls-bettergoods-pistachio-nut-butter-because-possible-health-risk
@@ -620,6 +648,9 @@ recalls:
     agency: FDA
     hazards: [undeclared-allergen]
     distribution: Lidl stores in 10 states and Washington, D.C.
+    cases:
+      as_of: 2026-07-31
+      illnesses: 0
     products:
       - name: Shortbread Cookies with Chocolate Truffle Coating & Apricot Filling, 11.6 oz
         brand: Eridanous (Lidl)
@@ -632,8 +663,7 @@ recalls:
     note: |
       Undeclared wheat, soy, milk, egg and tree nut (coconut) due to
       foreign-language packaging missing English allergen labeling. The recall
-      was expanded July 31 to a second product and the coconut allergen. No
-      illnesses reported.
+      was expanded July 31 to a second product and the coconut allergen.
     citations:
       - title: Lidl US Expands Recall of Eridanous Shortbread Cookies Due to Undeclared Wheat, Soy, Milk, Egg and Tree Nut (Coconut) Allergens
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/lidl-us-expands-recall-eridanous-shortbread-cookies-due-undeclared-wheat-soy-milk-egg-and-tree-nut
@@ -649,6 +679,9 @@ recalls:
     agency: FSIS
     hazards: [listeria]
     distribution: Oregon and Washington
+    cases:
+      as_of: 2026-07-30
+      illnesses: 0
     products:
       - name: Curry Chicken Salad, 8-oz plastic package
         brand: Mary's Harvest Fresh Foods
@@ -658,8 +691,7 @@ recalls:
     note: |
       FSIS issued a public health alert (not a full recall, since the product
       was no longer for sale) after routine testing found Listeria
-      monocytogenes. The product may still be in consumers' refrigerators. No
-      confirmed illnesses reported.
+      monocytogenes. The product may still be in consumers' refrigerators.
     citations:
       - title: FSIS Issues Public Health Alert for Chicken Salad Product That May Be Contaminated with Listeria
         url: https://www.fsis.usda.gov/recalls-alerts/fsis-issues-public-health-alert-chicken-salad-product-may-be-contaminated-listeria
@@ -676,7 +708,11 @@ recalls:
     agency: FDA
     hazards: [e-coli]
     distribution: Publix stores in 8 states (Alabama, Florida, Georgia, Kentucky, North Carolina, South Carolina, Tennessee, Virginia)
-    illnesses: 12
+    cases:
+      as_of: 2026-07-30
+      illnesses: 12
+      hospitalizations: 4
+      deaths: 0
     products:
       - name: GreenWise Organic Whole Blueberries, 10 oz and 48 oz
         brand: GreenWise (Publix)
@@ -695,8 +731,7 @@ recalls:
       blueberries from Chilean supplier Frutas y Hortalizas del Sur S.A., sold
       under Publix's GreenWise brand. After a single lot was recalled on July 3,
       Publix expanded the recall on July 29 to all lots of four blueberry and
-      mixed-berry products. Twelve confirmed cases and four hospitalizations were
-      reported across eight states, with no deaths.
+      mixed-berry products.
     citations:
       - title: Publix Recalls All Lots of GreenWise Organic Frozen Blueberries and Whole Mixed Berries Due to Potential E. coli O145 Contamination
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/publix-recalls-all-lots-greenwise-organic-frozen-blueberries-and-whole-mixed-berries-due-potential-e
@@ -717,6 +752,9 @@ recalls:
     hazards: [processing-defect]
     classification: I
     distribution: Grocery Outlet stores in Idaho, Oregon and Washington
+    cases:
+      as_of: 2026-07-24
+      illnesses: 0
     products:
       - name: Royale Natural Applewood Smoked Uncured Bacon, 12 oz
         brand: Royale
@@ -731,7 +769,7 @@ recalls:
     note: |
       About 12,036 pounds of not-ready-to-eat smoked bacon imported from Canada
       entered the US without the required import reinspection. Discovered during
-      routine FSIS inspection; no illnesses reported.
+      routine FSIS inspection.
     citations:
       - title: Maple Leaf Foods Inc. Recalls Not Ready-To-Eat (NRTE) Bacon Product Imported without the Benefit of Import Reinspection
         url: https://www.fsis.usda.gov/recalls-alerts/maple-leaf-foods-inc--recalls-not-ready-eat-nrte-bacon-product-imported-without
@@ -748,12 +786,15 @@ recalls:
     hazards: [botulism]
     classification: II
     distribution: New York and New Jersey (wholesale)
+    cases:
+      as_of: 2026-07-24
+      illnesses: 0
     products:
       - name: Pasteurized Cold Brew Concentrate, 2.5-gallon bag
         brand: Brooklyn Roasting Company
     note: |
       More than 3,000 gallons recalled because ambient storage conditions could
-      allow botulism toxin to form. No illnesses reported.
+      allow botulism toxin to form.
     citations:
       - title: More Than 3,000 Gallons of Cold Brew Recalled Over Botulism Risk, FDA Says
         url: https://www.health.com/cold-brew-recall-july-2026-12030925
@@ -774,7 +815,11 @@ recalls:
     hazards: [salmonella]
     classification: I
     distribution: Texas, Oklahoma, Louisiana, Arkansas, Mississippi and New Mexico
-    illnesses: 98
+    cases:
+      as_of: 2026-07-24
+      illnesses: 98
+      hospitalizations: 26
+      deaths: 0
     products:
       - name: White and brown cage-free shell eggs
         brand: Kroger, Brookshire's, Country Morning, Simple Truth, Cal-Maine Sunups
@@ -785,9 +830,8 @@ recalls:
     note: |
       Midwest Poultry Services recalled roughly 1.59 million dozen shell eggs
       after environmental samples matched the Salmonella Enteritidis strain
-      behind a 17-state outbreak (98 illnesses, 26 hospitalizations, no deaths).
-      Eggs were produced at Texas farms between June 6 and July 3, 2026. The FDA
-      upgraded the recall to Class I in August.
+      behind a 17-state outbreak. Eggs were produced at Texas farms between
+      June 6 and July 3, 2026. The FDA upgraded the recall to Class I in August.
     citations:
       - title: Midwest Poultry Services. L.P. Recalls Shell Eggs Due to Possible Salmonella Enteritidis Contamination
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/midwest-poultry-services-lp-recalls-shell-eggs-due-possible-salmonella-enteritidis-contamination
@@ -807,8 +851,11 @@ recalls:
     agency: FDA
     hazards: [cyclospora]
     distribution: 27 states, plus Taco Bell restaurants in five states
-    illnesses: 9481
-    deaths: 2
+    cases:
+      as_of: 2026-08-27
+      illnesses: 11458
+      hospitalizations: 495
+      deaths: 2
     products:
       - name: Marketside Iceberg Salad, 12 oz and 24 oz
         brand: Marketside
@@ -822,8 +869,7 @@ recalls:
       Iceberg lettuce sourced from central Mexico was linked to the largest
       cyclosporiasis outbreak on record, traced to shredded lettuce served at
       Taco Bell restaurants in five states. Taylor Farms de Mexico recalled all
-      such lettuce from the US market. The FDA's final update counted 9,481
-      illnesses, 398 hospitalizations and two deaths.
+      such lettuce from the US market.
     citations:
       - title: "Multistate Outbreak of Cyclospora Illnesses: Iceberg Lettuce July 2026"
         url: https://www.fda.gov/food/outbreaks-foodborne-illness/investigation-multistate-outbreak-cyclospora-illnesses-iceberg-lettuce-july-2026
@@ -915,7 +961,18 @@ recalls:
     hazards: [botulism]
     classification: I
     distribution: Nationwide via nara.com, Target stores and target.com
-    illnesses: 4
+    cases:
+      as_of: 2026-08-27
+      illnesses: 4
+      deaths: 0
+    ended:
+      announced: 2026-08-27
+      note: CDC declared the outbreak over; recalled cans have "Best By" dates ending in 2027 and should no longer be available for sale.
+      citations:
+        - title: "Outbreak Investigation of Infant Botulism: Powdered Infant Formula (June 2026)"
+          url: https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-infant-botulism-powdered-infant-formula-june-2026
+          publisher: FDA
+          accessed: 2026-08-27
     products:
       - name: Whole Milk Organic Powdered Infant Formula, 400g and 700g cans, all lots
         brand: Nara Organics
@@ -945,8 +1002,7 @@ recalls:
       Whole Milk Organic Powdered Infant Formula on June 13. No lots have
       tested positive for Clostridium botulinum. This is the second
       botulism outbreak tied to a premium organic whole-milk infant formula
-      in seven months, following ByHeart's November 2025 recall. No deaths
-      reported.
+      in seven months, following ByHeart's November 2025 recall.
     citations:
       - title: Nara Organics infant formula recalled due to botulism
         url: https://www.kcra.com/article/nara-organics-infant-formula-recall-botulism/71581963
@@ -971,6 +1027,9 @@ recalls:
     hazards: [undeclared-allergen]
     classification: II
     distribution: Nationwide
+    cases:
+      as_of: 2026-06-10
+      illnesses: 0
     products:
       - name: Park St. Deli Macaroni & Cheese, 20 oz
         brand: Park St. Deli (Aldi)
@@ -980,7 +1039,7 @@ recalls:
     note: |
       More than 525,000 packages of Park St. Deli Macaroni & Cheese sold at Aldi
       may contain undeclared soy lecithin. The 20-ounce product was distributed
-      nationwide. No illnesses reported.
+      nationwide.
     citations:
       - title: "Nearly 526,000 packages of macaroni and cheese recalled nationwide: FDA"
         url: https://www.newsnationnow.com/us-news/recalls/macaroni-cheese-recall-fda/
@@ -996,8 +1055,11 @@ recalls:
     agency: FDA
     hazards: [listeria]
     distribution: Maryland, Virginia, New York, North Carolina, New Jersey and Washington, D.C.
-    illnesses: 15
-    deaths: 1
+    cases:
+      as_of: 2026-08-26
+      illnesses: 15
+      hospitalizations: 14
+      deaths: 1
     ended:
       announced: 2026-08-26
       note: The recalled cheeses should no longer be available in stores or restaurants, and most are past expiration.
@@ -1020,8 +1082,7 @@ recalls:
       other cheeses from Clover Hill Dairy. The company first recalled its
       ricotta/requesón in early June and expanded to all Clover Hill Dairy
       cheeses on June 18 after product and environmental samples matched the
-      outbreak strain. The outbreak ultimately involved 15 illnesses, 14
-      hospitalizations and one death across four states.
+      outbreak strain.
     citations:
       - title: Clover Hill Dairy Recalls Soft Ricotta/Requeson Cheese Due to Possible Health Risk
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/clover-hill-dairy-recalls-soft-ricottarequeson-cheese-due-possible-health-risk
@@ -1045,6 +1106,9 @@ recalls:
     agency: other
     hazards: [mislabeling]
     distribution: Costco warehouses
+    cases:
+      as_of: 2026-06-01
+      illnesses: 0
     products:
       - name: Chicken Sausage Links, 48 oz (3 lb)
         brand: Jones Dairy Farm
@@ -1058,8 +1122,7 @@ recalls:
       product and said it was not a food safety concern, but a labeling
       issue relevant to customers who avoid pork for religious, allergy or
       dietary reasons. No official FDA or FSIS recall notice was located;
-      Costco notified members directly and is offering full refunds. No
-      illnesses reported.
+      Costco notified members directly and is offering full refunds.
     citations:
       - title: Costco chicken sausage recall
         url: https://www.kcra.com/article/costco-chicken-sausage-recall/71495007
@@ -1084,14 +1147,16 @@ recalls:
     hazards: [salmonella]
     classification: I
     distribution: Ingredient sold to food manufacturers nationwide
+    cases:
+      as_of: 2026-04-20
+      illnesses: 0
     products:
       - name: Powdered milk and buttermilk (bulk ingredient)
         brand: California Dairies
     note: |
       California Dairies recalled about 2 million pounds of powdered milk after
       Salmonella was found in routine testing. The ingredient was used in dozens
-      of foods, triggering more than 60 downstream recalls. No illnesses
-      reported.
+      of foods, triggering more than 60 downstream recalls.
     citations:
       - title: 2026 Recalls of Food Products Associated with Powdered Milk from California Dairies, Inc.
         url: https://www.fda.gov/safety/major-product-recalls/2026-recalls-food-products-associated-powdered-milk-california-dairies-inc-due-potential-salmonella
@@ -1112,12 +1177,15 @@ recalls:
     agency: FDA
     hazards: [salmonella]
     distribution: Nationwide (food service and e-commerce)
+    cases:
+      as_of: 2026-04-27
+      illnesses: 0
     products:
       - name: Hot cocoa, frappe and chocolate beverage mixes (13 products)
         brand: Ghirardelli
     note: |
       Recalled because a milk powder ingredient from California Dairies may
-      contain Salmonella. No illnesses reported.
+      contain Salmonella.
     citations:
       - title: Ghirardelli recalls drink mixes over salmonella risk. See list
         url: https://www.usatoday.com/story/money/2026/04/28/ghirardelli-powdered-drink-mix-recall/89844830007/
@@ -1139,6 +1207,9 @@ recalls:
     hazards: [salmonella]
     classification: I
     distribution: 41 states
+    cases:
+      as_of: 2026-05-06
+      illnesses: 0
     products:
       - name: Alfredo Sauce, 3 lb 7 oz sealed poly bag (12 bags per case)
         brand: The Coffee Connexion
@@ -1152,7 +1223,6 @@ recalls:
     note: |
       Recalled because a milk powder ingredient from California Dairies may
       contain Salmonella. The FDA classified the recall as Class I on June 4.
-      No illnesses reported.
     citations:
       - title: Alfredo sauce sold in 41 states recalled over potential salmonella contamination
         url: https://www.newsnationnow.com/us-news/recalls/alfredo-sauce-recalled-salmonella/
@@ -1172,6 +1242,9 @@ recalls:
     agency: FSIS
     hazards: [salmonella]
     distribution: Walmart, Aldi and other retailers
+    cases:
+      as_of: 2026-05-01
+      illnesses: 0
     products:
       - name: Great Value and Mama Cozzi's frozen pizzas (multiple varieties)
         brand: Great Value (Walmart) / Mama Cozzi's (Aldi)
@@ -1179,7 +1252,7 @@ recalls:
           - Lot codes WC103203 and others
     note: |
       Frozen pizzas recalled as part of the wider Salmonella recall linked to
-      California Dairies dry milk powder. No confirmed illnesses reported.
+      California Dairies dry milk powder.
     citations:
       - title: Frozen pizzas sold at Walmart recalled. See the impacted flavors
         url: https://www.tennessean.com/story/news/health/2026/05/03/walmart-frozen-pizza-recall-aldi-salmonella-concerns/89922386007/
@@ -1200,6 +1273,9 @@ recalls:
     agency: FDA
     hazards: [salmonella]
     distribution: Nationwide (including Target)
+    cases:
+      as_of: 2026-05-05
+      illnesses: 0
     products:
       - name: Snack and trail mixes (Good & Gather, Fisher, Southern Style Nuts, Squirrel Brand)
         brand: Good & Gather / Fisher / Squirrel Brand
@@ -1207,7 +1283,6 @@ recalls:
           - Best by 2027-01 through 2027-08
     note: |
       Seasoning contained dry milk powder recalled for possible Salmonella.
-      No illnesses reported.
     citations:
       - title: John B. Sanfilippo & Son, Inc. Voluntarily Recalls Snack Mix Products Due to Possible Health Risk
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/john-b-sanfilippo-son-inc-voluntarily-recalls-snack-mix-products-due-possible-health-risk
@@ -1228,6 +1303,9 @@ recalls:
     agency: FDA
     hazards: [salmonella]
     distribution: Nationwide
+    cases:
+      as_of: 2026-05-06
+      illnesses: 0
     products:
       - name: Zapp's and Dirty potato chips (multiple varieties)
         brand: Zapp's / Dirty
@@ -1235,7 +1313,6 @@ recalls:
           - Best by 2026-07-27 through 2026-08-31
     note: |
       Seasoning containing dry milk powder recalled for possible Salmonella.
-      No illnesses reported.
     citations:
       - title: Utz Quality Foods, LLC Issues Voluntary Recall of Certain Limited Varieties of Zapp's and Dirty Potato Chips
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/utz-quality-foods-llc-issues-voluntary-recall-certain-limited-varieties-zapps-and-dirty-potato-chips
@@ -1256,6 +1333,9 @@ recalls:
     agency: FDA
     hazards: [salmonella]
     distribution: Costco, Walmart, Target, Kroger and other retailers
+    cases:
+      as_of: 2026-05-29
+      illnesses: 0
     products:
       - name: Motor City Pizza Co. 5 Cheese Bread (single and 2-pack)
         brand: Motor City Pizza Co.
@@ -1263,7 +1343,7 @@ recalls:
           - UPC 8 70375 00511 1 and 8 70375 00509 8
     note: |
       Recalled because a seasoning blend contained milk powder recalled for
-      possible Salmonella. No illnesses reported.
+      possible Salmonella.
     citations:
       - title: Champion Foods Recalls Some Batches of Motor City Pizza Co. 5 Cheese Bread Because of Possible Health Risk
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/champion-foods-recalls-some-batches-motor-city-pizza-co-5-cheese-bread-because-possible-health-risk
@@ -1313,7 +1393,6 @@ recalls:
     hazards: [salmonella]
     classification: I
     distribution: California, Florida, New York and Pennsylvania
-    illnesses: 70
     products:
       - name: Whole cantaloupe (individually wrapped, 6-12 per carton)
         brand: Ayco
@@ -1344,6 +1423,9 @@ recalls:
     hazards: [botulism]
     classification: I
     distribution: New York, Pennsylvania and Vermont
+    cases:
+      as_of: 2026-03-25
+      illnesses: 0
     products:
       - name: Christopher Ranch Peeled Garlic, 6-oz bag
         brand: Christopher Ranch
@@ -1351,7 +1433,7 @@ recalls:
           - UPC 00007457410852
     note: |
       Peeled garlic was stored in coolers that did not maintain safe
-      temperatures, creating a botulism risk. No illnesses reported.
+      temperatures, creating a botulism risk.
     citations:
       - title: Garlic recalled because of botulism risk
         url: https://www.foodsafetynews.com/2026/03/garlic-recalled-because-of-botulism-risk/
@@ -1372,12 +1454,15 @@ recalls:
     agency: FSIS
     hazards: [processing-defect]
     distribution: Nationwide (wholesale and retail)
+    cases:
+      as_of: 2026-03-25
+      illnesses: 0
     products:
       - name: Blackwing Organic Meats Organic Ground Beef and other raw beef and pork
         brand: Blackwing Organic Meats
     note: |
       FSIS public health alert: raw beef and pork produced without federal
-      inspection and bearing a false mark of inspection. No illnesses reported.
+      inspection and bearing a false mark of inspection.
     citations:
       - title: FSIS Issues Public Health Alert for Beef and Pork Products Produced Without the Benefit of Inspection
         url: https://www.fsis.usda.gov/recalls-alerts/fsis-issues-public-health-alert-beef-and-pork-products-produced-without-benefit
@@ -1425,6 +1510,9 @@ recalls:
     hazards: [foreign-material]
     classification: II
     distribution: Nationwide (Wegmans, Walmart, Target, Whole Foods and others)
+    cases:
+      as_of: 2026-04-04
+      illnesses: 0
     products:
       - name: Regenerative Organic Certified White Jasmine Rice, 2-lb bag
         brand: Lundberg Family Farms
@@ -1432,8 +1520,7 @@ recalls:
           - UPC 073416-040281
           - Lots 260201 and 260202
     note: |
-      Voluntary recall of about 4,500 cases for possible foreign material. No
-      illnesses reported.
+      Voluntary recall of about 4,500 cases for possible foreign material.
     citations:
       - title: Popular white rice facing nationwide recall over foreign material
         url: https://nypost.com/2026/04/11/us-news/popular-white-rice-facing-nationwide-recall-over-foreign-material/
@@ -1453,6 +1540,9 @@ recalls:
     agency: FDA
     hazards: [undeclared-allergen]
     distribution: New Jersey, New York, Pennsylvania and Connecticut
+    cases:
+      as_of: 2026-05-27
+      illnesses: 0
     products:
       - name: De Dios Ice Pops, 3.7 oz (multiple flavors)
         brand: De Dios
@@ -1461,7 +1551,7 @@ recalls:
     note: |
       Ice pops may contain undeclared milk, Yellow #5, Red #40, pecans and
       pistachios. Found during an FDA inspection of the firm's manufacturing
-      practices; no illnesses reported.
+      practices.
     citations:
       - title: Paterson company recalls De Dios Ice Pops. Here's why
         url: https://www.northjersey.com/story/life/food/2026/05/28/paterson-nj-company-recalls-de-dios-ice-pops-health-concerns/90303307007/
@@ -1479,6 +1569,9 @@ recalls:
     hazards: [foreign-material]
     classification: II
     distribution: Retail and meal-kit customers in 10 states
+    cases:
+      as_of: 2026-03-23
+      illnesses: 0
     products:
       - name: Basil Pesto & Mozzarella Pizza (HelloFresh meal kit)
         brand: HelloFresh
@@ -1491,7 +1584,7 @@ recalls:
     note: |
       Pizzas and focaccia made with slow-roasted tomatoes that may contain metal
       fragments were recalled from 10 states. The recall was initiated in
-      January and classified Class II in March. No illnesses reported.
+      January and classified Class II in March.
     citations:
       - title: Pizza Recall Issued in 10 States Over Metal Risk
         url: https://www.usnews.com/news/health-news/articles/2026-03-25/hellofresh-pizza-recall-issued-in-10-states-over-metal-risk
@@ -1599,6 +1692,9 @@ recalls:
     agency: FDA
     hazards: [processing-defect]
     distribution: Walmart in 24 states
+    cases:
+      as_of: 2026-02-24
+      illnesses: 0
     products:
       - name: Great Value cottage cheese (fat free, lowfat and small curd), 16 oz to 3 lb
         brand: Great Value (Walmart)
@@ -1606,7 +1702,7 @@ recalls:
           - Best if used by 2026-04-01 through 2026-04-03
     note: |
       Recalled because liquid dairy ingredients may not have been fully
-      pasteurized. No illnesses reported.
+      pasteurized.
     citations:
       - title: Saputo USA Recalls Great Value Cottage Cheese Because of Possible Health Risk
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/saputo-usa-recalls-great-value-cottage-cheese-because-possible-health-risk
@@ -1627,6 +1723,9 @@ recalls:
     hazards: [undeclared-allergen]
     classification: II
     distribution: Nationwide
+    cases:
+      as_of: 2026-02-27
+      illnesses: 0
     products:
       - name: Honey BBQ Sauce-Mustard, 16-oz bottle
         brand: Savannah Bee Company
@@ -1635,7 +1734,7 @@ recalls:
           - Lot B1L1360525
     note: |
       Bottles of Honey BBQ Sauce-Sweet (containing wheat and soy) were
-      mislabeled as the mustard flavor. No illnesses reported.
+      mislabeled as the mustard flavor.
     citations:
       - title: Barbecue sauce recalled because of undeclared allergens
         url: https://www.foodsafetynews.com/2026/03/barbecue-sauce-recalled-because-of-undeclared-allergens/
@@ -1684,6 +1783,9 @@ recalls:
     agency: FDA
     hazards: [salmonella]
     distribution: Costco in 26 states, D.C. and Puerto Rico
+    cases:
+      as_of: 2026-03-14
+      illnesses: 0
     products:
       - name: Meatloaf with Mashed Yukon Potatoes and Glaze
         brand: Costco
@@ -1692,7 +1794,7 @@ recalls:
           - Sell by 2026-03-05 through 2026-03-16
     note: |
       An ingredient supplier (Griffith Foods) recalled an ingredient used in the
-      meatloaf over possible Salmonella. No illnesses reported.
+      meatloaf over possible Salmonella.
     citations:
       - title: Costco recalls popular meatloaf meal kit over salmonella concerns
         url: https://abc13.com/post/costco-recalls-popular-meatloaf-meal-kit-salmonella-risk/18723442/
@@ -1711,8 +1813,11 @@ recalls:
     recalling_firm: Raw Farm, LLC
     agency: FDA
     hazards: [e-coli]
-    distribution: Illnesses in California, Florida and Texas
-    illnesses: 9
+    distribution: California, Florida and Texas
+    cases:
+      as_of: 2026-04-30
+      illnesses: 9
+      hospitalizations: 3
     ended:
       announced: 2026-04-30
       note: The raw cheddar cheese that tested positive for E. coli was not shipped to stores and is not available for sale.
@@ -1726,9 +1831,8 @@ recalls:
         brand: Raw Farm
     note: |
       A multistate E. coli O157:H7 outbreak was linked to Raw Farm raw cheddar
-      cheese (9 illnesses, 3 hospitalizations, one case of kidney failure). The
-      company recalled the cheese on April 2; the outbreak was declared over
-      April 30.
+      cheese. The company recalled the cheese on April 2; the outbreak was
+      declared over April 30.
     citations:
       - title: "Outbreak Investigation of E. coli O157:H7: Raw Cheddar Cheese (March 2026)"
         url: https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-o157h7-raw-cheddar-cheese-march-2026
@@ -1749,6 +1853,9 @@ recalls:
     hazards: [foreign-material]
     classification: II
     distribution: Maryland and Pennsylvania
+    cases:
+      as_of: 2026-03-16
+      illnesses: 0
     products:
       - name: Simply Nature Spinach Bites, 12 oz
         brand: Simply Nature (Aldi)
@@ -1757,7 +1864,7 @@ recalls:
           - Lot G25CF-02B
     note: |
       Roughly 7,900 twelve-ounce boxes of frozen spinach bites sold exclusively
-      at Aldi may contain rodent hair. No illnesses reported.
+      at Aldi may contain rodent hair.
     citations:
       - title: Aldi Recalls Spinach Bites Over Possible Contamination
         url: https://www.healthday.com/health-news/public-health/aldi-recalls-spinach-bites-over-possible-contamination
@@ -1778,6 +1885,9 @@ recalls:
     hazards: [e-coli]
     classification: I
     distribution: Foodservice distributors in California, Idaho and Oregon
+    cases:
+      as_of: 2026-02-11
+      illnesses: 0
     products:
       - name: Beef, Coarse Ground, 73L (10-lb chubs)
         brand: Foodservice
@@ -1795,7 +1905,7 @@ recalls:
       About 22,912 pounds of raw ground beef produced January 14, 2026 may be
       contaminated with E. coli O145, found during FSIS testing at a downstream
       customer. Shipped to distributors in California, Idaho and Oregon for
-      foodservice use. No illnesses reported.
+      foodservice use.
     citations:
       - title: CS Beef Packers, LLC Recalls Ground Beef Products That May be Contaminated With E. Coli O145
         url: https://www.fsis.usda.gov/recalls-alerts/cs-beef-packers-llc-recalls-ground-beef-products-may-be-contaminated-e--coli-o145
@@ -1812,6 +1922,9 @@ recalls:
     hazards: [listeria]
     classification: II
     distribution: BJ's Wholesale Club in 7 states
+    cases:
+      as_of: 2026-02-10
+      illnesses: 0
     products:
       - name: Wellsley Farms Farm-Raised Atlantic Salmon, 2-lb (32 oz) frozen bag
         brand: Wellsley Farms (BJ's)
@@ -1822,7 +1935,7 @@ recalls:
     note: |
       FDA sampling found Listeria monocytogenes in one lot of frozen Atlantic
       salmon sold at BJ's Wholesale Club in Delaware, Maryland, New Jersey, New
-      York, North Carolina, Pennsylvania and Virginia. No illnesses reported.
+      York, North Carolina, Pennsylvania and Virginia.
     citations:
       - title: Slade Gorton & Co., Inc. Recalls One Lot of Wellsley Farms Farm-Raised Atlantic Salmon Sold at BJ's Wholesale Club Due to Potential Listeria Monocytogenes Contamination
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/slade-gorton-co-inc-recalls-one-lot-wellsley-farms-farm-raised-atlantic-salmon-sold-bjs-wholesale
@@ -1843,6 +1956,9 @@ recalls:
     hazards: [undeclared-allergen]
     classification: II
     distribution: 20 states
+    cases:
+      as_of: 2026-02-04
+      illnesses: 0
     products:
       - name: Repackaged M&M's (Peanut and classic), 1.3-oz packs
         brand: M&M's
@@ -1851,7 +1967,7 @@ recalls:
     note: |
       Promotional M&M's repackaged for corporate events lacked labels declaring
       milk, soy and peanut allergens. More than 6,000 units distributed in 20
-      states. No illnesses reported.
+      states.
     citations:
       - title: M&M candy recalled in 20 states including NC. Here's what we know
         url: https://www.usatoday.com/story/news/2026/02/06/mm-recall-nc-what-mms-were-recalled-where-were-they-sold/88548391007/
@@ -1871,6 +1987,9 @@ recalls:
     agency: FDA
     hazards: [undeclared-allergen]
     distribution: More than 20 states
+    cases:
+      as_of: 2026-02-03
+      illnesses: 0
     products:
       - name: Mini Beignets filled with Caramel, 22-pack
         brand: Costco Bakery
@@ -1879,7 +1998,7 @@ recalls:
     note: |
       Caramel-filled mini beignets were inadvertently packaged with chocolate
       hazelnut beignets, so the packages contain undeclared tree nuts
-      (hazelnuts). Sold in more than 20 states. No illnesses reported.
+      (hazelnuts). Sold in more than 20 states.
     citations:
       - title: Costco recalls popular bakery item due to undeclared allergen
         url: https://abc7ny.com/post/costco-beignets-company-recalls-popular-bakery-item-due-undeclared-tree-nut-allergen-20-states/18534155/
@@ -1899,6 +2018,9 @@ recalls:
     agency: FDA
     hazards: [salmonella]
     distribution: Nationwide (Whole Foods, Target, Amazon and online)
+    cases:
+      as_of: 2026-01-23
+      illnesses: 0
     products:
       - name: Organic Chia Seeds, 8 oz stand-up pouch
         brand: Navitas Organics
@@ -1907,7 +2029,7 @@ recalls:
           - Lots starting with W31025
     note: |
       Precautionary recall after the company's chia seed supplier recalled
-      product. No illnesses reported.
+      product.
     citations:
       - title: Navitas Organics Voluntarily Recalls Select Lots of 8oz Organic Chia Seeds Because of Possible Health Risk
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/navitas-organics-voluntarily-recalls-select-lots-8oz-organic-chia-seeds-because-possible-health-risk
@@ -1928,13 +2050,15 @@ recalls:
     hazards: [other]
     classification: II
     distribution: Minnesota, Indiana and North Dakota
+    cases:
+      as_of: 2026-01-22
+      illnesses: 0
     products:
       - name: Packaged foods, beverages, snacks and candy held at the facility
         brand: Multiple (Cheerios, Pringles, Nutella, Coca-Cola and more)
     note: |
       FDA inspectors found rodent and bird waste at a Minneapolis distribution
       facility, affecting nearly 2,000 products from major brands held there.
-      No illnesses reported.
     citations:
       - title: Cheerios, Pringles among thousands of products recalled due to possible rodent waste exposure
         url: https://abc7chicago.com/post/cheerios-pringles-among-thousands-products-recalled-due-possible-rodent-dropping-exposure-sold-indiana-fda/18510271/
@@ -1954,6 +2078,9 @@ recalls:
     agency: FDA
     hazards: [botulism]
     distribution: Nine states (Meijer, Giant, Safeway/Albertsons chains)
+    cases:
+      as_of: 2026-01-16
+      illnesses: 0
     products:
       - name: Genova Yellowfin Tuna in Olive Oil, 5 oz (4-pack)
         brand: Genova
@@ -1966,7 +2093,7 @@ recalls:
     note: |
       An expansion of a 2025 recall: quarantined cans with a possible botulism
       defect in the easy-open lids were inadvertently shipped by a third-party
-      distributor to nine states. No illnesses reported.
+      distributor to nine states.
     citations:
       - title: Recalled tuna accidentally shipped to stores in 9 states
         url: https://www.usatoday.com/story/money/2026/01/20/fda-tuna-recall-botulism/88274032007/
@@ -1987,6 +2114,9 @@ recalls:
     hazards: [listeria]
     classification: I
     distribution: Foodservice in Alabama, Florida, Georgia, Missouri, New Hampshire, North Carolina and Ohio
+    cases:
+      as_of: 2026-01-16
+      illnesses: 0
     products:
       - name: Grilled Chicken Breast Fillet with Rib Meat, 10-lb case (two 5-lb bags)
         brand: Suzanna's Kitchen
@@ -1997,7 +2127,7 @@ recalls:
       About 13,720 pounds of ready-to-eat grilled chicken breast fillets produced
       October 14, 2025 may be contaminated with Listeria monocytogenes, detected
       by a third-party laboratory. Distributed to foodservice customers in seven
-      states. No illnesses reported.
+      states.
     citations:
       - title: Suzanna's Kitchen Recalls Ready-To-Eat Grilled Chicken Breast Fillet Products due to Possible Listeria Contamination
         url: https://www.fsis.usda.gov/recalls-alerts/suzannas-kitchen-recalls-ready-eat-grilled-chicken-breast-fillet-products-due
