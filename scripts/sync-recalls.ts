@@ -26,6 +26,7 @@ import { join } from 'node:path';
 import { parse, stringify } from 'yaml';
 import { z } from 'zod';
 import {
+  CaseCounts,
   CLASSIFICATIONS,
   HAZARDS,
   HAZARD_LABELS,
@@ -292,8 +293,13 @@ When "include": true, produce a "draft" object with these fields:
   recognise it on the shelf; codes is an array of strings from code_info (UPCs, best-by
   dates, lot codes). Split into separate products only when clearly distinct.
 - distribution: free text, e.g. "Nationwide" or "Nationwide via online orders".
-- illnesses: integer count if stated, otherwise omit.
-- deaths: integer count if stated, otherwise omit.
+- cases: an object { as_of, illnesses?, hospitalizations?, deaths? } holding case counts
+  AS OF A SPECIFIC DATE. Counts go stale as an outbreak evolves, so an untimestamped count
+  is meaningless. Include cases ONLY when the report states both a count and a date it is
+  current as of (the report's own date qualifies, e.g. "no illnesses reported" in an
+  announcement dated 2026-08-27 -> { as_of: "2026-08-27", illnesses: 0 }). as_of is required
+  whenever cases is present. If a count is stated without any date, OMIT cases entirely
+  rather than guess. Use 0 for "none reported", and omit any count the report does not mention.
 - note: 2-4 sentences of plain prose describing what was recalled, why, the hazard, and what
   consumers should do. No markdown, no links, no bullet points.
 
@@ -318,8 +324,7 @@ const DraftSchema = z.object({
     )
     .min(1),
   distribution: z.string().min(1).optional(),
-  illnesses: z.number().int().nonnegative().optional(),
-  deaths: z.number().int().nonnegative().optional(),
+  cases: CaseCounts.optional(),
   note: z.string().min(1),
 });
 
@@ -480,8 +485,7 @@ function assemble(
     classification: draft.classification,
     products: draft.products,
     distribution: draft.distribution,
-    illnesses: draft.illnesses,
-    deaths: draft.deaths,
+    cases: draft.cases,
     note: draft.note,
     citations: [
       // The news link is taken blindly from search, so it isn't stamped `accessed`.
