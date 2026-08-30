@@ -850,12 +850,21 @@ recalls:
     recalling_firm: Taylor Farms de Mexico
     agency: FDA
     hazards: [cyclospora]
+    classification: I
     distribution: 27 states, plus Taco Bell restaurants in five states
     cases:
       as_of: 2026-08-27
       illnesses: 11458
       hospitalizations: 495
       deaths: 2
+    ended:
+      announced: 2026-08-28
+      note: The Best if Used By dates for the recalled lettuce have passed and the products should no longer be available in stores or restaurants; the FDA is confident none of the recalled iceberg lettuce remains on the market.
+      citations:
+        - title: Explaining the FDA's Classification of the Taylor Farms de Mexico Iceberg Lettuce Recall
+          url: https://www.fda.gov/food/hfp-constituent-updates/explaining-fdas-classification-taylor-farms-de-mexico-iceberg-lettuce-recall
+          publisher: FDA
+          accessed: 2026-08-30
     products:
       - name: Marketside Iceberg Salad, 12 oz and 24 oz
         brand: Marketside
