@@ -5,6 +5,145 @@
 # with the YAML extension (VS Code, Zed, Neovim + yaml-language-server).
 
 recalls:
+  - id: 2026-08-crystal-temptations-chocolatey-eyeballs-milk
+    date: 2026-08-31
+    title: Chocolatey Eyeballs (undeclared milk)
+    summary:
+      - chocolate eyeballs
+    recalling_firm: Crystal Temptations
+    agency: FDA
+    hazards: [undeclared-allergen]
+    distribution: Marshalls, TJ Maxx, HomeGoods and Sierra Trading Post stores in 13 states
+    cases:
+      as_of: 2026-08-31
+      illnesses: 0
+    products:
+      - name: Chocolatey Eyeballs, 7 oz, 10 oz, 10.5 oz, 11 oz and 16 oz
+        brand: Little Temptations
+        codes:
+          - Style 54077-CHEY (7 oz acrylic box)
+          - Style 54040-CHEY (10 oz plastic bag)
+          - Style 58008-CHEY (10.5 oz plastic jar)
+          - Style 54083-CHEY (11 oz plastic bag)
+          - Style 58089-CHEY (16 oz plastic pouch)
+    note: |
+      Crystal Temptations of North Arlington, NJ recalled Halloween Chocolatey
+      Eyeballs because they contain undeclared milk (whey). People with a milk
+      allergy or severe sensitivity risk a serious or life-threatening reaction
+      if they eat the candy.
+
+      The product was distributed in Arizona, Texas, Virginia, Georgia,
+      Massachusetts, North Carolina, Indiana, Nevada, California, New Jersey,
+      Connecticut, Ohio and Wyoming, sold at Marshalls, TJ Maxx, HomeGoods and
+      Sierra Trading Post. The recall was initiated after a TJX analyst
+      discovered the whey-containing product was packaged without disclosing
+      milk; a production and packaging breakdown was the cause. No illnesses
+      have been reported.
+    citations:
+      - title: Crystal Temptations Issues Allergy Alert on Undeclared Milk in Chocolatey Eyeballs
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/crystal-temptations-issues-allergy-alert-undeclared-milk-chocolatey-eyeballs
+        publisher: FDA
+        accessed: 2026-08-31
+
+  - id: 2026-08-kofinas-garlic-infused-olive-oil
+    date: 2026-08-31
+    title: Garlic Mediterranean Infused Extra Virgin Olive Oil (Kofinas)
+    summary:
+      - olive oil
+    recalling_firm: LMSI LLC / Kofinas Olive Oil
+    agency: FDA
+    hazards: [other]
+    distribution: Two Cincinnati stores and online at kofinasoliveoil.com
+    cases:
+      as_of: 2026-08-31
+      illnesses: 0
+    products:
+      - name: Garlic Mediterranean Infused Extra Virgin Olive Oil, 500 ml, 250 ml and 100 ml glass bottles
+        brand: Kofinas
+    note: |
+      LMSI LLC (Kofinas Olive Oil) of Cincinnati, OH voluntarily recalled its
+      Garlic Mediterranean Infused Extra Virgin Olive Oil because it was made
+      with a garlic essential oil not approved for culinary use.
+
+      The oil was sold at the Montgomery Store & Infusion Kitchen and Findlay
+      Market in Cincinnati, and online at kofinasoliveoil.com, from August 31,
+      2025 to August 27, 2026. No illnesses have been reported.
+    citations:
+      - title: LMSI LLC/Kofinas Olive Oil Issues a Voluntary Recall of its Garlic Mediterranean Infused Extra Virgin Olive Oil for Using a Garlic Essential Oil Not Approved for Culinary Use
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/lmsi-llckofinas-olive-oil-issues-voluntary-recall-its-garlic-mediterranean-infused-extra-virgin
+        publisher: FDA
+        accessed: 2026-08-31
+
+  - id: 2026-08-panorama-produce-mangoes-salmonella
+    date: 2026-08-28
+    title: Mangoes (Panorama Produce)
+    summary:
+      - mangoes
+    recalling_firm: Panorama Produce
+    agency: FDA
+    hazards: [salmonella]
+    distribution: CT, NY, NJ and PA, sold in select Walmart stores
+    cases:
+      as_of: 2026-08-28
+      illnesses: 0
+    products:
+      - name: Mangoes (size 9), 302 boxes
+        brand: Martina
+        codes:
+          - PLU 4584
+          - UPC 07503061948050
+    note: |
+      Panorama Produce of Mamaroneck, NY recalled 302 boxes of size 9 mangoes
+      because they may be contaminated with Salmonella. The mangoes were
+      distributed to CT, NY, NJ and PA beginning August 10 through August 21,
+      2026, and sold in select Walmart stores.
+
+      The mangoes are packaged in a Martina-branded case; individual mangoes
+      carry a light blue Agrofepac "Produce of Mexico" sticker with PLU 4584.
+      The recall was initiated after FDA sampling found Salmonella in mangoes
+      grown on the same farm that were not distributed into U.S. commerce. No
+      illnesses have been reported.
+    citations:
+      - title: Panorama Produce Recalls Mangoes Due to Possible Salmonella Contamination
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/panorama-produce-recalls-mangoes-due-possible-salmonella-contamination
+        publisher: FDA
+        accessed: 2026-08-31
+
+  - id: 2026-08-everything-sprouts-radish-mix
+    parent_id: 2026-08-everything-sprouts-alfalfa-sprouts
+    date: 2026-08-28
+    title: Robust Radish Mix (Everything Sprouts)
+    summary:
+      - radish sprouts
+    recalling_firm: Everything Sprouts, LLC
+    agency: FDA
+    hazards: [e-coli, salmonella]
+    distribution: Wholesale distributors and grocery stores in Minnesota and Wisconsin
+    cases:
+      as_of: 2026-08-28
+      illnesses: 0
+    products:
+      - name: Robust Radish Mix, 5 oz cups
+        brand: Everything Sprouts
+        codes:
+          - Barcode 087906000075
+          - LOT# 223, 226, 230 and 233
+    note: |
+      Everything Sprouts, LLC expanded its voluntary recall to include certain
+      lots of Robust Radish Sprout Mix because they may be contaminated with
+      Shiga toxin-producing E. coli (STEC) or Salmonella. The product was
+      distributed August 13 through August 26, 2026 to wholesale distributors
+      and grocery stores in Minnesota and Wisconsin.
+
+      No reports of illness have been received related to the radish mix. This
+      expands the company's earlier recall of Calco and Everything Sprouts
+      alfalfa sprouts.
+    citations:
+      - title: Everything Sprouts, LLC Expands Voluntarily Recall to Include Robust Radish Mix Due to Potential E. Coli and Salmonella Risk
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/everything-sprouts-llc-expands-voluntarily-recall-include-robust-radish-mix-due-potential-e-coli-and
+        publisher: FDA
+        accessed: 2026-08-31
+
   - id: 2026-08-jaimes-foods-jalapeno-ranch-egg
     date: 2026-08-25
     title: Jaime's Spanish Village Jalapeno Ranch (undeclared egg)
