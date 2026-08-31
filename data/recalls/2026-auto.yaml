@@ -657,4 +657,28 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99540
         publisher: FDA
         accessed: 2026-08-27
+  - id: 2026-08-19-midwest-poultry-servc-c-o-h-an-grade-a-white-in-shell-chicken
+    date: 2026-08-19
+    title: Grade A white eggs recalled for possible Salmonella Enteritidis
+    summary:
+      - eggs
+    recalling_firm: MIDWEST POULTRY SERVC C/O H & LELECTRIC
+    agency: FDA
+    hazards:
+      - salmonella
+    classification: I
+    products:
+      - name: Grade A white in-shell chicken eggs (various sizes and pack counts)
+        codes:
+          - UPC 0 11110-60902
+          - UPC 0 11110-60980
+          - UPC 0 92825-09564
+          - JD 0840962
+    distribution: Arkansas, Louisiana, Mississippi, New Mexico, Oklahoma, Texas
+    note: A large recall of Grade A white in-shell chicken eggs is being issued because the eggs may be contaminated with Salmonella Enteritidis. The eggs were distributed to grocery stores in six states and total more than 1.5 million dozen. Consumers who purchased these eggs should discard them or return them to the store for a refund. The eggs should be kept refrigerated at or below 45°F until they are disposed of.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99479
+        publisher: FDA
+        accessed: 2026-08-31
 
