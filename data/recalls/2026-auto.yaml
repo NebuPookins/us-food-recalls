@@ -677,6 +677,10 @@ recalls:
     distribution: Arkansas, Louisiana, Mississippi, New Mexico, Oklahoma, Texas
     note: A large recall of Grade A white in-shell chicken eggs is being issued because the eggs may be contaminated with Salmonella Enteritidis. The eggs were distributed to grocery stores in six states and total more than 1.5 million dozen. Consumers who purchased these eggs should discard them or return them to the store for a refund. The eggs should be kept refrigerated at or below 45°F until they are disposed of.
     citations:
+      - title: Salmonella Egg Recall Is Now Class I, the FDA’s Highest Risk Level
+        url: https://time.com/article/2026/08/15/eggs-recalled-for-salmonella-upgraded-to-highest-fda-risk-level/
+        publisher: Time Magazine
+        accessed: 2026-08-31
       - title: FDA recall record
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99479
         publisher: FDA
