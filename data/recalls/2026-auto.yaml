@@ -685,4 +685,36 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99479
         publisher: FDA
         accessed: 2026-08-31
+  - id: 2026-08-19-taylor-farms-de-mexico-s-de-r-markon-blend-lett-rom-80-20-wi
+    date: 2026-08-19
+    title: Markon Blend Lettuce/Romaine Mix with Sep Baggies recalled for potential Cyclospora contamination
+    summary:
+      - lettuce
+      - romaine
+    recalling_firm: Taylor Farms de Mexico S. de R.L. de C.V.
+    agency: FDA
+    hazards:
+      - other
+    products:
+      - name: Markon Blend Lettuce/Romaine Mix with Sep Baggies
+        brand: Markon
+        codes:
+          - TFMX183A05 7/21/2026
+          - TFMX184A02 7/22/2026
+          - TFMX187B02 7/25/2026
+          - TFMX189A03 7/27/2026
+          - TFMX190A03 7/28/2026
+          - TFMX190B01 7/28/2026
+          - TFMX191A02 7/29/2026
+          - TFMX194B02 8/1/2026
+    distribution: Multiple U.S. states and Mexico
+    note: Taylor Farms de Mexico is recalling 855 cases of Markon Blend Lettuce/Romaine Mix with Sep Baggies because the product may be contaminated with Cyclospora, a parasite that can cause gastrointestinal illness. The recall covers shipments distributed to many states across the United States as well as Mexico. Consumers who purchased this product should discard it or return it to the place of purchase. No illnesses have been reported at this time.
+    citations:
+      - title: FDA announces recall of Taylor Farms ready-to-eat foods sold at Walmart, Trader Joe’s, and more for potential salmonella contamination
+        url: https://www.msn.com/en-us/news/other/fda-announces-recall-of-taylor-farms-ready-to-eat-foods-sold-at-walmart-trader-joe-s-and-more-for-potential-salmonella-contamination/ar-AA29Mv7B
+        publisher: Allrecipes
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99453
+        publisher: FDA
+        accessed: 2026-09-01
 
