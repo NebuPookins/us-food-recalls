@@ -717,4 +717,36 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99453
         publisher: FDA
         accessed: 2026-09-01
+  - id: 2026-08-19-bazzini-llc-dark-chocolate-coconut-almond
+    date: 2026-08-19
+    title: Dark Chocolate Coconut Almond Bites recalled for undeclared peanuts
+    summary:
+      - chocolate
+    recalling_firm: Bazzini LLC
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: I
+    products:
+      - name: Dark Chocolate Coconut Almond Bites
+        codes:
+          - B15354
+          - B15356
+          - B15357
+          - B15360
+          - B15361
+          - B15363
+    distribution: Washington
+    cases:
+      as_of: 2026-08-19
+      illnesses: 0
+    note: Bazzini LLC is recalling its Dark Chocolate Coconut Almond Bites because the product contains undeclared peanuts, posing a risk to people with peanut allergies. The recall covers about 1.38 million pieces that were distributed in Washington state. Consumers should check the package codes listed and discard any affected product or return it to the place of purchase. No illnesses have been reported as of the announcement date.
+    citations:
+      - title: Chocolate Candy Recalled for Risk of 'Serious or Life-Threatening Allergic Reaction' Due to Undeclared Allergen
+        url: https://people.com/chocolate-candy-recalled-for-risk-of-serious-or-life-threatening-allergic-reaction-due-to-undeclared-allergen-11991139
+        publisher: People
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99097
+        publisher: FDA
+        accessed: 2026-09-02
 
