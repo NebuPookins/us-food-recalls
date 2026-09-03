@@ -955,10 +955,18 @@ recalls:
     classification: I
     distribution: Texas, Oklahoma, Louisiana, Arkansas, Mississippi and New Mexico
     cases:
-      as_of: 2026-07-24
-      illnesses: 98
-      hospitalizations: 26
+      as_of: 2026-09-03
+      illnesses: 134
+      hospitalizations: 34
       deaths: 0
+    ended:
+      announced: 2026-09-03
+      note: Recalled eggs are past expiration and should no longer be available for sale. CDC has declared the outbreak over.
+      citations:
+        - title: "Outbreak Investigation of Salmonella: Eggs (July 2026)"
+          url: https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-eggs-july-2026
+          publisher: FDA
+          accessed: 2026-09-03
     products:
       - name: White and brown cage-free shell eggs
         brand: Kroger, Brookshire's, Country Morning, Simple Truth, Cal-Maine Sunups
