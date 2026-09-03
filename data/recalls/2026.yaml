@@ -839,18 +839,18 @@ recalls:
 
   - id: 2026-07-publix-greenwise-frozen-blueberries
     date: 2026-07-29
-    title: GreenWise Organic Frozen Blueberries and Mixed Berries (Publix)
+    title: Frozen blueberries and mixed berries (GreenWise and Great Value)
     summary:
       - blueberries
       - mixed berries
-    recalling_firm: Publix Super Markets, Inc.
+    recalling_firm: Frutas y Hortalizas del Sur S.A.
     agency: FDA
     hazards: [e-coli]
-    distribution: Publix stores in 8 states (Alabama, Florida, Georgia, Kentucky, North Carolina, South Carolina, Tennessee, Virginia)
+    distribution: Publix stores in 8 states (Alabama, Florida, Georgia, Kentucky, North Carolina, South Carolina, Tennessee, Virginia) and Walmart stores in 16 states (Alabama, Arkansas, Florida, Illinois, Indiana, Kentucky, Louisiana, Minnesota, Mississippi, Missouri, North Carolina, Ohio, Oklahoma, South Carolina, Texas, Wisconsin)
     cases:
-      as_of: 2026-07-30
-      illnesses: 12
-      hospitalizations: 4
+      as_of: 2026-09-03
+      illnesses: 17
+      hospitalizations: 6
       deaths: 0
     products:
       - name: GreenWise Organic Whole Blueberries, 10 oz and 48 oz
@@ -865,12 +865,20 @@ recalls:
           - UPC 41415-06753 (10 oz)
           - UPC 41415-12153 (48 oz)
           - All lots
+      - name: Great Value Organic Triple Berry Blend, 10 oz
+        brand: Great Value (Walmart)
+        codes:
+          - Lot code 6040 01-6
+          - Best by 2028-02-09
     note: |
       A multistate outbreak of E. coli O145:H28 was traced to organic frozen
-      blueberries from Chilean supplier Frutas y Hortalizas del Sur S.A., sold
-      under Publix's GreenWise brand. After a single lot was recalled on July 3,
-      Publix expanded the recall on July 29 to all lots of four blueberry and
-      mixed-berry products.
+      blueberries from Chilean supplier Frutas y Hortalizas del Sur S.A. A
+      single lot was recalled on July 3, and Publix expanded the recall on
+      July 29 to all lots of four GreenWise blueberry and mixed-berry products.
+      On September 2 the supplier expanded the recall again to Great Value
+      Organic Triple Berry Blend sold at Walmart stores in 16 states. As of
+      September 3, the FDA and CDC have reported 17 illnesses and 6
+      hospitalizations across two states (Florida and Georgia), with no deaths.
     citations:
       - title: Publix Recalls All Lots of GreenWise Organic Frozen Blueberries and Whole Mixed Berries Due to Potential E. coli O145 Contamination
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/publix-recalls-all-lots-greenwise-organic-frozen-blueberries-and-whole-mixed-berries-due-potential-e
@@ -879,7 +887,7 @@ recalls:
       - title: "Outbreak Investigation of E. coli O145:H28: Frozen Blueberries (July 2026)"
         url: https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-o145h28-frozen-blueberries-july-2026
         publisher: FDA
-        accessed: 2026-08-18
+        accessed: 2026-09-03
 
   - id: 2026-07-maple-leaf-bacon-import
     date: 2026-07-24
