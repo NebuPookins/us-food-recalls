@@ -5,6 +5,42 @@
 # with the YAML extension (VS Code, Zed, Neovim + yaml-language-server).
 
 recalls:
+  - id: 2026-09-foods-alive-moringa-leaf-powder-salmonella
+    date: 2026-09-04
+    title: Organic Moringa Leaf Powder (Foods Alive)
+    summary:
+      - moringa powder
+    recalling_firm: Foods Alive Inc.
+    agency: FDA
+    hazards: [salmonella]
+    distribution: Nationwide via retail stores and online sellers
+    cases:
+      as_of: 2026-09-04
+      illnesses: 0
+    products:
+      - name: Organic Moringa Leaf Powder, 8 oz stand-up pouch
+        brand: Foods Alive
+        codes:
+          - Freshest by 110127
+          - 02726 (number below the date)
+    note: |
+      Foods Alive Inc. of Angola, IN recalled its 8-ounce packages of organic
+      moringa leaf powder because they may be contaminated with Salmonella. The
+      powder was distributed nationwide in retail stores and through online
+      sellers including foodsalive.com, and was shipped between January 27 and
+      August 7, 2026.
+
+      The recall was initiated after the company's supplier reported that a
+      sample of its super green powder mix, collected at retail, tested positive
+      for Salmonella. The source of the contamination has not been determined.
+      The company suspended production and distribution while FDA and the
+      company continue their investigation. No illnesses have been reported.
+    citations:
+      - title: Foods Alive Recalls Organic Moringa Leaf Powder Because of Possible Health Risk
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/foods-alive-recalls-organic-moringa-leaf-powder-because-possible-health-risk
+        publisher: FDA
+        accessed: 2026-09-04
+
   - id: 2026-08-crystal-temptations-chocolatey-eyeballs-milk
     date: 2026-08-31
     title: Chocolatey Eyeballs (undeclared milk)
@@ -331,6 +367,7 @@ recalls:
         accessed: 2026-08-18
 
   - id: 2026-08-hampton-grocer-lacnola-granola
+    parent_id: 2026-09-foods-alive-moringa-leaf-powder-salmonella
     date: 2026-08-14
     title: Lacnola Lactation Granola
     summary:
