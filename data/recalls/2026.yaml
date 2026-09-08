@@ -5,6 +5,51 @@
 # with the YAML extension (VS Code, Zed, Neovim + yaml-language-server).
 
 recalls:
+  - id: 2026-09-made-fresh-salads-deli-salads-cream-cheese
+    date: 2026-09-06
+    title: Ready-to-eat deli style salads and cream cheese (Made Fresh Salads)
+    summary:
+      - deli salads
+      - cream cheese
+    recalling_firm: Made Fresh Salads Inc.
+    agency: FDA
+    hazards: [listeria]
+    distribution: Brooklyn, Queens, the Bronx and New York City (direct delivery to retail stores and distributors)
+    cases:
+      as_of: 2026-09-06
+      illnesses: 0
+    products:
+      - name: Deli-style salads (black bean & corn, bruschetta, chickpea, crab, seafood, egg, pasta, quinoa, couscous and other varieties), 5 lb white plastic tubs
+        brand: Made Fresh Salads
+      - name: Potato salad, macaroni salad and coleslaw, 30 lb white plastic tubs
+        brand: Made Fresh Salads
+      - name: Chocolate pudding (7 lb), vanilla pudding (6 lb), potato croquettes (12 pc) and crabcakes (12 pc), half-size aluminum pans
+        brand: Made Fresh Salads
+      - name: Cream cheese spreads (apple cinnamon, blueberry, scallion, lox, strawberry, vegetable and other flavors), 5 lb white plastic tubs
+        brand: Made Fresh Salads and Northside
+      - name: Scallion and whipped cream cheese, 30 lb white plastic tubs
+        brand: Made Fresh Salads
+    note: |
+      Made Fresh Salads Inc. of Bay Shore, NY recalled all of its ready-to-eat
+      deli-style salads and cream cheese because they may be contaminated with
+      Listeria monocytogenes. The products were distributed by direct delivery
+      to retail stores and distributors in Brooklyn, Queens, the Bronx and New
+      York City, in 30 lb and 5 lb white plastic tubs labeled Made Fresh Salads
+      or Northside, and in half-size aluminum pans. They may have been repacked
+      by retail locations in deli-style or other retail packaging. Recalled
+      products carry expiration dates from September 3 through September 18,
+      2026 printed on the bottom left of the label.
+
+      The recall followed environmental sampling by the FDA and the company
+      that found Listeria monocytogenes in some areas of the facility.
+      Production and distribution were ceased while the FDA and the company
+      investigate. No illnesses have been reported.
+    citations:
+      - title: Made Fresh Salads, Inc. Recalls Ready to Eat Deli Style Salads and Cream Cheese Because of Possible Health Risk
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/made-fresh-salads-inc-recalls-ready-eat-deli-style-salads-and-cream-cheese-because-possible-health
+        publisher: FDA
+        accessed: 2026-09-07
+
   - id: 2026-09-foods-alive-moringa-leaf-powder-salmonella
     date: 2026-09-04
     title: Organic Moringa Leaf Powder (Foods Alive)
