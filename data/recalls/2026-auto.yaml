@@ -749,3 +749,34 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99097
         publisher: FDA
         accessed: 2026-09-02
+  - id: 2026-08-26-gifford-s-dairy-inc-gifford-s-homemaine-ice-cream
+    date: 2026-08-26
+    title: Gifford's HomeMaine POWER PLAY FUDGE ice cream contains rubber pieces
+    summary:
+      - ice cream
+    recalling_firm: Gifford's Dairy, Inc.
+    agency: FDA
+    hazards:
+      - foreign-material
+    classification: II
+    products:
+      - name: Gifford's HomeMaine POWER PLAY FUDGE ice cream
+        brand: HomeMaine
+        codes:
+          - "UPC: 8 60864 00030 7"
+          - "Lot Code: 26184"
+          - "Best By date: 08/27/27"
+    distribution: Massachusetts, Maine, Vermont
+    cases:
+      as_of: 2026-08-26
+      illnesses: 0
+    note: Gifford's Dairy, Inc. is recalling its HomeMaine POWER PLAY FUDGE ice cream (one‑quart containers) distributed in Massachusetts, Maine and Vermont. The product may contain pieces of rubber, a foreign‑material hazard. Consumers should not eat the ice cream and should return it to the place of purchase for a full refund or contact the company for instructions. No illnesses have been reported as of the announcement date.
+    citations:
+      - title: Ice Cream Recalled in 3 States for Possible Rubber
+        url: https://www.yahoo.com/news/us/articles/ice-cream-recalled-3-states-182205586.html
+        publisher: Yahoo
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99663
+        publisher: FDA
+        accessed: 2026-09-09
+
