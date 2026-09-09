@@ -5,6 +5,55 @@
 # with the YAML extension (VS Code, Zed, Neovim + yaml-language-server).
 
 recalls:
+  - id: 2026-09-evergreen-broccoli-sprouts
+    date: 2026-09-09
+    title: Evergreen Fresh Sprouts broccoli sprouts (Salmonella)
+    summary:
+      - broccoli sprouts
+    recalling_firm: Evergreen Fresh Sprouts, LLC
+    agency: FDA
+    hazards: [salmonella]
+    distribution: Grocery stores, restaurants and foodservice customers in Idaho, Montana and Washington (product may have been distributed further)
+    cases:
+      as_of: 2026-09-09
+      illnesses: 22
+      hospitalizations: 2
+      deaths: 0
+    products:
+      - name: Broccoli sprouts, 4 oz, in plastic bags or plastic clamshell containers
+        brand: Evergreen Fresh Sprouts
+        codes:
+          - Expiration dates 9/7, 9/9, 9/11, 9/14 and 9/16
+    note: |
+      FDA and CDC are investigating a multistate outbreak of Salmonella
+      Bovismorbificans infections linked to recalled broccoli sprouts grown by
+      Evergreen Fresh Sprouts, LLC of Moyie Springs, ID. On September 4, 2026,
+      Evergreen Fresh Sprouts initiated a recall of broccoli sprouts after a
+      sample collected and analyzed by Montana state officials tested positive
+      for Salmonella; whole genome sequencing confirmed the sample is the same
+      strain causing the illnesses.
+
+      As of September 9, 2026, 22 people in four states (Idaho, Montana, Utah
+      and Washington) have been reported infected with the outbreak strain,
+      with illnesses starting between July 7 and August 26, 2026. Of the 19
+      people interviewed, all 19 reported eating sprouts and 17 specifically
+      reported eating broccoli sprouts. Two people have been hospitalized and
+      no deaths have been reported.
+
+      Recalled broccoli sprouts are packaged in plastic bags or plastic
+      clamshell containers with expiration dates of 9/7, 9/9, 9/11, 9/14 and
+      9/16, and were sold to grocery stores, restaurants and foodservice
+      customers in Idaho, Montana and Washington; the product may have been
+      distributed further. Do not eat, sell or serve recalled Evergreen Fresh
+      Sprouts broccoli sprouts. This outbreak is being investigated separately
+      from the Shiga toxin-producing E. coli and Salmonella outbreak linked to
+      alfalfa sprouts.
+    citations:
+      - title: "Outbreak Investigation of Salmonella: Sprouts (September 2026)"
+        url: https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-sprouts-september-2026
+        publisher: FDA
+        accessed: 2026-09-09
+
   - id: 2026-09-made-fresh-salads-deli-salads-cream-cheese
     date: 2026-09-06
     title: Ready-to-eat deli style salads and cream cheese (Made Fresh Salads)
