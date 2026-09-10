@@ -779,4 +779,32 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99663
         publisher: FDA
         accessed: 2026-09-09
+  - id: 2026-09-02-byron-white-formulas-inc-byron-white-formulas-a-fng-her
+    date: 2026-09-02
+    title: Byron White FORMULAS A-FNG Herbal Supplement may contain walnuts not declared in English
+    summary:
+      - herbal supplement
+    recalling_firm: Byron White Formulas, Inc.
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: II
+    products:
+      - name: Byron White FORMULAS A-FNG Herbal Supplement 1.0 fl. oz./30 mL
+        brand: Byron White
+        codes:
+          - "Lot Code Format = MMD,DYY: 022,224. 061,424. 092,324. 022,125. 071,825. 112,125. 040,826."
+    distribution: Nationwide in the United States (including AL, AK, AR, AZ, CA, CO, CT, DC, DE, FL, GA, HI, IA, ID, IL, IN, KS, KY, LA, MA, MD, ME, MI, MN, MO, MT, NC, NE, NH, NJ, NM, NV, NY, OH, OK, OR, PA, PR, RI, SC, SD, TN, TX, UT, VA, VT, WA, WI, WV, WY) and exported to Canada, Switzerland, Colombia, Germany, Spain, United Kingdom, Japan, Norway, New Zealand, Saudi Arabia
+    cases:
+      as_of: 2026-09-02
+      illnesses: 0
+    note: Byron White Formulas is recalling its A-FNG Herbal Supplement because the label fails to declare the presence of walnuts in English, posing an undeclared allergen risk. The product was distributed across most U.S. states and several foreign countries. Consumers who have purchased this supplement should stop using it and return it to the place of purchase for a full refund.
+    citations:
+      - title: "FDA: 12 Herbal Supplements Have Been Recalled"
+        url: https://www.msn.com/en-us/health/diseases-and-conditions/fda-12-herbal-supplements-have-been-recalled/ar-AA2b780x
+        publisher: The Healthy
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99629
+        publisher: FDA
+        accessed: 2026-09-10
 
