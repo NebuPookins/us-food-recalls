@@ -807,4 +807,30 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99629
         publisher: FDA
         accessed: 2026-09-10
+  - id: 2026-09-02-cuisine-kettle-marketside-tomato-bisque-soup
+    date: 2026-09-02
+    title: Marketside Tomato Bisque Soup Kit recalled for Listeria
+    summary:
+      - soup
+    recalling_firm: CUISINE, KETTLE
+    agency: FDA
+    hazards:
+      - listeria
+    classification: II
+    products:
+      - name: Marketside Tomato Bisque Soup Kit with Cheese Croutons & White Cheddar Cheese
+        brand: Marketside
+        codes:
+          - UPC 194346474004
+          - Best By 8/22/2026
+    distribution: Multi-state (IL, NV, NM, CA, OK, TX, PA, OH, NC, NY, GA, AR)
+    note: The ready‑to‑heat Marketside Tomato Bisque Soup Kit containing cheese croutons was recalled after a presumptive positive test for Listeria monocytogenes. The product was distributed to twelve states and was sold in 540 cases. Consumers should not eat the soup and should discard it or return it to the place of purchase. The FDA and the firm are investigating the source of contamination.
+    citations:
+      - title: Tomato Bisque Recalled Over Possible Listeria Contamination After Being Distributed in 29 States
+        url: https://www.msn.com/en-us/foodanddrink/other/tomato-bisque-recalled-over-possible-listeria-contamination-after-being-distributed-in-29-states/ar-AA2a898u
+        publisher: People
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99690
+        publisher: FDA
+        accessed: 2026-09-11
 
