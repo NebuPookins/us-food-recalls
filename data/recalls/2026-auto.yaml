@@ -807,4 +807,31 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99629
         publisher: FDA
         accessed: 2026-09-10
+  - id: 2026-09-02-africando-foods-llc-clear-glass-bottle-with-black
+    date: 2026-09-02
+    title: Alfredo Hot Sauce recalled for undeclared wheat and soybean oil
+    summary:
+      - hot sauce
+    recalling_firm: Africando Foods LLC
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    products:
+      - name: Alfredo Hot Sauce
+        brand: Africando Foods
+        codes:
+          - "UPC: 860004527114"
+          - AF25296
+          - AF25303
+          - AF25319
+          - AF25333
+          - AF25343
+          - AF25357
+    distribution: 8 wholesale and retail locations in Iowa, Kentucky, and Illinois
+    note: Africando Foods LLC is recalling its Alfredo Hot Sauce because the label fails to list wheat and soybean oil, both potential allergens. The product was distributed to eight wholesale and retail locations across Iowa, Kentucky, and Illinois. Consumers who purchased the sauce should stop using it and return it to the place of purchase for a refund or contact the company for further instructions.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99642
+        publisher: FDA
+        accessed: 2026-09-12
 
