@@ -543,6 +543,7 @@ recalls:
     recalling_firm: Kettle Cuisine LLC
     agency: FDA
     hazards: [listeria]
+    classification: II
     distribution: Walmart stores in 29 states
     cases:
       as_of: 2026-08-12
@@ -566,6 +567,10 @@ recalls:
         url: https://www.usatoday.com/story/grocery/2026/08/16/walmart-tomato-soup-kit-recall-in-delaware-how-to-identify-it/91327995007/
         publisher: USA Today
         accessed: 2026-08-18
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99690
+        publisher: FDA
+        accessed: 2026-09-11
 
   - id: 2026-08-lidl-vitasia-wok-spice-mix
     date: 2026-08-12
