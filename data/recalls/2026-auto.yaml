@@ -834,4 +834,34 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99642
         publisher: FDA
         accessed: 2026-09-12
+  - id: 2026-08-26-lidl-us-trading-vitasia-asian-style-wok-spice
+    date: 2026-08-26
+    title: Vitasia Asian Style Wok Spice Mix recalled for Salmonella
+    summary:
+      - spice mix
+    recalling_firm: Lidl US TRADING
+    agency: FDA
+    hazards:
+      - salmonella
+    classification: I
+    products:
+      - name: Vitasia Asian Style Wok Spice Mix
+        brand: Vitasia
+        codes:
+          - "Lot # 155846"
+          - Best if Used By JUN 2028
+          - UPC 4335619355491
+    distribution: Washington DC, DE, GA, MD, NC, NJ, NY, PA, SC, VA
+    cases:
+      as_of: 2026-08-26
+      illnesses: 0
+    note: Lidl US Trading is recalling Vitasia Asian Style Wok Spice Mix after a positive test for Salmonella. The recall covers about 2,040 containers distributed to Washington DC and several states including DE, GA, MD, NC, NJ, NY, PA, SC, and VA. Consumers should discard the product or return it to the place of purchase and may contact the firm for a refund. No illnesses have been reported as of the announcement date.
+    citations:
+      - title: Grocery chain Lidl recalling spice mix over salmonella concerns
+        url: https://www.yahoo.com/news/us/articles/grocery-chain-lidl-recalling-spice-221702240.html
+        publisher: Yahoo
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99618
+        publisher: FDA
+        accessed: 2026-09-13
 
