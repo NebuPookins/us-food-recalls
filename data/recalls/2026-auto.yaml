@@ -857,9 +857,9 @@ recalls:
       illnesses: 0
     note: Lidl US Trading is recalling Vitasia Asian Style Wok Spice Mix after a positive test for Salmonella. The recall covers about 2,040 containers distributed to Washington DC and several states including DE, GA, MD, NC, NJ, NY, PA, SC, and VA. Consumers should discard the product or return it to the place of purchase and may contact the firm for a refund. No illnesses have been reported as of the announcement date.
     citations:
-      - title: Grocery chain Lidl recalling spice mix over salmonella concerns
-        url: https://www.yahoo.com/news/us/articles/grocery-chain-lidl-recalling-spice-221702240.html
-        publisher: Yahoo
+      - title: Spice mix sold at Lidl recalled over salmonella risk
+        url: https://www.usatoday.com/story/money/2026/08/14/spice-mix-sold-lidl-recalled-salmonella-risk/91311776007/
+        publisher: USA Today
       - title: FDA recall record
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99618
         publisher: FDA
