@@ -864,4 +864,30 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99618
         publisher: FDA
         accessed: 2026-09-13
+  - id: 2026-09-09-the-hampton-grocer-the-hampton-grocer-brand-lacno
+    date: 2026-09-09
+    title: Lacnola Small Batch Lactation Granola recalled for possible Salmonella contamination
+    summary:
+      - granola
+    recalling_firm: The Hampton Grocer
+    agency: FDA
+    hazards:
+      - salmonella
+    classification: I
+    products:
+      - name: Lacnola Small Batch Lactation Granola
+        brand: The Hampton Grocer
+        codes:
+          - Lot Code HGLC-102125 expiration 21OCT2026
+          - Lot Code HGLC-021326 expiration 13FEB2027
+    distribution: Nationwide
+    note: The Hampton Grocer is recalling its Lacnola Small Batch Lactation Granola because the product may be contaminated with Salmonella. The recall covers about 4,059 units distributed nationwide and was issued on September 9, 2026. The granola was produced in a facility that also processes tree nuts, peanuts, sesame, and soy, increasing the risk of cross‑contamination. Consumers should stop using the product and return it to the place of purchase for a full refund.
+    citations:
+      - title: A New FDA Recall Targets a Popular Granola Over Salmonella Fears. It Was Sold Nationwide for Months
+        url: https://www.msn.com/en-us/foodanddrink/foodnews/a-new-fda-recall-targets-a-popular-granola-over-salmonella-fears-it-was-sold-nationwide-for-months/ar-AA2apkMv
+        publisher: Inc.
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99656
+        publisher: FDA
+        accessed: 2026-09-16
 
