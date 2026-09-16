@@ -1101,4 +1101,55 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99635
         publisher: FDA
         accessed: 2026-09-16
+  - id: 2026-08-26-get-fresh-produce-get-fresh-produce-jalapeno-pep
+    date: 2026-08-26
+    title: Get Fresh Produce Jalapeno Peppers recalled for potential Salmonella contamination
+    summary:
+      - jalapeno peppers
+    recalling_firm: GET FRESH PRODUCE
+    agency: FDA
+    hazards:
+      - salmonella
+    classification: I
+    products:
+      - name: Get Fresh Produce Jalapeno Peppers 2 lb. box
+        codes:
+          - "21621908"
+          - 21621908-X0
+          - 21673911-X0
+          - "21692806"
+          - "21541606"
+          - 21541606-X1
+          - 21542008-X0
+          - 21541606-X0
+          - 21722002-X0
+          - 21458408-X0
+          - 21542008-X2
+          - 21621908-X1
+          - 21673911-X1
+      - name: Get Fresh Produce Jalapeno Peppers 10 lb. box
+        codes:
+          - "21621908"
+          - 21621908-X0
+          - 21673911-X0
+          - "21692806"
+          - "21541606"
+          - 21541606-X1
+          - 21542008-X0
+          - 21541606-X0
+          - 21722002-X0
+          - 21458408-X0
+          - 21542008-X2
+          - 21621908-X1
+          - 21673911-X1
+    distribution: Illinois, Indiana, Michigan, Wisconsin
+    note: GET FRESH PRODUCE is recalling its packaged jalapeno peppers sold in 2‑lb and 10‑lb boxes because of a potential Salmonella contamination. The recall covers products distributed to Illinois, Indiana, Michigan, and Wisconsin, totaling about 802 cases. Consumers who purchased these peppers should not eat them and should discard them or return them to the place of purchase. For more information, contact the firm or the FDA.
+    citations:
+      - title: Jalapeño peppers latest fresh veggie recall, this time for Salmonella
+        url: https://www.yahoo.com/news/science/articles/jalape-o-peppers-latest-fresh-211627197.html
+        publisher: Yahoo
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99650
+        publisher: FDA
+        accessed: 2026-09-16
 
