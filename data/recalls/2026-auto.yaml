@@ -1073,4 +1073,32 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99615
         publisher: FDA
         accessed: 2026-09-16
+  - id: 2026-08-26-dairyland-produce-llc-dairyland-produce-llc-pepper-j
+    date: 2026-08-26
+    title: Dairyland Produce Jalapeno peppers recalled for possible Salmonella contamination
+    summary:
+      - peppers
+    recalling_firm: Dairyland Produce, LLC
+    agency: FDA
+    hazards:
+      - salmonella
+    classification: I
+    products:
+      - name: Dairyland Produce Jalapeno peppers
+        codes:
+          - UPC 0009900168
+          - Lot X2741775
+          - Lot X2741859
+          - Lot X2744163
+          - Lot X2744706
+          - Lot X2746349
+          - Lot X2746490
+          - Lot X2748743
+    distribution: Louisiana and Texas
+    note: Dairyland Produce, LLC is recalling its 5‑lb bags of Jalapeno peppers because they may be contaminated with Salmonella. The recall covers products with UPC 0009900168 and the listed lot codes. The affected peppers were distributed to retail locations in Louisiana and Texas. Consumers who have purchased these peppers should discard them or return them to the store for a refund.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99635
+        publisher: FDA
+        accessed: 2026-09-16
 
