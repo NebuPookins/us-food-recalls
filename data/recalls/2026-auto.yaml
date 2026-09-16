@@ -1305,4 +1305,30 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99519
         publisher: FDA
         accessed: 2026-09-16
+  - id: 2026-09-02-lidl-us-trading-eridanous-greek-style-shortbre
+    date: 2026-09-02
+    title: Eridanous Greek Style Shortbread Cookies with apricot filling and cocoa topping recalled for undeclared wheat, soy, milk, egg, and coconut
+    summary:
+      - cookies
+    recalling_firm: Lidl US TRADING
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: II
+    products:
+      - name: Eridanous Greek Style Shortbread Cookies with apricot filling and cocoa topping with coconut sprinkles
+        codes:
+          - "BEST BEFORE: 10/11/2026"
+          - "LOT NO: 260315"
+          - "UPC: 4056489125846"
+    distribution: Shipped to DC, DE, GA, MD, NJ, NY, NC, PA, SC, and VA
+    note: Lidl US Trading is recalling 200 units of Eridanous Greek Style Shortbread Cookies with apricot filling and cocoa topping because the label omitted foreign language text and failed to declare wheat, soy, milk, eggs, and coconut, a tree nut. The product was distributed to stores in ten states including DC, NY, and others. Consumers who purchased the cookies should not eat them and should return them to the place of purchase for a refund or contact the company for instructions. The recall is classified as Class II.
+    citations:
+      - title: Popular Lidl shortbread cookies recalled. See affected products
+        url: https://www.yahoo.com/news/us/articles/popular-lidl-shortbread-cookies-recalled-155339321.html
+        publisher: Yahoo
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99493
+        publisher: FDA
+        accessed: 2026-09-16
 
