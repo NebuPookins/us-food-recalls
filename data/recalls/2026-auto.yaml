@@ -973,4 +973,42 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99582
         publisher: FDA
         accessed: 2026-09-16
+  - id: 2026-09-02-horizon-organic-dairy-llc-horizon-organic-org-asep-choc
+    date: 2026-09-02
+    title: Horizon Organic chocolate milk recalled for potential spoilage
+    summary:
+      - milk
+    recalling_firm: Horizon Organic Dairy, LLC
+    agency: FDA
+    hazards:
+      - processing-defect
+    classification: II
+    products:
+      - name: Horizon Organic Chocolate Milk 1% 8 oz (12 count)
+        brand: Horizon Organic
+        codes:
+          - UPC 742365002700
+          - Best By 28 JAN 2027
+          - Best By 30 JAN 2027
+          - Best By 31 JAN 2027
+          - Best By 01 FEB 2027
+          - Best By 02 FEB 2027
+          - Best By 03 FEB 2027
+      - name: Horizon Organic Chocolate Milk 1% 8 oz (18 count)
+        brand: Horizon Organic
+        codes:
+          - UPC 742365208867
+          - Best By 31 JAN 2027
+          - Best By 01 FEB 2027
+          - Best By 02 FEB 2027
+    distribution: Distributed throughout the United States.
+    note: Horizon Organic Dairy is recalling its 1% chocolate milk cartons because the product may be spoiled. The recall covers both 12‑count and 18‑count cases distributed nationwide. Consumers should check the UPC and best‑by dates on their cartons and discard any product that matches the recall. For refunds or questions, contact Horizon Organic Dairy at the address listed on the recall notice.
+    citations:
+      - title: Horizon Organic recalls 53,000 cases of chocolate milk, warns bottles could already be spoiled
+        url: https://www.msn.com/en-us/news/other/horizon-organic-recalls-53000-cases-of-chocolate-milk-warns-bottles-could-already-be-spoiled/ar-AA2bw9DT
+        publisher: Baller Alert
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99605
+        publisher: FDA
+        accessed: 2026-09-16
 
