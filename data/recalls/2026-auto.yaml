@@ -1358,4 +1358,33 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99569
         publisher: FDA
         accessed: 2026-09-16
+  - id: 2026-08-19-piazza-produce-dba-cibus-fresh-cibus-fresh-sprig-and-sprout-a
+    date: 2026-08-19
+    title: Cibus Fresh Garden Salad recalled for possible Cyclospora contamination
+    summary:
+      - salad
+    recalling_firm: Piazza Produce (dba CIBUS Fresh)
+    agency: FDA
+    hazards:
+      - other
+    classification: I
+    products:
+      - name: Cibus Fresh Garden Salad
+        brand: Cibus Fresh
+        codes:
+          - UPC 810028250253
+          - Best by 7/13/2026
+          - Best by 7/14/2026
+          - Best by 7/16/2026
+          - Best by 7/17/2026
+          - Best by 7/18/2026
+          - Best by 7/19/2026
+          - Best by 7/20/2026
+    distribution: Illinois, Indiana, Kentucky, Mississippi, Ohio, Tennessee
+    note: The FDA is recalling Cibus Fresh Garden Salad sold in 7.75‑oz clear plastic containers because it may be contaminated with the parasite Cyclospora, which can cause gastrointestinal illness. The product was distributed to stores in Illinois, Indiana, Kentucky, Mississippi, Ohio and Tennessee, with 1,279 retail units affected. Consumers should check the UPC 810028250253 and best‑by dates listed, and discard the salad or return it to the place of purchase. No illnesses have been reported as of the announcement date.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99470
+        publisher: FDA
+        accessed: 2026-09-16
 
