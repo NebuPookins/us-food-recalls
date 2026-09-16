@@ -939,4 +939,38 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99640
         publisher: FDA
         accessed: 2026-09-16
+  - id: 2026-09-09-lexunder-inc-food-to-live-organic-supergras
+    date: 2026-09-09
+    title: Food to Live Organic SuperGrass Powder contains Salmonella
+    summary:
+      - powder
+    recalling_firm: Lexunder Inc
+    agency: FDA
+    hazards:
+      - salmonella
+    classification: I
+    products:
+      - name: Food to Live Organic SuperGrass Powder
+        codes:
+          - "UPC: 6 oz 810097461543"
+          - "UPC: 12 oz 810097461550"
+          - "UPC: 1 lb 810097461567"
+          - "UPC: 4 lb 810097461581"
+          - Lot codes SO-77541
+          - Lot codes SO-77704
+          - Lot codes SO-77839
+          - Lot codes SO-78003
+          - Lot codes SO-78160
+          - Lot codes SO-78245
+          - Lot codes SO-78252
+    distribution: Nationwide (multiple states and U.S. Virgin Islands)
+    note: Lexunder Inc. is recalling its Food to Live Organic SuperGrass Powder after testing found contamination with Salmonella. The recall covers 2,802 units in 6‑oz, 12‑oz, 1‑lb and 4‑lb packages distributed to stores in many states and the U.S. Virgin Islands. Consumers should not consume the product and should return it to the place of purchase for a full refund or contact the company for disposal instructions.
+    citations:
+      - title: Food To Live recalls green powders nationwide over Salmonella risk
+        url: https://www.consumeraffairs.com/news/food-to-live-recalls-green-powders-nationwide-over-salmonella-risk-081026.html
+        publisher: ConsumerAffairs
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99582
+        publisher: FDA
+        accessed: 2026-09-16
 
