@@ -1233,4 +1233,24 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99548
         publisher: FDA
         accessed: 2026-09-16
+  - id: 2026-09-09-wonton-specialists-wonton-specialist-inc-pan-frie
+    date: 2026-09-09
+    title: Pan Fried Noodle recalled for undeclared FD&C Red No. 40
+    summary:
+      - noodles
+    recalling_firm: Wonton Specialists
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: III
+    products:
+      - name: Pan Fried Noodle
+        brand: Wonton Specialists
+    distribution: New York, New Jersey, Pennsylvania
+    note: Wonton Specialists is recalling its 16‑oz and 5‑lb pan‑fried noodle packages because they contain the food‑color additive FD&C Red No. 40 that is not listed on the label. The product was distributed to stores in New York, New Jersey and Pennsylvania. Consumers should not eat the noodles and should return them to the place of purchase for a full refund.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99508
+        publisher: FDA
+        accessed: 2026-09-16
 
