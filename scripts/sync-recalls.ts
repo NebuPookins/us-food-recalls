@@ -279,7 +279,7 @@ When "include": true, produce a "draft" object with these fields:
   "DQ Chocolate Reduced Fat Ice Cream Mix contains metal shavings" or
   "Acme Foods bagged spinach recalled for listeria". Lead with the product as a
   shopper would recognise it, not the firm name, and state the hazard/defect.
-- summary: an array of 1-2 lowercase food labels, e.g. ["spinach"].
+- summary: an array of 1-2 lowercase food labels, e.g. ["spinach"]; omit the field when no label fits.
 - recalling_firm: the firm name (omit if unknown).
 - hazards: an array of one or more of: listeria, salmonella, e-coli, botulism, hepatitis-a,
   norovirus, undeclared-allergen, foreign-material, chemical-contamination,
@@ -303,6 +303,9 @@ When "include": true, produce a "draft" object with these fields:
 - note: 2-4 sentences of plain prose describing what was recalled, why, the hazard, and what
   consumers should do. No markdown, no links, no bullet points.
 
+Never return an empty array for any field: "products" and "hazards" must each contain
+at least one item, and "summary" should be omitted rather than returned as [].
+
 Return JSON of exactly this shape:
 { "include": true, "draft": { ... } }   or   { "include": false, "exclude_reason": "..." }
 
@@ -310,9 +313,14 @@ Do not invent facts; use only what the report states. Write the note in plain En
 
 const DraftSchema = z.object({
   title: z.string().min(1),
-  summary: z.array(z.string().min(1)).min(1),
+  // Optional (as in RecallSchema); `assemble` drops an empty array so the model
+  // can't fail a draft over a field the site treats as optional.
+  summary: z.array(z.string().min(1)).optional(),
   recalling_firm: z.string().min(1).optional(),
-  hazards: z.array(z.enum(HAZARDS)).nonempty(),
+  hazards: z
+    .array(z.enum(HAZARDS))
+    .nonempty()
+    .refine((hazards) => new Set(hazards).size === hazards.length, 'must not contain duplicates'),
   classification: z.enum(CLASSIFICATIONS).optional(),
   products: z
     .array(
@@ -328,11 +336,12 @@ const DraftSchema = z.object({
   note: z.string().min(1),
 });
 
-const LlmResponseSchema = z.object({
-  include: z.boolean(),
-  exclude_reason: z.string().optional(),
-  draft: DraftSchema.optional(),
-});
+// A discriminated union so `{ "include": true }` with no `draft` is rejected by the
+// schema (and retried) instead of surfacing as a null dereference in `assemble`.
+const LlmResponseSchema = z.discriminatedUnion('include', [
+  z.object({ include: z.literal(true), draft: DraftSchema }),
+  z.object({ include: z.literal(false), exclude_reason: z.string().optional() }),
+]);
 
 type DraftResult = { recall?: Recall; excluded?: string };
 
@@ -340,6 +349,30 @@ function parseJsonLoose(text: string): unknown {
   const trimmed = text.trim();
   const fenced = trimmed.match(/```(?:json)?\s*([\s\S]*?)```/);
   return JSON.parse(fenced ? fenced[1] : trimmed);
+}
+
+/** "summary: Too small: ...; products: ..." — names the failing fields, unlike a bare message. */
+function formatIssues(error: { issues: readonly { path: readonly PropertyKey[]; message: string }[] }): string {
+  return error.issues
+    .map((issue) => `${issue.path.length > 0 ? issue.path.join('.') : '(root)'}: ${issue.message}`)
+    .join('; ');
+}
+
+type LlmParseResult =
+  | { ok: true; data: z.infer<typeof LlmResponseSchema> }
+  | { ok: false; reason: string };
+
+/** Parse the model's text reply into an LlmResponse, or a reason it couldn't be. */
+function parseLlmResponse(content: string): LlmParseResult {
+  let raw: unknown;
+  try {
+    raw = parseJsonLoose(content);
+  } catch (e) {
+    return { ok: false, reason: `response is not valid JSON (${msg(e)})` };
+  }
+  const parsed = LlmResponseSchema.safeParse(raw);
+  if (!parsed.success) return { ok: false, reason: formatIssues(parsed.error) };
+  return { ok: true, data: parsed.data };
 }
 
 type NewsCitation = { title: string; url: string; publisher?: string };
@@ -410,6 +443,9 @@ async function findNewsCitation(rec: SourceRecord): Promise<NewsCitation | null>
 
 // Free tier is 8k tokens/min, so a 429 clears after ~60s; retry rather than fail.
 const MAX_GROQ_RETRIES = 10;
+// A malformed reply is usually a one-off slip, not something a long retry loop
+// (each re-sending the whole prompt) will fix — a few corrective nudges is enough.
+const MAX_PARSE_RETRIES = 3;
 
 async function postGroq(key: string, payload: object): Promise<Response> {
   return fetch(GROQ_URL, {
@@ -419,6 +455,18 @@ async function postGroq(key: string, payload: object): Promise<Response> {
   });
 }
 
+/** POST to Groq, retrying transient 429s until one clears or the retry budget runs out. */
+async function postGroqWithRetry(key: string, payload: object, recKey: string): Promise<Response> {
+  for (let attempt = 0; ; attempt++) {
+    const res = await postGroq(key, payload);
+    if (res.status !== 429 || attempt >= MAX_GROQ_RETRIES) return res;
+    const retryAfter = Number(res.headers.get('retry-after'));
+    const waitSec = Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter : 60;
+    warn(`Groq rate-limited on ${recKey} — waiting ${waitSec}s (attempt ${attempt + 1}/${MAX_GROQ_RETRIES})`);
+    await sleep(waitSec * 1000);
+  }
+}
+
 async function groqDraft(
   rec: SourceRecord,
   used: Set<string>,
@@ -426,44 +474,64 @@ async function groqDraft(
 ): Promise<DraftResult> {
   const key = process.env.GROQ_API_KEY;
   if (!key) throw new Error('GROQ_API_KEY is not set');
-  const payload = {
-    model: GROQ_MODEL,
-    temperature: 0,
-    response_format: { type: 'json_object' },
-    messages: [
-      { role: 'system', content: SYSTEM_PROMPT },
-      { role: 'user', content: JSON.stringify(rec, null, 2) },
-    ],
-  };
 
-  let res = await postGroq(key, payload);
-  for (let attempt = 0; res.status === 429 && attempt < MAX_GROQ_RETRIES; attempt++) {
-    const retryAfter = Number(res.headers.get('retry-after'));
-    const waitSec = Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter : 60;
-    warn(`Groq rate-limited on ${rec.key} — waiting ${waitSec}s (attempt ${attempt + 1}/${MAX_GROQ_RETRIES})`);
-    await sleep(waitSec * 1000);
-    res = await postGroq(key, payload);
-  }
+  const base: { role: 'system' | 'user'; content: string }[] = [
+    { role: 'system', content: SYSTEM_PROMPT },
+    { role: 'user', content: JSON.stringify(rec, null, 2) },
+  ];
+  let nudge: { role: 'user'; content: string } | undefined;
 
-  if (res.status === 429) {
-    const detail = (await res.text().catch(() => '')).slice(0, 200);
-    throw new Error(`Groq still rate-limited after ${MAX_GROQ_RETRIES} retries: ${detail}`);
+  // Groq is flaky in two distinct ways — rate limits (429) and malformed model
+  // output — so both are retried, with different budgets, before failing loudly.
+  for (let attempt = 0; ; attempt++) {
+    const res = await postGroqWithRetry(
+      key,
+      {
+        model: GROQ_MODEL,
+        temperature: 0,
+        response_format: { type: 'json_object' },
+        messages: nudge ? [...base, nudge] : base,
+      },
+      rec.key,
+    );
+
+    if (!res.ok) {
+      const detail = (await res.text().catch(() => '')).slice(0, 200);
+      throw new Error(
+        res.status === 429
+          ? `Groq still rate-limited after ${MAX_GROQ_RETRIES} retries: ${detail}`
+          : `Groq HTTP ${res.status}: ${detail}`,
+      );
+    }
+
+    const body = (await res.json()) as { choices?: { message?: { content?: string } }[] };
+    const content = body.choices?.[0]?.message?.content ?? '';
+    const result = parseLlmResponse(content);
+    if (result.ok) {
+      const answer = result.data;
+      if (!answer.include) return { excluded: answer.exclude_reason || 'not significant' };
+      const draft = answer.draft;
+      const news = await findNewsCitation(rec);
+      return { recall: assemble(rec, draft, news, used, today) };
+    }
+
+    // Log the model's verbatim reply (not re-serialized) so a malformed one can be
+    // inspected directly — it may be pretty-printed JSON spanning many lines.
+    warn(`Groq raw response for ${rec.key}:\n${content}`);
+
+    if (attempt >= MAX_PARSE_RETRIES) {
+      throw new Error(
+        `Groq returned invalid output after ${MAX_PARSE_RETRIES} retries: ${result.reason}`,
+      );
+    }
+    warn(`Groq returned invalid output on ${rec.key} — retrying (attempt ${attempt + 1}/${MAX_PARSE_RETRIES}): ${result.reason}`);
+    // Overwrite the previous nudge rather than accumulating them, so the retried
+    // prompt stays at three messages instead of re-sending stale errors.
+    nudge = {
+      role: 'user',
+      content: `Your previous response failed validation: ${result.reason}. Return JSON of exactly the required shape.`,
+    };
   }
-  if (!res.ok) {
-    const detail = (await res.text().catch(() => '')).slice(0, 200);
-    throw new Error(`Groq HTTP ${res.status}: ${detail}`);
-  }
-  const body = (await res.json()) as { choices?: { message?: { content?: string } }[] };
-  const content = body.choices?.[0]?.message?.content ?? '';
-  const parsed = LlmResponseSchema.safeParse(parseJsonLoose(content));
-  if (!parsed.success) {
-    throw new Error(`Groq returned invalid shape: ${parsed.error.issues[0]?.message}`);
-  }
-  const answer = parsed.data;
-  if (!answer.include) return { excluded: answer.exclude_reason || 'not significant' };
-  const draft = answer.draft!;
-  const news = await findNewsCitation(rec);
-  return { recall: assemble(rec, draft, news, used, today) };
 }
 
 function assemble(
@@ -478,7 +546,7 @@ function assemble(
     id: makeId(rec.date, rec.firm, rec.product, used),
     date: rec.date || today,
     title: draft.title,
-    summary: draft.summary,
+    summary: draft.summary?.length ? draft.summary : undefined,
     recalling_firm: draft.recalling_firm || rec.firm || undefined,
     agency: rec.agency,
     hazards: draft.hazards,
@@ -497,7 +565,7 @@ function assemble(
   };
   const checked = RecallSchema.safeParse(candidate);
   if (!checked.success) {
-    throw new Error(`assembled recall invalid: ${checked.error.issues[0]?.message}`);
+    throw new Error(`assembled recall invalid: ${formatIssues(checked.error)}`);
   }
   used.add(checked.data.id);
   return checked.data;
