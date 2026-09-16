@@ -890,4 +890,27 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99656
         publisher: FDA
         accessed: 2026-09-16
+  - id: 2026-09-02-upstate-niagara-cooperative-mehadrin-chocolate-leben-6-oz
+    date: 2026-09-02
+    title: Mehadrin Chocolate Leben cups may be improperly pasteurized
+    summary:
+      - chocolate
+    recalling_firm: UPSTATE NIAGARA COOPERATIVE
+    agency: FDA
+    hazards:
+      - processing-defect
+    classification: II
+    products:
+      - name: Mehadrin Chocolate Leben 6 OZ (170g) Cups
+        codes:
+          - "UPC: 070784023144"
+          - "Lot code: 101426 L5 2W"
+          - "Use by date: 10/14/26"
+    distribution: NJ
+    note: Upstate Niagara Cooperative is recalling approximately 3,975 cases of 6‑ounce Mehadrin Chocolate Leben cups distributed in New Jersey because the product may not have been properly pasteurized. The issue is a processing defect that could affect safety. Consumers should check their freezers for the recalled product and discard it or return it to the place of purchase.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99619
+        publisher: FDA
+        accessed: 2026-09-16
 
