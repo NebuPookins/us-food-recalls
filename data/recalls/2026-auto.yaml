@@ -1181,4 +1181,26 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99695
         publisher: FDA
         accessed: 2026-09-16
+  - id: 2026-08-26-nutrient-foods-llc-protein-cereal-cocoa-crunch-sh
+    date: 2026-08-26
+    title: Protein Cereal Cocoa Crunch contains undeclared soy
+    summary:
+      - cereal
+    recalling_firm: Nutrient Foods, LLC
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: II
+    products:
+      - name: Protein Cereal Cocoa Crunch
+        codes:
+          - "030651"
+          - "030951"
+    distribution: Distributed to FL, IN, MD, MA, MO, NJ, NC, OK, PA, and TX
+    note: Nutrient Foods, LLC is recalling 16 kits of Protein Cereal Cocoa Crunch because the ingredient statement failed to list soy, a major allergen. The product was shipped to ten states across the country. Consumers who purchased this cereal should stop using it and return it to the place of purchase for a full refund or contact the company for disposal instructions.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99580
+        publisher: FDA
+        accessed: 2026-09-16
 
