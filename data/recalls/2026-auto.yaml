@@ -1331,4 +1331,31 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99493
         publisher: FDA
         accessed: 2026-09-16
+  - id: 2026-08-26-coast-citrus-distributors-jalapeno-pepper-packaged-in-bu
+    date: 2026-08-26
+    title: Jalapeno peppers recalled for potential Salmonella Javiana contamination
+    summary:
+      - peppers
+    recalling_firm: Coast Citrus Distributors
+    agency: FDA
+    hazards:
+      - salmonella
+    classification: I
+    products:
+      - name: Jalapeno peppers
+        codes:
+          - "73296608113"
+          - "73296600558"
+          - "73296610927"
+          - "73296600559"
+          - "732966107055"
+          - "02060042710"
+          - Pack date 07/01/2026 - 07/31/2026
+    distribution: Wholesale distributors in central and east coast states and further nationwide; no retail distribution identified as of 08/10/2026
+    note: The FDA announced a recall of bulk jalapeno peppers packaged by Coast Citrus Distributors because they may be contaminated with Salmonella Javiana. The peppers were shipped in large bulk containers to wholesale distributors in the central and east coast states and have also been distributed nationwide for further processing, but no retail sales have been identified. Consumers should discard any of these peppers or return them to the supplier, and businesses should cease using the product in food preparation. The recall covers all product with pack dates from July 1 2026 through July 31 2026.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99569
+        publisher: FDA
+        accessed: 2026-09-16
 
