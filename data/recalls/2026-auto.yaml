@@ -1276,4 +1276,33 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99517
         publisher: FDA
         accessed: 2026-09-16
+  - id: 2026-08-19-529-commerce-llc-aquafaba-powder-vegan-replacem
+    date: 2026-08-19
+    title: Aquafaba Powder vegan replacement contains undeclared egg
+    summary:
+      - egg
+    recalling_firm: 529 COMMERCE, LLC
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: I
+    products:
+      - name: Aquafaba Powder, Vegan Replacement
+        codes:
+          - Best By 12/14/2026 (Lot 1)
+          - Best By 12/12/2027 (Lot 2)
+          - NG2024121501
+          - NG2025121301
+          - "9928453095"
+          - "9928430622"
+    distribution: ID, FL, MI, MN, UT, OR, WA, OK, TX, NY, TN, IL, CA, KS, MA, NE, AZ, SC, MD, WI, GA, CO, WV
+    note: The FDA has issued a Class I recall of Aquafaba Powder vegan replacement sold by 529 COMMERCE, LLC because the product may contain undeclared egg, posing an allergen risk. The recall covers 3,860 units distributed to multiple states across the U.S. Consumers who purchased this product should stop using it immediately and return it to the place of purchase for a full refund.
+    citations:
+      - title: Vegan egg replacement product may contain undeclared eggs
+        url: https://www.yahoo.com/news/us/articles/vegan-egg-replacement-product-may-144002439.html
+        publisher: Yahoo
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99519
+        publisher: FDA
+        accessed: 2026-09-16
 
