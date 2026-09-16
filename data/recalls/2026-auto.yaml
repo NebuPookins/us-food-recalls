@@ -1011,4 +1011,36 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99605
         publisher: FDA
         accessed: 2026-09-16
+  - id: 2026-09-09-ron-s-home-style-foods-inc-item-dipsau0205rfs-salsa-auten
+    date: 2026-09-09
+    title: Salsa Autentica 5 lb. salsa recalled for potential Salmonella contamination
+    summary:
+      - salsa
+    recalling_firm: Ron's Home Style Foods, Inc.
+    agency: FDA
+    hazards:
+      - salmonella
+    classification: I
+    products:
+      - name: Salsa Autentica 5 lb. packaged in round plastic container
+        brand: Salsa Autentica
+        codes:
+          - 61890047 (Use-By Date 8/27/2026)
+          - 61960049 (Use-By Date 9/3/2026)
+          - 62030033 (Use-By Date 9/10/2026)
+          - 61900075 (Use-By Date 8/28/2026)
+          - 61970088 (Use-By Date 9/4/2026)
+          - 62110071 (Use-By Date 9/18/2026)
+    distribution: Arkansas, Oklahoma, Texas
+    cases:
+      as_of: 2026-09-09
+      illnesses: 0
+      hospitalizations: 0
+      deaths: 0
+    note: Ron's Home Style Foods is recalling its 5‑lb. Salsa Autentica packaged in round plastic containers because the jalapeños used may be contaminated with Salmonella. The recall covers product distributed to Arkansas, Oklahoma and Texas, totaling about 2,270 lb. Consumers who purchased the salsa should discard it or return it to the place of purchase. No illnesses have been reported as of the announcement date.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99587
+        publisher: FDA
+        accessed: 2026-09-16
 
