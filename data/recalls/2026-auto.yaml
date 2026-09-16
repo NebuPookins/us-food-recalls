@@ -1152,4 +1152,33 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99650
         publisher: FDA
         accessed: 2026-09-16
+  - id: 2026-09-02-sirna-and-sons-produce-inc-sirna-and-sons-produce-pepper
+    date: 2026-09-02
+    title: Jalapeño peppers recalled for potential Salmonella Javiana contamination
+    summary:
+      - pepper
+    recalling_firm: Sirna and Sons Produce, Inc
+    agency: FDA
+    hazards:
+      - salmonella
+    classification: I
+    products:
+      - name: Sirna & Sons Produce Jalapeño Pepper 1 lb bag
+        brand: Sirna & Sons Produce
+        codes:
+          - Lot 60947409
+          - Lot 60991812
+          - Pack Date 07/13/26
+          - Pack Date 07/23/26
+          - Internal Product Number 00184
+    distribution: Ohio and Pennsylvania (food service use only)
+    cases:
+      as_of: 2026-09-02
+      illnesses: 0
+    note: Sirna & Sons Produce is recalling 1‑lb bags of its jalapeño peppers that were repackaged for food‑service use in Ohio and Pennsylvania. The recall was issued because the product may be contaminated with Salmonella Javiana. No illnesses have been reported as of the announcement date. Consumers and food‑service operators should discard the product or return it to the supplier.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99695
+        publisher: FDA
+        accessed: 2026-09-16
 
