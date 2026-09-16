@@ -1203,4 +1203,34 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99580
         publisher: FDA
         accessed: 2026-09-16
+  - id: 2026-09-09-ukrop-s-homestyle-foods-llc-bread-pudding-with-vanilla-sau
+    date: 2026-09-09
+    title: Bread Pudding with Vanilla Sauce recalled for metal fragments
+    summary:
+      - bread pudding
+    recalling_firm: Ukrop's Homestyle Foods LLC
+    agency: FDA
+    hazards:
+      - foreign-material
+    classification: II
+    products:
+      - name: Bread Pudding with Vanilla Sauce
+        brand: Ukrop's Homestyle Foods
+        codes:
+          - UPC 72251591732
+          - Best By 07/06/26
+          - Best By 08/03/26
+    distribution: Shipped to Kentucky, North Carolina, Virginia, and West Virginia
+    cases:
+      as_of: 2026-09-09
+      illnesses: 0
+    note: Ukrop's Homestyle Foods is recalling its 4‑lb Bread Pudding with Vanilla Sauce because metal fragments were found in the product. The affected units were distributed to stores in Kentucky, North Carolina, Virginia and West Virginia. Consumers should not eat the product and should return it to the place of purchase for a full refund or contact the company for further instructions.
+    citations:
+      - title: Ukrop's Homestyle Foods Issues Voluntary Recall of Six Items Sold in Kentucky, North Carolina, Virginia, West Virginia
+        url: https://www.yahoo.com/news/us/articles/ukrops-homestyle-foods-issues-voluntary-000349675.html
+        publisher: Yahoo
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99548
+        publisher: FDA
+        accessed: 2026-09-16
 
