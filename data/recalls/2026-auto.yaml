@@ -913,4 +913,30 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99619
         publisher: FDA
         accessed: 2026-09-16
+  - id: 2026-08-26-wfm-purchasing-lp-whole-foods-medium-pico-de-gal
+    date: 2026-08-26
+    title: Whole Foods Medium Pico de Gallo Guacamole Dip recalled for possible Salmonella contamination
+    summary:
+      - guacamole
+    recalling_firm: WFM Purchasing, LP
+    agency: FDA
+    hazards:
+      - salmonella
+    classification: I
+    products:
+      - name: Whole Foods Medium Pico de Gallo Guacamole Dip
+        brand: Whole Foods
+        codes:
+          - "Best Before/By Date: 8/7/2026 - 8/12/2026"
+          - PLU 29802800000
+    distribution: AR, IA, IL, IN, KY, LA, MI, MN, MO, OH, OK, TX, WI
+    note: Whole Foods Medium Pico de Gallo Guacamole Dip sold in clear plastic containers is being recalled because the jalapeños used may be contaminated with Salmonella. The recall covers approximately 13,000 units distributed to stores in thirteen states. Consumers should check the PLU code 29802800000 and the best‑by dates of 8/7/2026 to 8/12/2026, and discard the product or return it to the place of purchase.
+    citations:
+      - title: Whole Foods guacamole recall classified under FDA’s highest risk level
+        url: https://www.yahoo.com/news/us/articles/whole-foods-guacamole-recall-classified-134727483.html
+        publisher: Yahoo
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99640
+        publisher: FDA
+        accessed: 2026-09-16
 
