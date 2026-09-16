@@ -1253,4 +1253,27 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99508
         publisher: FDA
         accessed: 2026-09-16
+  - id: 2026-08-19-lyle-style-lyle-style-mild-bloody-mary-mi
+    date: 2026-08-19
+    title: Lyle Style Mild Bloody Mary Mix recalled for undeclared soy
+    summary:
+      - bloody mary mix
+    recalling_firm: Lyle Style
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: II
+    products:
+      - name: Lyle Style Mild Bloody Mary Mix
+        brand: Lyle Style
+        codes:
+          - UPC 784762037303
+          - Production dates 7-28-2025 to 7-28-2026
+    distribution: Oregon and Washington
+    note: Lyle Style is recalling its Mild Bloody Mary Mix because the label fails to list soy flavoring and soy lecithin present in the Worcestershire sauce. The undeclared soy poses an allergen risk for consumers with soy allergies. The product was distributed in Oregon and Washington, with a total of 50 cases. Consumers who purchased this mix should stop using it and return it to the place of purchase for a refund.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99517
+        publisher: FDA
+        accessed: 2026-09-16
 
