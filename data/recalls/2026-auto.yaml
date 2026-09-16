@@ -1387,4 +1387,30 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99470
         publisher: FDA
         accessed: 2026-09-16
+  - id: 2026-09-02-botticelli-foods-llc-bettergoods-brand-pistachio-nu
+    date: 2026-09-02
+    title: Bettergoods Pistachio Nut Butter recalled for possible Salmonella contamination
+    summary:
+      - nuts
+    recalling_firm: Botticelli Foods, LLC
+    agency: FDA
+    hazards:
+      - salmonella
+    classification: I
+    products:
+      - name: Bettergoods Pistachio Nut Butter
+        brand: bettergoods
+        codes:
+          - UPC 194346207961
+          - "Lot: LB028ACP04 exp. date: January 28, 2027"
+    distribution: Alabama, Alaska, Arizona, Colorado, Florida, Georgia, Idaho, Kansas, Mississippi, Missouri, Montana, Nebraska, Nevada, New Mexico, Oregon, South Dakota, Tennessee, Washington, and Wyoming
+    note: Botticelli Foods, LLC is recalling its Bettergoods Pistachio Nut Butter because the product may be contaminated with Salmonella. The recall covers about 16,200 units distributed across multiple states. Consumers who purchased the 6.7‑oz jars should check the lot code LB028ACP04 and expiration date of January 28, 2027, and discard the product or return it to the place of purchase.
+    citations:
+      - title: "Nut butter recall update: FDA issues highest risk warning"
+        url: https://www.msn.com/en-us/news/other/nut-butter-recall-update-fda-issues-highest-risk-warning/ar-AA2b2w1l
+        publisher: Newsweek
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99538
+        publisher: FDA
+        accessed: 2026-09-16
 
