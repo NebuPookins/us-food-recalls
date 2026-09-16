@@ -1413,4 +1413,36 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99538
         publisher: FDA
         accessed: 2026-09-16
+  - id: 2026-08-26-prospector-popcorn-llc-prospector-popcorn-fudge-brown
+    date: 2026-08-26
+    title: Prospector Popcorn Fudge Brownie Gourmet Popcorn recalled for inaccurate nutrient labeling
+    summary:
+      - popcorn
+    recalling_firm: Prospector Popcorn, LLC
+    agency: FDA
+    hazards:
+      - mislabeling
+    classification: III
+    products:
+      - name: Prospector Popcorn Fudge Brownie Gourmet Popcorn 1.5 oz
+        codes:
+          - "UPC: 850073852354"
+          - "best by: July 10, 2027"
+      - name: Prospector Popcorn Fudge Brownie Gourmet Popcorn 3.5 oz
+        codes:
+          - "UPC: 850073852293"
+          - "best by: July 10, 2027"
+    distribution: Nationwide across multiple states and DC
+    cases:
+      as_of: 2026-08-26
+      illnesses: 0
+    note: Prospector Popcorn, LLC is recalling its Fudge Brownie Gourmet Popcorn in 1.5‑oz and 3.5‑oz packages because the nutrition facts inaccurately overstate potassium and calcium levels. The recall covers about 21,400 units distributed to 44 states and the District of Columbia. No illnesses have been reported. Consumers should stop using the product and return it to the place of purchase for a refund.
+    citations:
+      - title: Gourmet popcorn brand recalled in Connecticut, New York over undeclared soy
+        url: https://www.msn.com/en-us/money/other/gourmet-popcorn-brand-recalled-in-connecticut-new-york-over-undeclared-soy/ar-AA2brAqr
+        publisher: NBC New York
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99434
+        publisher: FDA
+        accessed: 2026-09-16
 
