@@ -1043,4 +1043,34 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99587
         publisher: FDA
         accessed: 2026-09-16
+  - id: 2026-09-09-marina-del-rey-foods-inc-frankie-s-organic-plant-based
+    date: 2026-09-09
+    title: Frankie's Organic Plant-Based Puffs Vegan Cheddar recalled for undeclared milk
+    summary:
+      - vegan cheese
+    recalling_firm: Marina Del Rey Foods inc.
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: I
+    products:
+      - name: Frankie's Organic Plant-Based Puffs Vegan Cheddar
+        brand: Frankie's Organic
+        codes:
+          - UPC 816929000119
+          - "Best If Used By: 05/16/2027"
+          - "Best If Used By: 07/03/2027"
+    distribution: Washington, Florida, South Carolina, Georgia, and Oregon via PCC Markets, Earth Fare stores, and select independent retailers
+    cases:
+      as_of: 2026-09-09
+      illnesses: 0
+    note: The vegan cheddar puff snack was found to contain undeclared milk, posing a risk to consumers with dairy allergies. The product was sold at PCC Markets in Washington, Earth Fare stores in Florida and South Carolina, and various independent retailers in those areas, with inventory also removed from distribution centers in Georgia and Oregon. Consumers who purchased the product should stop using it and return it for a full refund. The recall is classified as a Class I safety issue.
+    citations:
+      - title: Frankie's Organic Issues Allergy Alert on Undeclared Milk in Frankie's Organic Plant-Based Vegan Cheddar Puffs
+        url: https://finance.yahoo.com/healthcare/articles/frankies-organic-issues-allergy-alert-220000204.html
+        publisher: Yahoo Finance
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99615
+        publisher: FDA
+        accessed: 2026-09-16
 
