@@ -1445,4 +1445,30 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99434
         publisher: FDA
         accessed: 2026-09-16
+  - id: 2026-09-02-khong-guan-hq-glutinous-rice-balls-with-blac
+    date: 2026-09-02
+    title: Glutinous Rice Balls with Black Sesame Filling recalled for undeclared peanuts
+    summary:
+      - rice
+    recalling_firm: KHONG GUAN (HQ)
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: I
+    products:
+      - name: Glutinous Rice Balls with Black Sesame Filling
+        codes:
+          - "6908791000053"
+          - "USE BY: 10/19/2027"
+          - "USE BY: 9/22/2027"
+    distribution: Arizona, California, Colorado, Hawaii, New Jersey, Oregon, Texas, Washington
+    note: The product, Glutinous Rice Balls with Black Sesame Filling, was withdrawn because it may contain peanuts that are not listed on the label. The recall covers shipments distributed to several states across the western and eastern United States. Consumers who purchased this item should discard it or return it to the place of purchase. No illnesses have been reported.
+    citations:
+      - title: Undeclared Peanuts Prompt Expanded Recall Of Khong Guan Glutinous Rice Balls
+        url: https://menafn.com/1111408315/Undeclared-Peanuts-Prompt-Expanded-Recall-Of-Khong-Guan-Glutinous-Rice-Balls
+        publisher: Mena FN
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99424
+        publisher: FDA
+        accessed: 2026-09-17
 
