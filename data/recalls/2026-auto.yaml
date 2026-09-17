@@ -1529,4 +1529,23 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99542
         publisher: FDA
         accessed: 2026-09-17
+  - id: 2026-09-02-zmb-enterprises-addall-xr-shot-1-single-bottle
+    date: 2026-09-02
+    title: Addall XR Shot liquid dietary supplement contains 1,4-DMAA, phenylethylamine and phenibut
+    recalling_firm: ZMB Enterprises
+    agency: FDA
+    hazards:
+      - chemical-contamination
+    classification: I
+    products:
+      - name: Addall XR Shot liquid dietary supplement
+        codes:
+          - Sold between July - December 2025
+    distribution: Nationwide via the company website addallxr.com
+    note: ZMB Enterprises is recalling its Addall XR Shot liquid dietary supplement because it was found to contain the unapproved stimulants 1,4-DMAA, phenylethylamine and phenibut. The product was sold online between July and December 2025 and is available nationwide through the firm’s website. Consumers should stop using the product immediately and return it to the retailer or contact the company for a refund.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A98691
+        publisher: FDA
+        accessed: 2026-09-17
 
