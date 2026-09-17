@@ -1471,4 +1471,37 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99424
         publisher: FDA
         accessed: 2026-09-17
+  - id: 2026-09-09-fayus-inc-ola-ola-pounded-yam-iyan-iyani
+    date: 2026-09-09
+    title: OLA-OLA Pounded Yam (Iyan) recalled for undeclared milk
+    summary:
+      - yam
+    recalling_firm: Fayus Inc.
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: I
+    products:
+      - name: OLA-OLA Pounded Yam (Iyan) 2 lb
+        codes:
+          - "650655244825"
+      - name: OLA-OLA Pounded Yam (Iyan) 4 lb
+        codes:
+          - "650655496873"
+      - name: OLA-OLA Pounded Yam (Iyan) 5 lb
+        codes:
+          - "650655244856"
+      - name: OLA-OLA Pounded Yam (Iyan) 10 lb
+        codes:
+          - "650655244702"
+    distribution: "Domestic: CA, GA, IL, NJ, NY, TX; Foreign: Canada, Australia"
+    note: Fayus Inc. is recalling its OLA-OLA Pounded Yam (Iyan) because the product was packaged with an undeclared milk ingredient, posing a risk to consumers with milk allergies. The recall affects 2‑, 4‑, 5‑, and 10‑lb flexible‑bag packages distributed in several U.S. states as well as Canada and Australia. Consumers who have purchased the product should stop using it immediately and return it to the place of purchase for a full refund. For more information, contact the firm or the FDA.
+    citations:
+      - title: Fayus Inc., dba Yusol International Foods Expands Recall of OLA-OLA POUNDED YAM Due to Undeclared Milk Allergen
+        url: https://www.usatoday.com/recalls/food-and-drug/FDA-8w1wfgu7yiw/
+        publisher: USA Today
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99368
+        publisher: FDA
+        accessed: 2026-09-17
 
