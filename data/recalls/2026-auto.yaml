@@ -1504,4 +1504,29 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99368
         publisher: FDA
         accessed: 2026-09-17
+  - id: 2026-08-26-publix-super-markets-inc-organic-whole-mixed-berries-ne
+    date: 2026-08-26
+    title: Organic Whole Mixed Berries recalled for potential E. coli O145:H28 contamination
+    summary:
+      - berries
+    recalling_firm: Publix Super Markets, Inc.
+    agency: FDA
+    hazards:
+      - e-coli
+    classification: I
+    products:
+      - name: Organic Whole Mixed Berries
+        codes:
+          - UPC 41415-12153
+          - Best by Date Feb 09, 2028
+    distribution: Alabama, Florida, Georgia, Kentucky, North Carolina, South Carolina, Tennessee, and Virginia
+    note: Publix is recalling its organic whole mixed berries sold in 48‑oz plastic bags because the product may be contaminated with E. coli O145:H28. The recall covers all units with a best‑by date prior to February 9, 2028, totaling about 60,320 bags. Consumers who purchased the berries in the listed states should discard them or return them to the store for a refund. No illnesses have been reported at this time.
+    citations:
+      - title: Frozen berries sold at Walmart, Publix recalled for possible E coli contamination
+        url: https://www.msn.com/en-us/health/other/frozen-berries-sold-at-walmart-publix-recalled-for-possible-e-coli-contamination/ar-AA2c1Fi5
+        publisher: TODAY
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99542
+        publisher: FDA
+        accessed: 2026-09-17
 
