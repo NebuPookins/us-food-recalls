@@ -38,6 +38,36 @@ recalls:
         publisher: FDA
         accessed: 2026-09-18
 
+  - id: 2026-09-so-delicious-salted-caramel-cluster-stones
+    date: 2026-09-15
+    title: So Delicious Dairy Free Salted Caramel Cluster Non-Dairy Frozen Dessert pints (foreign material)
+    summary:
+      - frozen dessert
+    recalling_firm: Danone USA
+    agency: FDA
+    hazards: [foreign-material]
+    distribution: Retail stores nationwide in the United States
+    products:
+      - name: Salted Caramel Cluster Non-Dairy Frozen Dessert, pint
+        brand: So Delicious Dairy Free
+        codes:
+          - SKU 136603
+          - UPC 744473476138
+          - Best-by dates on and before April 3, 2028
+    note: |
+      Danone USA voluntarily recalled So Delicious Dairy Free Salted Caramel
+      Cluster Non-Dairy Frozen Dessert pints with best-by dates on and before
+      April 3, 2028 because the cashew inclusions may contain foreign material
+      such as small stones and other hard objects. The product was packaged in
+      pint containers and distributed to retail stores nationwide. No other
+      So Delicious Dairy Free codes, flavors, or products are affected. The
+      issue was identified through consumer complaints.
+    citations:
+      - title: So Delicious Dairy Free Issues Voluntary Recall of Salted Caramel Cluster Non-Dairy Frozen Dessert Pints Due to Potential Presence of Foreign Material
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/so-delicious-dairy-freer-issues-voluntary-recall-salted-caramel-cluster-non-dairy-frozen-dessert
+        publisher: FDA
+        accessed: 2026-09-18
+
   - id: 2026-09-evergreen-broccoli-sprouts
     date: 2026-09-09
     title: Evergreen Fresh Sprouts broccoli sprouts (Salmonella)
