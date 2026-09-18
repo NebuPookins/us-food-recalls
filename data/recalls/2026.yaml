@@ -211,6 +211,55 @@ recalls:
         publisher: FDA
         accessed: 2026-09-18
 
+  - id: 2026-09-whole-foods-cabricharme-cheese-egg
+    date: 2026-09-11
+    title: Whole Foods Market Cabricharme cheese (undeclared egg)
+    summary:
+      - cheese
+    recalling_firm: Whole Foods Market
+    agency: FDA
+    hazards: [undeclared-allergen]
+    distribution: Specialty cheese department at 18 Whole Foods Market stores in Arizona, California, Connecticut, Massachusetts, New Jersey, New York and Rhode Island
+    cases:
+      as_of: 2026-09-11
+      illnesses: 0
+    products:
+      - name: Fromagerie Coop de Mean Cabricharme Raw Milk – Aged 60 days cheese
+        brand: Whole Foods Market
+        codes:
+          - PLU 57953
+          - Best-by dates up to and including 10/7/2026
+      - name: Belgian Cabricharme cheese
+        brand: Whole Foods Market
+        codes:
+          - PLU 54670
+    note: |
+      Whole Foods Market of Austin, TX recalled Fromagerie Coop de Mean
+      Cabricharme cheese because it contains egg lysozyme, an egg white
+      protein, that is not declared on the product label. People with an egg
+      allergy or severe sensitivity risk a serious or life-threatening allergic
+      reaction if they consume it.
+
+      The recalled product was cut and plastic-wrapped by the pound with Whole
+      Foods Market scale labels and sold in the Specialty cheese department at
+      18 Whole Foods Market stores in Arizona, California, Connecticut,
+      Massachusetts, New Jersey, New York and Rhode Island. Two scale labels
+      are affected: Fromagerie Coop de Mean Cabricharme Raw Milk – Aged 60 days
+      (PLU 57953) in California, Connecticut, Massachusetts, New Jersey, New
+      York and Rhode Island, with best-by dates up to and including 10/7/2026;
+      and Belgian Cabricharme (PLU 54670) in California and Arizona.
+
+      All affected product has been removed from store shelves. The
+      mislabeling was discovered by a store team member, and no illnesses have
+      been reported. Customers who purchased the product are urged to destroy
+      it and may obtain a full refund with a valid receipt from the place of
+      purchase.
+    citations:
+      - title: Whole Foods Market Issues Allergy Alert on Undeclared Egg in Cabricharme Cheese
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/whole-foods-market-issues-allergy-alert-undeclared-egg-cabricharme-cheese
+        publisher: FDA
+        accessed: 2026-09-18
+
   - id: 2026-09-evergreen-broccoli-sprouts
     date: 2026-09-09
     title: Evergreen Fresh Sprouts broccoli sprouts (Salmonella)
