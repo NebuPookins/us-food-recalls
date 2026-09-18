@@ -171,6 +171,46 @@ recalls:
         publisher: FDA
         accessed: 2026-09-18
 
+  - id: 2026-09-ap-creations-biq-fel-sildenafil-tadalafil
+    date: 2026-09-15
+    title: biQ-FEL 500 mL dietary supplement (undeclared sildenafil and tadalafil)
+    summary:
+      - dietary supplement
+    recalling_firm: A&P Creations LLC
+    agency: FDA
+    hazards: [other]
+    distribution: Nationwide via Amazon, Walmart.com and naturefuel.us
+    products:
+      - name: biQ-FEL liquid dietary supplement, 500 mL bottle
+        brand: biQ-FEL
+        codes:
+          - Lot biQ-f001-06-25, exp. 05/06/27
+          - Lot biQ-003-01-26, exp. 01/01/28, UPC 7709799120663
+    note: |
+      A&P Creations LLC of Clermont, Florida is recalling certain lots of its
+      biQ-FEL 500 mL liquid dietary supplement after FDA laboratory analysis
+      found it contains undeclared sildenafil and tadalafil, the active
+      ingredients in the prescription drugs Viagra and Cialis.
+
+      Those drugs are approved only for treating erectile dysfunction under
+      the supervision of a licensed health care professional. The undeclared
+      ingredients may interact with nitrates in some prescription drugs, such
+      as nitroglycerin, and lower blood pressure to dangerous levels. People
+      with diabetes, high blood pressure, high cholesterol or heart disease
+      often take nitrates.
+
+      The product is a liquid in a 500 mL bottle with Spanish-language
+      labeling ("Sabor artificial Hierbabuena"), distributed to U.S. consumers
+      through Amazon, Walmart.com and naturefuel.us. A&P Creations distributed
+      biQ-FEL as a finished product and did not manufacture or formulate it.
+      As of September 14, 2026, no adverse events have been reported.
+      Consumers should stop using and destroy the product.
+    citations:
+      - title: A&P Creations LLC Issues Nationwide Recall of biQ-FEL Due to Undeclared Sildenafil and Tadalafil
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/ap-creations-llc-issues-nationwide-recall-biq-fel-due-undeclared-sildenafil-and-tadalafil
+        publisher: FDA
+        accessed: 2026-09-18
+
   - id: 2026-09-evergreen-broccoli-sprouts
     date: 2026-09-09
     title: Evergreen Fresh Sprouts broccoli sprouts (Salmonella)
