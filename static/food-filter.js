@@ -12,7 +12,7 @@
  */
 
 /** True for every visible entry except the last one — its separator would dangle. */
-function separatorVisibility(visible) {
+export function separatorVisibility(visible) {
   const lastVisible = visible.lastIndexOf(true);
   return visible.map((v, i) => v && i !== lastVisible);
 }
@@ -29,34 +29,45 @@ export function matchesSearch(haystack, terms) {
 
 /**
  * @param {ReadonlyArray<{ primaryCategories: readonly string[], alsoCategories: readonly (readonly string[])[] }>} foods
- *   One entry per food label. `primaryCategories` are the categories of the food's
- *   own link target (the newest alert); `alsoCategories` are the categories of
- *   each earlier-alert ("also previously") link, in display order.
+ *   One entry per food label. `primaryCategories` are the categories of the
+ *   food's newest alert; `alsoCategories` are the categories of each older
+ *   alert, newest-first.
  * @param {ReadonlySet<string>} activeCategories
  * @returns {ReadonlyArray<{
  *   visible: boolean,
- *   primaryVisible: boolean,
- *   sepVisible: boolean,
+ *   primaryIndex: number,
  *   alsoVisible: readonly boolean[],
  *   alsoSepVisible: readonly boolean[],
  *   anyAlsoVisible: boolean,
  * }>}
+ *   `primaryIndex` is the index of the alert the food-name link should point at:
+ *   `0` for the newest alert, or `k > 0` when the newest `k` alerts are all
+ *   filtered out and the `(k-1)`-th "also previously" alert is promoted to
+ *   primary. `-1` when no alert is active and the food should be hidden.
+ *   `alsoVisible` covers every original "also previously" link; an alert older
+ *   than the effective primary stays visible only if its own category is active,
+ *   while anything newer (and the effective primary itself) is suppressed.
  */
 export function decideFoods(foods, activeCategories) {
-  const decided = foods.map((food) => {
-    const primaryVisible = overlaps(food.primaryCategories, activeCategories);
-    const alsoVisible = food.alsoCategories.map((cats) => overlaps(cats, activeCategories));
+  return foods.map((food) => {
+    const primaryActive = overlaps(food.primaryCategories, activeCategories);
+    const alsoActive = food.alsoCategories.map((cats) => overlaps(cats, activeCategories));
+
+    const firstActiveAlso = alsoActive.findIndex(Boolean);
+    const primaryIndex = primaryActive ? 0 : firstActiveAlso === -1 ? -1 : firstActiveAlso + 1;
+    const visible = primaryIndex !== -1;
+
+    const alsoVisible = alsoActive.map((active, j) => visible && j + 1 > primaryIndex && active);
     const anyAlsoVisible = alsoVisible.some(Boolean);
-    return { primaryVisible, visible: primaryVisible || anyAlsoVisible, alsoVisible, anyAlsoVisible };
+
+    return {
+      visible,
+      primaryIndex,
+      alsoVisible,
+      alsoSepVisible: separatorVisibility(alsoVisible),
+      anyAlsoVisible,
+    };
   });
-
-  const sepVisible = separatorVisibility(decided.map((d) => d.visible));
-
-  return decided.map((d, i) => ({
-    ...d,
-    sepVisible: sepVisible[i],
-    alsoSepVisible: separatorVisibility(d.alsoVisible),
-  }));
 }
 
 /**

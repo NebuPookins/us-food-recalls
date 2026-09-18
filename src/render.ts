@@ -155,8 +155,7 @@ function renderEnded(ended: Ended): string {
  *  `.recall` article, so it never carries the list-only `id`/`data-*`
  *  attributes in the first place. It still includes the permalink anchor
  *  (`href="#id"`, only meaningful on the list page); the client strips that
- *  `href` on its clone, same as it strips it from any link whose target got
- *  filtered out elsewhere on the page (see `.food-list a:not([href])`). */
+ *  `href` on its clone so it reads as plain text inside the modal. */
 function renderRecallBody(recall: Recall, byId: ReadonlyMap<string, Recall>): string {
   return `
   <div class="recall-body">
@@ -216,9 +215,9 @@ export type SiteMeta = {
   readonly buildDate: string;
 };
 
-/** Trailing separator for an item in a comma-joined list of sibling spans; empty
- *  for the last item. Lives inside the item's own span (call site's job) so
- *  hiding the item also hides its separator — used at both list levels below. */
+/** Trailing separator for a comma-joined list of sibling spans; empty for the
+ *  last item so the list doesn't dangle. Lives inside the item's own span (the
+ *  call site's job) so hiding the item also hides its separator. */
 function sepHtml(sepClass: string, isLast: boolean): string {
   return isLast ? '' : `<span class="${sepClass}">, </span>`;
 }
@@ -262,21 +261,26 @@ export function bucketLabel(date: string, now: string): string {
 }
 
 /** Renders one food's span: the newest recall is the main link and earlier ones
- *  follow as dated "also previously" links. `isLast` omits the trailing comma so
- *  the last food in its bucket doesn't dangle a separator. */
-function renderFood(food: string, occurrences: readonly SummaryItem[], isLast: boolean): string {
+ *  follow as dated "also previously" links. The trailing separator is always
+ *  emitted (`hidden` for the last food) so the client can re-sort a bucket and
+ *  still place commas correctly.
+ *
+ *  Every link carries `data-date` (the recall's ISO date) and `data-bucket`
+ *  (the recency bucket the server already computed for that date) alongside its
+ *  `data-category`, so the client can re-bucket a food whose newest recall got
+ *  filtered out — the food-name link then points at the newest recall that is
+ *  still active, which may live in a different recency bucket. */
+function renderFood(food: string, occurrences: readonly SummaryItem[], isLast: boolean, now: string): string {
   const primary = occurrences[0];
-  // Earlier recalls become dated links, each tagged with its own category so
-  // the client can hide the ones the reader has filtered out. The primary
-  // link carries its own category too: if the newest recall's category gets
-  // filtered out while an older one stays active, the client strips its href
-  // instead of leaving it pointing at a now-hidden recall.
+  // Earlier recalls become dated links, each tagged with its own category, date
+  // and bucket so the client can hide the filtered-out ones and promote the
+  // newest survivor to primary without re-reading the page.
   const rest = occurrences.slice(1);
   const alsoLinks = rest
     .map(
       (o, k) =>
         `<span class="also-link">` +
-        `<a href="#${escapeHtml(o.id)}" data-category="${escapeHtml(o.categories.join(' '))}">${escapeHtml(formatDateShort(o.date))}</a>` +
+        `<a href="#${escapeHtml(o.id)}" data-category="${escapeHtml(o.categories.join(' '))}" data-date="${escapeHtml(o.date)}" data-bucket="${escapeHtml(bucketLabel(o.date, now))}">${escapeHtml(formatDateShort(o.date))}</a>` +
         sepHtml('also-sep', k === rest.length - 1) +
         `</span>`,
     )
@@ -284,9 +288,9 @@ function renderFood(food: string, occurrences: readonly SummaryItem[], isLast: b
   const extra = rest.length > 0 ? `<span class="also-previously"> (also previously ${alsoLinks})</span>` : '';
   return (
     `<span class="food">` +
-    `<a href="#${escapeHtml(primary.id)}" data-category="${escapeHtml(primary.categories.join(' '))}">${escapeHtml(food)}</a>` +
+    `<a href="#${escapeHtml(primary.id)}" data-category="${escapeHtml(primary.categories.join(' '))}" data-date="${escapeHtml(primary.date)}" data-bucket="${escapeHtml(bucketLabel(primary.date, now))}">${escapeHtml(food)}</a>` +
     extra +
-    sepHtml('sep', isLast) +
+    `<span class="sep"${isLast ? ' hidden' : ''}>, </span>` +
     '</span>'
   );
 }
@@ -312,22 +316,24 @@ function renderSummary(recalls: readonly Recall[], now: string): string {
   // separator lives inside the span so hiding an item hides its comma too.
   const groups = Map.groupBy(items, (it) => it.food);
 
-  // Bucket each food by the date of its newest recall, then render buckets in
-  // display order, dropping any that end up empty. `groups.entries()` already
-  // yields `[food, occurrences]`, so the second grouping keys straight off it.
+  // Bucket each food by the date of its newest recall, then render every bucket
+  // in display order, marking empty ones `hidden` so the client can re-parent
+  // foods between them without constructing markup or recomputing a bucket.
+  // `groups.entries()` already yields `[food, occurrences]`, so the second
+  // grouping keys straight off it.
   const byBucket = Map.groupBy(
     groups.entries(),
     ([, occurrences]) => bucketLabel(occurrences[0].date, now),
   );
 
   const body = [...RECENCY_BUCKETS.map((b) => b.label), OLDER_LABEL]
-    .flatMap((label) => {
-      const foods = byBucket.get(label);
-      if (!foods || foods.length === 0) return [];
-      return [`<div class="summary-bucket">
+    .map((label) => {
+      const foods = byBucket.get(label) ?? [];
+      const empty = foods.length === 0;
+      return `<div class="summary-bucket"${empty ? ' hidden' : ''}>
   <h3 class="summary-bucket-title">${escapeHtml(label)}</h3>
-  <p class="food-list">${foods.map(([food, occurrences], i) => renderFood(food, occurrences, i === foods.length - 1)).join('')}</p>
-</div>`];
+  <p class="food-list">${foods.map(([food, occurrences], i) => renderFood(food, occurrences, i === foods.length - 1, now)).join('')}</p>
+</div>`;
     })
     .join('\n');
 

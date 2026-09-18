@@ -53,9 +53,6 @@ a { color: var(--accent); }
   letter-spacing: .06em;
 }
 .food-list { margin: 0; line-height: 1.9; }
-/* A food-name link without an href (its own recall got filtered out, but an
-   older "also previously" recall kept it visible) should read as plain text. */
-.food-list a:not([href]) { color: inherit; text-decoration: none; cursor: default; }
 /* Search box typed but this food's recalls don't match it. */
 .food-list .food.dim { opacity: .35; }
 /* The part of a food's label the search terms actually land on. */
@@ -69,7 +66,7 @@ a { color: var(--accent); }
   text-transform: uppercase;
   letter-spacing: .06em;
 }
-.summary-bucket + .summary-bucket { margin-top: .6rem; }
+.summary-bucket:not([hidden]) ~ .summary-bucket:not([hidden]) { margin-top: .6rem; }
 
 /* ---- actions ---- */
 
@@ -254,8 +251,8 @@ a { color: var(--accent); }
 .recall-body h2 { margin: 0 0 .75rem; font-size: 1.25rem; line-height: 1.3; }
 .permalink { color: inherit; text-decoration: none; }
 .permalink:hover { color: var(--accent); text-decoration: underline; }
-/* Same convention as `.food-list a:not([href])`: a permalink whose `href` was
-   stripped (the modal's clone) reads as plain text, not a dead-looking link. */
+/* A permalink whose `href` was stripped (the modal's clone) reads as plain
+   text, not a dead-looking link. */
 .permalink:not([href]):hover { color: inherit; text-decoration: none; }
 .part-of { margin: 0 0 .75rem; font-size: .85rem; color: var(--muted); }
 
