@@ -47,46 +47,51 @@ import { decideFoods, highlightHtml, matchesSearch, matchRanges, overlaps } from
   // any "also previously" ones), and the food matches if any of them do.
   const searchById = new Map(recallMeta.map((r) => [r.id, r.search]));
 
-  // Foods in the "foods to check" list, read once and grouped into recency
-  // buckets. Within each bucket, the food-name link normally targets the newest
-  // recall (`mainHref`); if that recall's own category gets filtered out while
-  // an older one stays active, its `href` is stripped (see `applyFoods` below)
-  // so it renders as inert text instead of a dead link. `alsoLinks` are the
-  // earlier-recall "also previously" entries, each carrying the category of the
-  // recall it points at.
-  const buckets = Array.from(document.querySelectorAll('.summary-bucket')).map((bucketEl) => {
-    const foods = Array.from(bucketEl.querySelectorAll('.food')).map((el) => {
-      const mainLink = el.querySelector('a');
-      const alsoLinks = Array.from(el.querySelectorAll('.also-previously .also-link'));
-      // Read at startup, before any category filtering strips `mainLink`'s
-      // `href` — every food-name link and "also previously" link still points
-      // at its recall's id at this point.
-      const recallIds = [
-        mainLink.getAttribute('href').slice(1),
-        ...alsoLinks.map((link) => link.querySelector('a').getAttribute('href').slice(1)),
-      ];
-      return {
-        el,
-        mainLink,
-        mainHref: mainLink.getAttribute('href'),
-        label: mainLink.textContent,
-        searchTexts: recallIds.map((id) => searchById.get(id)).filter(Boolean),
-        primaryCategories: mainLink.dataset.category.split(' '),
-        sep: el.querySelector('.sep'),
-        also: el.querySelector('.also-previously'),
-        alsoLinks,
-        alsoSeps: alsoLinks.map((link) => link.querySelector('.also-sep')),
-        alsoCategories: alsoLinks.map((link) => link.querySelector('a')?.dataset.category.split(' ') ?? []),
-      };
-    });
-    return {
-      el: bucketEl,
-      foods,
-      // The plain-data view `decideFoods` needs: no DOM elements, so the decision
-      // logic stays testable without a browser.
-      foodData: foods.map(({ primaryCategories, alsoCategories }) => ({ primaryCategories, alsoCategories })),
-    };
-  });
+  // The "foods to check" list, read once. `foods` is a flat list in server
+  // (newest-first) order; each food-name and "also previously" link carries the
+  // recall's ISO date (`data-date`) and its server-computed recency bucket
+  // (`data-bucket`), so a food whose newest recall gets filtered out can be
+  // re-pointed at the newest survivor and re-bucketed under that survivor's
+  // precomputed bucket (see `applyFoods` below).
+  const summary = document.querySelector('.summary');
+
+  // Every recency bucket is pre-rendered by the server (empty ones `hidden`),
+  // so the client only re-parents foods between existing lists — it never has to
+  // construct a bucket or compute one from a date.
+  const bucketByLabel = new Map();
+  if (summary) {
+    for (const bucketEl of summary.querySelectorAll('.summary-bucket')) {
+      const label = bucketEl.querySelector('.summary-bucket-title').textContent;
+      bucketByLabel.set(label, { el: bucketEl, list: bucketEl.querySelector('.food-list') });
+    }
+  }
+
+  const foods = summary
+    ? Array.from(summary.querySelectorAll('.food')).map((el) => {
+        const mainLink = el.querySelector('a');
+        const alsoLinks = Array.from(el.querySelectorAll('.also-previously .also-link'));
+        const alsoAnchors = alsoLinks.map((link) => link.querySelector('a'));
+        const anchors = [mainLink, ...alsoAnchors];
+        return {
+          el,
+          mainLink,
+          mainHref: mainLink.getAttribute('href'),
+          label: mainLink.textContent,
+          searchTexts: anchors.map((a) => searchById.get(a.getAttribute('href').slice(1))).filter(Boolean),
+          primaryCategories: mainLink.dataset.category.split(' '),
+          sep: el.querySelector('.sep'),
+          also: el.querySelector('.also-previously'),
+          alsoLinks,
+          alsoAnchors,
+          alsoSeps: alsoLinks.map((link) => link.querySelector('.also-sep')),
+          alsoCategories: alsoAnchors.map((a) => a.dataset.category.split(' ')),
+          dates: anchors.map((a) => a.dataset.date),
+          buckets: anchors.map((a) => a.dataset.bucket),
+        };
+      })
+    : [];
+
+  const foodData = foods.map(({ primaryCategories, alsoCategories }) => ({ primaryCategories, alsoCategories }));
 
   const escapeHtml = (s) =>
     s
@@ -98,7 +103,7 @@ import { decideFoods, highlightHtml, matchesSearch, matchRanges, overlaps } from
   const activeCategories = () =>
     new Set(categoryInputs.filter((i) => i.checked).map((i) => i.value));
 
-  // Shared by `applyRecalls` and `applyFoods`, both of which rerun on every
+  // Shared by `applyRecalls` and `applyFoodSearch`, both of which rerun on every
   // search keystroke and need the same lowercased, whitespace-split terms.
   const searchTerms = () => q.value.toLowerCase().split(/\s+/).filter(Boolean);
 
@@ -204,60 +209,83 @@ import { decideFoods, highlightHtml, matchesSearch, matchRanges, overlaps } from
     );
   };
 
-  // The "foods to check" list's visibility (which foods/links are shown or
-  // hidden at all) reflects only the category preferences, not the
-  // search/hazard/year controls — so it's kept separate from `applyRecalls` and
-  // only called where a category might actually have changed. `decideFoods`
-  // also decides which separators would otherwise dangle once filtered-out
-  // items drop out, at both the food level and the "also previously" level, so
-  // this loop only has to apply its verdict.
-  //
-  // The search box layers on top of that, independent of visibility: a food
-  // that's still shown gets dimmed if none of its recalls match the typed
-  // terms, and bolded where the terms land inside its own label. This part
-  // *does* need to rerun on every search keystroke, so `applyFoods` is called
-  // from both the category-change and search-input handlers below.
-  const applyFoods = () => {
-    const categories = activeCategories();
-    const terms = searchTerms();
-
-    // `decideFoods` is applied per bucket so its separator logic (drop the
-    // trailing comma after the last visible food) runs within each bucket, not
-    // across the whole list. A bucket whose foods are all filtered out is
-    // hidden along with its heading.
-    for (const bucket of buckets) {
-      const decisions = decideFoods(bucket.foodData, categories);
-
-      bucket.foods.forEach((f, i) => {
-        const d = decisions[i];
-        f.el.hidden = !d.visible;
-        if (f.sep) f.sep.hidden = !d.sepVisible;
-
-        // Strip the food-name link's href when its own (newest-recall) category
-        // is filtered out, so it renders as inert text instead of a dead link;
-        // restore it once that category is active again.
-        if (d.primaryVisible) f.mainLink.setAttribute('href', f.mainHref);
-        else f.mainLink.removeAttribute('href');
-
-        f.alsoLinks.forEach((link, j) => {
-          link.hidden = !d.alsoVisible[j];
-          if (f.alsoSeps[j]) f.alsoSeps[j].hidden = !d.alsoSepVisible[j];
-        });
-        if (f.also) f.also.hidden = !d.anyAlsoVisible;
-
-        // Dimming/highlighting is only meaningful on a food `decideFoods` is
-        // already showing — skip the DOM work for one it's hiding by category.
-        if (d.visible) {
-          const matches = terms.length === 0 || f.searchTexts.some((h) => matchesSearch(h, terms));
-          f.el.classList.toggle('dim', !matches);
-          f.mainLink.innerHTML = matches
-            ? highlightHtml(f.label, matchRanges(f.label, terms), escapeHtml)
-            : escapeHtml(f.label);
-        }
-      });
-
-      bucket.el.hidden = !decisions.some((d) => d.visible);
+  // Applies one food's category decision to its DOM: points the name link at the
+  // effective primary, hides the suppressed/also links, and sets the trailing
+  // separator. Search dimming/highlighting is separate (`applyFoodSearch`),
+  // since it depends on the query, not the categories.
+  const applyFoodItem = (f, d, bucketSize, idx) => {
+    if (d.primaryIndex === 0) {
+      f.mainLink.setAttribute('href', f.mainHref);
+    } else {
+      f.mainLink.setAttribute('href', f.alsoAnchors[d.primaryIndex - 1].getAttribute('href'));
     }
+
+    f.alsoLinks.forEach((link, j) => {
+      link.hidden = !d.alsoVisible[j];
+      if (f.alsoSeps[j]) f.alsoSeps[j].hidden = !d.alsoSepVisible[j];
+    });
+    if (f.also) f.also.hidden = !d.anyAlsoVisible;
+
+    // Trailing comma on every food except the last in its bucket.
+    f.sep.hidden = idx === bucketSize - 1;
+  };
+
+  // Search dims/highlights whatever `applyFoods` left visible. Kept separate
+  // from `applyFoods` so the bucket re-parenting work below runs only on
+  // category changes, not on every search keystroke.
+  const applyFoodSearch = () => {
+    const terms = searchTerms();
+    for (const f of foods) {
+      if (f.el.hidden) continue;
+      const matches = terms.length === 0 || f.searchTexts.some((h) => matchesSearch(h, terms));
+      f.el.classList.toggle('dim', !matches);
+      f.mainLink.innerHTML = matches
+        ? highlightHtml(f.label, matchRanges(f.label, terms), escapeHtml)
+        : escapeHtml(f.label);
+    }
+  };
+
+  // The "foods to check" list's visibility reflects only the category
+  // preferences, not the search/hazard/year controls — so it's kept separate
+  // from `applyRecalls` and only called where a category might actually have
+  // changed. `decideFoods` promotes the newest surviving recall to the
+  // food-name link and suppresses the newer filtered-out ones; this loop then
+  // re-parents each food into the bucket of its effective primary (read from
+  // `data-bucket`, which the server already computed) and applies the verdict.
+  const applyFoods = () => {
+    if (!summary) return; // no "foods to check" list on this page
+    const categories = activeCategories();
+    const decisions = decideFoods(foodData, categories);
+
+    // Group each visible food under its effective primary's bucket.
+    const foodsByBucket = new Map();
+    for (const [i, d] of decisions.entries()) {
+      foods[i].el.hidden = !d.visible;
+      if (!d.visible) continue;
+      const f = foods[i];
+      const label = f.buckets[d.primaryIndex];
+      const list = foodsByBucket.get(label);
+      if (list) list.push({ f, d });
+      else foodsByBucket.set(label, [{ f, d }]);
+    }
+
+    // Newest-first within each bucket; ties keep the server's original order.
+    for (const [label, bucket] of bucketByLabel) {
+      const items = (foodsByBucket.get(label) ?? []).toSorted((a, b) => {
+        const da = a.f.dates[a.d.primaryIndex];
+        const db = b.f.dates[b.d.primaryIndex];
+        return da < db ? 1 : da > db ? -1 : 0;
+      });
+      const els = [];
+      for (const [idx, { f, d }] of items.entries()) {
+        applyFoodItem(f, d, items.length, idx);
+        els.push(f.el);
+      }
+      bucket.list.replaceChildren(...els);
+      bucket.el.hidden = items.length === 0;
+    }
+
+    applyFoodSearch();
   };
 
   const persist = () => {
@@ -282,7 +310,7 @@ import { decideFoods, highlightHtml, matchesSearch, matchRanges, overlaps } from
   };
 
   for (const control of [q, hazard, year]) control.addEventListener('input', applyRecalls);
-  q.addEventListener('input', applyFoods);
+  q.addEventListener('input', applyFoodSearch);
   for (const input of categoryInputs) {
     input.addEventListener('change', () => {
       prefsWarning.hidden = true;
