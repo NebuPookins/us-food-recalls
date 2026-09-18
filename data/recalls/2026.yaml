@@ -5,6 +5,109 @@
 # with the YAML extension (VS Code, Zed, Neovim + yaml-language-server).
 
 recalls:
+  - id: 2026-09-yellow-oleander-dietary-supplements
+    date: 2026-09-17
+    title: Weight-loss and tejocote root dietary supplements found to contain toxic yellow oleander
+    summary:
+      - tejocote root
+      - Brazil seed
+      - weight-loss supplements
+    agency: FDA
+    hazards: [other]
+    distribution: Sold online via Amazon.com, eBay.com, Etsy.com and firm websites
+    products:
+      - name: Tejocote Pieces (dietary supplement)
+        brand: Niwali (eBay.com)
+      - name: Tejocote Capsules (dietary supplement)
+        brand: Niwali (Everymarket.com)
+      - name: Easy Forte Natural Fiber (dietary supplement)
+        brand: Easy Forte (Amazon.com, Jaola Store)
+      - name: Slim Elixir, 30 capsules per bottle
+        brand: Slim Elixir (lamilagrosalab.com)
+      - name: D Magic Plus, 30 capsules per bottle
+        brand: D Magic Plus (lamilagrosalab.com)
+      - name: B. Magi, 30 capsules per bottle
+        brand: B. Magi (lamilagrosalab.com)
+      - name: Chupa Panza
+        brand: Chupa Panza (eBay.com)
+      - name: SdB Semilla de Brasil Tejocote Root
+        brand: SdB (eBay.com)
+      - name: SdB ELITE
+        brand: SdB (naturalvida.com)
+      - name: SiluetaYa Mexican Tejocote Roots
+        brand: SiluetaYa (siluetayausa.com)
+      - name: New Me
+        brand: New Me (Shopnewmeroot.com)
+      - name: VidaSlim
+        brand: VidaSlim (Vidaslim.com)
+      - name: Primor Health Optimus Weight
+        brand: Primor Health (Amazon.com, third-party)
+      - name: SdB Elite Salud da Belleza
+        brand: SdB (Amazon.com, third-party)
+      - name: Brazil Seed Semilla de Brazil
+        brand: Brazil Seed (Amazon.com)
+      - name: Elv Control Herbal Supplement (capsules)
+        brand: Green ELV Nutrition (Amazon.com)
+      - name: ALIPOTEC ELV Mexican Tejocote Root
+        brand: ALIPOTEC (alipotecus.com)
+      - name: nwl NUTRA Mexican Tejocote Root
+        brand: nwl NUTRA (Amazon.com)
+      - name: EVA NUTRITION Mexican Tejocote Root
+        brand: EVA NUTRITION (Eva-nutrition.com)
+      - name: ELV King All Natural Tejocote Root (Raiz de Tejocote)
+        brand: ELV King (Amazon.com)
+      - name: ALIPOTEC Tejocote Root Dietary Supplement Pieces
+        brand: ALIPOTEC (alipotectejocote.com)
+      - name: Science of ALPHA Mexican Tejocote Root
+        brand: Science of ALPHA (Tejocotemexican.com)
+      - name: H & Natural Tejo Root Raiz de Tejocote and Brazil Seed
+        brand: H & Natural (Handnatural.com)
+      - name: ALIPOTEC Tejocote Root Raiz de Tejocote and Dietary Supplement Pieces
+        brand: ALIPOTEC (Amazon.com, Backstage CTC)
+      - name: Nutraholics ELV Tejocote Root and Nutraking Mexican Tejocote Root
+        brand: Nutraholics ELV (Amazon.com)
+      - name: Niwali Raiz de Tejocote and Science of Alpha Mexican Tejocote Root
+        brand: Niwali / Science of Alpha (Etsy.com)
+      - name: ALIPOTEC Tejocote Root Dietary Supplement Pieces
+        brand: ALIPOTEC (Innovacionnatural.com)
+      - name: Tejocotex Tejocote Root
+        brand: Tejocotex (Amazon.com)
+    note: |
+      FDA analysis found that dozens of dietary supplements marketed for weight
+      loss — labeled as tejocote (Crataegus mexicana) root or Brazil seed — are
+      adulterated because they contain yellow oleander (Thevetia peruviana), a
+      poisonous plant native to Mexico and Central America, instead of the
+      labeled ingredient. Yellow oleander can cause neurologic, gastrointestinal
+      and cardiovascular effects that may be severe or even fatal.
+
+      The FDA advises consumers to stop using and dispose of these products, and
+      anyone who has taken them should contact a health care provider right
+      away, even if they have not used them recently. Call 9-1-1 or get
+      emergency help for serious side effects.
+
+      Recall response has varied. Some firms — including Global Mix (Niwali),
+      SiluetaYa, VidaSlim, World Green Nutrition (Green ELV / ALIPOTEC ELV),
+      nwl NUTRA, EVA NUTRITION, Science of ALPHA, H & Natural and Backstage CTC —
+      have issued recall announcements or agreed to recall. OBC Group (SdB) and
+      Creativa Interiors/Privit Wellness (Primor Health Optimus Weight) have not
+      committed to a recall. Sunset Sales (ELV King), Amazon (Nutraholics ELV)
+      and Pastor-Villareal (Tejocotex) declined to recall and removed their
+      listings. The FDA has been unable to contact several other firms,
+      including Comercializadora Naturista del Bajio (Easy Forte), Suerte y
+      Salud, Shopnewmeroot and Innovacion Natural.
+
+      Two products also contain hidden drug ingredients: D Magic Plus contains
+      diclofenac, which can cause life-threatening reactions, and B. Magi
+      contains phenolphthalein, which may increase the risk of cancer.
+
+      The FDA investigation is ongoing, and products that test positive for
+      yellow oleander will continue to be added to the alert.
+    citations:
+      - title: FDA Issues Warning About Certain Products Containing Toxic Yellow Oleander
+        url: https://www.fda.gov/food/alerts-advisories-safety-information/fda-issues-warning-about-certain-products-containing-toxic-yellow-oleander
+        publisher: FDA
+        accessed: 2026-09-18
+
   - id: 2026-09-saratoga-potato-chips-j-higgs-soy
     date: 2026-09-16
     title: J. HIGGS Loaded Bacon & Cheddar Potato Chips (undeclared soy)
