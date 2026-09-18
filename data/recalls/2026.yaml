@@ -5,6 +5,39 @@
 # with the YAML extension (VS Code, Zed, Neovim + yaml-language-server).
 
 recalls:
+  - id: 2026-09-saratoga-potato-chips-j-higgs-soy
+    date: 2026-09-16
+    title: J. HIGGS Loaded Bacon & Cheddar Potato Chips (undeclared soy)
+    summary:
+      - potato chips
+    recalling_firm: Saratoga Potato Chips LLC
+    agency: FDA
+    hazards: [undeclared-allergen]
+    distribution: Indiana, Kentucky, Ohio, Tennessee and Maryland (Save A Lot stores)
+    cases:
+      as_of: 2026-09-16
+      illnesses: 0
+    products:
+      - name: Loaded Bacon & Cheddar Potato Chips, 7.75 oz
+        brand: J. HIGGS
+        codes:
+          - UPC 0-51933-31645-4
+          - Best if USED BY DEC 11 26 and DEC 18 26
+    note: |
+      Saratoga Potato Chips of Fort Wayne, IN recalled two Best if USED BY codes
+      of its 7.75-ounce J. HIGGS Loaded Bacon and Cheddar Potato Chips because
+      they may contain undeclared soy. People with a soy allergy or severe
+      sensitivity risk a serious or life-threatening reaction if they eat the
+      chips.
+
+      The chips were distributed in Indiana, Kentucky, Ohio, Tennessee and
+      Maryland and sold in Save A Lot stores. No illnesses have been reported.
+    citations:
+      - title: Saratoga Potato Chips Issues Allergy Alert on Undeclared Soy in J. HIGGS Loaded Bacon and Cheddar Potato Chips
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/saratoga-potato-chips-issues-allergy-alert-undeclared-soy-j-higgs-loaded-bacon-and-cheddar-potato
+        publisher: FDA
+        accessed: 2026-09-18
+
   - id: 2026-09-evergreen-broccoli-sprouts
     date: 2026-09-09
     title: Evergreen Fresh Sprouts broccoli sprouts (Salmonella)
