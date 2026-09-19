@@ -5,6 +5,63 @@
 # with the YAML extension (VS Code, Zed, Neovim + yaml-language-server).
 
 recalls:
+  - id: 2026-09-gf-blends-truly-aip-flour-bread-pizza-mix-gluten
+    date: 2026-09-18
+    title: Truly AIP all-purpose flour and bread mix, EAT G.A.N.G.S.T.E.R. flat bread pizza mix (undeclared wheat gluten)
+    summary:
+      - flour
+      - bread mix
+      - pizza mix
+    recalling_firm: GF Blends
+    agency: FDA
+    hazards: [undeclared-allergen]
+    distribution: Nationwide via eatgangster.com, trulyaip.com and Amazon.com
+    cases:
+      as_of: 2026-09-17
+      illnesses: 0
+    products:
+      - name: All Purpose Flour, 15.3 oz
+        brand: Truly AIP
+        codes:
+          - Lot 260225, best by 2/25/2028
+          - Lot 260610, best by 6/10/2028
+      - name: Bread Mix, 14 oz
+        brand: Truly AIP
+        codes:
+          - Lot 260417, best by 4/17/2028
+          - Lot 260617, best by 12/17/2027
+      - name: Flat Bread Pizza Mix, 163 g and 3.98 lb
+        brand: EAT G.A.N.G.S.T.E.R.
+        codes:
+          - Lot 260327, best by 9/27/2027 and 7/27/2027
+          - Lot 260803, best by 2/03/2028
+    note: |
+      GF Blends recalled its Truly AIP All Purpose Flour and Bread Mix and EAT
+      G.A.N.G.S.T.E.R. Flat Bread Pizza Mix because they may contain undeclared
+      wheat gluten. People with celiac disease or a severe gluten intolerance
+      risk adverse health effects or allergic reactions if they consume the
+      products.
+
+      The products were made with plantain flour supplied by PMF Global that
+      was labeled and certified gluten free, but independent third-party
+      testing found the ingredient contained gluten, and the recalled products
+      all tested at levels significantly exceeding the FDA's 20 ppm threshold
+      for gluten free. GF Blends said it would test further to confirm for
+      wheat gluten.
+
+      The affected products were distributed via eatgangster.com and
+      trulyaip.com and on Amazon.com to retail and online customers nationwide
+      up to September 12, 2026. No adverse health effects have been reported
+      as of September 17, 2026. Consumers with celiac disease or a severe
+      wheat gluten intolerance should not consume the recalled products and
+      should return them for a full refund or discard them. Consumers can
+      contact GF Blends at 509-375-0909 or recall@gfblends.com.
+    citations:
+      - title: GF Blends Recalls Truly AIP All Purpose Flour and Bread Mix, and EAT G.A.N.G.S.T.E.R. Flat Bread Pizza Mix Due to Potential Undeclared Wheat Gluten
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/gf-blends-recalls-truly-aip-all-purpose-flour-and-bread-mix-and-eat-gangster-flat-bread-pizza-mix
+        publisher: FDA
+        accessed: 2026-09-19
+
   - id: 2026-09-yellow-oleander-dietary-supplements
     date: 2026-09-17
     title: Weight-loss and tejocote root dietary supplements found to contain toxic yellow oleander
