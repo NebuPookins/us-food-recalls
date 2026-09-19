@@ -211,6 +211,47 @@ recalls:
         publisher: FDA
         accessed: 2026-09-18
 
+  - id: 2026-09-gias-foods-bettergoods-lemon-alfredo-fettuccine-listeria
+    date: 2026-09-15
+    title: Bettergoods Authentic Italian Lemon Alfredo Fettuccine (Listeria)
+    summary:
+      - alfredo fettuccine
+    recalling_firm: Gias Foods, Inc.
+    agency: FDA
+    hazards: [listeria]
+    distribution: Nationwide at Walmart stores
+    cases:
+      as_of: 2026-09-15
+      illnesses: 0
+    products:
+      - name: Authentic Italian Lemon Alfredo Fettuccine, frozen, 22 oz
+        brand: Bettergoods (Walmart)
+        codes:
+          - UPC 194346442706
+          - Lot L6079C, expiration 09/19/2027
+          - Lot L6080C, expiration 09/20/2027
+    note: |
+      Gias Foods of New York, NY recalled two lots of bettergoods Authentic
+      Italian Lemon Alfredo Fettuccine because they may be contaminated with
+      Listeria monocytogenes, which can cause serious and sometimes fatal
+      infections in young children, frail or elderly people, and others with
+      weakened immune systems, and miscarriages and stillbirths in pregnant
+      women.
+
+      The frozen product is packaged in 22 oz yellow plastic and was
+      distributed nationwide at Walmart stores. The recall followed a routine
+      sampling program by the Washington State Department of Agriculture and
+      the Florida Department of Agriculture and Consumer Services that found
+      the finished product may contain the bacteria. The company has ceased
+      distribution while the FDA and the company investigate. No illnesses
+      have been reported. Consumers should return the product to the place of
+      purchase for a full refund.
+    citations:
+      - title: Gias Foods, Inc. Recalls Bettergoods Authentic Italian Lemon Alfredo Fettuccine Because of Possible Health Risk
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/gias-foods-inc-recalls-bettergoods-authentic-italian-lemon-alfredo-fettuccine-because-possible
+        publisher: FDA
+        accessed: 2026-09-19
+
   - id: 2026-09-whole-foods-cabricharme-cheese-egg
     date: 2026-09-11
     title: Whole Foods Market Cabricharme cheese (undeclared egg)
