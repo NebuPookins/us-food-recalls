@@ -1347,10 +1347,18 @@ recalls:
     hazards: [e-coli]
     distribution: Publix stores in 8 states (Alabama, Florida, Georgia, Kentucky, North Carolina, South Carolina, Tennessee, Virginia) and Walmart stores in 16 states (Alabama, Arkansas, Florida, Illinois, Indiana, Kentucky, Louisiana, Minnesota, Mississippi, Missouri, North Carolina, Ohio, Oklahoma, South Carolina, Texas, Wisconsin)
     cases:
-      as_of: 2026-09-03
+      as_of: 2026-09-21
       illnesses: 17
       hospitalizations: 6
       deaths: 0
+    ended:
+      announced: 2026-09-21
+      note: CDC declared the outbreak over; recalled products have "Best By" dates ending in 2028 and should no longer be available for sale.
+      citations:
+        - title: "Outbreak Investigation of E. coli O145:H28: Frozen Blueberries (July 2026)"
+          url: https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-o145h28-frozen-blueberries-july-2026
+          publisher: FDA
+          accessed: 2026-09-22
     products:
       - name: GreenWise Organic Whole Blueberries, 10 oz and 48 oz
         brand: GreenWise (Publix)
