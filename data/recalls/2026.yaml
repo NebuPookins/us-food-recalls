@@ -348,6 +348,47 @@ recalls:
         publisher: FDA
         accessed: 2026-09-19
 
+  - id: 2026-09-wakefern-wholesome-pantry-apple-sauce
+    date: 2026-09-14
+    title: Wholesome Pantry Organic Unsweetened Apple Sauce (elevated patulin)
+    summary:
+      - apple sauce
+    recalling_firm: Wakefern Food Corp.
+    agency: FDA
+    hazards: [chemical-contamination]
+    distribution: ShopRite, Price Rite Marketplace, The Fresh Grocer, Gourmet Garage and Fairway Market stores in CT, DE, MA, MD, NH, NJ, NY, PA and RI
+    cases:
+      as_of: 2026-09-14
+      illnesses: 0
+    products:
+      - name: Organic Unsweetened Apple Sauce, 23 oz plastic jar container
+        brand: Wholesome Pantry
+        codes:
+          - UPC 04119005677
+          - Best-by date June 16, 2027
+    note: |
+      Wakefern Food Corp. voluntarily recalled select 23-ounce plastic jar
+      containers of Wholesome Pantry Organic Unsweetened Apple Sauce after
+      routine FDA testing identified elevated levels of patulin, a naturally
+      occurring toxin produced by mold on damaged or bruised apples, exceeding
+      food safety limits.
+
+      The recalled product was sold through Wakefern supermarket banners
+      including ShopRite, Price Rite Marketplace, The Fresh Grocer, Gourmet
+      Garage and Fairway Market in Connecticut, Delaware, Massachusetts,
+      Maryland, New Hampshire, New Jersey, New York, Pennsylvania and Rhode
+      Island. No other products sold at those stores are affected, and no
+      illnesses or injuries have been reported.
+
+      Customers who purchased the recalled product can return it to the store
+      for a full refund or replacement. Questions may be directed to
+      1-800-ShopRite (1-800-746-7748).
+    citations:
+      - title: Wakefern Food Corp. Voluntarily Recalls Wholesome Pantry Organic Unsweetened Apple Sauce
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/wakefern-food-corp-voluntarily-recalls-wholesome-pantry-organic-unsweetened-apple-sauce
+        publisher: FDA
+        accessed: 2026-09-23
+
   - id: 2026-09-whole-foods-cabricharme-cheese-egg
     date: 2026-09-11
     title: Whole Foods Market Cabricharme cheese (undeclared egg)
