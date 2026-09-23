@@ -1548,4 +1548,29 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A98691
         publisher: FDA
         accessed: 2026-09-17
+  - id: 2026-09-16-international-sprout-holdings-alfalfa-net-weight-50-lbs-bag
+    date: 2026-09-16
+    title: Alfalfa sprouts recalled for potential E. coli and Salmonella contamination
+    summary:
+      - sprouts
+    recalling_firm: International Sprout Holdings, Inc
+    agency: FDA
+    hazards:
+      - e-coli
+      - salmonella
+    classification: I
+    products:
+      - name: Alfalfa sprouts, 50 lb bag
+        codes:
+          - "ISS Lot # SAL2-24JB"
+    distribution: Wholesale consignees in 16 states (CA, FL, HI, IL, MA, MN, MO, MT, NY, OH, OR, PA, TN, SC, TX, UT), Puerto Rico, Canada, Mexico, Tahiti, and Venezuela
+    note: International Sprout Holdings is recalling 50‑lb bags of alfalfa sprouts due to possible contamination with E. coli and Salmonella. The product was distributed to wholesale consignees across 16 U.S. states and several international locations. Consumers should not consume the product and should return it to the place of purchase or discard it. For more information, contact the firm or the FDA.
+    citations:
+      - title: Sprout seed supplier recalled product amid outbreak
+        url: https://www.foodsafetynews.com/2026/09/sprout-seed-supplier-recalled-product-amid-outbreak/
+        publisher: Food Safety News
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99822
+        publisher: FDA
+        accessed: 2026-09-23
 
