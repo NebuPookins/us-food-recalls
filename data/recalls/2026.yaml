@@ -198,6 +198,45 @@ recalls:
         publisher: FDA
         accessed: 2026-09-18
 
+  - id: 2026-09-international-sprout-holdings-alfalfa-seed
+    parent_id: 2026-08-everything-sprouts-alfalfa-sprouts
+    date: 2026-09-16
+    title: International Sprout Holdings alfalfa seed (E. coli and Salmonella)
+    summary:
+      - alfalfa seed
+    recalling_firm: International Sprout Holdings, Inc
+    agency: FDA
+    hazards: [e-coli, salmonella]
+    classification: I
+    distribution: Wholesale consignees in 16 states (CA, FL, HI, IL, MA, MN, MO, MT, NY, OH, OR, PA, TN, SC, TX, UT), Puerto Rico, Canada, Mexico, Tahiti, and Venezuela
+    products:
+      - name: Alfalfa seed, 50 lb bag
+        brand: International Specialty Supply
+        codes:
+          - "ISS Lot # SAL2-24JB"
+    note: |
+      International Sprout Holdings, Inc of Cookeville, TN recalled 43,799
+      pounds of alfalfa seed in 50-lb bags because the seed may be contaminated
+      with Shiga toxin-producing E. coli and Salmonella. The recall (FDA recall
+      number H-1341-2026) was initiated August 23, 2026, and appeared in the
+      FDA enforcement report on September 16, 2026.
+
+      The recalled seed is the implicated source of the August 2026 outbreak of
+      E. coli and Salmonella infections traced to alfalfa sprouts grown by
+      Everything Sprouts, LLC. Although the FDA said on August 31 that the seed
+      supplier had not responded to its recall recommendation, the enforcement
+      report later showed that the firm had in fact initiated a recall of the
+      seed on August 23.
+    citations:
+      - title: Sprout seed supplier recalled product amid outbreak
+        url: https://www.foodsafetynews.com/2026/09/sprout-seed-supplier-recalled-product-amid-outbreak/
+        publisher: Food Safety News
+        accessed: 2026-09-23
+      - title: FDA enforcement report
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99822
+        publisher: FDA
+        accessed: 2026-09-23
+
   - id: 2026-09-so-delicious-salted-caramel-cluster-stones
     date: 2026-09-15
     title: So Delicious Dairy Free Salted Caramel Cluster Non-Dairy Frozen Dessert pints (foreign material)
