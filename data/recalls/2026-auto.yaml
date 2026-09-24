@@ -1548,4 +1548,26 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A98691
         publisher: FDA
         accessed: 2026-09-17
+  - id: 2026-09-16-ferrero-usa-fannie-may-and-xo-marshmallow
+    date: 2026-09-16
+    title: Fannie May & XO Marshmallow Pixie S'mores Collection recalled for undeclared milk and pecans
+    summary:
+      - candy
+    recalling_firm: Ferrero USA
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: II
+    products:
+      - name: Fannie May & XO Marshmallow Pixie S'mores Collection
+        brand: Fannie May
+        codes:
+          - All best by codes that were sold 8/7/2026 to 8/14/2026
+    distribution: Illinois, Indiana, Iowa, Ohio
+    note: The marshmallow candy was sold with best‑by dates from August 7 to August 14, 2026, but the label failed to declare the presence of milk and pecans, which are allergens. Consumers with milk or nut allergies should not eat the product. Return the items to the place of purchase for a refund or discard them, and contact Ferrero USA for further assistance.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99682
+        publisher: FDA
+        accessed: 2026-09-24
 
