@@ -48,6 +48,27 @@ export function matchesSearch(haystack, terms) {
  *   than the effective primary stays visible only if its own category is active,
  *   while anything newer (and the effective primary itself) is suppressed.
  */
+/**
+ * Returns the search texts corresponding to recall entries that are currently
+ * active/visible under `decision`.
+ * @param {readonly string[]} searchTexts
+ * @param {{ visible: boolean, primaryIndex: number, alsoVisible: readonly boolean[] }} decision
+ * @returns {string[]}
+ */
+export function activeSearchTexts(searchTexts, decision) {
+  if (!decision || !decision.visible) return [];
+  const active = [];
+  if (decision.primaryIndex >= 0 && decision.primaryIndex < searchTexts.length) {
+    active.push(searchTexts[decision.primaryIndex]);
+  }
+  for (let j = 0; j < decision.alsoVisible.length; j++) {
+    if (decision.alsoVisible[j] && j + 1 < searchTexts.length) {
+      active.push(searchTexts[j + 1]);
+    }
+  }
+  return active;
+}
+
 export function decideFoods(foods, activeCategories) {
   return foods.map((food) => {
     const primaryActive = overlaps(food.primaryCategories, activeCategories);
