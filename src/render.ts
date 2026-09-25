@@ -338,16 +338,21 @@ function renderSummary(recalls: readonly Recall[], now: string): string {
     .join('\n');
 
   return `<section class="summary" aria-labelledby="summary-title">
-  <h2 id="summary-title">Foods to check</h2>
+  <div class="summary-header">
+    <h2 id="summary-title">Foods to check</h2>
+    <p class="summary-subtitle">Recalled items to check in your pantry and fridge right now</p>
+  </div>
+  <div class="summary-grid">
 ${body}
+  </div>
 </section>`;
 }
 
 /** Two calls to action: report a missed recall by email, and support the site. */
 function renderActions(): string {
   return `<section class="actions" aria-label="Get involved">
-  <a class="button" href="mailto:nebupookins@gmail.com?subject=New%20food%20alert%20to%20report">📧 Spotted an alert I missed? Let me know!</a>
-  <a class="button button-secondary" href="https://ko-fi.com/nebupookins" target="_blank" rel="noopener noreferrer">☕ Find this list useful? Support the site!</a>
+  <a class="button button-secondary" href="mailto:nebupookins@gmail.com?subject=New%20food%20alert%20to%20report">📧 Spotted an alert I missed? Let me know!</a>
+  <a class="button button-outline" href="https://ko-fi.com/nebupookins" target="_blank" rel="noopener noreferrer">☕ Find this list useful? Support the site!</a>
 </section>`;
 }
 
@@ -382,8 +387,10 @@ function renderPreferences(): string {
     <div class="categories">
 ${checkboxes}
     </div>
-    <button class="button" id="save-preferences" type="button">Save preferences</button>
-    <p class="preferences-warning" id="preferences-warning" hidden>Choose at least one category to save.</p>
+    <div class="preferences-footer">
+      <button class="button button-primary" id="save-preferences" type="button">Save preferences</button>
+      <p class="preferences-warning" id="preferences-warning" hidden>Choose at least one category to save.</p>
+    </div>
   </div>
 </section>`;
 }
@@ -416,43 +423,51 @@ export function renderIndex(recalls: readonly Recall[], meta: SiteMeta): string 
 </head>
 <body>
 <header class="site-header">
-  <h1>${escapeHtml(meta.title)}</h1>
-  <p class="tagline">${escapeHtml(meta.description)}</p>
-  <p class="site-links">
-    <a href="feed.xml">Atom feed</a> ·
-    <a href="recalls.json">JSON</a> ·
-    <span>${active.length} alert${active.length === 1 ? '' : 's'}</span> ·
-    <span>updated ${escapeHtml(formatDate(meta.buildDate))}</span>
-  </p>
+  <div class="site-header-inner">
+    <div class="site-title-area">
+      <span class="site-pill">Food Safety Alert Hub</span>
+      <h1>${escapeHtml(meta.title)}</h1>
+      <p class="tagline">${escapeHtml(meta.description)}</p>
+    </div>
+    <div class="site-stats">
+      <span class="stat-badge"><span class="pulse-dot"></span>${active.length} active alert${active.length === 1 ? '' : 's'}</span>
+      <span class="stat-date">Updated ${escapeHtml(formatDate(meta.buildDate))}</span>
+    </div>
+  </div>
 </header>
-
-${renderPreferences()}
 
 ${renderSummary(ongoing, meta.buildDate)}
 
+${renderPreferences()}
+
 ${renderActions()}
 
-<form class="filters" role="search" aria-label="Filter alerts">
-  <label>Search
-    <input type="search" id="q" placeholder="product, brand, firm…" autocomplete="off">
-  </label>
-  <label>Hazard
-    <select id="hazard">
-      <option value="">All</option>
-      ${hazards.map((h) => `<option value="${escapeHtml(h)}">${escapeHtml(HAZARD_LABELS[h])}</option>`).join('\n      ')}
-    </select>
-  </label>
-  <label>Year
-    <select id="year">
-      <option value="">All</option>
-      ${years.map((y) => `<option value="${escapeHtml(y)}">${escapeHtml(y)}</option>`).join('\n      ')}
-    </select>
-  </label>
-</form>
+<div class="timeline-section">
+  <form class="filters" role="search" aria-label="Filter alerts">
+    <div class="filter-field search-field">
+      <label for="q">Search</label>
+      <input type="search" id="q" placeholder="Search by product, brand, firm, or hazard…" autocomplete="off">
+    </div>
+    <div class="filter-field">
+      <label for="hazard">Hazard</label>
+      <select id="hazard">
+        <option value="">All Hazards</option>
+        ${hazards.map((h) => `<option value="${escapeHtml(h)}">${escapeHtml(HAZARD_LABELS[h])}</option>`).join('\n        ')}
+      </select>
+    </div>
+    <div class="filter-field">
+      <label for="year">Year</label>
+      <select id="year">
+        <option value="">All Years</option>
+        ${years.map((y) => `<option value="${escapeHtml(y)}">${escapeHtml(y)}</option>`).join('\n        ')}
+      </select>
+    </div>
+  </form>
 
-<p class="result-count" id="count" role="status"></p>
-<p class="retracted-hits" id="retracted-hits"></p>
-<p class="filtered-out-hits" id="filtered-out-hits"></p>
+  <p class="result-count" id="count" role="status"></p>
+  <p class="retracted-hits" id="retracted-hits"></p>
+  <p class="filtered-out-hits" id="filtered-out-hits"></p>
+</div>
 
 <dialog class="recall-modal" id="recall-modal">
   <button class="recall-modal-close" id="recall-modal-close" type="button" aria-label="Close">&times;</button>
@@ -466,7 +481,11 @@ ${active.map((r) => renderRecall(r, byId)).join('\n')}
 <p class="empty" id="empty" hidden>No alerts match those filters.</p>
 
 <footer class="site-footer">
-  <p class="site-links"><a href="retracted.html">Retracted alerts</a></p>
+  <p class="site-links">
+    <a href="feed.xml">Atom feed</a> ·
+    <a href="recalls.json">JSON dataset</a> ·
+    <a href="retracted.html">Retracted alerts</a>
+  </p>
   <p>Generated from YAML. Not affiliated with the FDA, FSIS or CDC. Always check the linked
      primary sources before acting on anything here.</p>
 </footer>
@@ -494,9 +513,16 @@ export function renderRetractedPage(recalls: readonly Recall[], meta: SiteMeta):
 </head>
 <body>
 <header class="site-header">
-  <h1>Retracted alerts</h1>
-  <p class="tagline">Reports that were withdrawn or turned out to be false positives — not active alerts.</p>
-  <p class="site-links"><a href="index.html">← Back to all alerts</a></p>
+  <div class="site-header-inner">
+    <div class="site-title-area">
+      <span class="site-pill">Archive</span>
+      <h1>Retracted alerts</h1>
+      <p class="tagline">Reports that were withdrawn or turned out to be false positives — not active alerts.</p>
+    </div>
+    <div class="site-stats">
+      <a class="button button-secondary" href="index.html">← Back to active alerts</a>
+    </div>
+  </div>
 </header>
 
 <main id="recalls">
@@ -504,6 +530,11 @@ ${retracted.map((r) => renderRecall(r, byId)).join('\n')}
 </main>
 
 <footer class="site-footer">
+  <p class="site-links">
+    <a href="index.html">← Back to active alerts</a> ·
+    <a href="feed.xml">Atom feed</a> ·
+    <a href="recalls.json">JSON dataset</a>
+  </p>
   <p>Generated from YAML. Not affiliated with the FDA, FSIS or CDC. Always check the linked
      primary sources before acting on anything here.</p>
 </footer>
