@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
+  activeSearchTexts,
   decideFoods,
   highlightHtml,
   matchesSearch,
@@ -144,6 +145,27 @@ test('drops the separator after the last visible "also previously" link', () => 
   // Only the allergen link is visible, so it gets no trailing separator.
   assert.deepEqual(decision.alsoVisible, [true, false]);
   assert.deepEqual(decision.alsoSepVisible, [false, false]);
+});
+
+test('activeSearchTexts includes only search texts for active recall entries', () => {
+  const searchTexts = ['chocolate leben pasteurization', 'dark chocolate almond bites peanut allergen'];
+  // Food has two recall entries: primary (other) and also (undeclared-allergens)
+  const foods = [{ primaryCategories: ['other'], alsoCategories: [['undeclared-allergens']] }];
+
+  // 1. Both categories active
+  const activeBoth = new Set(['other', 'undeclared-allergens']);
+  const [decisionBoth] = decideFoods(foods, activeBoth);
+  assert.deepEqual(activeSearchTexts(searchTexts, decisionBoth), searchTexts);
+
+  // 2. Only 'other' active (allergens filtered out)
+  const activeOther = new Set(['other']);
+  const [decisionOther] = decideFoods(foods, activeOther);
+  assert.deepEqual(activeSearchTexts(searchTexts, decisionOther), ['chocolate leben pasteurization']);
+
+  // Search for 'almond' against activeOther should NOT match
+  const terms = ['almond'];
+  const matches = activeSearchTexts(searchTexts, decisionOther).some((h) => matchesSearch(h, terms));
+  assert.equal(matches, false);
 });
 
 test('separatorVisibility marks every visible item except the last', () => {
