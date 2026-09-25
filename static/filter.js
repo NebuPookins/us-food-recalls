@@ -1,4 +1,4 @@
-import { decideFoods, highlightHtml, matchesSearch, matchRanges, overlaps } from './food-filter.js';
+import { activeSearchTexts, decideFoods, highlightHtml, matchesSearch, matchRanges, overlaps } from './food-filter.js';
 
 // Progressive enhancement: the full list is already in the HTML, this only hides
 // non-matching cards. With JS off the page still works, just unfiltered.
@@ -233,11 +233,16 @@ import { decideFoods, highlightHtml, matchesSearch, matchRanges, overlaps } from
   // Search dims/highlights whatever `applyFoods` left visible. Kept separate
   // from `applyFoods` so the bucket re-parenting work below runs only on
   // category changes, not on every search keystroke.
-  const applyFoodSearch = () => {
+  const applyFoodSearch = (decisions = null) => {
     const terms = searchTerms();
-    for (const f of foods) {
+    const categories = activeCategories();
+    const currentDecisions = decisions ?? decideFoods(foodData, categories);
+
+    for (let i = 0; i < foods.length; i++) {
+      const f = foods[i];
       if (f.el.hidden) continue;
-      const matches = terms.length === 0 || f.searchTexts.some((h) => matchesSearch(h, terms));
+      const activeTexts = activeSearchTexts(f.searchTexts, currentDecisions[i]);
+      const matches = terms.length === 0 || activeTexts.some((h) => matchesSearch(h, terms));
       f.el.classList.toggle('dim', !matches);
       f.mainLink.innerHTML = matches
         ? highlightHtml(f.label, matchRanges(f.label, terms), escapeHtml)
@@ -285,7 +290,7 @@ import { decideFoods, highlightHtml, matchesSearch, matchRanges, overlaps } from
       bucket.el.hidden = items.length === 0;
     }
 
-    applyFoodSearch();
+    applyFoodSearch(decisions);
   };
 
   const persist = () => {
@@ -310,7 +315,10 @@ import { decideFoods, highlightHtml, matchesSearch, matchRanges, overlaps } from
   };
 
   for (const control of [q, hazard, year]) control.addEventListener('input', applyRecalls);
-  q.addEventListener('input', applyFoodSearch);
+  // `applyFoodSearch` takes an optional decisions array (reused by `applyFoods`),
+  // so a bare reference here would receive the `input` event as that argument
+  // and leave every food dim.
+  q.addEventListener('input', () => applyFoodSearch());
   for (const input of categoryInputs) {
     input.addEventListener('change', () => {
       prefsWarning.hidden = true;
