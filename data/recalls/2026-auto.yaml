@@ -1570,4 +1570,31 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99682
         publisher: FDA
         accessed: 2026-09-24
+  - id: 2026-09-16-l-nutra-inc-prolon-everyday-apulian-almond
+    date: 2026-09-16
+    title: Prolon Everyday Apulian Almond & Cocoa Spread recalled for undeclared tree nuts
+    summary:
+      - spread
+    recalling_firm: L-Nutra Inc
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: II
+    products:
+      - name: Prolon Everyday Apulian Almond & Cocoa Spread
+        brand: Prolon
+        codes:
+          - "UPC: 50040360530"
+          - "Lot code: L2755"
+          - "Expiration: 02 Jan 2027"
+    distribution: Nationwide via the firm's online website
+    note: The FDA announced a recall of Prolon Everyday Apulian Almond & Cocoa Spread because the product may contain undeclared tree nuts—hazelnut, cashew, and pistachio—posing a risk to consumers with nut allergies. The spread was sold exclusively through L‑Nutra’s online store and 8,529 glass‑jar units are affected. Consumers should not eat the product and should return it to the retailer or discard it and contact L‑Nutra for a refund. The firm is recalling the items nationwide.
+    citations:
+      - title: L-Nutra Issues Allergy Alert on Undeclared Tree Nuts in Prolon Brand Apulian Almond & Cocoa Spread
+        url: https://www.usatoday.com/recalls/food-and-drug/FDA-ub24Kn1hCrk/
+        publisher: USA Today
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99675
+        publisher: FDA
+        accessed: 2026-09-25
 
