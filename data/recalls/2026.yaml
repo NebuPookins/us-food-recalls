@@ -5,6 +5,50 @@
 # with the YAML extension (VS Code, Zed, Neovim + yaml-language-server).
 
 recalls:
+  - id: 2026-09-sierra-nevada-graziers-raw-milk-cheese
+    date: 2026-09-25
+    title: Sierra Nevada Graziers raw milk cheeses (E. coli O26:H11)
+    summary:
+      - raw milk cheese
+    recalling_firm: Sierra Nevada Cheese Company, LLC
+    agency: FDA
+    hazards: [e-coli]
+    distribution: Retailers nationwide and online
+    cases:
+      as_of: 2026-09-25
+      illnesses: 13
+      hospitalizations: 8
+      deaths: 0
+    products:
+      - name: Grass-fed raw milk cheese — medium cheddar, sharp cheddar, jalapeno jack, and Monterey jack (8-oz or 16-oz packages, and 5-lb loaves)
+        brand: Sierra Nevada Graziers
+    note: |
+      The FDA and CDC, in collaboration with state and local partners, are
+      investigating a multistate outbreak of E. coli O26:H11 infections
+      linked to Sierra Nevada Graziers grass-fed raw milk cheese. On
+      September 24, 2026, the FDA contacted Sierra Nevada Cheese Company,
+      LLC, and that same day the firm agreed to and initiated a recall of
+      all Graziers Raw Milk Cheeses. Do not eat, sell, or serve the
+      recalled cheeses.
+
+      The recalled cheeses — medium cheddar, sharp cheddar, jalapeno jack,
+      and Monterey jack — were sold at retail in 8-oz or 16-oz packages and
+      were available to food service customers or wholesalers in 5-lb
+      loaves, at retailers nationwide and online.
+
+      As of September 25, 2026, 13 people across nine states (CA, CO, GA,
+      KY, MI, NV, OR, TN, UT) have been reported infected, with 8
+      hospitalizations and 3 cases of hemolytic uremic syndrome (HUS); no
+      deaths have been reported. Of the 9 people interviewed, all 9 (100%)
+      reported consuming Sierra Nevada Graziers grass-fed raw milk cheese.
+      Consumers who purchased recalled cheese may return it to the place of
+      purchase for a refund.
+    citations:
+      - title: "Outbreak Investigation of E. coli O26:H11: Raw Milk Cheese (September 2026)"
+        url: https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-o26h11-raw-milk-cheese-september-2026
+        publisher: FDA
+        accessed: 2026-09-25
+
   - id: 2026-09-gf-blends-truly-aip-flour-bread-pizza-mix-gluten
     date: 2026-09-18
     title: Truly AIP all-purpose flour and bread mix, EAT G.A.N.G.S.T.E.R. flat bread pizza mix (undeclared wheat gluten)
