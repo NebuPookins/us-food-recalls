@@ -49,6 +49,44 @@ recalls:
         publisher: FDA
         accessed: 2026-09-25
 
+  - id: 2026-09-deanos-pasta-pear-pecorino-triangoli-ravioli
+    date: 2026-09-24
+    title: Deano's Pasta Pear and Pecorino Triangoli Ravioli (undeclared lobster)
+    summary:
+      - ravioli
+    recalling_firm: Deano's Pasta
+    agency: FDA
+    hazards: [undeclared-allergen]
+    distribution: Retail stores in Massachusetts
+    cases:
+      as_of: 2026-09-24
+      illnesses: 0
+    products:
+      - name: Pear and Pecorino Triangoli Ravioli, frozen, 1 lb bag
+        brand: Deano's Pasta
+        codes:
+          - UPC 644216993994
+          - Lot codes 090126126, 082526126, 081826126 and 073126126
+    note: |
+      Deano's Pasta of Somerville, MA recalled approximately 20 lbs. of Pear
+      and Pecorino Triangoli Ravioli because it may contain undeclared lobster.
+      People with an allergy or severe sensitivity to crustacean shellfish
+      (lobster) risk a serious or life-threatening allergic reaction if they
+      eat the product.
+
+      The ravioli was distributed in Massachusetts in retail stores between
+      August 10 and September 22, 2026. It was packed frozen in 1 lb. bags with
+      lot codes 090126126, 082526126, 081826126 and 073126126; the lot code is
+      printed on the product label under the best-by date. No illnesses have
+      been reported. Consumers should not eat the product and may return it to
+      the place of purchase for a full refund, or contact Deano's Pasta at
+      (617) 623-0013.
+    citations:
+      - title: Deano's Pasta Issue Allergy Alert on Undeclared Lobster in Pear and Pecorino Triangoli Ravioli
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/deanos-pasta-issue-allergy-alert-undeclared-lobster-pear-and-pecorino-triangoli-ravioli
+        publisher: FDA
+        accessed: 2026-09-28
+
   - id: 2026-09-berlin-seeds-alfalfa-sprouting-seed
     parent_id: 2026-08-everything-sprouts-alfalfa-sprouts
     date: 2026-09-23
