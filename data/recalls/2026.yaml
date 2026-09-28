@@ -49,6 +49,46 @@ recalls:
         publisher: FDA
         accessed: 2026-09-25
 
+  - id: 2026-09-berlin-seeds-alfalfa-sprouting-seed
+    parent_id: 2026-08-everything-sprouts-alfalfa-sprouts
+    date: 2026-09-23
+    title: Berlin Seeds alfalfa sprouting seed (E. coli and Salmonella)
+    summary:
+      - alfalfa seed
+    recalling_firm: Berlin Seeds
+    agency: FDA
+    hazards: [e-coli, salmonella]
+    distribution: Berlin Seeds retail store in Millersburg, OH and online through the company website to customers in 44 states
+    products:
+      - name: Alfalfa sprouting seed (1/4 lb, 1/2 lb, 1 lb, 5 lb, and 50 lb)
+        brand: Berlin Seeds
+        codes:
+          - Lot SAL2-24JB (on 5 lb and 50 lb packages only)
+    note: |
+      Berlin Seeds of Millersburg, OH recalled 950 lbs. of Alfalfa Sprouting
+      Seeds on September 23, 2026 after being notified by their seed supplier
+      that the seed has the potential to be contaminated with Shiga
+      toxin-producing E. coli (STEC) and/or Salmonella. The recalled seed lot,
+      SAL2-24JB, was identified through traceback as seed used by another
+      sprout grower whose finished sprouts were part of FDA's outbreak
+      investigation.
+
+      The recalled seeds were packed under the Berlin Seeds label in 1/4 lb,
+      1/2 lb, 1 lb, 5 lb, and 50 lb sizes. The 1/4 lb, 1/2 lb, 1 lb, and 5 lb
+      sizes are packaged in resealable bags, while the 50 lb size is packaged
+      in a non-resealable poly woven bag. The 5 lb and 50 lb packages bear the
+      lot code SAL2-24JB on the label; the smaller packages do not bear a lot
+      code.
+
+      The seed was sold at the Berlin Seeds retail store in Millersburg, OH and
+      through the company website from February 13, 2026 to August 23, 2026 to
+      customers in 44 states. Do not use or sell recalled sprouting seeds.
+    citations:
+      - title: "Outbreak Investigation of Shiga Toxin-producing E. coli & Salmonella: Sprouts (August 2026)"
+        url: https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-shiga-toxin-producing-e-coli-salmonella-sprouts-august-2026
+        publisher: FDA
+        accessed: 2026-09-28
+
   - id: 2026-09-gf-blends-truly-aip-flour-bread-pizza-mix-gluten
     date: 2026-09-18
     title: Truly AIP all-purpose flour and bread mix, EAT G.A.N.G.S.T.E.R. flat bread pizza mix (undeclared wheat gluten)
