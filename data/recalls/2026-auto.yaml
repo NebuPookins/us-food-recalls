@@ -1623,4 +1623,29 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99636
         publisher: FDA
         accessed: 2026-09-26
+  - id: 2026-09-16-euro-foods-group-usa-nj-inc-crown-farms-dried-suri-cut-200
+    date: 2026-09-16
+    title: Crown Farms Dried Suri Cut not properly eviscerated
+    summary:
+      - fish
+    recalling_firm: EURO FOODS GROUP USA NJ INC
+    agency: FDA
+    hazards:
+      - processing-defect
+    classification: I
+    products:
+      - name: Crown Farms Dried Suri Cut
+        brand: Crown Farms
+        codes:
+          - "BATCH NO: 130 EF"
+          - 146 EF
+          - "SERIAL NUMBER: 5055192640140"
+          - "PRODUCT CODE: 28DSUM"
+    distribution: Virginia, New York, New Jersey, Michigan
+    note: The firm is recalling Crown Farms Dried Suri Cut because the ribbon fish was not properly eviscerated before drying, creating a processing defect that could lead to contamination. The product was distributed in 53 boxes to stores in Virginia, New York, New Jersey, and Michigan. Consumers who purchased this frozen product should stop using it and return it to the place of purchase for a full refund.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99684
+        publisher: FDA
+        accessed: 2026-09-28
 
