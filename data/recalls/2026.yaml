@@ -5,6 +5,48 @@
 # with the YAML extension (VS Code, Zed, Neovim + yaml-language-server).
 
 recalls:
+  - id: 2026-09-mezzetta-golden-greek-peperoncini
+    date: 2026-09-26
+    title: Mezzetta Golden Greek Peperoncini (Medium Heat) (pest contaminant)
+    summary:
+      - peperoncini
+    recalling_firm: G. L. Mezzetta Inc.
+    agency: FDA
+    hazards: [foreign-material]
+    classification: II
+    distribution: Limited distribution based on production and distribution records; affected customers identified by company
+    cases:
+      as_of: 2026-09-26
+      illnesses: 0
+    products:
+      - name: Golden Greek Peperoncini Medium Heat, 32 oz
+        brand: Mezzetta
+        codes:
+          - SKU 10106328
+          - Lot 720106
+    note: |
+      G. L. Mezzetta Inc. announced a limited voluntary recall of Mezzetta
+      Golden Greek Peperoncini Medium Heat, 32-ounce jars after becoming aware
+      of a video circulating on social media showing a potential pest
+      contaminant in a jar. The company has contacted the consumer who reported
+      the issue and moved quickly to initiate the recall.
+
+      The recall applies only to the specific product and lot identified: SKU
+      10106328, Lot 720106. The company has detailed production and distribution
+      records that allow them to identify where the product from the recalled
+      lot was distributed, and they are working directly with affected customers
+      to isolate and remove the affected product from sale.
+
+      At this time, no illnesses or injuries have been reported. Consumers who
+      believe they have a 32 oz jar of Mezzetta Golden Greek Peperoncini Medium
+      Heat from lot 720106 should not consume the product and should contact
+      Mezzetta at CustomerSupport@Mezzetta.com for assistance.
+    citations:
+      - title: G. L. Mezzetta Inc. Announces Recall of Mezzetta Brand Golden Greek Peperoncini (Medium Heat) Due to Presence of Pest Contaminant in the Jar
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/g-l-mezzetta-inc-announces-recall-mezzetta-brand-golden-greek-peperoncini-medium-heat-due-presence
+        publisher: FDA
+        accessed: 2026-09-28
+
   - id: 2026-09-sierra-nevada-graziers-raw-milk-cheese
     date: 2026-09-25
     title: Sierra Nevada Graziers raw milk cheeses (E. coli O26:H11)
