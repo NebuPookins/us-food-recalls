@@ -5,6 +5,61 @@
 # with the YAML extension (VS Code, Zed, Neovim + yaml-language-server).
 
 recalls:
+  - id: 2026-09-fda-ground-cinnamon-public-health-alert
+    date: 2026-09-28
+    title: Ground Cinnamon Products (multiple brands) — FDA Public Health Alert for Elevated Lead
+    summary:
+      - cinnamon
+      - spices
+    agency: FDA
+    hazards: [chemical-contamination]
+    distribution: Nationwide at various retail locations
+    cases:
+      as_of: 2026-09-28
+      illnesses: 0
+    products:
+      - name: Ground cinnamon
+        brand: Multiple (Lior, Lucky Foods, Venzu, DEVI, BaiLiFeng, HAETAE, Roshni, Durra, Wise Wife, Jiva, Super Brand, Asli, El Chilar, Marcum, SWAD, Supreme, Compania Indillor, ALB, Shahzada, Spice Class, La Frontera, and others)
+    note: |
+      The FDA issued a public health alert (beginning July 30, 2024) recommending
+      voluntary recalls of ground cinnamon products containing elevated levels of
+      lead. The alert has been updated multiple times through September 28, 2026,
+      as additional products were identified through state health department and
+      FDA retail sampling and testing.
+
+      Products on the alert contain lead levels ranging from 2.03 to 10.7 parts
+      per million (ppm). The FDA advises consumers to stop using and dispose of
+      these products, noting that cinnamon products have a long shelf life and
+      consumers should check their homes.
+
+      Brands affected include: Lior (Galil Foods), Lucky Foods, Venzu Traders,
+      DEVI, BaiLiFeng, HAETAE, Roshni, Durra, Wise Wife, Jiva Organics, Super
+      Brand, Asli, El Chilar, Marcum, SWAD, Supreme Tradition, Compania Indillor,
+      ALB Flavor, Shahzada, Spice Class, La Frontera, and others.
+
+      On September 28, 2026, Galil Foods of Hauppauge, NY's Lior Gourmet Spices
+      Ground Cinnamon (lot GAP11304, 2.18 ppm lead) was added to the alert after
+      testing by the Maryland Department of Health.
+
+      For context, the WanaBana cinnamon apple puree and applesauce products
+      recalled in fall 2023 contained 2,270–5,110 ppm lead. While current levels
+      are significantly lower, prolonged exposure could contribute to elevated
+      blood lead levels, particularly in young children who may be especially
+      vulnerable.
+    citations:
+      - title: More Ground Cinnamon Products Added to FDA Public Health Alert Due to Presence of Elevated Levels of Lead
+        url: https://www.fda.gov/food/alerts-advisories-safety-information/more-ground-cinnamon-products-added-fda-public-health-alert-due-presence-elevated-levels-lead
+        publisher: FDA
+        accessed: 2026-09-28
+      - title: March 6, 2024, FDA Alert Concerning Certain Cinnamon Products Due to Presence of Elevated Levels of Lead
+        url: https://www.fda.gov/food/alerts-advisories-safety-information/fda-public-health-alert-certain-cinnamon-products-due-presence-elevated-levels-lead
+        publisher: FDA
+        accessed: 2026-09-28
+      - title: July 25, 2024, FDA Public Health Alert Additional Ground Cinnamon Product Due to Presence of Elevated Levels of Lead
+        url: https://www.fda.gov/food/alerts-advisories-safety-information/fda-public-health-alert-additional-ground-cinnamon-product-due-presence-elevated-levels-lead
+        publisher: FDA
+        accessed: 2026-09-28
+
   - id: 2026-09-mezzetta-golden-greek-peperoncini
     date: 2026-09-26
     title: Mezzetta Golden Greek Peperoncini (Medium Heat) (pest contaminant)
