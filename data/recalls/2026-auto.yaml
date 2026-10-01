@@ -1697,4 +1697,30 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99831
         publisher: FDA
         accessed: 2026-09-30
+  - id: 2026-09-23-foods-alive-inc-foods-alive-organic-moringa-le
+    date: 2026-09-23
+    title: Foods Alive organic moringa leaf powder recalled for potential Salmonella contamination
+    summary:
+      - moringa
+    recalling_firm: FOODS ALIVE INC.
+    agency: FDA
+    hazards:
+      - salmonella
+    classification: I
+    products:
+      - name: Foods Alive organic moringa leaf powder
+        brand: Foods Alive
+        codes:
+          - 8 91551 00092 8
+          - Freshest by 110127
+    distribution: Nationwide US and UAE, including retail stores and online sellers
+    note: Foods Alive is recalling its organic moringa leaf powder after learning of a potential Salmonella contamination. The product was sold in 8‑oz pouches and distributed across the United States and the United Arab Emirates through retail locations and the company’s website. Consumers should stop using the product and return or discard any unopened pouches. For refunds or more information, contact Foods Alive or the FDA.
+    citations:
+      - title: FDA Recalls Foods Alive Organic Moringa Leaf Powder Due to Salmonella Risk
+        url: https://www.yahoo.com/news/us/articles/fda-recalls-foods-alive-organic-223000021.html
+        publisher: Yahoo
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99830
+        publisher: FDA
+        accessed: 2026-10-01
 
