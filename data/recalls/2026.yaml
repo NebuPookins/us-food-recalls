@@ -146,6 +146,83 @@ recalls:
         publisher: FDA
         accessed: 2026-09-25
 
+  - id: 2026-09-sierra-nevada-cheese-graziers-raw-milk-cheese-recall
+    parent_id: 2026-09-sierra-nevada-graziers-raw-milk-cheese
+    date: 2026-09-28
+    title: Sierra Nevada Cheese Company Graziers Raw Milk Cheese (E. coli O26:H11)
+    summary:
+      - raw milk cheese
+    recalling_firm: Sierra Nevada Cheese Company (Willows, California)
+    agency: FDA
+    hazards: [e-coli]
+    distribution: Nationwide, through distributors, retailers and direct customers
+    cases:
+      as_of: 2026-09-28
+      illnesses: 13
+    products:
+      - name: Graziers Raw Milk Monterey Jack, 8 oz square
+        brand: Sierra Nevada Graziers
+        codes:
+          - UPC 6-87652-16400-9
+      - name: Graziers Raw Milk Jalapeño Jack, 8 oz square
+        brand: Sierra Nevada Graziers
+        codes:
+          - UPC 6-87652-16403-0
+      - name: Graziers Raw Milk Medium Cheddar, 8 oz square
+        brand: Sierra Nevada Graziers
+        codes:
+          - UPC 6-87652-16506-8
+      - name: Graziers Raw Milk Sharp Cheddar, 8 oz square
+        brand: Sierra Nevada Graziers
+        codes:
+          - UPC 6-87652-16507-5
+      - name: Graziers Raw Milk Medium Cheddar, 16 oz brick
+        brand: Sierra Nevada Graziers
+        codes:
+          - UPC 6-87652-16501-3
+      - name: Graziers Raw Milk Monterey Jack, 5 lb loaf
+        brand: Sierra Nevada Graziers
+        codes:
+          - Item 6425
+      - name: Graziers Raw Milk Jalapeño Jack, 5 lb loaf
+        brand: Sierra Nevada Graziers
+        codes:
+          - Item 6426
+      - name: Graziers Raw Milk Medium Cheddar, 5 lb loaf
+        brand: Sierra Nevada Graziers
+        codes:
+          - Item 6510
+      - name: Graziers Raw Milk Sharp Cheddar, 5 lb loaf
+        brand: Sierra Nevada Graziers
+        codes:
+          - Item 6511
+      - name: Graziers Raw Milk Cheddar block, 40 lb
+        brand: Sierra Nevada Graziers
+        codes:
+          - Item 6515
+          - Item 6516
+    note: |
+      Sierra Nevada Cheese Company is voluntarily recalling all Graziers Raw
+      Milk Cheese currently in the market because of potential contamination
+      with Shiga toxin-producing E. coli O26:H11. The investigation has not
+      been narrowed to a specific lot, date code or production date, so no lot
+      codes are listed and every product in the table is included.
+
+      Illnesses in the multistate FDA/CDC outbreak investigation (13 identified
+      to date) have been epidemiologically associated with Graziers Raw Milk
+      Medium Cheddar. The company initiated the recall after being contacted by
+      FDA and stopped production and shipment of all Graziers Raw Milk Cheese.
+
+      Do not eat or serve the recalled cheese. Return it to the place of
+      purchase for a refund or dispose of it. Questions: Sierra Nevada Cheese
+      Company, (530) 934-8662, Monday through Friday, 8:30 a.m. to 5:00 p.m.
+      Pacific Time, or recallinfo@sierranevadacheese.com.
+    citations:
+      - title: Sierra Nevada Cheese Company Recalls Graziers Raw Milk Cheese Because of Possible Health Risk
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/sierra-nevada-cheese-company-recalls-graziers-raw-milk-cheese-because-possible-health-risk
+        publisher: FDA
+        accessed: 2026-09-30
+
   - id: 2026-09-galil-importing-lior-cinnamon-ground-seasoning
     date: 2026-09-24
     title: Lior Cinnamon Ground Seasoning (elevated lead)
