@@ -1140,26 +1140,55 @@ recalls:
     hazards: [e-coli, salmonella]
     distribution: Retailers, grocery stores and foodservice customers in 15 states
     cases:
-      as_of: 2026-08-21
-      illnesses: 55
-      hospitalizations: 4
+      as_of: 2026-10-01
+      illnesses: 76
+      hospitalizations: 6
       deaths: 0
     products:
-      - name: Alfalfa sprouts
+      - name: Alfalfa sprouts, 5 oz
         brand: Calco and Everything Sprouts
+        codes:
+          - LOT# 222, 223, 225, 226 and 230
+      - name: Crunchy Protein Sprout Mix, 5 oz cups
+        brand: Everything Sprouts
+        codes:
+          - UPC 08706000181
+          - LOT# 222, 223, 226 and 230
+      - name: Zesty Garlic Mix, 5 oz cups
+        brand: Everything Sprouts
+        codes:
+          - UPC 087906000167
+          - LOT# 222, 223, 225, 226 and 230
     note: |
       FDA and CDC are investigating a multistate outbreak of Shiga
       toxin-producing E. coli (serotypes O26:H11, O103:H25 and O168:H8) and
       Salmonella Agona traced to alfalfa sprouts grown and distributed by
       Everything Sprouts, LLC of Minneapolis, MN. FDA initiated an inspection
-      on August 19 and recommended that Everything Sprouts conduct a recall;
-      the investigation is ongoing. Do not eat, sell or serve sprouts sold
-      under the Calco and Everything Sprouts brands.
+      on August 19, and Everything Sprouts recalled its alfalfa sprouts on
+      August 22 (the recall also covers the mixes that contain them; see the
+      separate Robust Radish Mix entry for the August 28 expansion). Do not
+      eat, sell or serve the recalled sprouts. Their best-by dates have passed
+      and they should no longer be available in stores or restaurants.
+
+      As of October 1, 2026, CDC reports 76 illnesses from 16 states (FL, IN,
+      IA, KS, MI, MN, NH, NY, NC, ND, OR, PA, SC, SD, WA and WI): 64 with E.
+      coli, 9 with Salmonella and 3 with both. Illness onsets range from May
+      31 to September 7, 2026. There have been 6 hospitalizations and no
+      deaths. Of 50 people interviewed, 40 (80%) reported eating sprouts and 35
+      (70%) specified alfalfa sprouts.
+
+      Everything Sprouts' sprouts do not explain all the illnesses. Traceback
+      identified at least one other sprout grower that used the same lot of
+      alfalfa seed (SAL2-24JB) from a common supplier, which agreed to a seed
+      recall on September 15. The seed was sold to sprout growers and
+      wholesale distributors in 16 states and Puerto Rico, and shipped to
+      Canada, Mexico, Tahiti and Venezuela; see the International Sprout
+      Holdings and Berlin Seeds entries. FDA's investigation is ongoing.
     citations:
       - title: "Outbreak Investigation of Shiga Toxin-producing E. coli & Salmonella: Sprouts (August 2026)"
         url: https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-shiga-toxin-producing-e-coli-salmonella-sprouts-august-2026
         publisher: FDA
-        accessed: 2026-08-21
+        accessed: 2026-10-01
       - title: E. coli and Salmonella Outbreak Linked to Alfalfa Sprouts
         url: https://www.cdc.gov/ecoli/outbreaks/alfalfa-sprouts-08-26/index.html
         publisher: CDC
