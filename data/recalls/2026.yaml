@@ -1138,6 +1138,7 @@ recalls:
     recalling_firm: Everything Sprouts, LLC
     agency: FDA
     hazards: [e-coli, salmonella]
+    classification: I
     distribution: Retailers, grocery stores and foodservice customers in 15 states
     cases:
       as_of: 2026-10-01
@@ -1152,7 +1153,7 @@ recalls:
       - name: Crunchy Protein Sprout Mix, 5 oz cups
         brand: Everything Sprouts
         codes:
-          - UPC 08706000181
+          - UPC 087906010187
           - LOT# 222, 223, 226 and 230
       - name: Zesty Garlic Mix, 5 oz cups
         brand: Everything Sprouts
@@ -1193,6 +1194,10 @@ recalls:
         url: https://www.cdc.gov/ecoli/outbreaks/alfalfa-sprouts-08-26/index.html
         publisher: CDC
         accessed: 2026-08-21
+      - title: Alfalfa Sprout Recall Elevated to FDA Top Risk Level
+        url: https://www.ntd.com/alfalfa-sprout-recall-elevated-to-fda-top-risk-level_1172864.html
+        publisher: NTD News
+        accessed: 2026-10-02
 
   - id: 2026-08-indus-foods-gangothri-pickled-meat
     date: 2026-08-17
