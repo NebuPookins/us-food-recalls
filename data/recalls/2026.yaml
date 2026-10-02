@@ -1430,20 +1430,41 @@ recalls:
     recalling_firm: Coast Citrus Distributors
     agency: FDA
     hazards: [salmonella]
-    distribution: Restaurants and retailers in 27 states
+    distribution: Distributors, restaurants and food service companies nationwide; downstream products sold at retail nationwide
     cases:
-      as_of: 2026-08-05
-      illnesses: 345
-      hospitalizations: 36
+      as_of: 2026-10-02
+      illnesses: 488
+      hospitalizations: 65
+      deaths: 0
     products:
       - name: Fresh jalapeños (grown in Sinaloa, Mexico)
         brand: Coast Citrus Distributors
     note: |
-      A multistate Salmonella outbreak was traced to fresh jalapeños grown in
-      Sinaloa, Mexico and distributed by Coast Citrus Distributors. Restaurants
+      A multistate Salmonella Javiana outbreak was traced to fresh jalapeños
+      grown in Sinaloa, Mexico and distributed by Coast Citrus Distributors to
+      distributors, restaurants and food service companies. Restaurants
       including Chipotle and QDOBA stopped serving the peppers, and several
-      prepared-food firms recalled products made with them.
+      prepared-food firms recalled products made with them. The recalled fresh
+      jalapeños are no longer for sale and are past shelf life, but some
+      downstream products have longer shelf lives.
+
+      On October 2, 2026, CDC declared the outbreak over and FDA closed its
+      investigation. CDC reported 488 illnesses in 34 states (AL, AR, CA, CO,
+      FL, GA, HI, IL, IN, IA, KS, KY, LA, MI, MN, MO, MT, NE, NJ, NM, NC, ND,
+      OH, OK, PA, SC, TN, TX, UT, VA, WA, WV, WI and WY), 65 hospitalizations
+      and no deaths. Illness onsets ranged from June 16 to August 26, 2026. Of
+      308 people interviewed, 281 (91%) ate at a Mexican-style restaurant,
+      including Chipotle and QDOBA, between June 14 and July 29, 2026.
+      Traceback identified a common grower in Sinaloa as the likely source.
+      FDA inspected a common Mexican distributor, but no jalapeños were
+      available to sample and environmental samples were negative for
+      Salmonella, so FDA could not determine the route or source of
+      contamination.
     citations:
+      - title: "Outbreak Investigation of Salmonella: Jalapeño (August 2026)"
+        url: https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-jalapeno-august-2026
+        publisher: FDA
+        accessed: 2026-10-02
       - title: Taylor Farms recalls jalapeno products over salmonella concerns
         url: https://apnews.com/article/taylor-fresh-foods-trump-jalapenos-lettuce-salmonella-6cc2f9e17fdd4cb45953c21bee841e1e
         publisher: AP News
@@ -1452,6 +1473,143 @@ recalls:
         url: https://www.cnn.com/2026/08/10/health/salmonella-jalapeno-taylor-farms
         publisher: CNN
         accessed: 2026-08-18
+
+  - id: 2026-08-whole-foods-jalapeno-dips-salsas-salmonella
+    parent_id: 2026-08-coast-citrus-jalapenos-salmonella
+    date: 2026-08-12
+    title: Whole Foods Market guacamole, salsa, dips and prepared foods (jalapeños)
+    summary:
+      - guacamole
+      - salsa
+      - dips
+      - prepared foods
+    recalling_firm: Whole Foods Market
+    agency: FDA
+    hazards: [salmonella]
+    classification: I
+    distribution: Whole Foods Market stores and online in TX, OK, LA, AR, WI, MI, IL, IN, IA, MO, KY and OH
+    cases:
+      as_of: 2026-08-12
+      illnesses: 0
+    products:
+      - name: Guacamole dips (mild, mild no tomatoes, spicy, spicy no tomatoes, medium pico de gallo, pomegranate, roasted corn)
+        brand: Whole Foods Market
+        codes:
+          - Best before/by 8/7/2026 - 8/12/2026
+          - PLU 29802800000 (Medium Pico de Gallo Guacamole Dip), among others
+      - name: Dip Trio
+        brand: Whole Foods Market
+        codes:
+          - PLU 85001178876
+          - Best before/by 8/7/2026 - 8/12/2026
+      - name: Heirloom Tomato Salsa and Mango Pineapple Salsa
+        brand: Whole Foods Market
+        codes:
+          - PLU 46000049560 and 46000040275
+          - Best before/by 8/9/2026 - 8/14/2026
+    note: |
+      Whole Foods Market recalled select salsas, guacamole, pico de gallo and
+      prepared foods from its Produce and Prepared Foods departments because
+      they contain jalapeños sourced from Coast Citrus Distributors that may be
+      contaminated with Salmonella. The products were sold online and in stores
+      in 12 states with best-before/by dates of 8/7/2026 through 8/16/2026. The
+      product list was later revised to remove seasonal or discontinued
+      recipes that were not on sale during the recall period. No illnesses had
+      been reported. The FDA enforcement record (event 99640) classifies the
+      Medium Pico de Gallo Guacamole Dip portion as Class I, about 13,000
+      units. Customers can discard the products or bring a receipt to any Whole
+      Foods Market store for a full refund.
+    citations:
+      - title: Whole Foods Market Announces a Recall of Select Salsas, Guacamole, Pico de Gallo, and Prepared Foods Products Because of Possible Health Risk
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/whole-foods-market-announces-recall-select-salsas-guacamole-pico-de-gallo-and-prepared-foods
+        publisher: FDA
+        accessed: 2026-10-02
+      - title: Whole Foods guacamole recall classified under FDA's highest risk level
+        url: https://www.yahoo.com/news/us/articles/whole-foods-guacamole-recall-classified-134727483.html
+        publisher: Yahoo
+
+  - id: 2026-08-naturebest-jalapeno-products-salmonella
+    parent_id: 2026-08-coast-citrus-jalapenos-salmonella
+    date: 2026-08-08
+    title: NatureBest and H-E-B pico de gallo, stuffed mushrooms, soup mix and diced jalapeño
+    summary:
+      - pico de gallo
+      - stuffed mushrooms
+      - soup mix
+      - diced jalapeño
+    recalling_firm: NatureBest Precut & Produce LLC
+    agency: FDA
+    hazards: [salmonella]
+    distribution: Retail customers in Texas and Louisiana (H-E-B stores), July 3 to August 5, 2026
+    cases:
+      as_of: 2026-08-14
+      illnesses: 0
+    products:
+      - name: Pico de gallo (mild, medium, hot, mango), 4 oz, 9 oz and 14 oz
+        brand: NatureBest and H-E-B
+        codes:
+          - Lots 190A26184 through 190A26216
+          - Best by 7/14/2026 - 8/15/2026
+      - name: Soup Mix, 58 oz
+        brand: NatureBest
+        codes:
+          - UPC 089563071221
+          - Best by 7/13/2026 - 8/11/2026
+      - name: Cheddar & Jalapeno and Jalapeno Popper Stuffed Mushrooms, 8 oz
+        brand: NatureBest and H-E-B
+        codes:
+          - UPC 089563000863 and 019787014702
+          - Best by 7/12/2026 - 8/12/2026
+      - name: Diced Jalapeno, 3 oz
+        brand: NatureBest and H-E-B
+        codes:
+          - UPC 089563004106 and 004122076495
+          - Best by 7/13/2026 - 8/14/2026
+    note: |
+      NatureBest Precut & Produce LLC of Missouri City and Houston, TX
+      recalled products made with jalapeño peppers supplied by Coast Citrus
+      Distributors, which may be contaminated with Salmonella. The recall was
+      announced August 8 and posted by FDA on August 14, 2026. The company has
+      stopped distribution. No illnesses were reported with the announcement.
+      Consumers should discard the products or return them to the place of
+      purchase.
+    citations:
+      - title: NatureBest Precut & Produce LLC Voluntarily Recalls Products Containing Jalapenos Due to Potential Salmonella Contamination
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/naturebest-precut-produce-llc-voluntarily-recalls-products-containing-jalapenos-due-potential
+        publisher: FDA
+        accessed: 2026-10-02
+
+  - id: 2026-08-fsis-jalapeno-meat-poultry-alert
+    parent_id: 2026-08-coast-citrus-jalapenos-salmonella
+    date: 2026-08-08
+    title: Meat and poultry products containing recalled jalapeños (public health alert)
+    summary:
+      - meat and poultry products
+    recalling_firm: Taylor Farms; Greencore USA/Bakkavor USA (and other FSIS-regulated establishments)
+    agency: FSIS
+    hazards: [salmonella]
+    distribution: See the FSIS product list (PDF) for states
+    cases:
+      as_of: 2026-08-08
+      illnesses: 0
+    products:
+      - name: Fully cooked, not shelf-stable meat and poultry products containing recalled jalapeños
+        brand: Various (see FSIS product list)
+    note: |
+      FSIS issued a public health alert on August 8, 2026 for meat and poultry
+      products containing FDA-regulated jalapeños that may be contaminated with
+      Salmonella. FDA notified FSIS that multiple FSIS-regulated
+      establishments had received the recalled ingredient. FSIS said it
+      expected more downstream products to be identified, and the alert is
+      accompanied by a product list giving product names, establishment
+      numbers and states. No confirmed illnesses were linked to these products.
+      Consumers should not eat the products and should throw them away or
+      return them to the place of purchase.
+    citations:
+      - title: FSIS Issues Public Health Alert for Various Meat and Poultry Products Containing FDA-Regulated Jalapeños That Have Been Recalled Due To Possible Salmonella Contamination
+        url: https://www.fsis.usda.gov/recalls-alerts/fsis-issues-public-health-alert-various-meat-and-poultry-products-containing-fda-0
+        publisher: FSIS
+        accessed: 2026-10-02
 
   - id: 2026-08-taylor-fresh-jalapenos-salmonella
     parent_id: 2026-08-coast-citrus-jalapenos-salmonella
