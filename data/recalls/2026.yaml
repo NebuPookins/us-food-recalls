@@ -672,11 +672,12 @@ recalls:
         brand: Bettergoods (Walmart)
         codes:
           - UPC 194346442706
-          - Lot L6079C, expiration 09/19/2027
-          - Lot L6080C, expiration 09/20/2027
+          - All lots
     note: |
       Gias Foods of New York, NY recalled two lots of bettergoods Authentic
-      Italian Lemon Alfredo Fettuccine because they may be contaminated with
+      Italian Lemon Alfredo Fettuccine (L6079C and L6080C, expiring 09/19/2027
+      and 09/20/2027) on September 15, then expanded the recall on October 1
+      to all lot codes of the product. It may be contaminated with
       Listeria monocytogenes, which can cause serious and sometimes fatal
       infections in young children, frail or elderly people, and others with
       weakened immune systems, and miscarriages and stillbirths in pregnant
@@ -695,6 +696,10 @@ recalls:
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/gias-foods-inc-recalls-bettergoods-authentic-italian-lemon-alfredo-fettuccine-because-possible
         publisher: FDA
         accessed: 2026-09-19
+      - title: Gias Foods, Inc. Recalls Bettergoods Authentic Italian Lemon Alfredo Fettuccine Because of Possible Health Risk (expanded to all lots)
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/gias-foods-inc-recalls-bettergoods-authentic-italian-lemon-alfredo-fettuccine-because-possible-0
+        publisher: FDA
+        accessed: 2026-10-02
 
   - id: 2026-09-wakefern-wholesome-pantry-apple-sauce
     date: 2026-09-14
