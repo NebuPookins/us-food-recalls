@@ -1588,13 +1588,119 @@ recalls:
     recalling_firm: Taylor Farms; Greencore USA/Bakkavor USA (and other FSIS-regulated establishments)
     agency: FSIS
     hazards: [salmonella]
-    distribution: See the FSIS product list (PDF) for states
+    distribution: AL, AR, CT, FL, IL, IN, KS, KY, LA, MA, ME, MI, MO, NE, NH, NJ, NY, OH, OK, RI, TN, TX, VT, WV (stores include Kroger, Dillons, H-E-B, Walmart, RaceTrac, Albertsons, Randalls, Tom Thumb, Hannaford and Wawa)
     cases:
       as_of: 2026-08-08
       illnesses: 0
     products:
-      - name: Fully cooked, not shelf-stable meat and poultry products containing recalled jalapeños
-        brand: Various (see FSIS product list)
+      - name: Chipotle Cheddar Chicken Wrap, 9.25 oz
+        brand: Deli Kitchen
+        codes:
+          - Use by 8/07/2026 - 8/13/2026
+          - EST P47081
+          - Sold at Kroger/Dillons (KS, MO, NE, TX, LA, OH, MI, IN, IL, KY, WV)
+      - name: Cajun Chicken Mashed Potatoes & Corn, 11.5 oz
+        brand: Deli Kitchen
+        codes:
+          - Use by 8/07/2026 - 8/14/2026
+          - EST P34733
+          - Sold at Kroger (TX, KS, NE, LA)
+      - name: Shake Rattle Bowl Southwest Chicken, 9.75 oz
+        brand: H-E-B
+        codes:
+          - Use by 8/07/2026 - 8/15/2026
+          - EST P34733
+          - Sold at H-E-B (TX)
+      - name: Chicken & Beef Chimichurri, 12 oz
+        brand: Higher Harvest for H-E-B
+        codes:
+          - Use by 8/6/2026, 8/9/2026, 8/13/2026
+          - EST M46445, P46445
+          - Sold at H-E-B (TX)
+      - name: Creamy Cilantro Chicken, 13 oz
+        brand: Higher Harvest for H-E-B
+        codes:
+          - Use by 8/4/2026, 8/5/2026, 8/8/2026, 8/11/2026, 8/12/2026
+          - EST P46445
+          - Sold at H-E-B (TX)
+      - name: Southwest Style Salad with Chicken, 12.5 oz
+        brand: Marketside
+        codes:
+          - Use by 8/08/2026 - 8/16/2026
+          - EST P44818, P34733
+          - Sold at Walmart (FL, LA, OK, TX, NE, MO)
+      - name: Pork Carnitas Bowl, 11 oz
+        brand: Meal Simple
+        codes:
+          - Use by 8/3/2026, 8/7/2026, 8/10/2026, 8/14/2026
+          - EST M46445
+          - Sold at H-E-B (TX)
+      - name: Chicken & Rice with Cilantro Jalapeno Sauce, 12 oz
+        brand: Meal Simple
+        codes:
+          - Use by 8/3/2026, 8/7/2026, 8/10/2026, 8/14/2026
+          - EST P46445
+          - Sold at H-E-B (TX)
+      - name: Southwest Style Salad Chicken, 9.25 oz
+        brand: RaceTrac
+        codes:
+          - Use by 8/07/2026 - 8/13/2026
+          - EST P34733
+          - Sold at RaceTrac (TX, AL)
+      - name: Beef Barbacoa Bowl Premade, 12.5 oz
+        brand: Ready Meals
+        codes:
+          - Use by 8/07/2026 - 8/12/2026
+          - EST M34733
+          - Sold at Albertsons, Randalls, Tom Thumb (AR, LA, OK, TX)
+      - name: Chile Lime Rice Chicken Bowl Premade, 14.75 oz
+        brand: Ready Meals
+        codes:
+          - Use by 8/07/2026 - 8/12/2026
+          - EST P34733
+          - Sold at Albertsons, Randalls, Tom Thumb (AR, LA, OK, TX)
+      - name: Pork Chile Verde Bowl Premade, 14.1 oz
+        brand: Ready Meals
+        codes:
+          - Use by 8/07/2026 - 8/12/2026
+          - EST M34733
+          - Sold at Albertsons, Randalls, Tom Thumb (AR, LA, OK, TX)
+      - name: Chipotle Chicken Wrap Premade, 9.5 oz
+        brand: Ready Meals
+        codes:
+          - Use by 8/08/2026 - 8/11/2026
+          - EST P34733
+          - Sold at Albertsons, Randalls, Tom Thumb (AR, LA, OK, TX)
+      - name: Classic Beef Burrito, 12.8 oz
+        brand: Taylor Farms
+        codes:
+          - Use by 8/07/2026 - 8/12/2026
+          - EST M46638
+          - Sold at Hannaford (ME, NH, MA, NY, VT)
+      - name: Chipotle Chicken Tortilla Wrap, 10.3 oz
+        brand: Taylor Farms
+        codes:
+          - Use by 8/07/2026 - 8/10/2026
+          - EST P46638
+          - Sold at Hannaford (NY, CT, NJ, ME, NH, VT, MA, RI)
+      - name: Chicken Verde Burrito, 12 oz
+        brand: Taylor Farms
+        codes:
+          - Use by 8/07/2026 - 8/10/2026
+          - EST P46638
+          - Sold at Hannaford (ME, NH, MA, NY, VT)
+      - name: Chicken Enchilada, 4/34.5 oz
+        brand: Taylor Farms
+        codes:
+          - Use by 8/07/2026 - 8/16/2026
+          - EST P34733
+          - Sold at Kroger (KS, LA, NE, TX)
+      - name: Spicy Chipotle Chicken Wrap, 6.9 oz
+        brand: Wawa
+        codes:
+          - Use by 8/06/2026 - 8/08/2026
+          - EST P47081
+          - Sold at Wawa (TN, OH, IN, KY)
     note: |
       FSIS issued a public health alert on August 8, 2026 for meat and poultry
       products containing FDA-regulated jalapeños that may be contaminated with
@@ -1602,7 +1708,10 @@ recalls:
       establishments had received the recalled ingredient. FSIS said it
       expected more downstream products to be identified, and the alert is
       accompanied by a product list giving product names, establishment
-      numbers and states. No confirmed illnesses were linked to these products.
+      numbers and states; the initial list covers 18 fully cooked, not
+      shelf-stable ready-to-eat meals made by Taylor Farms and
+      Greencore USA/Bakkavor USA (the same meals appear in the Taylor Fresh
+      Foods entry). No confirmed illnesses were linked to these products.
       Consumers should not eat the products and should throw them away or
       return them to the place of purchase.
     citations:
