@@ -5,6 +5,43 @@
 # with the YAML extension (VS Code, Zed, Neovim + yaml-language-server).
 
 recalls:
+  - id: 2026-09-fontanini-foods-pork-sausage-links-plastic
+    date: 2026-09-25
+    title: Fontanini frozen pork breakfast sausage links (hard plastic)
+    summary:
+      - pork breakfast sausage
+    recalling_firm: Fontanini Foods LLC
+    agency: FSIS
+    hazards: [foreign-material]
+    classification: I
+    distribution: Distributors in California, Florida, Michigan and Nevada, for food service and restaurants (not sold at retail)
+    cases:
+      as_of: 2026-09-25
+      illnesses: 0
+    products:
+      - name: Fontanini PORK SAUSAGE LINKS, raw frozen, 10-lb case (ITEM 393)
+        brand: Fontanini
+        codes:
+          - Packed on 06/23/2026
+          - EST. 6944
+    note: |
+      Fontanini Foods LLC of McCook, Illinois is recalling approximately 2,320
+      pounds of raw, frozen pork breakfast sausage that may be contaminated
+      with clear, hard plastic. The problem was discovered after the firm
+      received two customer complaints. There have been no confirmed reports of
+      injury or adverse reactions.
+
+      The product was shipped to distributors for use in food service
+      establishments, including restaurants, and was not available for direct
+      purchase by consumers. FSIS is concerned that some product may be in
+      restaurant freezers; food service operators should not serve it and
+      should discard it or return it to the place of purchase.
+    citations:
+      - title: Fontanini Foods LLC Recalls Raw, Frozen Pork Sausage Products Due to Possible Foreign Matter Contamination
+        url: https://www.fsis.usda.gov/recalls-alerts/fontanini-foods-llc-recalls-raw-frozen-pork-sausage-products-due-possible-foreign
+        publisher: FSIS
+        accessed: 2026-10-02
+
   - id: 2026-09-fda-ground-cinnamon-public-health-alert
     date: 2026-09-28
     title: Ground Cinnamon Products (multiple brands) — FDA Public Health Alert for Elevated Lead
