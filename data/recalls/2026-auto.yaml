@@ -1671,4 +1671,30 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99831
         publisher: FDA
         accessed: 2026-09-30
+  - id: 2026-09-23-panorama-produce-sales-inc-martina-brand-fresh-whole-mang
+    date: 2026-09-23
+    title: Martina Fresh Whole Mangoes may contain Salmonella
+    summary:
+      - mangoes
+    recalling_firm: Panorama Produce Sales Inc.
+    agency: FDA
+    hazards:
+      - salmonella
+    classification: II
+    products:
+      - name: Martina Fresh Whole Mangoes
+        brand: Martina
+        codes:
+          - Lot 038
+          - PLU 4584
+    distribution: CT, NY, NJ, and PA
+    note: The FDA announced a recall of Martina brand fresh whole mangoes sold by Panorama Produce Sales because the fruit may be contaminated with Salmonella. The recall covers 302 boxes of individual mangoes packaged nine per carton and distributed to Connecticut, New York, New Jersey, and Pennsylvania. Consumers who purchased these mangoes should discard them or return them to the store for a refund. No illnesses have been reported.
+    citations:
+      - title: Walmart Mangoes Recalled Over Salmonella Risk After FDA Testing Finds Farm Connection
+        url: https://www.yahoo.com/news/us/articles/walmart-mangoes-recalled-over-salmonella-141540829.html
+        publisher: Yahoo
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99780
+        publisher: FDA
+        accessed: 2026-10-03
 
