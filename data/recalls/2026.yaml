@@ -5,6 +5,48 @@
 # with the YAML extension (VS Code, Zed, Neovim + yaml-language-server).
 
 recalls:
+  - id: 2026-10-winco-foods-salsa-bean-dip-trays
+    parent_id: 2026-09-mezzetta-golden-greek-peperoncini
+    date: 2026-10-01
+    title: WinCo Foods Salsa Bean Dip Trays (peperoncini pest contaminant)
+    summary:
+      - salsa bean dip
+    recalling_firm: WinCo Foods LLC
+    agency: FDA
+    hazards: [foreign-material]
+    distribution: WinCo Foods retail stores in AZ, CA, ID, MT, NV, OR, UT and WA
+    cases:
+      as_of: 2026-10-01
+      illnesses: 0
+    products:
+      - name: Salsa Bean Dip Tray Express, 54 oz
+        brand: WinCo Foods
+        codes:
+          - UPC 2-67173-#####
+          - Best If Used By dates Aug. 14, 2026 through Sept. 25, 2026
+      - name: Salsa Bean Dip Tray, 16 inch catering tray (special order only), 104 oz
+        brand: WinCo Foods
+        codes:
+          - UPC 2-67240-#####
+          - Best If Used By dates Aug. 14, 2026 through Sept. 25, 2026
+    note: |
+      WinCo Foods of Boise, ID recalled two sizes of its Salsa Bean Dip Trays
+      because they may contain peperoncini from the recalled lot of G. L.
+      Mezzetta Golden Greek Peperoncini, which was recalled over a potential
+      pest contaminant. The trays were sold in WinCo Foods retail stores in
+      Arizona, California, Idaho, Montana, Nevada, Oregon, Utah and Washington.
+
+      WinCo says it did not have or use any product with evidence of pests in
+      the jar, and has received no complaints or reports of illness. Because the
+      trays are ready-made deli items with a short shelf life, WinCo does not
+      expect any to still be in consumers' homes, and says all product that may
+      have been made with the peperoncini was removed from stores.
+    citations:
+      - title: WinCo Foods of Boise, ID is Recalling the Following Salsa Bean Dip Trays Due to the Inclusion of Recalled Peperoncini from G.L. Mezzetta
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/winco-foods-boise-id-recalling-following-salsa-bean-dip-trays-due-inclusion-recalled-peperoncini-gl
+        publisher: FDA
+        accessed: 2026-10-05
+
   - id: 2026-10-eak-distribution-broccoli-sprouting-seeds
     date: 2026-10-02
     title: Home Grown Green Sprouting Calabrese Broccoli Seeds (Salmonella)
