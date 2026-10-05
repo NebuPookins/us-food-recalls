@@ -2155,14 +2155,14 @@ recalls:
 
   - id: 2026-07-publix-greenwise-frozen-blueberries
     date: 2026-07-29
-    title: Frozen blueberries and mixed berries (GreenWise and Great Value)
+    title: Frozen blueberries and mixed berries (GreenWise, Great Value and Trader Joe's)
     summary:
       - blueberries
       - mixed berries
     recalling_firm: Frutas y Hortalizas del Sur S.A.
     agency: FDA
     hazards: [e-coli]
-    distribution: Publix stores in 8 states (Alabama, Florida, Georgia, Kentucky, North Carolina, South Carolina, Tennessee, Virginia) and Walmart stores in 16 states (Alabama, Arkansas, Florida, Illinois, Indiana, Kentucky, Louisiana, Minnesota, Mississippi, Missouri, North Carolina, Ohio, Oklahoma, South Carolina, Texas, Wisconsin)
+    distribution: Publix stores in 8 states (Alabama, Florida, Georgia, Kentucky, North Carolina, South Carolina, Tennessee, Virginia) and Walmart stores in 26 states and Puerto Rico (Alabama, Arkansas, Florida, Georgia, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Michigan, Minnesota, Mississippi, Missouri, Nebraska, North Carolina, North Dakota, Ohio, Oklahoma, South Carolina, South Dakota, Tennessee, Texas, Virginia, West Virginia, Wisconsin), plus Trader Joe's
     cases:
       as_of: 2026-09-21
       illnesses: 17
@@ -2194,15 +2194,37 @@ recalls:
         codes:
           - Lot code 6040 01-6
           - Best by 2028-02-09
+          - Lot codes 6 031 01 and 6 041 01 (added Oct 2)
+          - Best by 2028-01-31 and 2028-02-10
+      - name: Great Value Organic Blueberries, 10 oz
+        brand: Great Value (Walmart)
+        codes:
+          - Lot codes 6 019 01, 6 040 01 and 6 163 01 (front of package)
+          - Best by 2028-01-19, 2028-02-09 and 2028-06-12
+      - name: Trader Joe's Organic Mixed Berry Blend, 12 oz
+        brand: Trader Joe's
+        codes:
+          - Lot code 6 051 01 (back of package)
+          - Best before 2028-02-20
     note: |
       A multistate outbreak of E. coli O145:H28 was traced to organic frozen
       blueberries from Chilean supplier Frutas y Hortalizas del Sur S.A. A
       single lot was recalled on July 3, and Publix expanded the recall on
       July 29 to all lots of four GreenWise blueberry and mixed-berry products.
       On September 2 the supplier expanded the recall again to Great Value
-      Organic Triple Berry Blend sold at Walmart stores in 16 states. As of
-      September 3, the FDA and CDC have reported 17 illnesses and 6
-      hospitalizations across two states (Florida and Georgia), with no deaths.
+      Organic Triple Berry Blend sold at Walmart stores; on September 11 the
+      firm clarified that the lot was sold in 26 states and Puerto Rico. The
+      FDA and CDC reported 17 illnesses and 6 hospitalizations across two
+      states (Florida and Georgia), with no deaths, and CDC declared the
+      outbreak over on September 21.
+
+      On October 2 the supplier expanded the recall a third time, to one more
+      Great Value Organic Triple Berry Blend lot, two more Great Value Organic
+      Blueberries lots and one Trader Joe's Organic Mixed Berry Blend lot. The
+      FDA said the expansion followed new information from an onsite foreign
+      inspection, and that the firm had not provided all records the agency
+      requested during the outbreak investigation. No new illnesses have been
+      reported. The firm's products are on FDA Import Alert 99-35.
     citations:
       - title: Publix Recalls All Lots of GreenWise Organic Frozen Blueberries and Whole Mixed Berries Due to Potential E. coli O145 Contamination
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/publix-recalls-all-lots-greenwise-organic-frozen-blueberries-and-whole-mixed-berries-due-potential-e
@@ -2211,7 +2233,7 @@ recalls:
       - title: "Outbreak Investigation of E. coli O145:H28: Frozen Blueberries (July 2026)"
         url: https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-o145h28-frozen-blueberries-july-2026
         publisher: FDA
-        accessed: 2026-09-03
+        accessed: 2026-10-05
 
   - id: 2026-07-maple-leaf-bacon-import
     date: 2026-07-24
