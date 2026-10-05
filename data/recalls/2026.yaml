@@ -5,6 +5,46 @@
 # with the YAML extension (VS Code, Zed, Neovim + yaml-language-server).
 
 recalls:
+  - id: 2026-10-stewarts-shops-heavenly-medley-vanilla-chocolate-strawberry-ice-cream
+    date: 2026-10-02
+    title: Stewart's Shops Heavenly Medley and Vanilla-Chocolate-Strawberry ice cream (metal)
+    summary:
+      - ice cream
+    recalling_firm: Stewart's Shops Corp.
+    agency: FDA
+    hazards: [foreign-material]
+    distribution: All Stewart's Shops locations in NY, VT and NH, sold July 17 to October 2, 2026
+    cases:
+      as_of: 2026-10-02
+      illnesses: 0
+    products:
+      - name: Heavenly Medley ice cream, half gallon (1.89 L) paperboard carton
+        brand: Stewart's Shops
+        codes:
+          - UPC 0 82086 44371 1
+          - Best By Feb.10.27
+      - name: Vanilla-Chocolate-Strawberry ice cream, half gallon (1.89 L) paperboard carton
+        brand: Stewart's Shops
+        codes:
+          - UPC 0 82086 44377 3
+          - Best By Feb.11.27
+    note: |
+      Stewart's Shops Corp. of Saratoga Springs, NY recalled two flavors of its
+      half-gallon ice cream, Heavenly Medley and Vanilla-Chocolate-Strawberry,
+      because they may contain metal. The recall began after a consumer found a
+      metal object in a carton.
+
+      The ice cream was sold at all Stewart's Shops locations in New York,
+      Vermont and New Hampshire between July 17 and October 2, 2026. No
+      injuries or illnesses have been reported. Consumers who bought either
+      product should not eat it and can return it to any Stewart's Shops
+      location for a full refund.
+    citations:
+      - title: Stewart's Shop Corp. Recalls Heavenly Medley and Vanilla-Chocolate-Strawberry Due to Possible Foreign Object
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/stewarts-shop-corp-recalls-heavenly-medley-and-vanilla-chocolate-strawberry-due-possible-foreign
+        publisher: FDA
+        accessed: 2026-10-05
+
   - id: 2026-10-winco-foods-salsa-bean-dip-trays
     parent_id: 2026-09-mezzetta-golden-greek-peperoncini
     date: 2026-10-01
