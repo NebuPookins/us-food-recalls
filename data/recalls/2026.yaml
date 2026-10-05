@@ -5,6 +5,47 @@
 # with the YAML extension (VS Code, Zed, Neovim + yaml-language-server).
 
 recalls:
+  - id: 2026-10-flowers-foods-natures-own-hawaiian-bread-milk
+    date: 2026-10-02
+    title: Nature's Own Hawaiian Bread (undeclared milk)
+    summary:
+      - Hawaiian bread
+    recalling_firm: Flowers Foods, Inc.
+    agency: FDA
+    hazards: [undeclared-allergen]
+    distribution: Retail customers in Arkansas, Louisiana, New Mexico, Oklahoma and Texas
+    cases:
+      as_of: 2026-10-02
+      illnesses: 0
+    products:
+      - name: Nature's Own Hawaiian Bread, 20 oz single loaf
+        brand: Nature's Own
+        codes:
+          - UPC 0-72250-91662-2
+          - Best if used by OCT 08 2026 to OCT 18 2026 (with product codes 0188 262, 0188 265, 0188 267, 0188 270, 0188 272, each followed by a time range)
+      - name: Nature's Own 2-pack Hawaiian Bread, 40 oz
+        brand: Nature's Own
+        codes:
+          - UPC 0-72250-00683-5
+    note: |
+      Flowers Foods, Inc. of Thomasville, GA is recalling Nature's Own Hawaiian
+      Bread in 20 oz. and 40 oz. bags because it may contain undeclared milk.
+      People with an allergy or severe sensitivity to milk risk an allergic
+      reaction if they eat the product.
+
+      The recall began after the company found, during a review of production
+      records, that certain packages did not declare milk as an ingredient. No
+      illnesses or incidents have been reported. The 20 oz. loaves are
+      identified by the UPC, product codes and "Best if used by" dates above;
+      the 2-pack has no product code or date listed. Consumers should discard
+      the product or return it to the place of purchase for a full refund, or
+      call Flowers' Consumer Relations Center at 1-866-245-8921.
+    citations:
+      - title: Flowers Foods Issues Recall of Nature's Own Hawaiian Bread Due to Undeclared Milk
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/flowers-foods-issues-recall-natures-own-hawaiian-bread-due-undeclared-milk
+        publisher: FDA
+        accessed: 2026-10-05
+
   - id: 2026-09-fontanini-foods-pork-sausage-links-plastic
     date: 2026-09-25
     title: Fontanini frozen pork breakfast sausage links (hard plastic)
