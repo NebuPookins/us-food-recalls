@@ -195,54 +195,87 @@ async function fetchOpenfda(from: string, to: string): Promise<SourceRecord[]> {
 }
 
 /**
- * FSIS is best-effort: the whole `fsis.usda.gov` domain is behind Akamai bot
- * protection and returned 403 from a desktop, so this may yield nothing from a
- * CI runner too. Field names are the ones documented for the Recall API; if the
- * shape differs, records come out empty and are simply dropped.
+ * The FSIS recall API sits behind Akamai bot protection, which 403s a bare
+ * `fetch` (Node's default User-Agent) but serves requests that look like a
+ * browser navigation. It has no server-side date filter and returns every
+ * recall since 2012 (~2k records), so we filter by date client-side. If the 403
+ * returns, this header set (notably the pinned Chrome version) is what to update.
  */
-async function fetchFsis(): Promise<SourceRecord[]> {
+const FSIS_HEADERS = {
+  'User-Agent':
+    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+  Accept: 'application/json',
+  'Accept-Language': 'en-US,en;q=0.9',
+  'Sec-Fetch-Dest': 'document',
+  'Sec-Fetch-Mode': 'navigate',
+  'Sec-Fetch-Site': 'none',
+  'Upgrade-Insecure-Requests': '1',
+};
+
+const FsisItem = z.object({
+  field_recall_number: z.string().min(1),
+  field_recall_date: z.string().default(''),
+  field_title: z.string().default(''),
+  field_recall_url: z.string().optional(),
+  field_establishment: z.array(z.string()).default([]),
+  field_product_items: z.array(z.string()).default([]),
+  field_recall_reason: z.array(z.string()).default([]),
+  field_summary: z.string().default(''),
+  field_states: z.array(z.string()).default([]),
+  field_risk_level: z.string().default(''),
+  field_recall_classification: z.string().default(''),
+  field_recall_type: z.string().default(''),
+  field_qty_recovered: z.string().default(''),
+});
+type FsisItem = z.infer<typeof FsisItem>;
+
+function stripHtml(html: string): string {
+  return decodeXml(html.replace(/<[^>]*>/g, ' ').replace(/&nbsp;/g, ' '))
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+async function fetchFsis(from: string): Promise<SourceRecord[]> {
   try {
-    const res = await fetch(FSIS_URL, { headers: { Accept: 'application/json' } });
+    const res = await fetch(FSIS_URL, { headers: FSIS_HEADERS });
     if (!res.ok) {
       warn(`FSIS HTTP ${res.status} — skipping FSIS`);
       return [];
     }
-    const body = (await res.json()) as unknown;
-    const items = Array.isArray(body)
-      ? body
-      : ((body as { results?: unknown[]; data?: unknown[] }).results ??
-        (body as { data?: unknown[] }).data ??
-        []);
-    return (Array.isArray(items) ? items : [])
-      .map((item) => fsisToRecord(item as Record<string, unknown>))
-      .filter((r): r is SourceRecord => r !== null);
+    const body: unknown = await res.json();
+    const items = Array.isArray(body) ? body : [];
+    const parsed = items.flatMap((item) => {
+      const r = FsisItem.safeParse(item);
+      return r.success ? [r.data] : [];
+    });
+    // A schema drift that rejects everything would otherwise look like "no recent recalls".
+    if (items.length > 0 && parsed.length === 0) {
+      warn('FSIS returned records but none matched the expected shape — has the API changed?');
+    }
+    return parsed.map(fsisToRecord).filter((rec) => rec.date >= from);
   } catch (e) {
     warn(`FSIS fetch failed: ${msg(e)} — skipping FSIS`);
     return [];
   }
 }
 
-function fsisToRecord(item: Record<string, unknown>): SourceRecord | null {
-  const recallNumber = str(item.recall_number) || str(item.recallNumber) || str(item.id);
-  if (!recallNumber) return null;
-  const rawUrl = str(item.url) || str(item.link);
-  const citationUrl = rawUrl
-    ? rawUrl.startsWith('http')
-      ? rawUrl
-      : `https://www.fsis.usda.gov${rawUrl}`
-    : undefined;
+function fsisToRecord(item: FsisItem): SourceRecord {
   return {
-    key: `fsis:${recallNumber}`,
+    key: `fsis:${item.field_recall_number}`,
     agency: 'FSIS',
-    date: normalizeDate(str(item.recall_date) || str(item.date) || str(item.closed_date)),
-    firm: str(item.establishment) || str(item.recalling_firm),
-    product: str(item.title) || str(item.product_description),
-    reason: str(item.summary) || str(item.reason_for_recall),
-    distribution: str(item.distribution) || str(item.states),
-    classification: str(item.classification),
-    codes: str(item.code_info) || str(item.product_codes),
-    quantity: str(item.product_quantity) || str(item.amount),
-    citationUrl,
+    date: normalizeDate(item.field_recall_date),
+    firm: item.field_establishment.join(', '),
+    product: [item.field_title, ...item.field_product_items].filter(Boolean).join(' — '),
+    reason: [item.field_recall_reason.join(', '), stripHtml(item.field_summary).slice(0, 1500)]
+      .filter(Boolean)
+      .join(': '),
+    distribution: item.field_states.join(', '),
+    classification:
+      item.field_recall_classification || item.field_risk_level || item.field_recall_type,
+    codes: '',
+    quantity: item.field_qty_recovered,
+    // The API returns http:// links; normalise so dedup against curated citations matches.
+    citationUrl: item.field_recall_url?.replace(/^http:/, 'https:'),
   };
 }
 
@@ -699,13 +732,14 @@ async function main(): Promise<void> {
   const lastRun = state.lastRun ? normalizeDate(state.lastRun) : '';
   const from = lastRun && lastRun < isoDate(defaultFrom) ? parseIsoDate(lastRun) : defaultFrom;
 
-  const records: SourceRecord[] = [];
-  try {
-    records.push(...(await fetchOpenfda(compactDate(from), compactDate(today))));
-  } catch (e) {
-    warn(`openFDA fetch failed: ${msg(e)}`);
-  }
-  records.push(...(await fetchFsis()));
+  const [openfda, fsis] = await Promise.all([
+    fetchOpenfda(compactDate(from), compactDate(today)).catch((e: unknown) => {
+      warn(`openFDA fetch failed: ${msg(e)}`);
+      return [];
+    }),
+    fetchFsis(isoDate(from)),
+  ]);
+  const records = [...openfda, ...fsis];
 
   const fresh = records.filter(
     (r) => !seen.has(r.key) && !(r.citationUrl && existingUrls.has(r.citationUrl)),
