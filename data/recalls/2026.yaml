@@ -2484,16 +2484,20 @@ recalls:
     agency: FDA
     hazards: [cyclospora]
     classification: I
-    distribution: 27 states, plus Taco Bell restaurants in five states
+    distribution: Foodservice customers in 31 states (possibly also DC, DE, ND, PR, RI, SD, VT and WA) and Marketside products at Walmart stores in 15 states; also sold in Mexico
     cases:
-      as_of: 2026-08-27
-      illnesses: 11458
-      hospitalizations: 495
+      as_of: 2026-09-11
+      illnesses: 12883
+      hospitalizations: 570
       deaths: 2
     ended:
-      announced: 2026-08-28
-      note: The Best if Used By dates for the recalled lettuce have passed and the products should no longer be available in stores or restaurants; the FDA is confident none of the recalled iceberg lettuce remains on the market.
+      announced: 2026-09-11
+      note: CDC declared the outbreak over on September 11, and FDA concluded its investigation on October 2. The Best if Used By dates for the recalled lettuce have passed and the products should no longer be available in stores or restaurants; the FDA is confident none of the recalled iceberg lettuce remains on the market.
       citations:
+        - title: "Investigation of Multistate Outbreak of Cyclospora Illnesses: Iceberg Lettuce (July 2026)"
+          url: https://www.fda.gov/food/outbreaks-foodborne-illness/investigation-multistate-outbreak-cyclospora-illnesses-iceberg-lettuce-july-2026
+          publisher: FDA
+          accessed: 2026-10-05
         - title: Explaining the FDA's Classification of the Taylor Farms de Mexico Iceberg Lettuce Recall
           url: https://www.fda.gov/food/hfp-constituent-updates/explaining-fdas-classification-taylor-farms-de-mexico-iceberg-lettuce-recall
           publisher: FDA
@@ -2511,12 +2515,26 @@ recalls:
       Iceberg lettuce sourced from central Mexico was linked to the largest
       cyclosporiasis outbreak on record, traced to shredded lettuce served at
       Taco Bell restaurants in five states. Taylor Farms de Mexico recalled all
-      such lettuce from the US market.
+      such lettuce from the US market. The final count was 12,883 illnesses in
+      21 states, 570 hospitalizations and 2 deaths, with the last illness onset
+      on August 17, 2026.
+
+      FDA's traceback identified several farms and a processing facility in
+      Mexico. Of the environmental samples FDA collected during onsite
+      inspections there, two tested positive for Cyclospora: one from a tank
+      holding outgoing wastewater from the Taylor Farms de Mexico processing
+      facility and one from a drainage ditch at a grower identified in the
+      traceback. FDA says there is not enough evidence to determine how the
+      contamination occurred, but the samples add to the epidemiological and
+      traceback evidence linking the outbreak to the recalled lettuce. (An
+      earlier July positive on a product sample was retracted by FDA as a false
+      positive.) FDA concluded its investigation on October 2 and continues
+      post-outbreak response work.
     citations:
       - title: "Multistate Outbreak of Cyclospora Illnesses: Iceberg Lettuce July 2026"
         url: https://www.fda.gov/food/outbreaks-foodborne-illness/investigation-multistate-outbreak-cyclospora-illnesses-iceberg-lettuce-july-2026
         publisher: FDA
-        accessed: 2026-08-18
+        accessed: 2026-10-05
       - title: Taylor Farms lettuce sample produced false positive for cyclospora, FDA says
         url: https://www.nbcnews.com/health/health-news/fda-says-taylor-farms-lettuce-sample-tested-cyclospora-produced-false-rcna588303
         publisher: NBC News
