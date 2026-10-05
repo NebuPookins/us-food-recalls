@@ -2234,6 +2234,10 @@ recalls:
         url: https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-o145h28-frozen-blueberries-july-2026
         publisher: FDA
         accessed: 2026-10-05
+      - title: FDA recall record (Great Value Organic Triple Berry Blend, Arkansas)
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99831
+        publisher: FDA
+        accessed: 2026-09-30
 
   - id: 2026-07-maple-leaf-bacon-import
     date: 2026-07-24
