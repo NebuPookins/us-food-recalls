@@ -5,6 +5,46 @@
 # with the YAML extension (VS Code, Zed, Neovim + yaml-language-server).
 
 recalls:
+  - id: 2026-10-eak-distribution-broccoli-sprouting-seeds
+    date: 2026-10-02
+    title: Home Grown Green Sprouting Calabrese Broccoli Seeds (Salmonella)
+    summary:
+      - broccoli sprouting seeds
+    recalling_firm: EAK Distribution LLC
+    agency: FDA
+    hazards: [salmonella]
+    distribution: Nationwide, sold on Amazon.com from August 20 to September 18, 2026
+    cases:
+      as_of: 2026-10-02
+      illnesses: 0
+    products:
+      - name: Green Sprouting Calabrese Broccoli Seeds, 8 oz, Heirloom (cream-colored pouch)
+        brand: Home Grown
+        codes:
+          - UPC 850056627443
+          - Production lot code AUG172026 (embossed on the top seal)
+    note: |
+      EAK Distribution LLC of Casper, WY recalled its 8-ounce Home Grown Green
+      Sprouting Calabrese Broccoli Seeds because they may be contaminated with
+      Salmonella. The seeds were sold on Amazon.com to consumers nationwide
+      between August 20 and September 18, 2026. No illnesses have been
+      reported from this product.
+
+      The recall began after the firm's seed supplier told it on September 16
+      that seed lot W4105 had been used by a sprout grower whose finished
+      sprouts were part of an FDA investigation of a multistate foodborne
+      illness outbreak. FDA's analysis of a sample of the seed found Salmonella
+      (the firm was notified September 28). The announcement does not say which
+      outbreak investigation this refers to.
+
+      Consumers who bought the seeds should not use them, should throw them
+      away, and can contact Amazon for a full refund.
+    citations:
+      - title: EAK Distribution LLC Recalls HOME GROWN Green Sprouting Calabrese Broccoli Seeds, 8 oz, Heirloom Because of Possible Health Risk
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/eak-distribution-llc-recalls-home-grown-green-sprouting-calabrese-broccoli-seeds-8-oz-heirloom
+        publisher: FDA
+        accessed: 2026-10-05
+
   - id: 2026-10-flowers-foods-natures-own-hawaiian-bread-milk
     date: 2026-10-02
     title: Nature's Own Hawaiian Bread (undeclared milk)
