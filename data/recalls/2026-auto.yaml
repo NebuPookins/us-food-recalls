@@ -1697,4 +1697,26 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99780
         publisher: FDA
         accessed: 2026-10-03
+  - id: 2026-09-23-best-friends-bakery-llc-pumpkin-spice-no-bake-cookie-n
+    date: 2026-09-23
+    title: Pumpkin Spice No Bake Cookie recalled for undeclared peanuts and eggs
+    summary:
+      - cookies
+    recalling_firm: Best Friends Bakery, LLC
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: II
+    products:
+      - name: Pumpkin Spice No Bake Cookie
+        codes:
+          - UPC 8 10158 14087 5
+          - Lot 20326
+    distribution: Shipped to AL, FL, GA, IN, KY, MI, OH, TN, VA, WV
+    note: Best Friends Bakery is recalling its Pumpkin Spice No Bake Cookie because peanuts were listed in the ingredient statement but omitted from the contain statement, and eggs were listed in the contain statement despite not being present in the product. The omission creates an undeclared allergen risk for consumers with peanut or egg allergies. The product was distributed to ten states in the Southeast and Midwest. Consumers who purchased the product should discard it or return it to the place of purchase.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99803
+        publisher: FDA
+        accessed: 2026-10-05
 
