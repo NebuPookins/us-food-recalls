@@ -1714,4 +1714,57 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99611
         publisher: FDA
         accessed: 2026-10-05
+  - id: 2026-09-30-wwf-operating-company-so-delicious-dairy-free-salted
+    date: 2026-09-30
+    title: So Delicious Dairy Free Salted Caramel Cluster Cashewmilk frozen dessert may contain small stones
+    summary:
+      - frozen dessert
+    recalling_firm: WWF Operating Company
+    agency: FDA
+    hazards:
+      - foreign-material
+    classification: II
+    products:
+      - name: So Delicious Dairy Free Salted Caramel Cluster Cashewmilk
+        brand: So Delicious Dairy Free
+        codes:
+          - "BB: 28 Aug 2027"
+          - "BB: 29 Aug 2027"
+          - "BB: 9 Sep 2027"
+          - "BB: 10 Sept 2027"
+          - "BB: 16 Oct 2027"
+          - "BB: 17 Oct 2027"
+          - "BB: 18 Oct 2027"
+          - "BB: 22 Oct 2027"
+          - "BB: 23 Oct 2027"
+          - "BB: 24 Oct 2027"
+          - "BB: 25 Oct 2027"
+          - "BB: 1 Dec 2027"
+          - "BB: 2 Dec 2027"
+          - "BB: 3 Dec 2027"
+          - "BB: 4 Dec 2027"
+          - "BB: 5 Dec 2027"
+          - "BB: 3 Feb 2028"
+          - "BB: 4 Feb 2028"
+          - "BB: 5 Feb 2028"
+          - "BB: 6 Feb 2028"
+          - "BB: 7 Feb 2028"
+          - "BB: 25 Feb 2028"
+          - "BB: 26 Feb 2028"
+          - "BB: 27 Feb 2028"
+          - "BB: 28 Feb 2028"
+          - "BB: 31 Mar 2028"
+          - "BB: 1 Apr 2028"
+          - "BB: 2 Apr 2028"
+          - "BB: 3 Apr 2028"
+    distribution: Nationwide
+    note: The FDA is recalling So Delicious Dairy Free Salted Caramel Cluster Cashewmilk frozen dessert because it may contain small stones and other hard foreign objects. The product was distributed nationwide, with over two million units affected. Consumers should stop using the product and return it to the place of purchase for a full refund or contact the manufacturer for further instructions.
+    citations:
+      - title: So Delicious Dairy Free salted caramel frozen dessert pints recalled over foreign objects
+        url: https://www.news4jax.com/news/2026/09/16/so-delicious-dairy-free-salted-caramel-frozen-dessert-pints-recalled-over-foreign-objects/
+        publisher: News4JAX
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99884
+        publisher: FDA
+        accessed: 2026-10-06
 
