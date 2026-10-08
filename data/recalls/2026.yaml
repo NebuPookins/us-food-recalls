@@ -88,6 +88,7 @@ recalls:
         accessed: 2026-10-05
 
   - id: 2026-10-eak-distribution-broccoli-sprouting-seeds
+    parent_id: 2026-09-evergreen-broccoli-sprouts
     date: 2026-10-02
     title: Home Grown Green Sprouting Calabrese Broccoli Seeds (Salmonella)
     summary:
@@ -116,8 +117,9 @@ recalls:
       that seed lot W4105 had been used by a sprout grower whose finished
       sprouts were part of an FDA investigation of a multistate foodborne
       illness outbreak. FDA's analysis of a sample of the seed found Salmonella
-      (the firm was notified September 28). The announcement does not say which
-      outbreak investigation this refers to.
+      (the firm was notified September 28). FDA's October 7 advisory links
+      the recalled seed lot to the Salmonella Bovismorbificans outbreak
+      associated with Evergreen Fresh Sprouts broccoli sprouts.
 
       Consumers who bought the seeds should not use them, should throw them
       away, and can contact Amazon for a full refund.
@@ -126,6 +128,45 @@ recalls:
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/eak-distribution-llc-recalls-home-grown-green-sprouting-calabrese-broccoli-seeds-8-oz-heirloom
         publisher: FDA
         accessed: 2026-10-05
+      - title: "Outbreak Investigation of Salmonella: Sprouts (September 2026)"
+        url: https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-sprouts-september-2026
+        publisher: FDA
+        accessed: 2026-10-07
+
+  - id: 2026-10-eden-brothers-calabrese-broccoli-seeds
+    parent_id: 2026-09-evergreen-broccoli-sprouts
+    date: 2026-10-07
+    title: Eden Brothers calabrese broccoli seeds (Salmonella)
+    summary:
+      - broccoli sprouting seeds
+    recalling_firm: Eden Brothers LLC
+    agency: FDA
+    hazards: [salmonella]
+    distribution: Nationwide through Edenbrothers.com and Amazon.com, July 8 to September 28, 2026
+    products:
+      - name: Calabrese broccoli seeds in packets and 1-oz and 1-lb sizes
+        brand: Eden Brothers
+        codes:
+          - Eden Brothers lots 1022067 and 1022068
+          - Supplier lot W4105
+    note: |
+      Eden Brothers LLC of Arden, NC recalled calabrese broccoli seeds in
+      packets and 1-oz and 1-lb sizes after its seed supplier notified it that
+      supplier lot W4105 may be contaminated with Salmonella. FDA sampled seeds
+      from the supplier; the sample tested positive and whole genome sequencing
+      matched the Salmonella Bovismorbificans strain behind the outbreak linked
+      to Evergreen Fresh Sprouts broccoli sprouts and microgreens. The same
+      seed lot is behind the earlier Home Grown (EAK Distribution) recall.
+
+      The seeds were sold to customers nationwide through Edenbrothers.com and
+      Amazon.com between July 8 and September 28, 2026. Do not use the
+      recalled seeds. Clean and sanitize any surfaces or containers they
+      touched.
+    citations:
+      - title: "Outbreak Investigation of Salmonella: Sprouts (September 2026)"
+        url: https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-sprouts-september-2026
+        publisher: FDA
+        accessed: 2026-10-07
 
   - id: 2026-10-flowers-foods-natures-own-hawaiian-bread-milk
     date: 2026-10-02
