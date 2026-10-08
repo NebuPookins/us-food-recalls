@@ -1714,4 +1714,31 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99611
         publisher: FDA
         accessed: 2026-10-05
+  - id: 2026-09-30-wfm-purchasing-lp-fromagerie-coop-de-mean-cabric
+    date: 2026-09-30
+    title: Cabricharme cheese recalled for undeclared egg allergen
+    summary:
+      - cheese
+    recalling_firm: WFM Purchasing, LP
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: I
+    products:
+      - name: Cabricharme cheese
+        brand: Fromagerie Coop de Mean
+        codes:
+          - "Shelf life: 30 days, all dates through and including 10/7/2026"
+          - "54670"
+          - "57953"
+    distribution: CA, AZ, NJ, MA, RI, CT, NY
+    note: The sliced Cabricharme cheese was packaged for Whole Foods but the label failed to declare egg, an allergen. This undeclared egg poses a risk to consumers with egg allergies. The recall involves 21 wheels distributed to stores in California, Arizona, New Jersey, Massachusetts, Rhode Island, Connecticut, and New York. Consumers should not eat the product and may return it to the retailer for a refund.
+    citations:
+      - title: "Recall issued for cheese sold at Whole Foods: What to check"
+        url: https://www.msn.com/en-us/crime/general/recall-issued-for-cheese-sold-at-whole-foods-what-to-check/ar-AA2c5KwF
+        publisher: Daily Voice
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99874
+        publisher: FDA
+        accessed: 2026-10-08
 
