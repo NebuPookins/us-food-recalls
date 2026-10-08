@@ -793,6 +793,7 @@ recalls:
     recalling_firm: Danone USA
     agency: FDA
     hazards: [foreign-material]
+    classification: II
     distribution: Retail stores nationwide in the United States
     products:
       - name: Salted Caramel Cluster Non-Dairy Frozen Dessert, pint
@@ -801,6 +802,35 @@ recalls:
           - SKU 136603
           - UPC 744473476138
           - Best-by dates on and before April 3, 2028
+          - "BB: 28 Aug 2027"
+          - "BB: 29 Aug 2027"
+          - "BB: 9 Sep 2027"
+          - "BB: 10 Sept 2027"
+          - "BB: 16 Oct 2027"
+          - "BB: 17 Oct 2027"
+          - "BB: 18 Oct 2027"
+          - "BB: 22 Oct 2027"
+          - "BB: 23 Oct 2027"
+          - "BB: 24 Oct 2027"
+          - "BB: 25 Oct 2027"
+          - "BB: 1 Dec 2027"
+          - "BB: 2 Dec 2027"
+          - "BB: 3 Dec 2027"
+          - "BB: 4 Dec 2027"
+          - "BB: 5 Dec 2027"
+          - "BB: 3 Feb 2028"
+          - "BB: 4 Feb 2028"
+          - "BB: 5 Feb 2028"
+          - "BB: 6 Feb 2028"
+          - "BB: 7 Feb 2028"
+          - "BB: 25 Feb 2028"
+          - "BB: 26 Feb 2028"
+          - "BB: 27 Feb 2028"
+          - "BB: 28 Feb 2028"
+          - "BB: 31 Mar 2028"
+          - "BB: 1 Apr 2028"
+          - "BB: 2 Apr 2028"
+          - "BB: 3 Apr 2028"
     note: |
       Danone USA voluntarily recalled So Delicious Dairy Free Salted Caramel
       Cluster Non-Dairy Frozen Dessert pints with best-by dates on and before
@@ -814,6 +844,10 @@ recalls:
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/so-delicious-dairy-freer-issues-voluntary-recall-salted-caramel-cluster-non-dairy-frozen-dessert
         publisher: FDA
         accessed: 2026-09-18
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99884
+        publisher: FDA
+        accessed: 2026-10-06
 
   - id: 2026-09-ap-creations-biq-fel-sildenafil-tadalafil
     date: 2026-09-15
