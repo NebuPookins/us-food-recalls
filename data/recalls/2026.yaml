@@ -1076,7 +1076,7 @@ recalls:
     hazards: [salmonella]
     distribution: Grocery stores, restaurants and foodservice customers in Idaho, Montana and Washington (product may have been distributed further)
     cases:
-      as_of: 2026-09-24
+      as_of: 2026-10-07
       illnesses: 32
       hospitalizations: 3
       deaths: 0
@@ -1114,11 +1114,19 @@ recalls:
       Sprouts broccoli sprouts. This outbreak is being investigated separately
       from the Shiga toxin-producing E. coli and Salmonella outbreak linked to
       alfalfa sprouts.
+
+      On October 7, 2026, FDA reported that a sample of seeds from the
+      sprouts' seed supplier tested positive for Salmonella and that whole
+      genome sequencing matched the outbreak strain. The supplier recalled the
+      implicated seed lot (W4105) and notified its customers, which led to
+      downstream recalls of broccoli seeds by EAK Distribution (Home Grown) and
+      Eden Brothers; see those entries. FDA is continuing to work with the
+      supply chain, and the outbreak investigation remains ongoing.
     citations:
       - title: "Outbreak Investigation of Salmonella: Sprouts (September 2026)"
         url: https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-sprouts-september-2026
         publisher: FDA
-        accessed: 2026-09-24
+        accessed: 2026-10-07
 
   - id: 2026-09-made-fresh-salads-deli-salads-cream-cheese
     date: 2026-09-06
