@@ -1741,4 +1741,31 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99874
         publisher: FDA
         accessed: 2026-10-08
+  - id: 2026-09-30-gias-food-inc-lemon-alfredo-fettuccine-packe
+    date: 2026-09-30
+    title: Lemon Alfredo Fettuccine recalled for Listeria contamination
+    summary:
+      - pasta
+    recalling_firm: GIAS FOOD INC.
+    agency: FDA
+    hazards:
+      - listeria
+    classification: I
+    products:
+      - name: bettergoods Lemon Alfredo Fettuccine
+        brand: bettergoods
+        codes:
+          - UPC 194346442706
+          - L6080C SEP 20 2027
+          - L6079C SEP 19 2027
+    distribution: Nationwide via Walmart distribution centers and retail locations
+    note: GIAS FOOD INC. is recalling about 16,000 bags of bettergoods Lemon Alfredo Fettuccine after testing showed contamination with Listeria monocytogenes. The product was distributed to Walmart distribution centers and stores across the United States. Consumers should not eat the product and should discard it or return it to the place of purchase for a full refund.
+    citations:
+      - title: FDA recall for frozen fettuccine Alfredo sold at Walmart stores nationwide
+        url: https://www.newsday.com/business/fda-pasta-recall-walmart-vxhrtb6l
+        publisher: Newsday
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99853
+        publisher: FDA
+        accessed: 2026-10-09
 
