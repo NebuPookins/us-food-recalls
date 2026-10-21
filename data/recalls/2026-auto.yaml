@@ -1768,4 +1768,29 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99853
         publisher: FDA
         accessed: 2026-10-09
+  - id: 2026-10-14-saint-francis-apizza-llc-saint-francis-apizza-frozen-pe
+    date: 2026-10-14
+    title: Saint Francis Apizza Frozen Pepperoni Pizza contains undeclared soy allergen
+    summary:
+      - pizza
+    recalling_firm: Saint Francis Apizza LLC
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: II
+    products:
+      - name: Saint Francis Apizza Frozen Pepperoni Pizza
+        codes:
+          - "UPC: 6 66186 27762 1"
+          - "Best By: all dates through 3/30/2027"
+    distribution: Kentucky and Ohio
+    note: Saint Francis Apizza LLC is recalling approximately 4,931 individually vacuum‑sealed frozen pepperoni pizzas distributed in Kentucky and Ohio. The pizzas were found to contain soybean oil and soy lecithin, which were not listed on the label, posing a risk to consumers with soy allergies. Consumers who purchased this product should discard it or return it to the place of purchase. No illnesses have been reported.
+    citations:
+      - title: Saint Francis Apizza recalls frozen pizzas over undeclared soy allergen
+        url: https://dayton247now.com/news/local/saint-francis-apizza-recalls-frozen-pizzas-over-undeclared-soy-allergen
+        publisher: Dayton 24/7 Now
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100043
+        publisher: FDA
+        accessed: 2026-10-21
 
