@@ -1793,4 +1793,42 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100043
         publisher: FDA
         accessed: 2026-10-21
+  - id: 2026-10-14-pepsico-inc-28-oz-gatorade-lemon-lime-gato
+    date: 2026-10-14
+    title: Gatorade 28‑oz Lemon Lime, Lemon Lime Zero, Orange, and Orange Zero recalled for undeclared Yellow No. 5 and Yellow No. 6
+    summary:
+      - beverage
+    recalling_firm: Pepsico Inc
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: II
+    products:
+      - name: Gatorade 28‑oz Lemon Lime, Lemon Lime Zero, Orange, and Orange Zero
+        codes:
+          - Lot 091026 DL - JUN 07 27
+          - Lot 091126 DL - JUN 08 27
+          - Lot 072226 DT - APR 18 27
+          - Lot 072426 TL - APR 20 27
+          - Lot 073126 TL - APR 27 27
+          - Lot 072926 TL - APR 25 27
+          - Lot 073026 TL - APR 25 27
+          - Lot 081026 TL - MAY 07 27
+          - Lot 082126 OA - APR 18 27
+          - Lot 080126 DL - APR 28 27
+          - Lot 082026 DL - MAY 17 27
+          - Lot 083126 DT - JUN 07 27
+          - Lot 082526 KM - MAY 22 27
+          - Lot 090426 KM - JUN 01 27
+          - Lot 072726 TL - APR 23 27
+    distribution: Nationwide across 34 states
+    note: Pepsico is recalling 28‑oz bottles of Gatorade Lemon Lime, Lemon Lime Zero, Orange and Orange Zero because they may contain undeclared Yellow No. 5 and Yellow No. 6 color additives. The products were distributed to stores in 34 states. Consumers should check the lot codes listed and discard any affected bottles or return them to the place of purchase.
+    citations:
+      - title: Gatorade recalls 28-ounce bottles of lemon lime, lemon lime zero, orange and orange zero
+        url: https://www.msn.com/en-us/food-and-drink/beverages/gatorade-recalls-28-ounce-bottles-of-lemon-lime-lemon-lime-zero-orange-and-orange-zero/ar-AA2dCud0
+        publisher: iHeart
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99991
+        publisher: FDA
+        accessed: 2026-10-21
 
