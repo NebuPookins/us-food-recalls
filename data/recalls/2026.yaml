@@ -600,6 +600,7 @@ recalls:
     recalling_firm: Berlin Seeds
     agency: FDA
     hazards: [e-coli, salmonella]
+    classification: I
     distribution: Berlin Seeds retail store in Millersburg, OH and online through the company website to customers in 44 states
     products:
       - name: Alfalfa sprouting seed (1/4 lb, 1/2 lb, 1 lb, 5 lb, and 50 lb)
@@ -638,6 +639,10 @@ recalls:
         url: https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-shiga-toxin-producing-e-coli-salmonella-sprouts-august-2026
         publisher: FDA
         accessed: 2026-09-28
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99894
+        publisher: FDA
+        accessed: 2026-10-23
 
   - id: 2026-09-gf-blends-truly-aip-flour-bread-pizza-mix-gluten
     date: 2026-09-18
