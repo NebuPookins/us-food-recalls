@@ -1644,4 +1644,32 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99872
         publisher: FDA
         accessed: 2026-10-23
+  - id: 2026-10-07-pacific-health-sciences-llc-organiccs-absolutely-pure-type
+    date: 2026-10-07
+    title: Organiccs Absolutely Pure Hydrolyzed Collagen Capsules recalled for undeclared shellfish
+    summary:
+      - collagen
+    recalling_firm: Pacific Health Sciences Llc
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: II
+    products:
+      - name: Organiccs Absolutely Pure Type-1 Hydrolyzed Collagen Peptides, 180 Veggie Capsules
+        brand: Organiccs Absolutely Pure
+        codes:
+          - 25009CP
+    distribution: Private practice medical offices in California, Oregon, Washington, Kentucky, Massachusetts, and Hawaii
+    cases:
+      as_of: 2026-10-07
+      illnesses: 0
+    note: Pacific Health Sciences Llc is recalling its Organiccs Absolutely Pure Type-1 Hydrolyzed Collagen Peptides capsules because they contain an undeclared shellfish ingredient (crab shell) used in the glucosamine sulfate. The product was distributed to private practice medical offices in six states. Consumers should stop using the product and return it to the place of purchase or contact the firm for a refund.
+    citations:
+      - title: "Collagen recall: 2 separate products affected in 6 total states"
+        url: https://www.msn.com/en-us/news/other/collagen-recall-2-separate-products-affected-in-6-total-states/ar-AA2dr4rB
+        publisher: MSN
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99897
+        publisher: FDA
+        accessed: 2026-10-23
 
