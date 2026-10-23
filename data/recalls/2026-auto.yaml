@@ -1857,4 +1857,40 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99954
         publisher: FDA
         accessed: 2026-10-23
+  - id: 2026-10-14-sierra-nevada-cheese-company-i-sierra-nevada-cheese-graziers
+    date: 2026-10-14
+    title: Sierra Nevada raw milk sharp cheddar cheese recalled for possible E. coli O26:H11 contamination
+    summary:
+      - cheese
+    recalling_firm: Sierra Nevada Cheese Company, Inc
+    agency: FDA
+    hazards:
+      - e-coli
+    products:
+      - name: Sierra Nevada Cheese Graziers Raw Milk Sharp Cheddar
+        brand: Sierra Nevada
+        codes:
+          - "Lot: 00116265"
+          - "Lot: 00310265"
+          - "Lot: 00317261"
+          - "Lot: 00512264"
+          - "Lot: 00923252"
+          - "Lot: 00926251"
+          - "Lot: 01002251"
+          - "Lot: 01010252"
+          - "Lot: 01021251"
+          - "Lot: 01031254"
+          - "Lot: 01107253"
+          - "Lot: 01205254"
+          - "Lot: 01230254"
+    distribution: Multi-state (AZ, CA, CO, FL, GA, IL, IN, MD, NJ, OR, TX, WA, WI)
+    note: Sierra Nevada Cheese Company is recalling its raw milk sharp cheddar cheese sold in 40‑lb blocks because it may be contaminated with E. coli O26:H11. The product was distributed to retailers in several states across the United States. Consumers who purchased this cheese should not consume it and should return it to the place of purchase for a full refund or contact the company for disposal instructions. The recall is being handled as a precautionary measure pending further investigation.
+    citations:
+      - title: Four Sierra Nevada Cheese Company products recalled in Hawaii
+        url: https://www.msn.com/en-us/news/other/four-sierra-nevada-cheese-company-products-recalled-in-hawaii/ar-AA2dt34x
+        publisher: KHON2
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99986
+        publisher: FDA
+        accessed: 2026-10-23
 
