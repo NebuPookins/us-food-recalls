@@ -54,6 +54,7 @@ recalls:
     recalling_firm: WinCo Foods LLC
     agency: FDA
     hazards: [foreign-material]
+    classification: II
     distribution: WinCo Foods retail stores in AZ, CA, ID, MT, NV, OR, UT and WA
     cases:
       as_of: 2026-10-01
@@ -81,11 +82,22 @@ recalls:
       trays are ready-made deli items with a short shelf life, WinCo does not
       expect any to still be in consumers' homes, and says all product that may
       have been made with the peperoncini was removed from stores.
+
+      The FDA enforcement report (recall number H-0008-2027, event 99946)
+      classifies the recall as Class II. It was initiated on September 20, 2026
+      and reported on October 14, 2026. It lists 4,266 units of the 54 oz
+      Salsa Bean Dip Express Tray (UPC 2 67173 510983) and 97 units of the 104
+      oz 16-inch catering tray (UPC 2 67240 ######), both sold refrigerated
+      with a 4-day shelf life from package date.
     citations:
       - title: WinCo Foods of Boise, ID is Recalling the Following Salsa Bean Dip Trays Due to the Inclusion of Recalled Peperoncini from G.L. Mezzetta
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/winco-foods-boise-id-recalling-following-salsa-bean-dip-trays-due-inclusion-recalled-peperoncini-gl
         publisher: FDA
         accessed: 2026-10-05
+      - title: FDA recall record (enforcement report H-0008-2027)
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99946
+        publisher: FDA
+        accessed: 2026-10-23
 
   - id: 2026-10-eak-distribution-broccoli-sprouting-seeds
     parent_id: 2026-09-evergreen-broccoli-sprouts
@@ -310,7 +322,7 @@ recalls:
     agency: FDA
     hazards: [foreign-material]
     classification: II
-    distribution: Limited distribution based on production and distribution records; affected customers identified by company
+    distribution: Limited distribution to 22 states (AZ, CA, CO, GA, IA, ID, IL, IN, MI, MN, MO, NC, OH, OK, OR, PA, SD, TX, UT, VA, WA, WI), per FDA enforcement report
     cases:
       as_of: 2026-09-26
       illnesses: 0
@@ -320,6 +332,8 @@ recalls:
         codes:
           - SKU 10106328
           - Lot 720106
+          - Best if used by July 2029
+          - UPC 073214003280
     note: |
       G. L. Mezzetta Inc. announced a limited voluntary recall of Mezzetta
       Golden Greek Peperoncini Medium Heat, 32-ounce jars after becoming aware
@@ -337,11 +351,21 @@ recalls:
       believe they have a 32 oz jar of Mezzetta Golden Greek Peperoncini Medium
       Heat from lot 720106 should not consume the product and should contact
       Mezzetta at CustomerSupport@Mezzetta.com for assistance.
+
+      The FDA enforcement report (recall number H-0007-2027, event 99937)
+      classifies the recall as Class II. It was initiated on September 19, 2026
+      and reported on October 14, 2026, and covers 7,497 cases (6 units per
+      case). The enforcement report describes the reason as potential
+      contamination with foreign objects, specifically mice.
     citations:
       - title: G. L. Mezzetta Inc. Announces Recall of Mezzetta Brand Golden Greek Peperoncini (Medium Heat) Due to Presence of Pest Contaminant in the Jar
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/g-l-mezzetta-inc-announces-recall-mezzetta-brand-golden-greek-peperoncini-medium-heat-due-presence
         publisher: FDA
         accessed: 2026-09-28
+      - title: FDA recall record (enforcement report H-0007-2027)
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99937
+        publisher: FDA
+        accessed: 2026-10-23
 
   - id: 2026-09-sierra-nevada-graziers-raw-milk-cheese
     date: 2026-09-25
@@ -458,11 +482,23 @@ recalls:
       purchase for a refund or dispose of it. Questions: Sierra Nevada Cheese
       Company, (530) 934-8662, Monday through Friday, 8:30 a.m. to 5:00 p.m.
       Pacific Time, or recallinfo@sierranevadacheese.com.
+
+      The FDA enforcement report (event 99986) covers the 40-pound Graziers Raw
+      Milk Sharp Cheddar block (Item 6516). It was initiated on September 24,
+      2026 and reported on October 14, 2026, and lists 1,373 pounds (40 pounds
+      per unit) with lot codes 00116265, 00310265, 00317261, 00512264,
+      00923252, 00926251, 01002251, 01010252, 01021251, 01031254, 01107253,
+      01205254 and 01230254. It is not yet classified and lists distribution in
+      AZ, CA, CO, FL, GA, IL, IN, MD, NJ, OR, TX, WA and WI.
     citations:
       - title: Sierra Nevada Cheese Company Recalls Graziers Raw Milk Cheese Because of Possible Health Risk
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/sierra-nevada-cheese-company-recalls-graziers-raw-milk-cheese-because-possible-health-risk
         publisher: FDA
         accessed: 2026-09-30
+      - title: FDA recall record (event 99986)
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99986
+        publisher: FDA
+        accessed: 2026-10-23
 
   - id: 2026-09-galil-importing-lior-cinnamon-ground-seasoning
     date: 2026-09-24
@@ -472,6 +508,7 @@ recalls:
     recalling_firm: Galil Importing Corp
     agency: FDA
     hazards: [chemical-contamination]
+    classification: II
     distribution: Retail stores, grocery stores, delis and supermarkets in New York, New Jersey, Pennsylvania, Texas, Florida and Illinois
     cases:
       as_of: 2026-09-24
@@ -502,7 +539,15 @@ recalls:
       have been reported to date. Consumers should not consume the product and
       should discard it or return it to the place of purchase for a refund.
       Questions may be directed to Galil Importing Corp at 1-516-496-7400.
+
+      The FDA enforcement report (recall number H-1402-2026, event 99954)
+      classifies the recall as Class II. It was initiated on September 24, 2026,
+      reported on October 7, 2026, and lists 162 cases of product.
     citations:
+      - title: FDA recall record (enforcement report H-1402-2026)
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99954
+        publisher: FDA
+        accessed: 2026-10-23
       - title: Galil Importing Corp Recalls Lior Cinnamon Ground Seasoning Due to Elevated Lead Levels
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/galil-importing-corp-recalls-lior-cinnamon-ground-seasoning-due-elevated-lead-levels
         publisher: FDA
@@ -974,6 +1019,11 @@ recalls:
       distributed to retail locations nationwide. The enforcement report
       describes the product as packed in a yellow plastic sealed bag, made in
       Italy and distributed by Walmart Inc.
+
+      A second FDA enforcement record (recall number H-1396-2026, event 99853)
+      lists 16,002 bags (2,286 cases) of the same product. It was initiated on
+      September 3, 2026, reported on September 30, 2026, and distributed to
+      Walmart distribution centers and retail locations nationwide.
     citations:
       - title: Gias Foods, Inc. Recalls Bettergoods Authentic Italian Lemon Alfredo Fettuccine Because of Possible Health Risk
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/gias-foods-inc-recalls-bettergoods-authentic-italian-lemon-alfredo-fettuccine-because-possible
@@ -985,6 +1035,10 @@ recalls:
         accessed: 2026-10-02
       - title: FDA recall record
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100010
+        publisher: FDA
+        accessed: 2026-10-23
+      - title: FDA recall record (enforcement report H-1396-2026)
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99853
         publisher: FDA
         accessed: 2026-10-23
 
@@ -1298,6 +1352,7 @@ recalls:
     recalling_firm: Panorama Produce
     agency: FDA
     hazards: [salmonella]
+    classification: II
     distribution: CT, NY, NJ and PA, sold in select Walmart stores
     cases:
       as_of: 2026-08-28
@@ -1308,6 +1363,7 @@ recalls:
         codes:
           - PLU 4584
           - UPC 07503061948050
+          - Lot 038
     note: |
       Panorama Produce of Mamaroneck, NY recalled 302 boxes of size 9 mangoes
       because they may be contaminated with Salmonella. The mangoes were
@@ -1319,11 +1375,20 @@ recalls:
       The recall was initiated after FDA sampling found Salmonella in mangoes
       grown on the same farm that were not distributed into U.S. commerce. No
       illnesses have been reported.
+
+      The FDA enforcement report (recall number H-1342-2026, event 99780)
+      classifies the recall as Class II. It was initiated on August 19, 2026,
+      reported on September 23, 2026, and lists 302 boxes of nine mangoes per
+      carton, with lot 038 and PLU 4584.
     citations:
       - title: Panorama Produce Recalls Mangoes Due to Possible Salmonella Contamination
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/panorama-produce-recalls-mangoes-due-possible-salmonella-contamination
         publisher: FDA
         accessed: 2026-08-31
+      - title: FDA recall record (enforcement report H-1342-2026)
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99780
+        publisher: FDA
+        accessed: 2026-10-23
 
   - id: 2026-08-everything-sprouts-radish-mix
     parent_id: 2026-08-everything-sprouts-alfalfa-sprouts
@@ -1599,6 +1664,7 @@ recalls:
     recalling_firm: The Hampton Grocer, Inc.
     agency: FDA
     hazards: [salmonella]
+    classification: I
     distribution: Nationwide via Amazon and other online retailers
     cases:
       as_of: 2026-08-14
@@ -1615,6 +1681,11 @@ recalls:
       supplier reported that a sample of an organic greens powder containing
       moringa tested positive for Salmonella. The granola sold nationwide via
       Amazon and the company's website between October 2025 and August 2026.
+
+      The FDA enforcement report (recall number H-1309-2026, event 99656)
+      classifies the recall as Class I. It was initiated on August 14, 2026,
+      reported on September 9, 2026, and lists 4,059 units distributed
+      nationwide. The enforcement report also lists UPC 8 50035 32455 4.
     citations:
       - title: The Hampton Grocer, Inc. Recalls 8-Ounce Packages of Lacnola Lactation Granola Because of Possible Health Risk
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/hampton-grocers-inc-recalls-its-8-ounce-packages-lacnola-lactation-granola-because-possible-health
@@ -1624,6 +1695,10 @@ recalls:
         url: https://www.foxbusiness.com/lifestyle/granola-sold-nationwide-amazon-recalled-salmonella-contamination-fears
         publisher: Fox Business
         accessed: 2026-08-18
+      - title: FDA recall record (enforcement report H-1309-2026)
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99656
+        publisher: FDA
+        accessed: 2026-10-23
 
   - id: 2026-08-exotique-foods-momchipz-veggie-chips-gluten
     date: 2026-08-14
@@ -1633,6 +1708,7 @@ recalls:
     recalling_firm: Exotique Foods Inc (Ontario, Canada)
     agency: FDA
     hazards: [undeclared-allergen]
+    classification: I
     distribution: Sold to 49 U.S. customers via Amazon.com
     cases:
       as_of: 2026-08-14
@@ -1649,11 +1725,20 @@ recalls:
       Canadian Food Inspection Agency found undeclared gluten. The product was
       sold to 49 U.S. customers through Amazon.com between March and June
       2026.
+
+      The FDA enforcement report (recall number H-1330-2026, event 99636)
+      classifies the recall as Class I. It was initiated on August 7, 2026,
+      reported on September 16, 2026, and lists 68 cases of the 3 oz (85 g)
+      bags. The enforcement report gives the reason as undeclared wheat.
     citations:
       - title: Exotique Foods Inc Recalls Momchipz Veggie Chips Broccoli Florets & Cauliflower Due to Undeclared Gluten
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/exotique-foods-inc-recalls-momchipz-veggie-chips-broccoli-florets-cauliflower-due-undeclared-gluten
         publisher: FDA
         accessed: 2026-08-21
+      - title: FDA recall record (enforcement report H-1330-2026)
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99636
+        publisher: FDA
+        accessed: 2026-10-23
 
   - id: 2026-08-kettle-cuisine-tomato-soup-kits
     date: 2026-08-12
@@ -1700,6 +1785,7 @@ recalls:
     recalling_firm: Lidl US
     agency: FDA
     hazards: [salmonella]
+    classification: I
     distribution: Lidl stores in 10 states and Washington, D.C.
     cases:
       as_of: 2026-08-12
@@ -1716,11 +1802,20 @@ recalls:
       spice mix. Recalled from Lidl US stores in Delaware, Georgia, Maryland,
       New Jersey, New York, North Carolina, Pennsylvania, South Carolina,
       Virginia and Washington, D.C.
+
+      The FDA enforcement report (recall number H-1243-2026, event 99618)
+      classifies the recall as Class I. It was initiated on August 10, 2026,
+      reported on August 26, 2026, and lists 2,040 containers distributed to
+      Washington, D.C., DE, GA, MD, NC, NJ, NY, PA, SC and VA.
     citations:
       - title: Lidl US Recalls Vitasia Asian Style Wok Spice Mix Due to Potential Salmonella Contamination
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/lidl-us-recalls-vitasia-asian-style-wok-spice-mix-due-potential-salmonella-contamination
         publisher: FDA
         accessed: 2026-08-18
+      - title: FDA recall record (enforcement report H-1243-2026)
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99618
+        publisher: FDA
+        accessed: 2026-10-23
 
   - id: 2026-08-coast-citrus-jalapenos-salmonella
     date: 2026-08-09
@@ -2020,6 +2115,43 @@ recalls:
         publisher: FSIS
         accessed: 2026-10-02
 
+  - id: 2026-08-26-coast-citrus-distributors-jalapeno-pepper-packaged-in-bu
+    parent_id: 2026-08-coast-citrus-jalapenos-salmonella
+    date: 2026-08-26
+    title: Bulk jalapeño peppers packaged by Coast Citrus recalled for Salmonella Javiana
+    summary:
+      - peppers
+    recalling_firm: Coast Citrus Distributors
+    agency: FDA
+    hazards: [salmonella]
+    classification: I
+    distribution: Wholesale distributors in central and east coast states and further nationwide; no retail distribution identified as of 08/10/2026
+    products:
+      - name: Bulk jalapeño peppers
+        codes:
+          - "73296608113"
+          - "73296600558"
+          - "73296610927"
+          - "73296600559"
+          - "732966107055"
+          - "02060042710"
+          - Pack date 07/01/2026 - 07/31/2026
+    note: |
+      The FDA announced a recall of bulk jalapeño peppers packaged by Coast
+      Citrus Distributors because they may be contaminated with Salmonella
+      Javiana. The peppers were shipped in large bulk containers to wholesale
+      distributors in the central and east coast states and have also been
+      distributed nationwide for further processing, but no retail sales have
+      been identified. Consumers should discard any of these peppers or return
+      them to the supplier, and businesses should cease using the product in
+      food preparation. The recall covers all product with pack dates from July
+      1, 2026 through July 31, 2026.
+    citations:
+      - title: FDA recall record (event 99569)
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99569
+        publisher: FDA
+        accessed: 2026-09-16
+
   - id: 2026-08-taylor-fresh-jalapenos-salmonella
     parent_id: 2026-08-coast-citrus-jalapenos-salmonella
     date: 2026-08-09
@@ -2244,6 +2376,7 @@ recalls:
     recalling_firm: Botticelli Foods
     agency: FDA
     hazards: [salmonella]
+    classification: I
     distribution: Walmart stores in 19 states
     cases:
       as_of: 2026-08-03
@@ -2260,7 +2393,18 @@ recalls:
       Florida Department of Agriculture and Consumer Services at a Walmart
       store. Botticelli Foods recalled the Walmart-exclusive pistachio nut
       butter, distributed in 19 states.
+
+      The FDA enforcement report (recall number H-1273-2026, event 99538)
+      classifies the recall as Class I. It was initiated on July 17, 2026,
+      reported on September 2, 2026, and lists 16,200 units of the 6.7 oz
+      (190 g) jar, distributed in Alabama, Alaska, Arizona, Colorado, Florida,
+      Georgia, Idaho, Kansas, Mississippi, Missouri, Montana, Nebraska, Nevada,
+      New Mexico, Oregon, South Dakota, Tennessee, Washington and Wyoming.
     citations:
+      - title: FDA recall record (enforcement report H-1273-2026)
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99538
+        publisher: FDA
+        accessed: 2026-10-23
       - title: Botticelli Foods Recalls Bettergoods Pistachio Nut Butter Because of Possible Health Risk
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/boticelli-foods-recalls-bettergoods-pistachio-nut-butter-because-possible-health-risk
         publisher: FDA
@@ -2319,6 +2463,7 @@ recalls:
     recalling_firm: Lidl US
     agency: FDA
     hazards: [undeclared-allergen]
+    classification: II
     distribution: Lidl stores in 10 states and Washington, D.C.
     cases:
       as_of: 2026-07-31
@@ -2336,11 +2481,22 @@ recalls:
       Undeclared wheat, soy, milk, egg and tree nut (coconut) due to
       foreign-language packaging missing English allergen labeling. The recall
       was expanded July 31 to a second product and the coconut allergen.
+
+      The FDA enforcement reports classify both products as Class II. The
+      chocolate truffle coating and apricot filling variety (UPC 4056489125839,
+      recall number H-1274-2026) has 500 units, and the cocoa topping with
+      coconut sprinkles variety (UPC 4056489125846, recall number H-1275-2026)
+      has 200 units. Both carry lot 260315 and best before 10/11/2026, were
+      initiated on July 22, 2026, and were reported on September 2, 2026.
     citations:
       - title: Lidl US Expands Recall of Eridanous Shortbread Cookies Due to Undeclared Wheat, Soy, Milk, Egg and Tree Nut (Coconut) Allergens
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/lidl-us-expands-recall-eridanous-shortbread-cookies-due-undeclared-wheat-soy-milk-egg-and-tree-nut
         publisher: FDA
         accessed: 2026-08-18
+      - title: FDA recall records (event 99493)
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99493
+        publisher: FDA
+        accessed: 2026-10-23
 
   - id: 2026-07-marys-harvest-curry-chicken-salad
     date: 2026-07-30

@@ -834,62 +834,6 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99642
         publisher: FDA
         accessed: 2026-09-12
-  - id: 2026-08-26-lidl-us-trading-vitasia-asian-style-wok-spice
-    date: 2026-08-26
-    title: Vitasia Asian Style Wok Spice Mix recalled for Salmonella
-    summary:
-      - spice mix
-    recalling_firm: Lidl US TRADING
-    agency: FDA
-    hazards:
-      - salmonella
-    classification: I
-    products:
-      - name: Vitasia Asian Style Wok Spice Mix
-        brand: Vitasia
-        codes:
-          - "Lot # 155846"
-          - Best if Used By JUN 2028
-          - UPC 4335619355491
-    distribution: Washington DC, DE, GA, MD, NC, NJ, NY, PA, SC, VA
-    cases:
-      as_of: 2026-08-26
-      illnesses: 0
-    note: Lidl US Trading is recalling Vitasia Asian Style Wok Spice Mix after a positive test for Salmonella. The recall covers about 2,040 containers distributed to Washington DC and several states including DE, GA, MD, NC, NJ, NY, PA, SC, and VA. Consumers should discard the product or return it to the place of purchase and may contact the firm for a refund. No illnesses have been reported as of the announcement date.
-    citations:
-      - title: Spice mix sold at Lidl recalled over salmonella risk
-        url: https://www.usatoday.com/story/money/2026/08/14/spice-mix-sold-lidl-recalled-salmonella-risk/91311776007/
-        publisher: USA Today
-      - title: FDA recall record
-        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99618
-        publisher: FDA
-        accessed: 2026-09-13
-  - id: 2026-09-09-the-hampton-grocer-the-hampton-grocer-brand-lacno
-    date: 2026-09-09
-    title: Lacnola Small Batch Lactation Granola recalled for possible Salmonella contamination
-    summary:
-      - granola
-    recalling_firm: The Hampton Grocer
-    agency: FDA
-    hazards:
-      - salmonella
-    classification: I
-    products:
-      - name: Lacnola Small Batch Lactation Granola
-        brand: The Hampton Grocer
-        codes:
-          - Lot Code HGLC-102125 expiration 21OCT2026
-          - Lot Code HGLC-021326 expiration 13FEB2027
-    distribution: Nationwide
-    note: The Hampton Grocer is recalling its Lacnola Small Batch Lactation Granola because the product may be contaminated with Salmonella. The recall covers about 4,059 units distributed nationwide and was issued on September 9, 2026. The granola was produced in a facility that also processes tree nuts, peanuts, sesame, and soy, increasing the risk of cross‑contamination. Consumers should stop using the product and return it to the place of purchase for a full refund.
-    citations:
-      - title: A New FDA Recall Targets a Popular Granola Over Salmonella Fears. It Was Sold Nationwide for Months
-        url: https://www.msn.com/en-us/foodanddrink/foodnews/a-new-fda-recall-targets-a-popular-granola-over-salmonella-fears-it-was-sold-nationwide-for-months/ar-AA2apkMv
-        publisher: Inc.
-      - title: FDA recall record
-        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99656
-        publisher: FDA
-        accessed: 2026-09-16
   - id: 2026-09-02-upstate-niagara-cooperative-mehadrin-chocolate-leben-6-oz
     date: 2026-09-02
     title: Mehadrin Chocolate Leben cups may be improperly pasteurized
@@ -1279,59 +1223,6 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99519
         publisher: FDA
         accessed: 2026-09-16
-  - id: 2026-09-02-lidl-us-trading-eridanous-greek-style-shortbre
-    date: 2026-09-02
-    title: Eridanous Greek Style Shortbread Cookies with apricot filling and cocoa topping recalled for undeclared wheat, soy, milk, egg, and coconut
-    summary:
-      - cookies
-    recalling_firm: Lidl US TRADING
-    agency: FDA
-    hazards:
-      - undeclared-allergen
-    classification: II
-    products:
-      - name: Eridanous Greek Style Shortbread Cookies with apricot filling and cocoa topping with coconut sprinkles
-        codes:
-          - "BEST BEFORE: 10/11/2026"
-          - "LOT NO: 260315"
-          - "UPC: 4056489125846"
-    distribution: Shipped to DC, DE, GA, MD, NJ, NY, NC, PA, SC, and VA
-    note: Lidl US Trading is recalling 200 units of Eridanous Greek Style Shortbread Cookies with apricot filling and cocoa topping because the label omitted foreign language text and failed to declare wheat, soy, milk, eggs, and coconut, a tree nut. The product was distributed to stores in ten states including DC, NY, and others. Consumers who purchased the cookies should not eat them and should return them to the place of purchase for a refund or contact the company for instructions. The recall is classified as Class II.
-    citations:
-      - title: Popular Lidl shortbread cookies recalled. See affected products
-        url: https://www.yahoo.com/news/us/articles/popular-lidl-shortbread-cookies-recalled-155339321.html
-        publisher: Yahoo
-      - title: FDA recall record
-        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99493
-        publisher: FDA
-        accessed: 2026-09-16
-  - id: 2026-08-26-coast-citrus-distributors-jalapeno-pepper-packaged-in-bu
-    date: 2026-08-26
-    title: Jalapeno peppers recalled for potential Salmonella Javiana contamination
-    summary:
-      - peppers
-    recalling_firm: Coast Citrus Distributors
-    agency: FDA
-    hazards:
-      - salmonella
-    classification: I
-    products:
-      - name: Jalapeno peppers
-        codes:
-          - "73296608113"
-          - "73296600558"
-          - "73296610927"
-          - "73296600559"
-          - "732966107055"
-          - "02060042710"
-          - Pack date 07/01/2026 - 07/31/2026
-    distribution: Wholesale distributors in central and east coast states and further nationwide; no retail distribution identified as of 08/10/2026
-    note: The FDA announced a recall of bulk jalapeno peppers packaged by Coast Citrus Distributors because they may be contaminated with Salmonella Javiana. The peppers were shipped in large bulk containers to wholesale distributors in the central and east coast states and have also been distributed nationwide for further processing, but no retail sales have been identified. Consumers should discard any of these peppers or return them to the supplier, and businesses should cease using the product in food preparation. The recall covers all product with pack dates from July 1 2026 through July 31 2026.
-    citations:
-      - title: FDA recall record
-        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99569
-        publisher: FDA
-        accessed: 2026-09-16
   - id: 2026-08-19-piazza-produce-dba-cibus-fresh-cibus-fresh-sprig-and-sprout-a
     date: 2026-08-19
     title: Cibus Fresh Garden Salad recalled for possible Cyclospora contamination
@@ -1359,32 +1250,6 @@ recalls:
     citations:
       - title: FDA recall record
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99470
-        publisher: FDA
-        accessed: 2026-09-16
-  - id: 2026-09-02-botticelli-foods-llc-bettergoods-brand-pistachio-nu
-    date: 2026-09-02
-    title: Bettergoods Pistachio Nut Butter recalled for possible Salmonella contamination
-    summary:
-      - nuts
-    recalling_firm: Botticelli Foods, LLC
-    agency: FDA
-    hazards:
-      - salmonella
-    classification: I
-    products:
-      - name: Bettergoods Pistachio Nut Butter
-        brand: bettergoods
-        codes:
-          - UPC 194346207961
-          - "Lot: LB028ACP04 exp. date: January 28, 2027"
-    distribution: Alabama, Alaska, Arizona, Colorado, Florida, Georgia, Idaho, Kansas, Mississippi, Missouri, Montana, Nebraska, Nevada, New Mexico, Oregon, South Dakota, Tennessee, Washington, and Wyoming
-    note: Botticelli Foods, LLC is recalling its Bettergoods Pistachio Nut Butter because the product may be contaminated with Salmonella. The recall covers about 16,200 units distributed across multiple states. Consumers who purchased the 6.7‑oz jars should check the lot code LB028ACP04 and expiration date of January 28, 2027, and discard the product or return it to the place of purchase.
-    citations:
-      - title: "Nut butter recall update: FDA issues highest risk warning"
-        url: https://www.msn.com/en-us/news/other/nut-butter-recall-update-fda-issues-highest-risk-warning/ar-AA2b2w1l
-        publisher: Newsweek
-      - title: FDA recall record
-        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99538
         publisher: FDA
         accessed: 2026-09-16
   - id: 2026-08-26-prospector-popcorn-llc-prospector-popcorn-fudge-brown
@@ -1571,32 +1436,6 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99675
         publisher: FDA
         accessed: 2026-09-25
-  - id: 2026-09-16-exotique-foods-canada-momchipz-gluten-free-veggie-ch
-    date: 2026-09-16
-    title: Momchipz Gluten Free Veggie Chips recalled for undeclared wheat
-    summary:
-      - chips
-    recalling_firm: EXOTIQUE FOODS CANADA
-    agency: FDA
-    hazards:
-      - undeclared-allergen
-    classification: I
-    products:
-      - name: Momchipz Gluten Free Veggie Chips Broccoli Florets & Cauliflower
-        brand: Momchipz
-        codes:
-          - UPC 6 28634 44216 6
-          - "Best Before: 2026 AUGUST 31"
-    distribution: Sold in the United States
-    note: The product was recalled because it may contain wheat despite being labeled gluten‑free. Consumers with a wheat allergy should not eat it and should discard or return the product. The recall covers 68 cases of the 3‑oz bags sold in the United States. The firm responsible is Exotique Foods Canada.
-    citations:
-      - title: "Important Recall: Exotique Foods Veggie Chips May Contain Undeclared Gluten"
-        url: https://www.yahoo.com/news/us/articles/important-recall-exotique-foods-veggie-155403687.html
-        publisher: Yahoo
-      - title: FDA recall record
-        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99636
-        publisher: FDA
-        accessed: 2026-09-26
   - id: 2026-09-16-euro-foods-group-usa-nj-inc-crown-farms-dried-suri-cut-200
     date: 2026-09-16
     title: Crown Farms Dried Suri Cut not properly eviscerated
@@ -1644,32 +1483,6 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99815
         publisher: FDA
         accessed: 2026-09-29
-  - id: 2026-09-23-panorama-produce-sales-inc-martina-brand-fresh-whole-mang
-    date: 2026-09-23
-    title: Martina Fresh Whole Mangoes may contain Salmonella
-    summary:
-      - mangoes
-    recalling_firm: Panorama Produce Sales Inc.
-    agency: FDA
-    hazards:
-      - salmonella
-    classification: II
-    products:
-      - name: Martina Fresh Whole Mangoes
-        brand: Martina
-        codes:
-          - Lot 038
-          - PLU 4584
-    distribution: CT, NY, NJ, and PA
-    note: The FDA announced a recall of Martina brand fresh whole mangoes sold by Panorama Produce Sales because the fruit may be contaminated with Salmonella. The recall covers 302 boxes of individual mangoes packaged nine per carton and distributed to Connecticut, New York, New Jersey, and Pennsylvania. Consumers who purchased these mangoes should discard them or return them to the store for a refund. No illnesses have been reported.
-    citations:
-      - title: Walmart Mangoes Recalled Over Salmonella Risk After FDA Testing Finds Farm Connection
-        url: https://www.yahoo.com/news/us/articles/walmart-mangoes-recalled-over-salmonella-141540829.html
-        publisher: Yahoo
-      - title: FDA recall record
-        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99780
-        publisher: FDA
-        accessed: 2026-10-03
   - id: 2026-09-23-best-friends-bakery-llc-pumpkin-spice-no-bake-cookie-n
     date: 2026-09-23
     title: Pumpkin Spice No Bake Cookie recalled for undeclared peanuts and eggs
@@ -1741,33 +1554,6 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99874
         publisher: FDA
         accessed: 2026-10-08
-  - id: 2026-09-30-gias-food-inc-lemon-alfredo-fettuccine-packe
-    date: 2026-09-30
-    title: Lemon Alfredo Fettuccine recalled for Listeria contamination
-    summary:
-      - pasta
-    recalling_firm: GIAS FOOD INC.
-    agency: FDA
-    hazards:
-      - listeria
-    classification: I
-    products:
-      - name: bettergoods Lemon Alfredo Fettuccine
-        brand: bettergoods
-        codes:
-          - UPC 194346442706
-          - L6080C SEP 20 2027
-          - L6079C SEP 19 2027
-    distribution: Nationwide via Walmart distribution centers and retail locations
-    note: GIAS FOOD INC. is recalling about 16,000 bags of bettergoods Lemon Alfredo Fettuccine after testing showed contamination with Listeria monocytogenes. The product was distributed to Walmart distribution centers and stores across the United States. Consumers should not eat the product and should discard it or return it to the place of purchase for a full refund.
-    citations:
-      - title: FDA recall for frozen fettuccine Alfredo sold at Walmart stores nationwide
-        url: https://www.newsday.com/business/fda-pasta-recall-walmart-vxhrtb6l
-        publisher: Newsday
-      - title: FDA recall record
-        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99853
-        publisher: FDA
-        accessed: 2026-10-09
   - id: 2026-10-14-saint-francis-apizza-llc-saint-francis-apizza-frozen-pe
     date: 2026-10-14
     title: Saint Francis Apizza Frozen Pepperoni Pizza contains undeclared soy allergen
@@ -1831,97 +1617,3 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99991
         publisher: FDA
         accessed: 2026-10-21
-  - id: 2026-10-07-galil-importing-corp-lior-brand-cinnamon-ground-sea
-    date: 2026-10-07
-    title: Lior Cinnamon Ground Seasoning contains elevated levels of lead
-    summary:
-      - cinnamon
-    recalling_firm: Galil Importing Corp
-    agency: FDA
-    hazards:
-      - chemical-contamination
-    classification: II
-    products:
-      - name: Lior Cinnamon Ground Seasoning
-        brand: Lior
-        codes:
-          - UPC 794711005484
-          - GAP11304
-    distribution: NY, NJ, PA, TX, FL, IL
-    note: Galil Importing Corp is recalling its Lior brand Cinnamon Ground Seasoning after testing showed elevated lead levels. The product was distributed in six states and 162 cases were identified. Consumers should stop using the seasoning and return it to the place of purchase for a full refund.
-    citations:
-      - title: Ground Cinnamon Sold in 6 States Recalled for Potential Lead Contamination
-        url: https://www.yahoo.com/news/us/articles/ground-cinnamon-sold-6-states-044514454.html
-        publisher: Yahoo
-      - title: FDA recall record
-        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99954
-        publisher: FDA
-        accessed: 2026-10-23
-  - id: 2026-10-14-sierra-nevada-cheese-company-i-sierra-nevada-cheese-graziers
-    date: 2026-10-14
-    title: Sierra Nevada raw milk sharp cheddar cheese recalled for possible E. coli O26:H11 contamination
-    summary:
-      - cheese
-    recalling_firm: Sierra Nevada Cheese Company, Inc
-    agency: FDA
-    hazards:
-      - e-coli
-    products:
-      - name: Sierra Nevada Cheese Graziers Raw Milk Sharp Cheddar
-        brand: Sierra Nevada
-        codes:
-          - "Lot: 00116265"
-          - "Lot: 00310265"
-          - "Lot: 00317261"
-          - "Lot: 00512264"
-          - "Lot: 00923252"
-          - "Lot: 00926251"
-          - "Lot: 01002251"
-          - "Lot: 01010252"
-          - "Lot: 01021251"
-          - "Lot: 01031254"
-          - "Lot: 01107253"
-          - "Lot: 01205254"
-          - "Lot: 01230254"
-    distribution: Multi-state (AZ, CA, CO, FL, GA, IL, IN, MD, NJ, OR, TX, WA, WI)
-    note: Sierra Nevada Cheese Company is recalling its raw milk sharp cheddar cheese sold in 40‑lb blocks because it may be contaminated with E. coli O26:H11. The product was distributed to retailers in several states across the United States. Consumers who purchased this cheese should not consume it and should return it to the place of purchase for a full refund or contact the company for disposal instructions. The recall is being handled as a precautionary measure pending further investigation.
-    citations:
-      - title: Four Sierra Nevada Cheese Company products recalled in Hawaii
-        url: https://www.msn.com/en-us/news/other/four-sierra-nevada-cheese-company-products-recalled-in-hawaii/ar-AA2dt34x
-        publisher: KHON2
-      - title: FDA recall record
-        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99986
-        publisher: FDA
-        accessed: 2026-10-23
-  - id: 2026-10-14-winco-foods-llc-winco-foods-salsa-bean-dip-exp
-    date: 2026-10-14
-    title: WinCo Foods Salsa Bean Dip Express and Catering Trays recalled for pest‑contaminated peperoncini
-    summary:
-      - dip
-    recalling_firm: WinCo Foods LLC
-    agency: FDA
-    hazards:
-      - foreign-material
-    classification: II
-    products:
-      - name: WinCo Foods Salsa Bean Dip Express Tray
-        brand: WinCo Foods
-        codes:
-          - UPC 2 67173 510983
-          - Best If Used By August 14 2026
-          - Best If Used By September 25 2026
-      - name: WinCo Foods Salsa Bean Dip 16‑inch Catering Tray
-        brand: WinCo Foods
-        codes:
-          - "UPC 2 67240 ######"
-    distribution: Distributed in AZ, CA, ID, MT, NV, OR, UT, and WA
-    note: WinCo Foods is recalling its Salsa Bean Dip Express Tray (54 oz) and 16‑inch Catering Tray (104 oz) because the peperoncini ingredient was found to have a pest issue. The products were sold refrigerated and shipped to eight western states. Consumers should discard the recalled trays or return them to the store for a refund.
-    citations:
-      - title: WinCo recalls bean dip trays sold in Utah, other states
-        url: https://www.msn.com/en-us/news/other/winco-recalls-bean-dip-trays-sold-in-utah-other-states/ar-AA2dCOu4
-        publisher: ABC4 Utah
-      - title: FDA recall record
-        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99946
-        publisher: FDA
-        accessed: 2026-10-23
-
