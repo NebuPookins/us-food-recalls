@@ -1695,4 +1695,23 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99887
         publisher: FDA
         accessed: 2026-10-23
+  - id: 2026-10-14-j-k-patisserie-and-bakery-llc-chocolate-chip-cookies-package
+    date: 2026-10-14
+    title: Chocolate Chip Cookies recalled for undeclared soy allergen
+    summary:
+      - cookies
+    recalling_firm: J K Patisserie & Bakery LLC
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: II
+    products:
+      - name: Chocolate Chip Cookies
+    distribution: NY and NJ
+    note: J K Patisserie & Bakery LLC is recalling about 610 units of chocolate chip cookies packaged in a cardboard box because soy was not listed in the Contains statement. The cookies contain milk, wheat, and eggs, but the undeclared soy poses an allergy risk. The recall covers distribution in New York and New Jersey. Consumers who purchased these cookies should not eat them and should return them to the place of purchase for a refund.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99823
+        publisher: FDA
+        accessed: 2026-10-23
 
