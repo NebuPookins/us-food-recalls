@@ -1893,4 +1893,35 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99986
         publisher: FDA
         accessed: 2026-10-23
+  - id: 2026-10-14-winco-foods-llc-winco-foods-salsa-bean-dip-exp
+    date: 2026-10-14
+    title: WinCo Foods Salsa Bean Dip Express and Catering Trays recalled for pest‑contaminated peperoncini
+    summary:
+      - dip
+    recalling_firm: WinCo Foods LLC
+    agency: FDA
+    hazards:
+      - foreign-material
+    classification: II
+    products:
+      - name: WinCo Foods Salsa Bean Dip Express Tray
+        brand: WinCo Foods
+        codes:
+          - UPC 2 67173 510983
+          - Best If Used By August 14 2026
+          - Best If Used By September 25 2026
+      - name: WinCo Foods Salsa Bean Dip 16‑inch Catering Tray
+        brand: WinCo Foods
+        codes:
+          - "UPC 2 67240 ######"
+    distribution: Distributed in AZ, CA, ID, MT, NV, OR, UT, and WA
+    note: WinCo Foods is recalling its Salsa Bean Dip Express Tray (54 oz) and 16‑inch Catering Tray (104 oz) because the peperoncini ingredient was found to have a pest issue. The products were sold refrigerated and shipped to eight western states. Consumers should discard the recalled trays or return them to the store for a refund.
+    citations:
+      - title: WinCo recalls bean dip trays sold in Utah, other states
+        url: https://www.msn.com/en-us/news/other/winco-recalls-bean-dip-trays-sold-in-utah-other-states/ar-AA2dCOu4
+        publisher: ABC4 Utah
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99946
+        publisher: FDA
+        accessed: 2026-10-23
 
