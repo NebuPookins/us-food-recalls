@@ -6,6 +6,10 @@
  * the reviewer merges incremental PRs instead of one large batch. If an earlier
  * auto PR is still open, this run exits early and waits for it to be merged.
  *
+ * A record that duplicates an existing entry (same firm, dates within
+ * DUPLICATE_WINDOW_DAYS, and a shared lot code; see dedupe.ts) is not drafted.
+ * Its new citation and classification are merged into the existing entry instead.
+ *
  * The curated fields are drafted by an LLM (Groq free tier); `GROQ_API_KEY` is
  * required whenever there is a new record to draft. The stable fields (`id`,
  * `date`, `agency`) are always produced by this script, never the model, so
@@ -21,7 +25,7 @@
  */
 
 import { execFileSync } from 'node:child_process';
-import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { parse, stringify } from 'yaml';
 import { z } from 'zod';
@@ -31,10 +35,17 @@ import {
   HAZARDS,
   HAZARD_LABELS,
   RecallSchema,
+  type Citation,
   type Recall,
 } from '../src/schema.ts';
 import { loadRecalls } from '../src/load.ts';
 import { DATA_DIR } from '../src/paths.ts';
+import {
+  addToEntry,
+  classificationFromRaw,
+  findDuplicate,
+  type DuplicateMatch,
+} from './dedupe.ts';
 
 const DRY_RUN = process.argv.includes('--dry-run');
 const ROOT = join(DATA_DIR, '..', '..');
@@ -634,14 +645,81 @@ function appendAutoEntry(recall: Recall): void {
   writeAutoFile(file, [...readAutoRecalls(file), recall]);
 }
 
-function buildSummary(added: Recall, excluded: { rec: SourceRecord; reason: string }[]): string {
-  const lines: string[] = [
-    '## New recalls (auto-drafted)',
-    '',
-    '_Drafted 1 recall for data/recalls/<year>-auto.yaml. Review the diff before merging._',
-    '',
-    `- ${added.date} — ${added.title} (${added.agency}, ${added.hazards.map((h) => HAZARD_LABELS[h]).join(', ')})`,
+// ---------------------------------------------------------------- merging
+
+type Merge = { rec: SourceRecord; match: DuplicateMatch; changes: string[] };
+
+/** The data file whose YAML contains the entry with this id. */
+function fileContaining(id: string): string {
+  const files = readdirSync(DATA_DIR)
+    .filter((name) => /\.ya?ml$/.test(name))
+    .map((name) => join(DATA_DIR, name));
+  const hit = files.find((f) => readFileSync(f, 'utf8').split('\n').includes(`  - id: ${id}`));
+  if (!hit) throw new Error(`no data file contains entry ${id}`);
+  return hit;
+}
+
+/**
+ * Add a duplicate source record's new details (its primary citation and FDA
+ * classification) to the entry it duplicates. Returns what changed; empty when the
+ * entry already has everything. Writes the file unless in dry-run.
+ */
+function mergeIntoEntry(rec: SourceRecord, match: DuplicateMatch, today: string): string[] {
+  const { recall } = match;
+  const citation: Citation | undefined =
+    rec.citationUrl && !recall.citations.some((c) => c.url === rec.citationUrl)
+      ? {
+          title: `${rec.agency} recall record`,
+          url: rec.citationUrl,
+          publisher: rec.agency,
+          accessed: today,
+        }
+      : undefined;
+  const classification = recall.classification ? undefined : classificationFromRaw(rec.classification);
+
+  const changes = [
+    ...(citation ? [`citation "${citation.title}"`] : []),
+    ...(classification ? [`classification ${classification}`] : []),
   ];
+  if (changes.length === 0 || DRY_RUN) return changes;
+
+  const file = fileContaining(recall.id);
+  try {
+    const before = readFileSync(file, 'utf8');
+    const after = addToEntry(before, recall.id, {
+      classification,
+      citations: citation ? [citation] : [],
+    });
+    writeFileSync(file, after);
+  } catch (e) {
+    warn(`failed to merge ${rec.key} into ${recall.id} in ${file}: ${msg(e)}`);
+    throw e;
+  }
+  return changes;
+}
+
+function buildSummary(
+  added: Recall | null,
+  excluded: { rec: SourceRecord; reason: string }[],
+  merges: Merge[],
+): string {
+  const lines: string[] = [];
+  if (added) {
+    lines.push(
+      '## New recalls (auto-drafted)',
+      '',
+      '_Drafted 1 recall for data/recalls/<year>-auto.yaml. Review the diff before merging._',
+      '',
+      `- ${added.date} — ${added.title} (${added.agency}, ${added.hazards.map((h) => HAZARD_LABELS[h]).join(', ')})`,
+    );
+  }
+  if (merges.length > 0) {
+    if (lines.length > 0) lines.push('');
+    lines.push('## Merged into existing entries', '');
+    for (const m of merges) {
+      lines.push(`- ${m.match.recall.id} — ${m.rec.firm}: added ${m.changes.join(', ')}`);
+    }
+  }
   if (excluded.length > 0) {
     lines.push('', '## Excluded (filtered as local/insignificant)');
     for (const e of excluded) {
@@ -718,10 +796,12 @@ async function main(): Promise<void> {
   const seen = new Set(state.seen);
 
   const existing = loadRecalls(DATA_DIR);
-  const used = new Set(existing.ok ? existing.recalls.map((r) => r.id) : []);
-  const existingUrls = new Set(
-    existing.ok ? existing.recalls.flatMap((r) => r.citations.map((c) => c.url)) : [],
-  );
+  if (!existing.ok) {
+    warn(`existing recalls failed to load — duplicate detection is disabled this run:\n  ${existing.errors.join('\n  ')}`);
+  }
+  let recalls: readonly Recall[] = existing.ok ? existing.recalls : [];
+  const used = new Set(recalls.map((r) => r.id));
+  const existingUrls = new Set(recalls.flatMap((r) => r.citations.map((c) => c.url)));
 
   const today = new Date();
   const todayIso = isoDate(today);
@@ -746,7 +826,35 @@ async function main(): Promise<void> {
   );
   log(`${records.length} record(s) fetched, ${fresh.length} new.`);
 
-  if (fresh.length > 0 && !process.env.GROQ_API_KEY) {
+  // Records already covered by a curated entry are merged into it rather than drafted
+  // again. Each merge is validated before the next one, so a bad write stops the run.
+  const merges: Merge[] = [];
+  const toDraft: SourceRecord[] = [];
+  for (const rec of fresh) {
+    const match = findDuplicate(rec, recalls);
+    if (!match) {
+      toDraft.push(rec);
+      continue;
+    }
+    const changes = mergeIntoEntry(rec, match, todayIso);
+    seen.add(rec.key);
+    log(
+      `duplicate: ${rec.key} (${rec.firm}) matches ${match.recall.id} via lot ${match.sharedCodes.join(', ')}` +
+        (changes.length > 0 ? `; merging ${changes.join(', ')}` : '; nothing new to merge'),
+    );
+    if (changes.length === 0) continue;
+    merges.push({ rec, match, changes });
+    if (!DRY_RUN) {
+      const reloaded = loadRecalls(DATA_DIR);
+      if (!reloaded.ok) {
+        warn(`validation failed after merging — nothing committed:\n  ${reloaded.errors.join('\n  ')}`);
+        process.exit(1);
+      }
+      recalls = reloaded.recalls;
+    }
+  }
+
+  if (toDraft.length > 0 && !process.env.GROQ_API_KEY) {
     throw new Error('GROQ_API_KEY is not set — set it as a repository secret.');
   }
 
@@ -756,7 +864,7 @@ async function main(): Promise<void> {
   // One recall per run: scan past excluded (local/insignificant) records and stop
   // at the first significant one. A drafting error aborts the run (failing the
   // workflow); the unfinished record is retried on the next run.
-  for (const rec of fresh) {
+  for (const rec of toDraft) {
     const result = await groqDraft(rec, used, todayIso);
     seen.add(rec.key);
     if (result.recall) {
@@ -768,7 +876,7 @@ async function main(): Promise<void> {
 
   if (!DRY_RUN) saveSeen({ seen: [...seen].slice(-MAX_SEEN), lastRun: todayIso });
 
-  if (!added) {
+  if (!added && merges.length === 0) {
     log('No new recalls to add.');
     if (DRY_RUN) {
       for (const e of excluded) log(`  [dry-run] excluded: ${e.rec.firm} — ${e.rec.product}`);
@@ -776,16 +884,18 @@ async function main(): Promise<void> {
     return;
   }
 
-  const summary = buildSummary(added, excluded);
+  const summary = buildSummary(added, excluded, merges);
   log(summary);
 
   if (DRY_RUN) {
-    log('\n[dry-run] drafted entry:\n');
-    log(stringify({ recalls: [added] }, { lineWidth: 0 }));
+    if (added) {
+      log('\n[dry-run] drafted entry:\n');
+      log(stringify({ recalls: [added] }, { lineWidth: 0 }));
+    }
     return;
   }
 
-  appendAutoEntry(added);
+  if (added) appendAutoEntry(added);
 
   // Gate on the same validator the site and CI use; abort before touching git if invalid.
   const check = loadRecalls(DATA_DIR);
