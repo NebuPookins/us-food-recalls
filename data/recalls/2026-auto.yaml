@@ -1672,4 +1672,30 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99897
         publisher: FDA
         accessed: 2026-10-23
+  - id: 2026-10-14-berlin-seeds-berlin-seeds-alfalfa-sprouting
+    date: 2026-10-14
+    title: Berlin Seeds Alfalfa Sprouting Seeds recalled for potential E. coli and Salmonella contamination
+    summary:
+      - sprouts
+    recalling_firm: Berlin Seeds
+    agency: FDA
+    hazards:
+      - e-coli
+      - salmonella
+    classification: I
+    products:
+      - name: Berlin Seeds Alfalfa Sprouting Seeds
+        brand: Berlin Seeds
+        codes:
+          - "Lot # SAL2-24JB"
+    distribution: Nationwide through the firm’s website and at its retail store in Millersburg, OH
+    note: Berlin Seeds is recalling its alfalfa sprouting seeds after the supplier identified a possible contamination with E. coli and Salmonella. The seeds were sold in resealable bags ranging from 1/4 lb to 50 lb and were distributed both at the company’s Ohio store and online across the United States. Consumers who purchased these seeds should stop using them immediately and return them to the place of purchase for a full refund.
+    citations:
+      - title: "FDA: Massive recall on Alfalfa Sprouting Seeds sold here in Ohio"
+        url: https://www.msn.com/en-us/news/other/fda-massive-recall-on-alfalfa-sprouting-seeds-sold-here-in-ohio/ar-AA2cYVpo
+        publisher: WJW-TV Cleveland
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99894
+        publisher: FDA
+        accessed: 2026-10-23
 
