@@ -1924,4 +1924,28 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99946
         publisher: FDA
         accessed: 2026-10-23
+  - id: 2026-10-14-g-l-mezzetta-inc-mezzetta-golden-greek-peperonc
+    date: 2026-10-14
+    title: Mezzetta Golden Greek Peperoncini recalled for potential mouse contamination
+    summary:
+      - peppers
+    recalling_firm: G L Mezzetta Inc
+    agency: FDA
+    hazards:
+      - foreign-material
+    classification: II
+    products:
+      - name: Mezzetta Golden Greek Peperoncini Medium Heat 32 fl oz
+        brand: Mezzetta
+        codes:
+          - Lot 720106
+          - Best if used by July 2029
+          - UPC 073214003280
+    distribution: Multi-state (AZ, CA, CO, GA, IA, ID, IL, IN, MI, MN, MO, NC, OH, OK, OR, PA, SD, TX, UT, VA, WA, WI)
+    note: Mezzetta is recalling its Golden Greek Peperoncini because the product may be contaminated with mouse parts, a foreign material hazard. The recall covers about 7,497 cases distributed to many states across the U.S. Consumers should check the lot number 720106 and the UPC 073214003280, and discard any product that matches this description. For refunds or further information, contact the company or the FDA.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99937
+        publisher: FDA
+        accessed: 2026-10-23
 
