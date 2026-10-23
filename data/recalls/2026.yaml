@@ -938,6 +938,7 @@ recalls:
     recalling_firm: Gias Foods, Inc.
     agency: FDA
     hazards: [listeria]
+    classification: I
     distribution: Nationwide at Walmart stores
     cases:
       as_of: 2026-09-15
@@ -948,6 +949,7 @@ recalls:
         codes:
           - UPC 194346442706
           - All lots
+          - Lot L6081A (best if used by SEP 21 2027)
     note: |
       Gias Foods of New York, NY recalled two lots of bettergoods Authentic
       Italian Lemon Alfredo Fettuccine (L6079C and L6080C, expiring 09/19/2027
@@ -966,6 +968,12 @@ recalls:
       distribution while the FDA and the company investigate. No illnesses
       have been reported. Consumers should return the product to the place of
       purchase for a full refund.
+
+      The FDA enforcement report (recall number H-0014-2027) classified the
+      recall as Class I on October 6 and lists 1,174 cases of product
+      distributed to retail locations nationwide. The enforcement report
+      describes the product as packed in a yellow plastic sealed bag, made in
+      Italy and distributed by Walmart Inc.
     citations:
       - title: Gias Foods, Inc. Recalls Bettergoods Authentic Italian Lemon Alfredo Fettuccine Because of Possible Health Risk
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/gias-foods-inc-recalls-bettergoods-authentic-italian-lemon-alfredo-fettuccine-because-possible
@@ -975,6 +983,10 @@ recalls:
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/gias-foods-inc-recalls-bettergoods-authentic-italian-lemon-alfredo-fettuccine-because-possible-0
         publisher: FDA
         accessed: 2026-10-02
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100010
+        publisher: FDA
+        accessed: 2026-10-23
 
   - id: 2026-09-wakefern-wholesome-pantry-apple-sauce
     date: 2026-09-14
