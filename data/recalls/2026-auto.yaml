@@ -1617,3 +1617,31 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99991
         publisher: FDA
         accessed: 2026-10-21
+  - id: 2026-10-14-a-and-p-creations-x10-natural-enhancement-supple
+    date: 2026-10-14
+    title: X10 Natural Enhancement Supplement contains undeclared sildenafil and tadalafil
+    summary:
+      - dietary supplement
+    recalling_firm: A&P CREATIONS
+    agency: FDA
+    hazards:
+      - other
+    classification: I
+    products:
+      - name: X10 Natural Enhancement Supplement
+        codes:
+          - "UPC: 7708075247094"
+          - "Lot # F090824LN16, Expiry: 8/2026"
+          - "Lot # F170325LN19, Expiry: 03/2027"
+          - "Lot # 300326LN28, Expiry: 03/2028"
+    distribution: Nationwide (US)
+    note: The FDA is recalling X10 Natural Enhancement Supplement because it was found to contain undeclared pharmaceutical ingredients sildenafil and tadalafil. These drugs are not approved for inclusion in dietary supplements and could pose serious health risks, especially for individuals taking certain medications or with underlying conditions. The product was distributed nationwide and 1,283 retail units are affected. Consumers should stop using the supplement and return it to the place of purchase for a full refund.
+    citations:
+      - title: X10 and BIQ-FEL supplements are recalled in a Class I action for hidden sildenafil and tadalafil
+        url: https://www.msn.com/en-us/news/other/x10-and-biq-fel-supplements-are-recalled-in-a-class-i-action-for-hidden-sildenafil-and-tadalafil/ar-AA2fQKMW
+        publisher: Morning Overview
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99872
+        publisher: FDA
+        accessed: 2026-10-23
+
