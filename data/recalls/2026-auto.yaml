@@ -1764,4 +1764,31 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100041
         publisher: FDA
         accessed: 2026-11-03
+  - id: 2026-10-28-pacific-coast-producers-great-value-fruit-cocktail-in
+    date: 2026-10-28
+    title: Great Value Fruit Cocktail in Fruit Juice recalled for lead contamination
+    summary:
+      - fruit cocktail
+    recalling_firm: Pacific Coast Producers
+    agency: FDA
+    hazards:
+      - chemical-contamination
+    classification: II
+    products:
+      - name: Great Value Fruit Cocktail in Fruit Juice from Concentrate 15 oz
+        brand: Great Value
+        codes:
+          - "Lot: 6FCB 04 C2263"
+          - "BEST IF USED BY: SEP 01 2027"
+          - "UPC: 078742369570"
+    distribution: "Domestic: AL, AZ, LA, NM, PA, WA, WY"
+    note: Pacific Coast Producers is recalling Great Value Fruit Cocktail in Fruit Juice (15 oz) distributed by Walmart in several states because testing found elevated levels of lead. Lead is a toxic metal that can cause serious health effects, especially for children and pregnant women. Consumers who purchased this product should stop using it immediately and return it to the place of purchase for a full refund or contact Walmart for disposal instructions.
+    citations:
+      - title: Walmart Great Value fruit cocktail is recalled over lead
+        url: https://www.msn.com/en-us/food-and-drink/general/walmart-great-value-fruit-cocktail-is-recalled-over-lead/ar-AA2gcoqi
+        publisher: Pirates & Princesses
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100125
+        publisher: FDA
+        accessed: 2026-11-03
 
