@@ -1873,4 +1873,28 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99985
         publisher: FDA
         accessed: 2026-11-03
+  - id: 2026-10-21-daring-foods-inc-made-from-plants-daring-plant
+    date: 2026-10-21
+    title: Daring Plant Steak Bites recalled for packaging that can rupture/explode during cooking
+    summary:
+      - plant-based meat
+    recalling_firm: DARING FOODS INC
+    agency: FDA
+    hazards:
+      - processing-defect
+    classification: II
+    products:
+      - name: Daring Plant Steak Bites
+        brand: Daring
+        codes:
+          - "UPC: 86001124319"
+          - "Best By Date: 2027-09-14"
+          - "Lot # 2576"
+    distribution: Six locations of a single grocery chain in Florida and one location in North Carolina
+    note: Daring Foods is recalling its Plant Steak Bites because the microwaveable pouch packaging may rupture or explode when cooked. The recall covers about 4,544 cases (27,324 units) distributed to six stores of one grocery chain in Florida and North Carolina. Consumers should stop using the product and return it to the store for a full refund or contact the company for replacement.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99992
+        publisher: FDA
+        accessed: 2026-11-03
 
