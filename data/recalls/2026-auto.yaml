@@ -1814,4 +1814,34 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100077
         publisher: FDA
         accessed: 2026-11-03
+  - id: 2026-10-21-holsum-de-puerto-rico-inc-holsum-spinach-flour-tortillas
+    date: 2026-10-21
+    title: Holsum Spinach Flour Tortillas recalled for undeclared colors
+    summary:
+      - spinach
+    recalling_firm: Holsum De Puerto Rico, Inc.
+    agency: FDA
+    hazards:
+      - mislabeling
+    classification: II
+    products:
+      - name: Holsum Spinach Flour Tortillas Large, 8 count (20 oz.)
+        brand: Holsum
+        codes:
+          - Lot 26187 expiration 10/04/26
+          - Lot 26195 expiration 10/12/26
+          - Lot 26210 expiration 10/27/26
+          - Lot 26216 expiration 11/02/26
+          - Lot 26224 expiration 11/10/26
+          - Lot 26239 expiration 11/25/26
+          - Lot 26250 expiration 12/06/26
+          - Lot 26251 expiration 12/07/26
+          - Lot 2026261 expiration 12/17/26
+    distribution: Puerto Rico and U.S. Virgin Islands
+    note: Holsum De Puerto Rico, Inc. is recalling its Spinach Flour Tortillas because the product contains undeclared FD&C Blue No. 1 and FD&C Yellow No. 5 colors. The undeclared colors represent a labeling error that could affect consumers with sensitivities. The recall covers about 9,602 units distributed in Puerto Rico and the U.S. Virgin Islands. Consumers should not eat the product and may return it to the place of purchase for a refund.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100002
+        publisher: FDA
+        accessed: 2026-11-03
 
