@@ -1897,4 +1897,26 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99992
         publisher: FDA
         accessed: 2026-11-03
+  - id: 2026-10-28-evexias-health-solution-evexias-health-solutions-amino
+    date: 2026-10-28
+    title: Amino Ultra capsules recalled for undeclared fish oil
+    recalling_firm: EVEXIAS HEALTH SOLUTION
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+      - mislabeling
+    classification: II
+    products:
+      - name: Amino Ultra capsules
+        brand: Evexias Health Solutions
+        codes:
+          - "Lot Number: 594886001 MFG 1125"
+          - 496 inkjet-printed on the bottom
+    distribution: FL, NM, PA, NY, TN, SD, ND, KY, WA
+    note: Evexias Health Solutions is recalling its Amino Ultra dietary supplement capsules because the label does not list fish oil, an undeclared allergen. The product was distributed to multiple states, including Florida, New Mexico, Pennsylvania, New York, Tennessee, South Dakota, North Dakota, Kentucky, and Washington. The recall is classified as Class II. Consumers who have purchased the product should stop using it and return it to the place of purchase for a refund or contact the company for further instructions.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99942
+        publisher: FDA
+        accessed: 2026-11-03
 
