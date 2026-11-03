@@ -2136,4 +2136,34 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100052
         publisher: FDA
         accessed: 2026-11-03
+  - id: 2026-10-24-imperio-distribution-llc-recal
+    date: 2026-10-24
+    title: Imperio Beef Jerky recalled for being produced without federal inspection
+    summary:
+      - beef jerky
+    recalling_firm: Imperio Distribution LLC
+    agency: FSIS
+    hazards:
+      - processing-defect
+    classification: I
+    products:
+      - name: Imperio Fuego Beef Jerky (2 oz sealed bag)
+        brand: Imperio
+      - name: Imperio Original Beef Jerky (2 oz sealed bag)
+        brand: Imperio
+      - name: Imperio Limón Beef Jerky (2 oz sealed bag)
+        brand: Imperio
+    distribution: Illinois, Indiana, Iowa, Michigan, Minnesota, Missouri, Wisconsin
+    cases:
+      as_of: 2026-10-24
+      illnesses: 0
+    note: Imperio Distribution LLC is recalling three varieties of 2‑oz ready‑to‑eat beef jerky (Fuego, Original, and Limón) because the products were produced without federal inspection and bear an unauthorized USDA mark of inspection. The items were packaged between January and October 2026 and were shipped to retail locations in Illinois, Indiana, Iowa, Michigan, Minnesota, Missouri and Wisconsin. No illnesses have been reported. Consumers should not eat the jerky and may return it to the place of purchase for a refund or contact the company for disposal instructions.
+    citations:
+      - title: Imperio recalls beef jerky over missing federal inspection
+        url: https://www.consumeraffairs.com/news/imperio-recalls-beef-jerky-over-missing-federal-inspection-102726.html
+        publisher: ConsumerAffairs
+      - title: FSIS recall record
+        url: https://www.fsis.usda.gov/recalls-alerts/imperio-distribution-llc-recalls-beef-jerky-products-produced-without-benefit
+        publisher: FSIS
+        accessed: 2026-11-03
 
