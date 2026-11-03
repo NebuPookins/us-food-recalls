@@ -1714,4 +1714,28 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99823
         publisher: FDA
         accessed: 2026-10-23
+  - id: 2026-10-28-pacific-health-sciences-llc-babies-magic-tea-baby-sleep-gr
+    date: 2026-10-28
+    title: Babies' Magic Tea infant supplement contains elevated alcohol
+    recalling_firm: Pacific Health Sciences Llc
+    agency: FDA
+    hazards:
+      - chemical-contamination
+    classification: II
+    products:
+      - name: Babies' Magic Tea Baby Sleep Gripe Water
+        codes:
+          - "Lot: 25122bw"
+          - "Expiration date: 12/2028"
+          - "UPC: 850302008183"
+    distribution: Sold nationwide via Amazon and the company's website, manufactured for a single customer in Florida
+    note: The FDA is recalling Babies' Magic Tea Baby Sleep Gripe Water, an infant dietary supplement, because testing found elevated levels of alcohol, making it adulterated. The product was produced for a single customer in Florida but was sold nationwide through Amazon and the company's website. Consumers should stop using the product and return it to the seller for a full refund. No illnesses have been reported.
+    citations:
+      - title: Baby Sleep Supplement Recalled Over Undeclared Alcohols, FDA Says
+        url: https://www.ntd.com/baby-sleep-supplement-recalled-over-undeclared-alcohols-fda-says_1177965.html
+        publisher: NTD News
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100068
+        publisher: FDA
+        accessed: 2026-11-03
 

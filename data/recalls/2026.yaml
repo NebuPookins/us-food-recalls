@@ -135,6 +135,7 @@ recalls:
 
       Consumers who bought the seeds should not use them, should throw them
       away, and can contact Amazon for a full refund.
+    classification: I
     citations:
       - title: EAK Distribution LLC Recalls HOME GROWN Green Sprouting Calabrese Broccoli Seeds, 8 oz, Heirloom Because of Possible Health Risk
         url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/eak-distribution-llc-recalls-home-grown-green-sprouting-calabrese-broccoli-seeds-8-oz-heirloom
@@ -144,6 +145,10 @@ recalls:
         url: https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-salmonella-sprouts-september-2026
         publisher: FDA
         accessed: 2026-10-07
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100040
+        publisher: FDA
+        accessed: 2026-11-03
 
   - id: 2026-10-eden-brothers-calabrese-broccoli-seeds
     parent_id: 2026-09-evergreen-broccoli-sprouts
