@@ -2055,4 +2055,35 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99898
         publisher: FDA
         accessed: 2026-11-03
+  - id: 2026-10-14-leasa-industries-co-inc-leasa-alfalfa-sprouts-packaged
+    date: 2026-10-14
+    title: LEASA Alfalfa Sprouts recalled for possible E.coli contamination
+    summary:
+      - sprouts
+    recalling_firm: LEASA Industries Co., Inc.
+    agency: FDA
+    hazards:
+      - e-coli
+    classification: I
+    products:
+      - name: LEASA Alfalfa Sprouts
+        brand: LEASA
+        codes:
+          - "UPC: 0 75465 11111 0"
+          - "Expiration Date: 9/4/26"
+          - "Expiration Date: 9/8/26"
+          - "Expiration Date: 9/10/26"
+          - "Expiration Date: 9/15/26"
+          - "Expiration Date: 9/17/26"
+          - "Expiration Date: 9/18/26"
+    distribution: Florida and New Hampshire
+    note: The alfalfa sprouts packaged by LEASA Industries are being recalled because the seeds may be contaminated with E.coli. The recall covers about 1,416 6‑oz cups distributed in Florida and New Hampshire. Consumers should not eat the product and should discard it or return it to the place of purchase. For more information, contact LEASA Industries or the FDA.
+    citations:
+      - title: Miami company recalls sprouts in Florida, New Hampshire because of E. coli contamination
+        url: https://www.foodsafetynews.com/2026/10/miami-company-recalls-sprouts-in-florida-new-hampshire-because-of-e-coli-contamination/
+        publisher: Food Safety News
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99951
+        publisher: FDA
+        accessed: 2026-11-03
 
