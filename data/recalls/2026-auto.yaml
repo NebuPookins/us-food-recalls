@@ -2005,4 +2005,27 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99944
         publisher: FDA
         accessed: 2026-11-03
+  - id: 2026-10-28-walker-foods-inc-marca-el-pato-salsa-para-enchi
+    date: 2026-10-28
+    title: Marca El Pato Salsa para Enchiladas recalled for undeclared salt, garlic, and onions
+    summary:
+      - salsa
+    recalling_firm: Walker Foods, Inc
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: II
+    products:
+      - name: Marca El Pato Salsa para Enchiladas
+        brand: Marca El Pato
+    distribution: Nationwide (32 direct account customers across the U.S.)
+    note: Walker Foods, Inc is recalling 28‑ounce cans of Marca El Pato Salsa para Enchiladas because the product contains undeclared salt, garlic, and onions. The recall covers 71,694 cases that were shipped to distributors and retail grocery stores nationwide. Consumers should not eat the product and should return it to the place of purchase for a refund or contact the company for disposal instructions.
+    citations:
+      - title: "Sauce Recall: Popular Enchilada Sauce Flagged for 3 Undeclared Ingredients"
+        url: https://www.msn.com/en-us/news/other/sauce-recall-popular-enchilada-sauce-flagged-for-3-undeclared-ingredients/ar-AA2fRODX
+        publisher: The Healthy
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99958
+        publisher: FDA
+        accessed: 2026-11-03
 
