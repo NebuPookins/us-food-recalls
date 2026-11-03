@@ -2086,4 +2086,28 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99951
         publisher: FDA
         accessed: 2026-11-03
+  - id: 2026-10-14-freshpoint-central-florida-inc-cranberry-chicken-salad-wedge
+    date: 2026-10-14
+    title: Cranberry Chicken Salad Wedge missing egg allergen statement
+    summary:
+      - chicken salad
+    recalling_firm: FRESHPOINT CENTRAL FLORIDA, INC.
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: II
+    products:
+      - name: Cranberry Chicken Salad Wedge
+        codes:
+          - Use By Dates from 9/3/2026 to 9/17/2026
+    distribution: Florida and Georgia
+    note: Freshpoint Central Florida, Inc. is recalling its 4.5‑oz Cranberry Chicken Salad Wedge because the allergen statement on the package fails to list egg, even though egg is an ingredient. The product was distributed in Florida and Georgia and the recall covers 1,093 units with use‑by dates from September 3 to 17 2026. Consumers who purchased the salad should discard it or return it to the store for a refund. No illnesses have been reported.
+    citations:
+      - title: FreshPoint Issues Recall for Chicken Salad Sandwiches Sold in 2 States
+        url: https://www.yahoo.com/news/articles/freshpoint-issues-recall-chicken-salad-123000955.html
+        publisher: Yahoo
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99847
+        publisher: FDA
+        accessed: 2026-11-03
 
