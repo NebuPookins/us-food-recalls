@@ -2028,4 +2028,31 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99958
         publisher: FDA
         accessed: 2026-11-03
+  - id: 2026-10-21-saratoga-potato-chips-llc-j-higgs-loaded-bacon-and-chedd
+    date: 2026-10-21
+    title: J. HIGGS Loaded Bacon & Cheddar Potato Chips contain undeclared soy
+    summary:
+      - potato chips
+    recalling_firm: Saratoga Potato Chips LLC
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: II
+    products:
+      - name: J. HIGGS Loaded Bacon & Cheddar Potato Chips
+        brand: J. HIGGS
+        codes:
+          - UPC 051933316454
+          - Best if USED BY Dec 11 26
+          - Best if USED BY Dec 18 26
+    distribution: Florida, Indiana, Kentucky, Ohio, Tennessee, and Maryland (sold in Save A Lot stores)
+    note: The FDA is recalling J. HIGGS Loaded Bacon & Cheddar Potato Chips because they may contain soy, an undeclared allergen that could affect consumers with soy allergies. The chips were distributed to Save A Lot stores in six states, totaling 769 cases. Consumers who purchased the 7.75‑oz bags should discard them or return them to the store for a refund. No illnesses have been reported.
+    citations:
+      - title: Saratoga Potato Chips Issues Voluntary Recall of J. HIGGS Loaded Bacon & Cheddar Potato Chips Due to Undeclared Soy Allergen
+        url: https://www.morningstar.com/news/pr-newswire/20260917de51242/saratoga-potato-chips-issues-voluntary-recall-of-j-higgs-loaded-bacon-cheddar-potato-chips-due-to-undeclared-soy-allergen
+        publisher: Morningstar%2c Inc.
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99898
+        publisher: FDA
+        accessed: 2026-11-03
 
