@@ -2110,4 +2110,30 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99847
         publisher: FDA
         accessed: 2026-11-03
+  - id: 2026-10-28-trader-joe-s-company-trader-joe-s-crispy-rice-milk
+    date: 2026-10-28
+    title: Trader Joe's Crispy Rice Milk Chocolate Bar contains undeclared wheat
+    summary:
+      - chocolate
+    recalling_firm: Trader Joe's Company
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: II
+    products:
+      - name: Trader Joe's Crispy Rice Milk Chocolate Bar
+        brand: Trader Joe's
+        codes:
+          - "UPC: 00515092"
+          - "Lot code: LT26189 BB 10.08.2027"
+    distribution: Stores in CT, FL, GA, MA, ME, NH, NJ, NY, PA, RI, SC, VT
+    note: The FDA announced a recall of Trader Joe's Crispy Rice Milk Chocolate Bars because the outer label failed to list wheat, an undeclared allergen. The bars were produced by a contract manufacturer and shipped to distribution centers and then to stores in the listed states. Consumers who purchased the product should not eat it and should return it to the store for a refund or discard it. The firm is recalling 11,765 units.
+    citations:
+      - title: Trader Joe’s recalls popular snack in NY and NJ
+        url: https://www.msn.com/en-us/news/other/trader-joe-s-recalls-popular-snack-in-ny-and-nj/ar-AA2fOnNY
+        publisher: PIX11
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100052
+        publisher: FDA
+        accessed: 2026-11-03
 
