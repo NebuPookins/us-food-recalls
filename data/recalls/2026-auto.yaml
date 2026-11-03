@@ -1844,4 +1844,33 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100002
         publisher: FDA
         accessed: 2026-11-03
+  - id: 2026-10-28-wild-west-seed-inc-wild-west-seeds-broccoli-seeds
+    date: 2026-10-28
+    title: Wild West Seeds broccoli seeds recalled for Salmonella
+    summary:
+      - broccoli
+    recalling_firm: Wild West Seed Inc
+    agency: FDA
+    hazards:
+      - salmonella
+    classification: I
+    products:
+      - name: Wild West Seeds Broccoli Green Sprouting Calabrese
+        brand: Wild West Seeds
+        codes:
+          - "Lot #W4105"
+      - name: Wild West Seeds Broccoli Waltham29 Seeds
+        brand: Wild West Seeds
+        codes:
+          - "Lot #W4475"
+    distribution: Distributed in CA, FL, GA, ID, MD, ME, NC, OR, PA, TX, UT, and United Kingdom.
+    note: Wild West Seed Inc is recalling two types of broccoli seed packages due to possible contamination with Salmonella. The seeds were distributed to multiple states and the United Kingdom. Consumers who purchased the recalled seed lots should discard them or return them to the seller. No illnesses have been reported.
+    citations:
+      - title: "Health alert: Utah-based company recalls broccoli seeds after possible salmonella contamination"
+        url: https://www.msn.com/en-us/news/other/health-alert-utah-based-company-recalls-broccoli-seeds-after-possible-salmonella-contamination/ar-AA2dVbx4
+        publisher: MSN
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99985
+        publisher: FDA
+        accessed: 2026-11-03
 
