@@ -1791,4 +1791,27 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100125
         publisher: FDA
         accessed: 2026-11-03
+  - id: 2026-10-28-gardeners-basics-gardners-basics-brand-waltham
+    date: 2026-10-28
+    title: Gardeners Basics Waltham 29 Broccoli Sprouting Seeds recalled for Salmonella
+    summary:
+      - broccoli sprouts
+    recalling_firm: Gardeners Basics
+    agency: FDA
+    hazards:
+      - salmonella
+    classification: I
+    products:
+      - name: Waltham 29 Broccoli Sprouting Seeds
+        brand: Gardeners Basics
+        codes:
+          - "848137042889"
+          - Packed for 2027
+    distribution: Nationwide via online sales.
+    note: Gardeners Basics is recalling its Waltham 29 broccoli sprouting seeds after testing found Salmonella contamination. The seeds were sold in one‑pound resealable pouches and distributed nationwide through online sales. Consumers should stop using the product and discard it or return it to the place of purchase for a refund. No illnesses have been reported at this time.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100077
+        publisher: FDA
+        accessed: 2026-11-03
 
