@@ -1738,4 +1738,30 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100068
         publisher: FDA
         accessed: 2026-11-03
+  - id: 2026-10-21-stewart-s-shops-corp-stewarts-shops-vanilla-heavenl
+    date: 2026-10-21
+    title: Stewart's Shops Vanilla Heavenly Medley ice cream recalled for possible metal fragments
+    summary:
+      - ice cream
+    recalling_firm: Stewart's Shops Corp.
+    agency: FDA
+    hazards:
+      - foreign-material
+    classification: II
+    products:
+      - name: Stewart's Shops Vanilla Heavenly Medley 1/2 Gallon ice cream
+        brand: Stewart's Shops
+        codes:
+          - 0 82086 44371 1
+          - best by Feb.10.27
+    distribution: NY, VT, NH
+    note: Stewart's Shops Corp. is recalling its Vanilla Heavenly Medley 1/2 gallon ice cream because it may contain pieces of metal. The recall covers about 10,392 units distributed in New York, Vermont, and New Hampshire. Consumers should check the UPC and best‑by date on their containers and discard any product that may be affected. For refunds or questions, contact Stewart's Shops customer service.
+    citations:
+      - title: Metal pieces pulled two Stewart’s ice creams from freezers in three states
+        url: https://www.msn.com/en-us/news/other/metal-pieces-pulled-two-stewart-s-ice-creams-from-freezers-in-three-states/ar-AA2glJLS
+        publisher: Morning Overview
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100041
+        publisher: FDA
+        accessed: 2026-11-03
 
