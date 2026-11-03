@@ -1972,4 +1972,37 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99966
         publisher: FDA
         accessed: 2026-11-03
+  - id: 2026-10-28-gearharts-fine-chocolates-inc-gearharts-fine-chocolates-net
+    date: 2026-10-28
+    title: Gearharts Fine Chocolates chocolate contains broken glass
+    summary:
+      - chocolate
+    recalling_firm: Gearharts Fine Chocolates, Inc.
+    agency: FDA
+    hazards:
+      - foreign-material
+    classification: II
+    products:
+      - name: Gearharts Fine Chocolates 4 oz chocolate
+        brand: Gearharts Fine Chocolates
+        codes:
+          - UPC 8 98111 00205 7
+          - BEST BY OCT 1 2026
+          - BEST BY OCT 21 2026
+      - name: Gearharts Fine Chocolates 8 oz chocolate
+        brand: Gearharts Fine Chocolates
+        codes:
+          - UPC 8 98111 00206
+          - BEST BY OCT 1 2026
+          - BEST BY OCT 21 2026
+    distribution: Shipped to CA, CT, GA, IL, KY, MA, MD, ME, MN, NC, NJ, NY, OH, SC, TX, VA and WA.
+    note: Gearharts Fine Chocolates, Inc. is recalling its 4‑oz and 8‑oz chocolate bars after broken glass was found in a piece of the finished product. The recall covers about 4,703 pieces distributed to stores in 16 states. Consumers should stop using the product and return it to the place of purchase for a refund or contact the company for instructions. No illnesses have been reported.
+    citations:
+      - title: "Chocolates sold in NY, NJ recalled over glass concerns: FDA"
+        url: https://www.msn.com/en-us/food-and-drink/beverages/chocolates-sold-in-ny-nj-recalled-over-glass-concerns-fda/ar-AA2fzXfn
+        publisher: PIX11
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99944
+        publisher: FDA
+        accessed: 2026-11-03
 
