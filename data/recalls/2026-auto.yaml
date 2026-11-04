@@ -2214,4 +2214,31 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99727
         publisher: FDA
         accessed: 2026-11-04
+  - id: 2026-10-07-admiral-beverage-corporation-7up-tropical-beverage-shelf-st
+    date: 2026-10-07
+    title: 7Up Tropical beverage may contain undeclared sugar
+    summary:
+      - beverage
+    recalling_firm: Admiral Beverage Corporation
+    agency: FDA
+    hazards:
+      - mislabeling
+    classification: II
+    products:
+      - name: 7Up Tropical beverage
+        brand: 7Up
+        codes:
+          - "UPC: 0 78000 03798 2"
+          - "Lot Code/Batch Code: UT06176"
+          - "Best By: March 17, 2027"
+    distribution: Utah
+    note: Admiral Beverage Corporation is recalling 7Up Tropical beverage cans because they may contain undeclared sugar, which is a labeling issue. The product was sold in 12‑oz cans packaged in 12‑packs and distributed throughout Utah. Consumers who purchased this product should check the UPC and lot code and discard any affected cans or return them to the retailer.
+    citations:
+      - title: Recall of popular soft drink hits 77,000 cans after zero-sugar labels found on full-sugar soda
+        url: https://www.msn.com/en-us/food-and-drink/beverages/recall-of-popular-soft-drink-hits-77-000-cans-after-zero-sugar-labels-found-on-full-sugar-soda/ar-AA2djkpv
+        publisher: Fox Business
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99735
+        publisher: FDA
+        accessed: 2026-11-04
 
