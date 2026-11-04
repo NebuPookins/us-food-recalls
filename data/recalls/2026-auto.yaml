@@ -2166,4 +2166,30 @@ recalls:
         url: https://www.fsis.usda.gov/recalls-alerts/imperio-distribution-llc-recalls-beef-jerky-products-produced-without-benefit
         publisher: FSIS
         accessed: 2026-11-03
+  - id: 2026-10-07-lmsi-llc-kofinas-garlic-mediterranean-i
+    date: 2026-10-07
+    title: Kofinas Garlic Mediterranean Infused Extra Virgin Olive Oil contains unapproved garlic essential oil
+    summary:
+      - olive oil
+    recalling_firm: LMSI, LLC
+    agency: FDA
+    hazards:
+      - chemical-contamination
+    classification: II
+    products:
+      - name: Kofinas Garlic Mediterranean Infused Extra Virgin Olive Oil
+        brand: Kofinas
+        codes:
+          - "799475717185"
+          - "799475717178"
+    distribution: Distributed directly to consumers in CA, FL, IL, KY, MO, NC, OH, OR, TN, TX, VA, WA, and WV
+    note: LMSI, LLC is recalling its Kofinas Garlic Mediterranean Infused Extra Virgin Olive Oil because it contains garlic essential oil that is not approved for culinary use. The product was sold in 3.4 fl oz gift sets and 8.5 fl oz and 17 fl oz bottles. The recall covers shipments to consumers in thirteen states. Consumers should stop using the oil and return it to the place of purchase for a refund.
+    citations:
+      - title: Extra Virgin Olive Oil Recalled Over Ingredient Not Approved for Culinary Use
+        url: https://www.health.com/olive-oil-recall-august-2026-12074268
+        publisher: Health.com
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99805
+        publisher: FDA
+        accessed: 2026-11-04
 
