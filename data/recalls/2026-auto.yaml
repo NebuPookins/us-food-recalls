@@ -2192,4 +2192,26 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99805
         publisher: FDA
         accessed: 2026-11-04
+  - id: 2026-10-28-el-ruisenor-de-mexico-inc-jovy-gummy-worms-neon-packaged
+    date: 2026-10-28
+    title: Jovy Gummy Worms Neon recalled for undeclared allergen ingredients
+    summary:
+      - candy
+    recalling_firm: El Ruisenor De Mexico, Inc.
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: II
+    products:
+      - name: Jovy Gummy Worms Neon
+        codes:
+          - UPC 712199083411
+          - "lot: 6156"
+    distribution: Primarily California, with limited distribution to Hawaii, Illinois, Kansas, Nevada, Oregon, and Washington
+    note: "The FDA announced a recall of Jovy Gummy Worms Neon because the product contains undeclared color additives (Red #40, Yellow #5, Yellow #6, Blue #1) that may pose an allergen risk. The recall covers about 521 pounds of the candy distributed mainly to California customers and to limited customers in several other states. Consumers who purchased this product should stop using it and return it to the place of purchase for a full refund or contact the firm for disposal instructions."
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99727
+        publisher: FDA
+        accessed: 2026-11-04
 
