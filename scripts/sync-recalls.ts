@@ -5,6 +5,7 @@
  * Only one significant recall is added per run (the first one encountered), so
  * the reviewer merges incremental PRs instead of one large batch. If an earlier
  * auto PR is still open, this run exits early and waits for it to be merged.
+ * Merging or closing that PR re-triggers the workflow straight away.
  *
  * A record that duplicates an existing entry (same firm, dates within
  * DUPLICATE_WINDOW_DAYS, and a shared lot code; see dedupe.ts) is not drafted.
@@ -62,7 +63,8 @@ const BING_NEWS_URL = 'https://www.bing.com/news/search';
 const SEEN_FILE = join(DATA_DIR, '.seen.json');
 const LOOKBACK_DAYS = 30;
 const MAX_SEEN = 500;
-// Head branch prefix written by openPr() and checked by hasOpenAutoPr().
+// Head branch prefix written by openPr() and checked by hasOpenAutoPr() and by
+// the job condition in .github/workflows/sync-recalls.yml.
 const AUTO_BRANCH_PREFIX = 'auto/recalls-';
 
 // ---------------------------------------------------------------- helpers

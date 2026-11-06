@@ -9,20 +9,34 @@ on:
     # Daily at 08:23 UTC (off-minute). Tunable if the sources ever update faster.
     - cron: '23 8 * * *'
   workflow_dispatch:
+  # Run as soon as the auto PR is merged or closed, rather than waiting for
+  # tomorrow's schedule. The job's `if` limits this to auto PRs. Only a merge
+  # lands .seen.json, so closing unmerged re-drafts that PR's recall.
+  # pull_request_target, not pull_request: it runs on main (so it sees the
+  # merged .seen.json) and also fires for a closed PR with merge conflicts. It
+  # has secrets and a write token, so never check out the PR's code here.
+  pull_request_target:
+    types: [closed]
+    branches: [main]
 
 permissions:
   contents: write
   pull-requests: write
 
-# One run at a time: an overlapping run would race hasOpenAutoPr() and open a
-# duplicate PR for the same recall. Queue (don't cancel) so a queued run then
-# sees the first run's open PR and skips.
-concurrency:
-  group: sync-recalls
-  cancel-in-progress: false
-
 jobs:
   sync:
+    # The branch prefix matches AUTO_BRANCH_PREFIX in scripts/sync-recalls.ts.
+    if: >-
+      github.event_name != 'pull_request_target' ||
+      (github.event.pull_request.head.repo.full_name == github.repository &&
+      startsWith(github.event.pull_request.head.ref, 'auto/recalls-'))
+    # One run at a time: an overlapping run would race hasOpenAutoPr() and open a
+    # duplicate PR for the same recall. Queue (don't cancel) so a queued run then
+    # sees the first run's open PR and skips. Job-level so that a skipped run for
+    # an unrelated PR can't displace a pending sync.
+    concurrency:
+      group: sync-recalls
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
