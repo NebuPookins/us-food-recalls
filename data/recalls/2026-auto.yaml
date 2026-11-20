@@ -2241,4 +2241,28 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99735
         publisher: FDA
         accessed: 2026-11-04
+  - id: 2026-11-11-ethel-s-bakery-llc-ethel-s-gluten-free-turtle-dan
+    date: 2026-11-11
+    title: Ethel's Gluten Free Turtle Dandy Dessert Bars recalled for inaccurate ingredient and nutrition labeling
+    summary:
+      - dessert
+    recalling_firm: Ethel's Bakery, LLC
+    agency: FDA
+    hazards:
+      - mislabeling
+    classification: III
+    products:
+      - name: Ethel's Gluten Free Turtle Dandy Dessert Bars
+        brand: Ethel's
+        codes:
+          - UPC 8 50054 16601 2
+          - "Lot Code: 26-254"
+          - "Best by Date: 9/11/2027"
+    distribution: Arizona, Colorado, Illinois, Indiana, Maryland, Michigan, New Hampshire, New York, Oregon, and Pennsylvania
+    note: Ethel's Bakery is recalling 842 cases of its Gluten Free Turtle Dandy Dessert Bars because a product mix‑up led to incorrect product identity and inaccurate ingredient and Nutrition Facts declarations. The bars may be missing declared ingredients and contain incorrect nutrition information, posing a risk of misinforming consumers with dietary restrictions. Consumers who purchased the product in the listed states should discard it or return it to the place of purchase. No illnesses have been reported.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100223
+        publisher: FDA
+        accessed: 2026-11-20
 
