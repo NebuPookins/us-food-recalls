@@ -2265,4 +2265,29 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100223
         publisher: FDA
         accessed: 2026-11-20
+  - id: 2026-11-11-vitality-works-inc-365-whole-foods-market-standar
+    date: 2026-11-11
+    title: Whole Foods Market Standardized + Full Spectrum Blend Ashwagandha Capsules recalled for possible Salmonella contamination
+    summary:
+      - ashwagandha
+    recalling_firm: Vitality Works, Inc
+    agency: FDA
+    hazards:
+      - salmonella
+    products:
+      - name: Whole Foods Market Standardized + Full Spectrum Blend Ashwagandha Capsules 120 count
+        brand: Whole Foods Market
+        codes:
+          - "Lot: 202526227 Exp. Date: 10-13-28"
+          - "UPC: 099482520991"
+    distribution: Nationwide
+    note: Vitality Works, Inc is recalling 10,176 bottles of Whole Foods Market Standardized + Full Spectrum Blend Ashwagandha Capsules after identifying a possible Salmonella contamination. The product was distributed nationwide and bears the lot code 202526227 with an expiration date of October 13, 2028. Consumers who have purchased this supplement should stop using it immediately and return it to the place of purchase for a full refund. For more information, contact the firm or the FDA.
+    citations:
+      - title: Vitality Works Inc. Recalls 365 Whole Foods Market Ashwagandha Capsules Sold Nationwide
+        url: https://www.wwaytv3.com/vitality-works-inc-recalls-365-whole-foods-market-ashwagandha-capsules-sold-nationwide/
+        publisher: WWAY TV
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100248
+        publisher: FDA
+        accessed: 2026-11-21
 
