@@ -2316,4 +2316,30 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100193
         publisher: FDA
         accessed: 2026-11-21
+  - id: 2026-11-11-lidl-us-trading-gelatelli-naturally-flavored-c
+    date: 2026-11-11
+    title: Gelatelli Naturally Flavored Coffee & Vanilla Gelato with Coffee Sauce & Cookie Pieces recalled for Listeria monocytogenes
+    summary:
+      - gelato
+    recalling_firm: Lidl US TRADING
+    agency: FDA
+    hazards:
+      - listeria
+    classification: I
+    products:
+      - name: Gelatelli Naturally Flavored Coffee & Vanilla Gelato with Coffee Sauce & Cookie Pieces
+        brand: Gelatelli
+        codes:
+          - "LOT: 085261"
+          - "BEST BY: MAR/26/2028"
+    distribution: Shipped to DC, DE, GA, MD, NC, NJ, NY, PA, SC, and VA
+    note: Lidl US TRADING is recalling 1,122 units of Gelatelli coffee and vanilla gelato after a positive test for Listeria monocytogenes. The product was distributed to ten states in the Mid‑Atlantic and Southeast. Consumers should not eat the gelato and should discard it or return it to the place of purchase. The FDA classifies this as a Class I recall, the most serious level.
+    citations:
+      - title: FDA Upgrades Recall of Gelatelli-Brand Gelato
+        url: https://www.ntd.com/fda-upgrades-recall-of-gelatelli-brand-gelato_1183782.html
+        publisher: NTD News
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100138
+        publisher: FDA
+        accessed: 2026-11-21
 
