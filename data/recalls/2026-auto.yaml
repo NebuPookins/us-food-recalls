@@ -2390,4 +2390,31 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100127
         publisher: FDA
         accessed: 2026-11-21
+  - id: 2026-11-04-oliva-on-main-riad-s-oliva-to-go-hummus
+    date: 2026-11-04
+    title: Riad's Oliva to Go Hummus contains undeclared sesame
+    summary:
+      - hummus
+    recalling_firm: Oliva on Main
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: I
+    products:
+      - name: Riad's Oliva to Go Hummus
+        codes:
+          - best by dates 10/12/26 through 10/18/26
+    distribution: Massachusetts and Connecticut
+    cases:
+      as_of: 2026-11-04
+      illnesses: 0
+    note: Oliva on Main is recalling its Riad's Oliva to Go Hummus because the product may contain sesame, an undeclared allergen. The recall covers 158 units distributed in Massachusetts and Connecticut with best‑by dates from October 12, 2026 through October 18, 2026. No illnesses have been reported. Consumers who purchased the hummus should discard it or return it to the place of purchase.
+    citations:
+      - title: Undeclared sesame triggered a recall of Oliva to Go baba ghanouj and hummus
+        url: https://www.msn.com/en-us/food-and-drink/general/undeclared-sesame-triggered-a-recall-of-oliva-to-go-baba-ghanouj-and-hummus/ar-AA2e1s9p
+        publisher: MSN
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100088
+        publisher: FDA
+        accessed: 2026-11-21
 
