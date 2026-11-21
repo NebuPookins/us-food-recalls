@@ -2361,9 +2361,10 @@ recalls:
     distribution: Distributors located in CT, MA, MD, NJ, NY, PA, and VA; product may be further distributed.
     note: The FDA is recalling Family Farmstead Dairy’s raw milk cheddar cheese because it may be contaminated with pathogenic non‑O157 STEC E. coli. The cheese was sold in 8‑oz vacuum‑sealed blocks and distributed through distributors in Connecticut, Massachusetts, Maryland, New Jersey, New York, Pennsylvania and Virginia, and possibly beyond. Consumers should not eat the product and should discard it or return it to the place of purchase for a full refund. If any symptoms of E. coli infection appear, they should contact a health care provider.
     citations:
-      - title: Raw cheddar cheese recalled again in less than a month, this time over serious listeria concerns
-        url: https://www.msn.com/en-us/food-and-drink/general/raw-cheddar-cheese-recalled-again-in-less-than-a-month-this-time-over-serious-listeria-concerns/ar-AA2hHXQi
-        publisher: So Yummy!
+      - title: Family Farmstead Dairy Announces Recall of Raw Mild Cheddar Cheese Due to Potential E. coli O26:H11 and O45:H2 Contamination
+        url: https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/family-farmstead-dairy-announces-recall-raw-mild-cheddar-cheese-due-potential-e-coli-o26h11-and?permalink=DA777A617FAF1F7F5D691A29DE8E58783BB5107D51043ABA3411F312FDA02677
+        publisher: FDA
+        accessed: 2026-11-21
       - title: FDA recall record
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100137
         publisher: FDA
