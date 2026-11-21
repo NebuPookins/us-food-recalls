@@ -2290,4 +2290,30 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100248
         publisher: FDA
         accessed: 2026-11-21
+  - id: 2026-11-11-winco-foods-llc-winco-foods-hoagie-rolls-6-rol
+    date: 2026-11-11
+    title: WinCo Foods Hoagie Rolls recalled for undeclared sesame
+    summary:
+      - bread
+    recalling_firm: WinCo Foods LLC
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: I
+    products:
+      - name: WinCo Foods Hoagie Rolls
+        brand: WinCo Foods
+        codes:
+          - UPC 070552006492
+          - "Best if Used By: 9/10/2026 - 11/3/2026"
+    distribution: Distributed in CA, ID, MT, NV, OR, UT, and WA.
+    note: WinCo Foods is recalling its Hoagie Rolls because the product may contain sesame, an undeclared allergen. The rolls were packaged in clear plastic bags and distributed to stores in seven western states. Consumers who have purchased these rolls should check the package for the UPC 070552006492 and the best‑if‑used‑by dates of September 10 2026 through November 3 2026, and discard any that match. If you have any health concerns, contact your healthcare provider.
+    citations:
+      - title: WinCo Foods hoagie rolls recalled in 7 states over undeclared sesame
+        url: https://www.msn.com/en-us/news/other/winco-foods-hoagie-rolls-recalled-in-7-states-over-undeclared-sesame/ar-AA2fS2Gm
+        publisher: MSN
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100193
+        publisher: FDA
+        accessed: 2026-11-21
 
