@@ -2417,4 +2417,32 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100088
         publisher: FDA
         accessed: 2026-11-21
+  - id: 2026-11-04-eden-brothers-eden-brothers-broccoli-seeds-c
+    date: 2026-11-04
+    title: Eden Brothers Broccoli Seeds recalled for Salmonella
+    summary:
+      - broccoli
+    recalling_firm: EDEN BROTHERS
+    agency: FDA
+    hazards:
+      - salmonella
+    classification: I
+    products:
+      - name: Eden Brothers Broccoli Seeds - Calabrese
+        brand: Eden Brothers
+        codes:
+          - "Lot #1022067"
+          - "Lot #1022068"
+          - UPC SVBRO111 -qb2
+          - UPC SVBRO111 -qb4
+    distribution: Distributed to 48 states and the District of Columbia
+    note: Eden Brothers is recalling its Calabrese broccoli seeds sold in 1‑oz and 1‑lb pouches because the product may be contaminated with Salmonella. The seeds were distributed to stores in 48 states and the District of Columbia. Consumers should not consume the seeds and should discard them or return them to the place of purchase. The FDA classifies this recall as Class I, the most serious type.
+    citations:
+      - title: Eden Brothers recalled Calabrese broccoli seeds sold on Amazon over possible salmonella
+        url: https://www.msn.com/en-us/news/other/eden-brothers-recalled-calabrese-broccoli-seeds-sold-on-amazon-over-possible-salmonella/ar-AA2fLLMJ
+        publisher: MSN
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99993
+        publisher: FDA
+        accessed: 2026-11-21
 
