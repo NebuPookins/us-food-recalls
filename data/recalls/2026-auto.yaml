@@ -2369,4 +2369,25 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100137
         publisher: FDA
         accessed: 2026-11-21
+  - id: 2026-11-11-house-foods-america-corporatio-bulk-packaged-seitan-cubes-2-5
+    date: 2026-11-11
+    title: Seitan Cubes recalled for missing wheat allergen statement
+    summary:
+      - seitan
+    recalling_firm: House Foods America Corporation
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: I
+    products:
+      - name: Seitan Cubes
+        codes:
+          - D2026OCT26
+    distribution: Distributed to 9 distribution centers across the United States
+    note: House Foods America Corporation is recalling bulk packaged seitan cubes because the product label omitted the ingredient statement and failed to list wheat, a known allergen. The recall affects 8,278 cases that were sent to nine distribution centers nationwide. Consumers who purchased this product should stop using it and return it to the place of purchase for a refund or contact the company for further instructions.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100127
+        publisher: FDA
+        accessed: 2026-11-21
 
