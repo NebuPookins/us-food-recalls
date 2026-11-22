@@ -2499,4 +2499,33 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100118
         publisher: FDA
         accessed: 2026-11-22
+  - id: 2026-11-04-prosperity-organic-foods-inc-miyoko-s-creamery-european-sty
+    date: 2026-11-04
+    title: Miyoko's Creamery European Style Salted Plant Milk Butter recalled for yeast, mold, and E. coli
+    summary:
+      - butter
+    recalling_firm: Prosperity Organic Foods Inc
+    agency: FDA
+    hazards:
+      - e-coli
+      - other
+    classification: II
+    products:
+      - name: Miyoko's Creamery European Style Salted Plant Milk Butter
+        brand: Miyoko's Creamery
+        codes:
+          - Lot 07871
+          - Best by 11/5/26 09
+          - "1007871"
+          - Best by 11/5/26 09:05
+    distribution: CT, FL, GA, IA, IL, IN, MD, NJ, NH, WI
+    note: Miyoko's Creamery European Style Salted Plant Milk Butter is being recalled because testing found yeast, mold, and the presence of E. coli. The product was distributed to stores in ten states across the Midwest and East Coast. Consumers who purchased the 8‑oz butter should discard it or return it to the retailer for a refund. No illnesses have been reported.
+    citations:
+      - title: Miyoko’s Creamery butter recalled over potential E. coli contamination
+        url: https://www.abc10.com/article/news/nation-world/miyokos-creamery-butter-recall/507-8aafafcd-0116-432a-927d-3041248485ce
+        publisher: ABC10
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99871
+        publisher: FDA
+        accessed: 2026-11-22
 
