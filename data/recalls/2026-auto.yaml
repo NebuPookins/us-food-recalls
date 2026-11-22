@@ -2471,4 +2471,32 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100089
         publisher: FDA
         accessed: 2026-11-22
+  - id: 2026-11-04-fortuna-marketing-inc-zestigreens-broccoli-seeds-for
+    date: 2026-11-04
+    title: ZestiGreens Broccoli Seeds recalled for potential Salmonella contamination
+    summary:
+      - broccoli seeds
+    recalling_firm: FORTUNA MARKETING, INC
+    agency: FDA
+    hazards:
+      - salmonella
+    classification: I
+    products:
+      - name: ZestiGreens Broccoli Seeds for Sprouting & Microgreens
+        brand: ZestiGreens
+        codes:
+          - "SKU: X004IOM4AJ"
+          - 8 OZ
+      - name: ZestiGreens Broccoli Seeds for Sprouting & Microgreens
+        brand: ZestiGreens
+        codes:
+          - "SKU: B0D5289F94"
+          - 16 OZ
+    distribution: Primarily distributed to Amazon fulfillment centers and sold online nationwide; Amazon placed a stop on the SKUs
+    note: Fortuna Marketing, Inc. is recalling ZestiGreens broccoli seeds because they may be contaminated with Salmonella. The product was mainly shipped to Amazon fulfillment centers and sold to consumers online. Amazon has halted sales of the affected SKUs and customers have been notified. Consumers who purchased the seeds should discard them or return them for a refund.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100118
+        publisher: FDA
+        accessed: 2026-11-22
 
