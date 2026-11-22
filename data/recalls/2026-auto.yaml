@@ -2445,4 +2445,30 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99993
         publisher: FDA
         accessed: 2026-11-21
+  - id: 2026-11-11-krasnyi-oktyabr-inc-starfish-seafood-cold-smoked-n
+    date: 2026-11-11
+    title: Starfish Seafood Cold Smoked Norwegian Salmon contains Listeria monocytogenes
+    summary:
+      - salmon
+    recalling_firm: Krasnyi Oktyabr Inc
+    agency: FDA
+    hazards:
+      - listeria
+    classification: I
+    products:
+      - name: Starfish Seafood Cold Smoked Norwegian Salmon
+        codes:
+          - "UPC: 4751048940099"
+          - "Best before: 27.11.2027"
+          - "LOT: D080-148"
+    distribution: "Multiple states: NY, MA, SC, FL, GA, NV, NJ, OH, NC"
+    note: Krasnyi Oktyabr Inc is recalling its Starfish Seafood Cold Smoked Norwegian Salmon after testing showed contamination with Listeria monocytogenes. The recall is classified as Class I, the most serious level, and affects product distributed to several states. Consumers should not eat the product and should discard it or return it to the place of purchase for a refund. For more information, contact the firm or the FDA.
+    citations:
+      - title: Smoked salmon recall over listeria contamination upgraded to highest risk level
+        url: https://www.msn.com/en-ca/health/diseases-and-conditions/smoked-salmon-recall-over-listeria-contamination-upgraded-to-highest-risk-level/ar-AA2h4LFB
+        publisher: Daily Mail
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100089
+        publisher: FDA
+        accessed: 2026-11-22
 
