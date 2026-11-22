@@ -2529,4 +2529,38 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99871
         publisher: FDA
         accessed: 2026-11-22
+  - id: 2026-11-04-pink-house-alchemy-llc-blue-bottle-coffee-4oz-sweet-b
+    date: 2026-11-04
+    title: Blue Bottle Coffee Sweet Blossom Simple Syrup recalled for potential mold (Aspergillus niger)
+    summary:
+      - syrup
+    recalling_firm: Pink House Alchemy, LLC
+    agency: FDA
+    hazards:
+      - other
+    classification: II
+    products:
+      - name: Blue Bottle Coffee Sweet Blossom Simple Syrup 4 fl oz
+        brand: Blue Bottle Coffee
+        codes:
+          - "UPC: 810123980659"
+          - "Batch: 4ozBBCSB261051"
+          - "Expiration: 04/15/2028"
+          - "Batch: 4ozBBCSB261061"
+          - "Expiration: 04/16/2028"
+          - "Batch: 4ozBBCSB261071"
+          - "Expiration: 04/17/2028"
+          - "Batch: 4ozBBCSB261181"
+          - "Expiration: 04/28/2026"
+          - "Batch: 4ozBBCSB261201"
+          - "Expiration: 04/30/2028"
+          - "Batch: 4ozBBCSB261281"
+          - "Expiration: 05/08/2028"
+    distribution: "Sole consignee: Blue Bottle Coffee LLC, 476 9th Street, Oakland, CA 94607"
+    note: Pink House Alchemy is recalling 9,420 bottles of Blue Bottle Coffee Sweet Blossom Simple Syrup because of potential contamination with the mold Aspergillus niger. The product was distributed to Blue Bottle Coffee LLC as the sole consignee, meaning it could be in any location that receives the syrup from that source. Consumers should not consume the syrup and should return it to the place of purchase for a refund or contact the company for disposal instructions.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99961
+        publisher: FDA
+        accessed: 2026-11-22
 
