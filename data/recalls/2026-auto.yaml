@@ -2521,9 +2521,9 @@ recalls:
     distribution: CT, FL, GA, IA, IL, IN, MD, NJ, NH, WI
     note: Miyoko's Creamery European Style Salted Plant Milk Butter is being recalled because testing found yeast, mold, and the presence of E. coli. The product was distributed to stores in ten states across the Midwest and East Coast. Consumers who purchased the 8‑oz butter should discard it or return it to the retailer for a refund. No illnesses have been reported.
     citations:
-      - title: Plant-based butter recalled over yeast, mold and E.coli concerns receives FDA risk classification
-        url: https://ktbb.com/post/?p=1558850
-        publisher: KTBB
+      - title: Butter Alternative Recalled for Yeast, Mold and E. Coli Concerns Gets FDA’s Second-Highest Warning Level
+        url: https://people.com/butter-alternative-recalled-for-yeast-mold-and-e-coli-risk-gets-fda-class-ii-warning-level-12198492
+        publisher: People
         accessed: 2026-11-22
       - title: FDA recall record
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99871
