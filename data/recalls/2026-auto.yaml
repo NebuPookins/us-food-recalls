@@ -2694,4 +2694,27 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A98760
         publisher: FDA
         accessed: 2026-11-23
+  - id: 2026-10-28-primal-supplements-group-llc-primal-herbs-volume-herbal-sup
+    date: 2026-10-28
+    title: Primal Herbs Volume herbal supplement contains undeclared sildenafil
+    recalling_firm: PRIMAL SUPPLEMENTS GROUP LLC
+    agency: FDA
+    hazards:
+      - mislabeling
+    classification: I
+    products:
+      - name: Primal Herbs Volume
+        brand: Primal Supplements Group LLC
+        codes:
+          - "All orders placed between July 2, 2025, and September 19, 2025, on the website: primalherbs.com"
+    distribution: Online sales nationwide via primalherbs.com
+    note: The FDA found that Primal Herbs Volume, a herbal supplement sold on the company's website, contains sildenafil, a prescription drug not listed on the label. This undeclared ingredient poses a health risk, especially for individuals taking medications that may interact with sildenafil. Consumers who purchased the product online should stop using it and return it for a full refund. The firm is recalling the product and has been classified as a Class I recall.
+    citations:
+      - title: Urgent recall for herbal supplement tainted with VIAGRA
+        url: https://www.msn.com/en-nz/news/other/urgent-recall-for-herbal-supplement-tainted-with-viagra/ar-AA1YuFE3
+        publisher: MSN
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A98583
+        publisher: FDA
+        accessed: 2026-11-23
 
