@@ -2770,4 +2770,42 @@ recalls:
         url: https://www.fsis.usda.gov/recalls-alerts/fsis-issues-public-health-alert-meat-and-poultry-products-containing-biscuits
         publisher: FSIS
         accessed: 2026-11-23
+  - id: 2026-11-06-betterballen-foods-llc-fsis-issues-public-health-aler
+    date: 2026-11-06
+    title: Bami Rolls, Saté Kroketten, and Bitterballen contain undeclared allergens
+    summary:
+      - meat
+      - poultry
+    recalling_firm: BETTERBALLEN FOODS LLC
+    agency: FSIS
+    hazards:
+      - undeclared-allergen
+      - mislabeling
+    products:
+      - name: Bami Rolls (6‑piece)
+        codes:
+          - BR-2026-01
+          - BR-2026-02
+          - BEST BY October 2027
+      - name: Saté Kroketten (10‑piece)
+        codes:
+          - SK-1026-01
+          - BEST BY October 2027
+      - name: Bitterballen (12‑piece)
+        codes:
+          - BB-1026-01
+          - BEST BY October 2027
+    distribution: Sold nationwide through internet sales by Lowlands House; also possibly sold at a festival and farmers market in Georgia and South Carolina
+    cases:
+      as_of: 2026-11-06
+      illnesses: 0
+    note: FSIS issued a public health alert for frozen, not‑ready‑to‑eat meat and poultry products because they contain sesame and anchovy from Worcestershire sauce, which were not declared on the labels. The affected items are Bami Rolls, Saté Kroketten, and Bitterballen sold online nationwide and in limited local venues. No illnesses have been reported. Consumers should discard the products or return them to the seller.
+    citations:
+      - title: "USDA warns: Don't eat these frozen meat products"
+        url: https://www.msn.com/en-us/news/money/usda-warns-dont-eat-these-frozen-meat-products/ar-AA2h5Iq4
+        publisher: USA TODAY
+      - title: FSIS recall record
+        url: https://www.fsis.usda.gov/recalls-alerts/fsis-issues-public-health-alert-meat-and-poultry-products-due-misbranding-and
+        publisher: FSIS
+        accessed: 2026-11-23
 
