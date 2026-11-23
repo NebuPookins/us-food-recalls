@@ -2563,4 +2563,29 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99961
         publisher: FDA
         accessed: 2026-11-22
+  - id: 2026-11-04-gf-blends-inc-gluten-free-truly-aip-rustic-b
+    date: 2026-11-04
+    title: Gluten Free Truly AIP Rustic Bread Mix contains undeclared wheat gluten
+    summary:
+      - bread
+    recalling_firm: GF Blends Inc
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: I
+    products:
+      - name: Gluten Free Truly AIP Rustic Bread Mix
+        codes:
+          - Lot 260417, Best By date 4-17-28
+          - Lot 260617, Best By date 12-17-27
+    distribution: Nationwide online at eatgangster.com, trulyaip.com, and Amazon.com
+    note: The FDA announced a recall of Gluten Free Truly AIP Rustic Bread Mix because the product may contain wheat gluten that was not declared on the label, posing a risk to consumers with gluten intolerance. The recall covers 986 bags sold nationwide through the company’s websites and Amazon. Consumers who purchased the mix should stop using it and return it for a refund or discard it. No illnesses have been reported.
+    citations:
+      - title: Gluten-free flour, baking mixes recalled due to wheat gluten
+        url: https://www.khou.com/article/news/nation-world/gluten-free-flour-baking-mixes-recall-wheat-gluten/507-806c5ea4-bd66-4e1d-b707-fc64470228a4
+        publisher: KHOU 11
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99914
+        publisher: FDA
+        accessed: 2026-11-23
 
