@@ -2717,4 +2717,32 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A98583
         publisher: FDA
         accessed: 2026-11-23
+  - id: 2026-11-22-brett-anthony-foods-brett-anthony-foods-recalls-fr
+    date: 2026-11-22
+    title: WOW BAO Cheeseburger Bao Buns recalled for undeclared sesame and soy allergens
+    summary:
+      - beef
+    recalling_firm: Brett Anthony Foods
+    agency: FSIS
+    hazards:
+      - undeclared-allergen
+    classification: I
+    products:
+      - name: WOW BAO Cheeseburger Bao Buns
+        brand: WOW BAO
+        codes:
+          - "USE BY 10. 01. 27 LOT #26243 EST 40001"
+    distribution: Alabama, Colorado, Connecticut, Georgia, Iowa, Maine, Massachusetts, Michigan
+    cases:
+      as_of: 2026-11-22
+      illnesses: 0
+    note: Brett Anthony Foods is recalling about 1,935 pounds of frozen fully cooked cheeseburger bao buns that were mislabeled and may contain Chinese‑style BBQ pork with sesame and soy, which are undeclared allergens. The product was shipped to distributors in eight states for retail sale. No illnesses have been reported. Consumers should not eat the product and should return it to the place of purchase or discard it.
+    citations:
+      - title: Brett Anthony Foods Recalls Frozen Fully Cooked Chinese-Style BBQ Pork Products Due to Misbranding and Undeclared Allergens
+        url: https://www.usatoday.com/recalls/meat-and-poultry/USDA-W5BvHyS5l4g/
+        publisher: USA TODAY
+      - title: FSIS recall record
+        url: https://www.fsis.usda.gov/recalls-alerts/brett-anthony-foods-recalls-frozen-fully-cooked-cheeseburger-products-due
+        publisher: FSIS
+        accessed: 2026-11-23
 
