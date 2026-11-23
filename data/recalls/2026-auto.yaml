@@ -2745,4 +2745,29 @@ recalls:
         url: https://www.fsis.usda.gov/recalls-alerts/brett-anthony-foods-recalls-frozen-fully-cooked-cheeseburger-products-due
         publisher: FSIS
         accessed: 2026-11-23
+  - id: 2026-11-14-fresh-and-amp-ready-foods-llc-fsis-issues-public-health-aler
+    date: 2026-11-14
+    title: Biscuit & Sausage Gravy (9.5 oz) recalled for possible Listeria contamination
+    summary:
+      - biscuit
+      - sausage gravy
+    recalling_firm: Fresh & Ready Foods LLC
+    agency: FSIS
+    hazards:
+      - listeria
+    products:
+      - name: Biscuit & Sausage Gravy (9.5 oz)
+    distribution: Arkansas, Louisiana, Mississippi, Oklahoma, Tennessee, Texas
+    cases:
+      as_of: 2026-11-14
+      illnesses: 0
+    note: Fresh & Ready Foods LLC issued a public health alert for its 9.5 oz Biscuit & Sausage Gravy products after learning the biscuits used may be contaminated with Listeria monocytogenes. The products were distributed to stores in Arkansas, Louisiana, Mississippi, Oklahoma, Tennessee, and Texas. No illnesses have been reported to date. Consumers should not eat the product and should discard it or return it to the place of purchase.
+    citations:
+      - title: Recall issued for ready-to-eat meal sold in vending machines amid listeria concerns
+        url: https://www.msn.com/en-us/food-and-drink/recipes/recall-issued-for-ready-to-eat-meal-sold-in-vending-machines-amid-listeria-concerns/ar-AA2hysM1
+        publisher: Parade
+      - title: FSIS recall record
+        url: https://www.fsis.usda.gov/recalls-alerts/fsis-issues-public-health-alert-meat-and-poultry-products-containing-biscuits
+        publisher: FSIS
+        accessed: 2026-11-23
 
