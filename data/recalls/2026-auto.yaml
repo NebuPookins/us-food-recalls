@@ -2671,4 +2671,27 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99495
         publisher: FDA
         accessed: 2026-11-23
+  - id: 2026-11-11-nalpac-ltd-dtf-sexual-chocolates-upc-code
+    date: 2026-11-11
+    title: DTF Sexual Chocolates contain undeclared sildenafil and tadalafil
+    summary:
+      - chocolate
+    recalling_firm: NALPAC LTD.
+    agency: FDA
+    hazards:
+      - other
+    classification: I
+    products:
+      - name: DTF Sexual Chocolates
+        codes:
+          - "UPC: 757817783069"
+          - "LOT: 20241022"
+          - EXP:12/31/2027
+    distribution: Nalpac sold the product to approximately 16 customers, some of which operate multiple stores across several states
+    note: The recall involves DTF Sexual Chocolates that were found to contain the prescription drugs sildenafil and tadalafil, which were not listed on the label. These undeclared pharmaceutical ingredients pose a serious health risk, especially to consumers with contraindications or who are not expecting drug exposure. The FDA classified the recall as Class I, the most serious level. Consumers who purchased these chocolates should stop using them immediately and return them to the place of purchase for a full refund.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A98760
+        publisher: FDA
+        accessed: 2026-11-23
 
