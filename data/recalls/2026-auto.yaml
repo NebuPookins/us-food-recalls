@@ -2588,4 +2588,29 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99914
         publisher: FDA
         accessed: 2026-11-23
+  - id: 2026-11-04-sunny-sky-products-llc-sunny-sky-non-dairy-french-van
+    date: 2026-11-04
+    title: Sunny Sky Non-Dairy French Vanilla Creamer recalled for potential sterility compromise
+    summary:
+      - creamer
+    recalling_firm: Sunny Sky Products, LLC
+    agency: FDA
+    hazards:
+      - processing-defect
+    classification: II
+    products:
+      - name: Sunny Sky Non-Dairy French Vanilla Creamer
+        brand: Sunny Sky
+        codes:
+          - L0437F083101
+    distribution: "Multiple states: GA, TX, UT, MN, NM, OH, NC, CA, KY, AR, NV"
+    note: Sunny Sky Products is recalling its 96‑oz Non‑Dairy French Vanilla Creamer because the product's sterility may have been compromised during production. The affected items were shipped to stores in eleven states. Consumers should discard the product or return it to the place of purchase for a full refund.
+    citations:
+      - title: FDA warns of safety issue with creamer sold in Ohio, nationwide
+        url: https://fox8.com/news/fda-warns-of-safety-issue-with-creamer-sold-in-ohio-nationwide/
+        publisher: fox8
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99881
+        publisher: FDA
+        accessed: 2026-11-23
 
