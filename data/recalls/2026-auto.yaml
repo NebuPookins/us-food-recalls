@@ -2613,4 +2613,38 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99881
         publisher: FDA
         accessed: 2026-11-23
+  - id: 2026-11-11-crystal-temptations-little-temptations-chocolatey
+    date: 2026-11-11
+    title: Little Temptations Chocolatey Eyeballs contain undeclared milk (whey)
+    summary:
+      - candy
+    recalling_firm: Crystal Temptations
+    agency: FDA
+    hazards:
+      - undeclared-allergen
+    classification: II
+    products:
+      - name: Little Temptations Chocolatey Eyeballs
+        brand: Crystal Temptations
+        codes:
+          - CARD HEADER BAG 2022602
+          - "2022604"
+          - "2022610"
+          - "2142611"
+          - "217610"
+          - 2172627 ACRYLIC BOX 1222626 EYEBALL JAR 1222626 POUCH BAG 2112618
+          - "2172607"
+          - "2172633"
+          - "2172639"
+          - 2242601 TAG & BELL BAG 1222626
+    distribution: "Multiple states: AZ, TX, VA, GA, MA, NC, IN, NV, CA, NJ, CT, OH, WY"
+    note: Crystal Temptations is recalling its Little Temptations Chocolatey Eyeballs because the product, which contains whey (milk), was packaged in containers that did not disclose the presence of milk. The undeclared milk poses an allergen risk for consumers with dairy allergies. The recall covers about 55,000 pieces distributed to stores in several states. Consumers who purchased this product should stop using it and return it to the place of purchase for a refund or contact the company for further instructions.
+    citations:
+      - title: FDA recalls Halloween chocolatey eyeballs in 13 states due to milk allergen risk
+        url: https://www.msn.com/en-us/news/other/fda-recalls-halloween-chocolatey-eyeballs-in-13-states-due-to-milk-allergen-risk/ar-AA2bqMBP
+        publisher: MSN
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A99783
+        publisher: FDA
+        accessed: 2026-11-23
 
