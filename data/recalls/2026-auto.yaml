@@ -2808,4 +2808,30 @@ recalls:
         url: https://www.fsis.usda.gov/recalls-alerts/fsis-issues-public-health-alert-meat-and-poultry-products-due-misbranding-and
         publisher: FSIS
         accessed: 2026-11-23
+  - id: 2026-11-18-fresh-and-ready-foods-llc-fresh-to-you-sausage-egg-and-c
+    date: 2026-11-18
+    title: Fresh To You Sausage, Egg & Cheese Biscuit Sandwich recalled for possible Listeria contamination
+    summary:
+      - breakfast sandwich
+    recalling_firm: Fresh & Ready Foods LLC
+    agency: FDA
+    hazards:
+      - listeria
+    classification: I
+    products:
+      - name: Fresh To You Sausage, Egg & Cheese Biscuit Sandwich
+        brand: Fresh To You
+        codes:
+          - UPC 8 40549 30168 4
+          - "Fresh Thru: 11/7 through 11/19"
+    distribution: Oregon and Washington
+    note: Fresh & Ready Foods LLC is recalling about 2,414 units of its Fresh To You Sausage, Egg & Cheese Biscuit Sandwich due to possible contamination with Listeria monocytogenes. The sandwiches were distributed in Oregon and Washington and are marked with a fresh‑through date of 11/7 through 11/19. Consumers should not eat the product and should return it to the place of purchase or discard it. The firm is working with the FDA to investigate the source of the potential contamination.
+    citations:
+      - title: Fresh & Ready Foods expands biscuit sandwich and gravy recall to 7 states over listeria
+        url: https://www.msn.com/en-us/food-and-drink/recipes/fresh-ready-foods-expands-biscuit-sandwich-and-gravy-recall-to-7-states-over-listeria/ar-AA2hMnQ7
+        publisher: FP Media
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100316
+        publisher: FDA
+        accessed: 2026-11-25
 
