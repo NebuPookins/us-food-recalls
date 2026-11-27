@@ -2944,11 +2944,8 @@ recalls:
     cases:
       as_of: 2026-11-11
       illnesses: 0
-    note: Sunny Sky Products is recalling 7-Eleven Horchata FD 4:1 BIB sold in 7‑Eleven stores nationwide because laboratory testing showed the water activity of certain lots was slightly above the product specification. Elevated water activity can affect product safety and quality. Consumers who purchased this product should not consume it and should return it to the store for a refund or discard it. The recall involves approximately 9,289 cases and no illnesses have been reported.
+    note: Sunny Sky Products is recalling 7-Eleven Horchata FD 4:1 BIB, a 3-gallon bag-in-box fountain-drink concentrate (item L0496F010201) sold in 7-Eleven stores nationwide, because laboratory testing showed the water activity of certain lots was slightly above the product specification. Water activity is the amount of free water in a product that microbes can use to grow; above the limit, spoilage organisms can grow and the drink may not stay safe through its shelf life. The recall involves approximately 9,289 cases. No illnesses have been reported.
     citations:
-      - title: FDA warns of safety issue with creamer sold in Ohio, nationwide
-        url: https://www.aol.com/articles/fda-warns-safety-issue-creamer-184934000.html
-        publisher: AOL
       - title: FDA recall record
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100191
         publisher: FDA
