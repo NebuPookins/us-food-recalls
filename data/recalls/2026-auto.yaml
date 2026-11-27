@@ -2834,4 +2834,31 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100316
         publisher: FDA
         accessed: 2026-11-25
+  - id: 2026-11-18-breath-of-fresh-air-pdx-llc-ground-up-nut-butter-cups-fill
+    date: 2026-11-18
+    title: Ground Up Nut Butter Cups filled with Almond & Cashew Butter Dark Chocolate Two Pack recalled for plastic fiber contamination
+    summary:
+      - nut butter
+      - chocolate
+    recalling_firm: Breath of Fresh Air PDX LLC
+    agency: FDA
+    hazards:
+      - foreign-material
+    classification: II
+    products:
+      - name: Ground Up Nut Butter Cups filled with Almond & Cashew Butter Dark Chocolate Two Pack
+        codes:
+          - UPC 850017637221
+          - "Lot code: 10/2027"
+          - "Best By: 10/2027"
+    distribution: Nationwide through online orders, originally distributed in Oregon
+    cases:
+      as_of: 2026-11-18
+      illnesses: 0
+    note: The product, sold in two‑pack boxes of almond and cashew butter‑filled dark chocolate cups, was found to contain a plastic fiber. The recall affects 242 boxes that were shipped from Oregon and sold nationwide via online orders. Consumers should stop using the product and return it to the retailer or discard it. The firm is working with the FDA to resolve the issue.
+    citations:
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100258
+        publisher: FDA
+        accessed: 2026-11-27
 
