@@ -2890,4 +2890,27 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100220
         publisher: FDA
         accessed: 2026-11-27
+  - id: 2026-11-18-country-creek-llc-country-creek-acres-alfalfa-sp
+    date: 2026-11-18
+    title: Country Creek Acres alfalfa sprout seeds recalled for possible E. coli and Salmonella contamination
+    summary:
+      - sprouts
+    recalling_firm: Country Creek LLC
+    agency: FDA
+    hazards:
+      - e-coli
+      - salmonella
+    classification: I
+    products:
+      - name: Country Creek Acres Alfalfa Sprout Seeds
+    distribution: Nationwide via e‑commerce orders
+    note: Country Creek LLC is recalling its alfalfa sprout seed packages sold online because the seeds may be contaminated with E. coli and/or Salmonella. The recall covers 200 lb of product shipped to customers across the United States. Consumers who purchased these seeds should stop using them immediately and contact the company for a refund or replacement. No illnesses have been reported at this time.
+    citations:
+      - title: More sprouting seeds recalled because of possible contamination with E. coli and Salmonella
+        url: https://www.foodsafetynews.com/2026/11/more-sprouting-seeds-recalled-because-of-possible-contamination-with-e-coli-and-salmonella/
+        publisher: Food Safety News
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100206
+        publisher: FDA
+        accessed: 2026-11-27
 
