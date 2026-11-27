@@ -2861,4 +2861,33 @@ recalls:
         url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100258
         publisher: FDA
         accessed: 2026-11-27
+  - id: 2026-11-18-d-and-m-smoked-fish-inc-cold-smoked-sprats-5-lbs
+    date: 2026-11-18
+    title: Cold Smoked Sprats recalled for possible botulism contamination
+    summary:
+      - fish
+    recalling_firm: D & M Smoked Fish, Inc.
+    agency: FDA
+    hazards:
+      - botulism
+    classification: I
+    products:
+      - name: Cold Smoked Sprats
+        codes:
+          - 9/2 Lot 244
+          - 9/7 Lot 247
+          - 9/8 Lot 250
+          - 9/9 Lot 251
+          - 9/14 Lot 254
+          - 9/15 Lot 257
+    distribution: New York, New Jersey, Pennsylvania
+    note: D & M Smoked Fish, Inc. is recalling all 5‑lb packages of cold smoked sprats because they may be contaminated with Clostridium botulinum, which can cause botulism. The recall covers approximately 560 lb distributed to New York, New Jersey and Pennsylvania. Consumers should not eat the product and should return it to the place of purchase for a refund or contact the company for disposal instructions.
+    citations:
+      - title: D & M Smoked Fish Cold Smoked Sprats Recalled For Botulism
+        url: https://foodpoisoningbulletin.com/2026/d-m-smoked-fish-cold-smoked-sprats-recalled-for-botulism/
+        publisher: Food Poisoning Bulletin
+      - title: FDA recall record
+        url: https://api.fda.gov/food/enforcement.json?search=event_id%3A100220
+        publisher: FDA
+        accessed: 2026-11-27
 
